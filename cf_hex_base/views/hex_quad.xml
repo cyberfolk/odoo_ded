@@ -27,6 +27,14 @@
         <field name="arch" type="xml">
             <form js_class="quad_form">
                 <sheet>
+                    <header>
+                        <button name="get_current_view_from_o2m" type="object" class="btn-primary"
+                                invisible="not open_from_o2m">
+                            <i class="fa fa-expand"/>
+                            <span class="ms-2">Expand</span>
+                        </button>
+                        <field name="open_from_o2m" invisible="open_from_o2m"/>
+                    </header>
                     <group>
                         <group col="1">
                             <group>
@@ -36,7 +44,7 @@
                                 <field name="hook_widget" widget="quad" nolabel="1"/>
                             </group>
                             <group string="Missing Hexes" name="quad_missing_ids">
-                                <field readonly="1" colspan="2" nolabel="1" name="missing_ids" widget='many2many_tags' />
+                                <field readonly="1" colspan="2" nolabel="1" name="missing_ids" widget='many2many_tags'/>
                             </group>
                         </group>
                         <group col="1">
