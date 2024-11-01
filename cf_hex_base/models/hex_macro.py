@@ -20,10 +20,21 @@ class MacroArea(models.Model):
     )
 
     @api.model
-    def get_json_macro(self):
+    def get_json_map_list(self):
+        """Metodo richiamato dal orm di CurrentMap.js
+            :return: Json delle liste di mappe."""
+        map_fields = ['id', 'name']
+        map_list = self.env['hex.macro'].search([]).read(map_fields)
+        json_map = json.dumps(map_list)
+        return json_map
+
+
+    @api.model
+    def get_json_macro(self, macro_id):
         """Metodo richiamato dal orm di view_macro.js
             :return: Json della Macro-Area."""
-        self_macro = self.env['hex.macro'].browse(1)
+        macro_id = int(macro_id)
+        self_macro = self.env['hex.macro'].browse(macro_id)
         quad_fields = ['id', 'code', 'index', 'polygon', 'hex_ids']
         hex_fields = ['id', 'code', 'index', 'color', 'hex_asset_id']
 

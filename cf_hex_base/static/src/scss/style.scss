@@ -137,6 +137,7 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
     @extend .p-2;
     @extend .rounded;
     width: fit-content;
+    min-width: 50%;
 
     .view-macro-controller__title{
         @extend .m-1;

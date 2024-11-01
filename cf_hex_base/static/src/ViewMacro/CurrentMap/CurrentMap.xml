@@ -1,0 +1,7 @@
+<div t-name="CurrentMap" class="current-map mt-2">
+    <select class="form-select" t-model="store.currentMap" t-on-change="onChange">
+        <option t-foreach="store.mapList" t-as="map" t-key="map" t-att-value="map.id">
+            <t t-esc="map.name"/>
+        </option>
+    </select>
+</div>

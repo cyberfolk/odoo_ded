@@ -3,6 +3,7 @@ import { ClearCurrent } from '@cf_hex_base/ViewMacro/ClearCurrent/ClearCurrent';
 import { CurrentColor } from '@cf_hex_base/ViewMacro/CurrentColor/CurrentColor';
 import { CurrentTiles } from '@cf_hex_base/ViewMacro/CurrentTiles/CurrentTiles';
 import { CurrentZoom } from '@cf_hex_base/ViewMacro/CurrentZoom/CurrentZoom';
+import { CurrentMap } from '@cf_hex_base/ViewMacro/CurrentMap/CurrentMap';
 import { HexHex } from '@cf_hex_base/ViewMacro/HexHex/HexHex';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
@@ -14,18 +15,17 @@ const actionRegistry = registry.category("actions");
 class ViewMacro extends Component {
     static template = "ViewMacro"
     static props = ["*"]
-    static components = { CurrentColor, CurrentZoom, CurrentTiles, ClearCurrent, HexHex };
+    static components = { CurrentColor, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, HexHex };
 
     setup() {
         super.setup();
         this.orm = useService("orm");
-        this.state = useState({
+        this.store = useStore({
             macro: null,
         })
-        this.store = useStore()
 
         onWillStart(async () => {
-            this.state.macro = await this.orm.call("hex.macro", "get_json_macro", [], {})
+            this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [1], {})
                 .then((result) => { return JSON.parse(result) })
         })
     }
