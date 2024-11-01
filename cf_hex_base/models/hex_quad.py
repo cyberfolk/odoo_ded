@@ -77,21 +77,6 @@ class Quadrant(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    open_from_o2m = fields.Char(
-        string="Where",
-        compute="_compute_open_from_o2m",
-    )
-
-    def _compute_open_from_o2m(self):
-        for rec in self:
-            context = self.env.context
-            from_model = context.get('params', {}).get('model', False)
-            active_model = context.get('active_model', False)
-            if from_model == 'hex.macro' and active_model != 'hex.quad':
-                rec.open_from_o2m = True
-            else:
-                rec.open_from_o2m = False
-    #
     @api.depends('index')
     def _compute_code(self):
         for rec in self:
@@ -190,14 +175,3 @@ class Quadrant(models.Model):
                 missing_hex[border_key] = target_hex
                 specular_borders_key = SPECULAR_BORDERS_MAP[border_key]
                 target_hex[specular_borders_key] = missing_hex
-
-    def get_current_view_from_o2m(self):
-        return {
-            'type': 'ir.actions.act_window',
-            'name': self.code,
-            'view_type': 'form',
-            'view_mode': 'form',
-            'res_model': self._name,
-            'res_id': self.id,
-            'target': 'current',
-        }
