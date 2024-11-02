@@ -9,7 +9,6 @@
                 <field name="index" readonly="1"/>
                 <field name="circle_order"/>
                 <field name="circle_number"/>
-                <field name="color" readonly="1"/>
                 <field name="macro_id"/>
                 <field name="border_N"/>
                 <field name="border_NE"/>
@@ -31,7 +30,7 @@
                         <field name="id" widget="view_form_o2m" model="hex.quad" model_parent="hex.macro"/>
                     </header>
                     <group>
-                        <group col="1">
+                        <group col  ="1">
                             <group>
                                 <field class="fw-bold h1" colspan="2" nolabel="1" readonly="1" name="name"/>
                             </group>

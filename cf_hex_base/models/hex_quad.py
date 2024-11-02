@@ -3,6 +3,7 @@ from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
 from ..utility.constant import SPECULAR_BORDERS_MAP
+from ..utility.constant import COLOR_HEX_LIST
 from ..utility.odoo_to_json import obj_odoo_to_json
 
 
@@ -95,9 +96,9 @@ class Quadrant(models.Model):
             return quad
         for index in quad.hex_list:
             hex_vals = {
-                'quad_id': quad.id,
+                'quad_id': quad.index,
                 'index': index,
-                'color': quad.color,
+                'color': COLOR_HEX_LIST[quad.index - 1],
             }
             hex_id = self.env['hex.hex'].create(hex_vals)
             quad.hex_ids = [(4, hex_id.id)]

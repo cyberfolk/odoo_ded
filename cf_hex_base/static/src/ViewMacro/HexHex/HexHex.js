@@ -23,7 +23,7 @@ export class HexHex extends Component {
     }
 
     getHexStyle() {
-        return `${getAxes(this.state.index, 0.95)}; background-color: ${this.state.color}; filter: brightness(${120 - 3 * this.state.index}%);`
+        return `${getAxes(this.state.index, 0.95)}; background-color: ${this.state.color};`
     }
 
     /**

@@ -29,10 +29,6 @@ class HexMixin(models.AbstractModel):
         help="Il valore di 'index' deve essere compreso tra 1 e 19.",
     )
 
-    color = fields.Char(
-        string='Color',
-    )
-
     @api.depends('code')
     def _compute_display_name(self):
         for rec in self:

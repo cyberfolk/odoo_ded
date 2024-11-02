@@ -1,17 +1,6 @@
 import json
-from odoo import api, fields, models, Command
 
-
-class HexAssetTile(models.Model):
-    _name = "hex.asset.tile"
-    _description = "Hexagonal Asset Tiles"
-
-    rotation = fields.Integer(string="Rotazione")
-    asset_id = fields.Many2one(
-        comodel_name='asset.tile',
-        string="Asset",
-        help="Assets contained in this hex"
-    )
+from odoo import api, fields, models
 
 
 class Hex(models.Model):
@@ -71,6 +60,10 @@ class Hex(models.Model):
         help="Confine Nord-Ovest"
     )
 
+    color = fields.Char(
+        string='Color',
+    )
+
     @api.depends('index')
     def _compute_code(self):
         for record in self:
@@ -122,4 +115,3 @@ class Hex(models.Model):
 
         json_hex = json.dumps(dict_hex)
         return json_hex
-
