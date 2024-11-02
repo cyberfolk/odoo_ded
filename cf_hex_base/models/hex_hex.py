@@ -75,6 +75,7 @@ class Hex(models.Model):
                 code = 'void'
             record.code = code
 
+    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
     @api.model
     def change_hex_color(self, hex_id, current_color):
         """Metodo richiamato dal orm di view_macro.js
@@ -115,3 +116,4 @@ class Hex(models.Model):
 
         json_hex = json.dumps(dict_hex)
         return json_hex
+    # endregion --------------------------------------------------------------------------------------------------------
