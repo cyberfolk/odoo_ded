@@ -4,7 +4,7 @@ from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
 from ..utility.constant import SPECULAR_BORDERS_MAP
 from ..utility.odoo_to_json import obj_odoo_to_json
-import json
+
 
 class Quadrant(models.Model):
     _name = "hex.quad"
@@ -85,15 +85,6 @@ class Quadrant(models.Model):
             else:
                 rec.code = 'void'
 
-    @api.model
-    def get_json_quad(self, quad_id):
-        """Metodo richiamato dal orm di quad.js
-            :param quad_id: Id quadrante.
-            :return: Json del quadrante."""
-        self_quad = self.env['hex.quad'].browse(quad_id)[0]
-        json_quad = obj_odoo_to_json(self_quad)
-        return json_quad
-
     @api.model_create_multi
     def create(self, vals):
         quad = super(Quadrant, self).create(vals)
@@ -137,6 +128,31 @@ class Quadrant(models.Model):
                 if hex[border_key].code == 'void' and hex_border:
                     hex[border_key] = hex_border
 
+    def set_missing_ids(self):
+        """Popola il campo che contiene gli esagoni mancanti."""
+        all_index = list(range(1, 20))
+        missing_index_list = list(set(all_index) - set(self.hex_ids.mapped('index')))
+        for missing_index in missing_index_list:
+            border_quad, target_index, borders = HEX_MISSING_INDEX[missing_index]
+            missing_hex = self[border_quad].hex_ids.filtered(lambda x: x.index == target_index)
+            self.missing_ids = [(4, missing_hex.id)]
+
+            for border_key, border_idex in borders.items():
+                target_hex = self.hex_ids.filtered(lambda x: x.index == border_idex)
+                missing_hex[border_key] = target_hex
+                specular_borders_key = SPECULAR_BORDERS_MAP[border_key]
+                target_hex[specular_borders_key] = missing_hex
+
+    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
+    @api.model
+    def get_json_quad(self, quad_id):
+        """Metodo richiamato dal orm di quad.js
+            :param quad_id: Id quadrante.
+            :return: Json del quadrante."""
+        self_quad = self.env['hex.quad'].browse(quad_id)[0]
+        json_quad = obj_odoo_to_json(self_quad)
+        return json_quad
+
     @api.model
     def get_json_external_hexs(self, quad_id):
         """Metodo richiamato dal orm di quad.js
@@ -160,18 +176,4 @@ class Quadrant(models.Model):
         ]
         json_hex_list = obj_odoo_to_json(hex_list)
         return json_hex_list
-
-    def set_missing_ids(self):
-        """Popola il campo che contiene gli esagoni mancanti."""
-        all_index = list(range(1, 20))
-        missing_index_list = list(set(all_index) - set(self.hex_ids.mapped('index')))
-        for missing_index in missing_index_list:
-            border_quad, target_index, borders = HEX_MISSING_INDEX[missing_index]
-            missing_hex = self[border_quad].hex_ids.filtered(lambda x: x.index == target_index)
-            self.missing_ids = [(4, missing_hex.id)]
-
-            for border_key, border_idex in borders.items():
-                target_hex = self.hex_ids.filtered(lambda x: x.index == border_idex)
-                missing_hex[border_key] = target_hex
-                specular_borders_key = SPECULAR_BORDERS_MAP[border_key]
-                target_hex[specular_borders_key] = missing_hex
+    # endregion --------------------------------------------------------------------------------------------------------

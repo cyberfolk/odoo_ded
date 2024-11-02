@@ -2,6 +2,7 @@ import json
 
 from odoo import fields, models, api
 from ..utility.constant import BORDERS_MAP
+from ..utility.constant import MACRO_MAP_TYPE_SELECTION
 from ..utility.constant import QUAD_LIST
 
 
@@ -18,51 +19,6 @@ class MacroArea(models.Model):
         string="Quadrants",
         inverse_name='macro_id',
     )
-
-    @api.model
-    def get_json_map_list(self):
-        """Metodo richiamato dal orm di CurrentMap.js
-            :return: Json delle liste di mappe."""
-        map_fields = ['id', 'name']
-        map_list = self.env['hex.macro'].search([]).read(map_fields)
-        json_map = json.dumps(map_list)
-        return json_map
-
-
-    @api.model
-    def get_json_macro(self, macro_id):
-        """Metodo richiamato dal orm di view_macro.js
-            :return: Json della Macro-Area."""
-        macro_id = int(macro_id)
-        self_macro = self.env['hex.macro'].browse(macro_id)
-        quad_fields = ['id', 'code', 'index', 'polygon', 'hex_ids']
-        hex_fields = ['id', 'code', 'index', 'color', 'hex_asset_id']
-
-        # Otteniamo tutti i quad e i relativi hex in una singola query
-        quads = self_macro.quad_ids.read(quad_fields)
-        hex_map = {quad['id']: self.env['hex.hex'].browse(quad['hex_ids']).read(hex_fields) for quad in quads}
-
-        # Aggiungo le info relative a gli hex_asset negli hex
-        hex_asset_fields = ['asset_id', 'rotation']
-        hex_assets = self.env['hex.asset.tile'].search([]).read(hex_asset_fields)
-        hex_assets_map = {x['id']: {'tile_id': x['asset_id'][0], 'rotation': x['rotation']} for x in hex_assets}
-        for k, v in hex_map.items():
-            for _hex in v:
-                if _hex['hex_asset_id']:
-                    _id = _hex['hex_asset_id'][0]
-                    _hex['hex_asset_id'] = hex_assets_map[_id]
-
-        dict_macro = {
-            'quad_ids': [{
-                'id': quad['id'],
-                'code': quad['code'],
-                'index': quad['index'],
-                'polygon': quad['polygon'],
-                'hex_ids': hex_map[quad['id']],
-            } for quad in quads]
-        }
-        json_macro = json.dumps(dict_macro)
-        return json_macro
 
     def set_quads_borders(self):
         """Impostare i bordi dei quadranti. Dal secondo cerchio in poi ci potrebbero essere bordi che non
@@ -100,3 +56,49 @@ class MacroArea(models.Model):
         for quad in macro.quad_ids:
             quad.set_missing_ids()
         return macro
+
+    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
+    @api.model
+    def get_json_map_list(self):
+        """Metodo richiamato dal orm di CurrentMap.js
+            :return: Json della lista di tutte le Macro-Aree nel DB."""
+        map_fields = ['id', 'name']
+        map_list = self.env['hex.macro'].search([]).read(map_fields)
+        json_map = json.dumps(map_list)
+        return json_map
+
+    @api.model
+    def get_json_macro(self, macro_id):
+        """Metodo richiamato dal orm di view_macro.js
+            :return: Json della Macro-Area."""
+        macro_id = int(macro_id)
+        self_macro = self.env['hex.macro'].browse(macro_id)
+        quad_fields = ['id', 'code', 'index', 'polygon', 'hex_ids']
+        hex_fields = ['id', 'code', 'index', 'color', 'hex_asset_id']
+
+        # Otteniamo tutti i quad e i relativi hex in una singola query
+        quads = self_macro.quad_ids.read(quad_fields)
+        hex_map = {quad['id']: self.env['hex.hex'].browse(quad['hex_ids']).read(hex_fields) for quad in quads}
+
+        # Aggiungo le info relative a gli hex_asset negli hex
+        hex_asset_fields = ['asset_id', 'rotation']
+        hex_assets = self.env['hex.asset.tile'].search([]).read(hex_asset_fields)
+        hex_assets_map = {x['id']: {'tile_id': x['asset_id'][0], 'rotation': x['rotation']} for x in hex_assets}
+        for k, v in hex_map.items():
+            for _hex in v:
+                if _hex['hex_asset_id']:
+                    _id = _hex['hex_asset_id'][0]
+                    _hex['hex_asset_id'] = hex_assets_map[_id]
+
+        dict_macro = {
+            'quad_ids': [{
+                'id': quad['id'],
+                'code': quad['code'],
+                'index': quad['index'],
+                'polygon': quad['polygon'],
+                'hex_ids': hex_map[quad['id']],
+            } for quad in quads]
+        }
+        json_macro = json.dumps(dict_macro)
+        return json_macro
+    # endregion --------------------------------------------------------------------------------------------------------
