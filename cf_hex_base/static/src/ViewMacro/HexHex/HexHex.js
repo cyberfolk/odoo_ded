@@ -2,7 +2,7 @@
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { store, useStore } from "../../store";
-import { getAxes } from '../../utility/utils.js';
+import { getAxesV1, getAxesV2 } from '../../utility/utils.js';
 import { useService } from "@web/core/utils/hooks";
 
 export class HexHex extends Component {
@@ -16,6 +16,8 @@ export class HexHex extends Component {
         this.store = useStore()
         this.state = useState({
             id: this.props.id,
+            row: this.props.row,
+            col: this.props.col,
             index: this.props.index,
             color: this.props.color,
             hex_asset_id: this.props.hex_asset_id
@@ -23,7 +25,11 @@ export class HexHex extends Component {
     }
 
     getHexStyle() {
-        return `${getAxes(this.state.index, 0.95)}; background-color: ${this.state.color};`
+        if (this.state.index) {
+            return `${getAxesV1(this.state.index, 0.95)}; background-color: ${this.state.color};`
+        } else {
+            return `${getAxesV2(this.state.row, this.state.col)}; background-color: ${this.state.color};`
+        }
     }
 
     /**
