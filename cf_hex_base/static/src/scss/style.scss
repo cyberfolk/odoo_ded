@@ -50,8 +50,10 @@ $MF-HW_INIZIALE: $MF-HW_ARBITRARIA; // Hex Width Iniziale - Senza padding
 $MF-HH_INIZIALE: $MF-HW_INIZIALE * $K_RATEO; // Hex Height Iniziale - Senza padding
 $MF-HW: $MF-HW_INIZIALE * (1 - $PADDING); // Hex Width con padding
 $MF-HH: $MF-HH_INIZIALE * (1 - $PADDING); // Hex Height con padding
-$MF-QW: $MF-HW_INIZIALE * 4; // Quad Width
-$MF-QH: $MF-HH_INIZIALE * 5; // Quad Height
+$MF-QW-V2: $MF-HW_INIZIALE * 3.25; // Quad Width V1
+$MF-QH-V2: $MF-HH_INIZIALE * 4.5; // Quad Height V1
+$MF-QW-V1: $MF-HW_INIZIALE * 4; // Quad Width V1
+$MF-QH-V1: $MF-HH_INIZIALE * 5; // Quad Height V1
 $MF-MW: $MF-HW_INIZIALE * 16; // Macro Width
 $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
 
@@ -63,11 +65,17 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
     width: $MF-MW;
     position: relative;
 
-    .quad {
-        width: $MF-QW;
-        height: $MF-QH;
+    .quad_v1 {
+        width: $MF-QW-V1;
+        height: $MF-QH-V1;
         position: absolute;
         transform: translate(-50%, -50%);
+    }
+    .quad_v2 {
+        width: $MF-QW-V2;
+        height: $MF-QH-V2;
+        position: absolute;
+        position: relative;
     }
 
     .hex:hover {
