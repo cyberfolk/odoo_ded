@@ -13,7 +13,7 @@ export class CurrentMap extends Component {
         this.store = useStore()
         this.store.add({
             mapList: null,
-            currentMap: 1,
+            currentMapID: 1,
         })
         this.orm = useService("orm");
 
@@ -23,8 +23,8 @@ export class CurrentMap extends Component {
         })
     }
     async onChange(event) {
-        this.store.currentMap = event.target.value;
-        this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [this.store.currentMap], {})
+        this.store.currentMapID = Number(event.target.value);
+        this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [this.store.currentMapID], {})
             .then((result) => { return JSON.parse(result) })
     }
 }
