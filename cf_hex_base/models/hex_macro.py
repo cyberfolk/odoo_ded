@@ -1,9 +1,12 @@
 import json
+import logging
 
-from odoo import fields, models, api
+from itertools import groupby
+from odoo import fields, models, api, Command
 from ..utility.constant import BORDERS_MAP
-from ..utility.constant import MACRO_MAP_TYPE_SELECTION
-from ..utility.constant import QUAD_LIST
+from ..utility.constant import QUAD_LIST_V1
+
+_logger = logging.getLogger(__name__)
 
 
 class MacroArea(models.Model):
@@ -19,6 +22,13 @@ class MacroArea(models.Model):
         string="Quadrants",
         inverse_name='macro_id',
     )
+
+    row_min = fields.Integer(string="Row Min", compute="compute_quad_stats")
+    row_max = fields.Integer(string="Row Max", compute="compute_quad_stats")
+    row_num = fields.Integer(string="Row Num", compute="compute_quad_stats")
+    col_min = fields.Integer(string="Row Min", compute="compute_quad_stats")
+    col_max = fields.Integer(string="Row Max", compute="compute_quad_stats")
+    col_num = fields.Integer(string="Row Num", compute="compute_quad_stats")
 
     def set_quads_borders(self):
         """Impostare i bordi dei quadranti. Dal secondo cerchio in poi ci potrebbero essere bordi che non
@@ -44,7 +54,10 @@ class MacroArea(models.Model):
             - La lista degli Esagoni mancanti
         """
         macro = super().create(vals_list)
-        for quad_dict in QUAD_LIST:
+        # quad_vals = {"row": 0, "col": 0}
+        # macro.quad_ids = [Command.create(quad_vals)]
+
+        for quad_dict in QUAD_LIST_V1:
             quad = self.env['hex.quad'].create(quad_dict)
             macro.quad_ids = [(4, quad.id)]
 
@@ -56,6 +69,45 @@ class MacroArea(models.Model):
         for quad in macro.quad_ids:
             quad.set_missing_ids()
         return macro
+
+    def compute_quad_stats(self):
+        for rec in self:
+            if not self.quad_ids:
+                rec.row_min = None
+                rec.row_max = None
+                rec.row_num = None
+                rec.col_min = None
+                rec.col_max = None
+                rec.col_num = None
+            else:
+                col_set = {x.col for x in self.quad_ids}
+                row_set = {x.row for x in self.quad_ids}
+                rec.row_min = min(row_set)
+                rec.row_max = max(row_set)
+                rec.row_num = rec.row_max - rec.row_min + 1
+                rec.col_min = min(col_set)
+                rec.col_max = max(col_set)
+                rec.col_num = rec.col_max - rec.col_min + 1
+
+    def add_right(self):
+        for row_i in range(self.row_min, self.row_max + 1):
+            quad_vals = {"row": row_i, "col": self.col_max + 1}
+            self.quad_ids = [Command.create(quad_vals)]
+
+    def add_top(self):
+        for col_i in range(self.col_min, self.col_max + 1):
+            quad_vals = {"row": self.row_min - 1, "col": col_i}
+            self.quad_ids = [Command.create(quad_vals)]
+
+    def add_bottom(self):
+        for col_i in range(self.col_min, self.col_max + 1):
+            quad_vals = {"row": self.row_max + 1, "col": col_i}
+            self.quad_ids = [Command.create(quad_vals)]
+
+    def add_left(self):
+        for row_i in range(self.row_min, self.row_max + 1):
+            quad_vals = {"row": row_i, "col": self.col_min - 1}
+            self.quad_ids = [Command.create(quad_vals)]
 
     # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
     @api.model
@@ -73,8 +125,8 @@ class MacroArea(models.Model):
             :return: Json della Macro-Area."""
         macro_id = int(macro_id)
         self_macro = self.env['hex.macro'].browse(macro_id)
-        quad_fields = ['id', 'code', 'index', 'polygon', 'hex_ids']
-        hex_fields = ['id', 'code', 'index', 'color', 'hex_asset_id']
+        quad_fields = ['id', 'code', 'index', 'row', 'col', 'hex_ids']
+        hex_fields = ['id', 'code', 'index', 'row', 'col', 'color', 'hex_asset_id']
 
         # Otteniamo tutti i quad e i relativi hex in una singola query
         quads = self_macro.quad_ids.read(quad_fields)
@@ -91,14 +143,19 @@ class MacroArea(models.Model):
                     _hex['hex_asset_id'] = hex_assets_map[_id]
 
         dict_macro = {
+            'id': macro_id,
             'quad_ids': [{
                 'id': quad['id'],
+                'row': quad['row'],
                 'code': quad['code'],
                 'index': quad['index'],
-                'polygon': quad['polygon'],
+                'col': quad['col'],
                 'hex_ids': hex_map[quad['id']],
             } for quad in quads]
         }
+        # quad_ids = dict_macro.pop('quad_ids')
+        # quad_rows = [list(v) for k, v in groupby(quad_ids, key=lambda x: x['row'])]
+        # dict_macro['quad_rows'] = quad_rows
         json_macro = json.dumps(dict_macro)
         return json_macro
     # endregion --------------------------------------------------------------------------------------------------------

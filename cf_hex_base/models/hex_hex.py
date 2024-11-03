@@ -64,6 +64,14 @@ class Hex(models.Model):
         string='Color',
     )
 
+    row = fields.Integer(
+        string="Riga",
+    )
+
+    col = fields.Integer(
+        string="Colonna",
+    )
+
     @api.depends('index')
     def _compute_code(self):
         for record in self:
@@ -71,6 +79,8 @@ class Hex(models.Model):
                 code = f"{record.quad_id.code}"
                 code += f".{str(record.circle_order).zfill(2)}"
                 code += f".{str(record.circle_number).zfill(2)}"
+            if record.row is not None and record.col is not None:
+                code = f"R{record.row}C{record.col}"
             else:
                 code = 'void'
             record.code = code

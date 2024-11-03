@@ -11,6 +11,7 @@ class Quadrant(models.Model):
     _name = "hex.quad"
     _inherit = ['hex.mixin']
     _description = "Quadrant, contains Hexagons."
+    _order = 'row,col'
 
     macro_id = fields.Many2one(
         comodel_name='hex.macro',
@@ -31,10 +32,6 @@ class Quadrant(models.Model):
         comodel_name='hex.hex',
         relation='quad_hex_missing_rel',
         string="Missing IDs"
-    )
-
-    polygon = fields.Char(
-        string='Polygon'
     )
 
     hook_widget = fields.Char(
@@ -78,13 +75,39 @@ class Quadrant(models.Model):
         help="Confine Nord-Ovest"
     )
 
+    row = fields.Integer(
+        string="Riga",
+    )
+
+    col = fields.Integer(
+        string="Colonna",
+    )
+
     @api.depends('index')
     def _compute_code(self):
         for rec in self:
             if rec.index:
                 rec.code = (chr(ord('A') + rec.index - 1))
+            if rec.row is not None and rec.col is not None:
+                _row = format_int_v2(rec.row)
+                _col = format_int_v2(rec.col)
+                rec.code = f"{_row}:{_col}"
             else:
                 rec.code = 'void'
+
+    # @api.model_create_multi
+    # def create(self, vals):
+    #     quad = super(Quadrant, self).create(vals)
+    #     quad.name = f"Quadrante {quad.code}"
+    #     for i in range(16):
+    #         hex_vals = {
+    #             'row': i // 4,
+    #             'col': i % 4,
+    #             'color': "#ff0000",
+    #         }
+    #         hex_id = self.env['hex.hex'].create(hex_vals)
+    #         quad.hex_ids = [(4, hex_id.id)]
+    #     return quad
 
     @api.model_create_multi
     def create(self, vals):
@@ -178,3 +201,11 @@ class Quadrant(models.Model):
         json_hex_list = obj_odoo_to_json(hex_list)
         return json_hex_list
     # endregion --------------------------------------------------------------------------------------------------------
+
+
+def format_int_v2(num):
+    """Ritorna '000' se num=0, altrimenti 'Nxx' o 'Pxx' in base al segno di num."""
+    if num == 0:
+        return "000"
+    prefix = "N" if num < 0 else "P"
+    return f"{prefix}{abs(num):02d}"
