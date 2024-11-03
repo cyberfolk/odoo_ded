@@ -5,11 +5,14 @@ export const POSITION = {
 };
 
 export const POSITION_V2 = {
-    "X": [12.5, 31.25, 50, 68.75, 12.5, 31.25, 50, 68.75, 12.5, 31.25, 50, 68.75, 12.5, 31.25, 50, 68.75],
-    "Y": [10, 20, 10, 20, 30, 40, 30, 40, 50, 60, 50, 60, 70, 80, 70, 80]
+//    "X": [16.50, 38.83, 61.16, 83.50, 16.50, 38.83, 61.16, 83.50, 16.50, 38.83, 61.16, 83.50, 16.50, 38.83, 61.16, 83.50,],
+//    "Y": [13.75, 23.75, 13.75, 23.75, 34.25, 44.75, 34.25, 44.75, 55.25, 65.75, 55.25, 65.75, 76.25, 86.75, 76.25, 86.75]
+    "X": [15.00, 38.33, 61.66, 85.00, 15.00, 38.33, 61.66, 85.00, 15.00, 38.33, 61.66, 85.00, 15.00, 38.33, 61.66, 85.00,],
+    "Y": [11.11, 22.22, 11.11, 22.22, 33.33, 44.44, 33.33, 44.44, 55.55, 66.66, 55.55, 66.66, 77.77, 88.88, 77.77, 88.88]
 };
 
-export function getAxes(index, REDUCTION=0.95) {
+
+export function getAxesV1(index, REDUCTION=0.95) {
     // REDUCTION is a constant used to bring the HEX closer to the center of the QUADRANT.
     // In this way we have the perception that the padding of the QUADRANTS increases
     const asse_y = 50 + POSITION.Y[index - 1] * REDUCTION + "%";
@@ -17,10 +20,10 @@ export function getAxes(index, REDUCTION=0.95) {
     return `top: ${asse_y}; left: ${asse_x};`
 }
 
-export function getAxesV2(row, column) {
+export function getAxesV2(row, col) {
     // REDUCTION is a constant used to bring the HEX closer to the center of the QUADRANT.
     // In this way we have the perception that the padding of the QUADRANTS increases
-    const index = row * 4 + column;
+    const index = row * 4 + col;
     const asse_y = POSITION_V2.Y[index] + "%";
     const asse_x = POSITION_V2.X[index] + "%";
     return `top: ${asse_y}; left: ${asse_x};`
