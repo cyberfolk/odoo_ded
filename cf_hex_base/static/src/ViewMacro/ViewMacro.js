@@ -8,7 +8,7 @@ import { HexHex } from '@cf_hex_base/ViewMacro/HexHex/HexHex';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { getAxes } from '../utility/utils.js';
+import { getAxesV1, getAxesV2, POLYGON_QUAD_V2, POLYGON_QUAD_V1_LIST } from '../utility/utils.js';
 import { store, useStore } from "../store";
 const actionRegistry = registry.category("actions");
 
@@ -31,13 +31,37 @@ class ViewMacro extends Component {
     }
 
     getQuadStyle(quad) {
-        return `${getAxes(quad.index, 0.97)}; z-index: ${20 - quad.index}; clip-path: ${quad.polygon};`
+        const index = quad.index
+        if (index) {
+            return `${getAxesV1(index, 0.97)}; z-index: ${20 - index}; clip-path: ${POLYGON_QUAD_V1_LIST[index -1]};`;
+        } else {
+            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -12.5px`;
+        }
     }
 
     resetCurrentSelect_ClickOutside(event) {
         if (!event.target.closest('.hex')) {  // Check elemento cliccato non appartenga alla macro_form o ai suoi figli
             this.store.resetCurrentSelect();
         }
+    }
+    addRight(){
+        const res = this.orm.call("hex.macro", "add_right", [store.currentMapID], {})
+            // .then((result) => { return JSON.parse(result) })
+    }
+
+    addTop(){
+        const res = this.orm.call("hex.macro", "add_top", [store.currentMapID], {})
+            // .then((result) => { return JSON.parse(result) })
+    }
+
+    addBottom(){
+        const res = this.orm.call("hex.macro", "add_bottom", [store.currentMapID], {})
+            // .then((result) => { return JSON.parse(result) })
+    }
+
+    addLeft(){
+        const res = this.orm.call("hex.macro", "add_left", [store.currentMapID], {})
+            // .then((result) => { return JSON.parse(result) })
     }
 }
 

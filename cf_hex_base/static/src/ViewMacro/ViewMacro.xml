@@ -5,15 +5,33 @@
         <CurrentColor/>
         <CurrentTiles/>
         <ClearCurrent/>
+        <button class="btn btn-primary" t-on-click="addRight">Add Right</button>
+        <button class="btn btn-primary" t-on-click="addTop">Add Top</button>
+        <br/>
+        <button class="btn btn-primary" t-on-click="addBottom">Add Bottom</button>
+        <button class="btn btn-primary" t-on-click="addLeft">Add Left</button>
     </div>
 
     <div class="p-3 bg-white" t-attf-style="zoom: {{store.zoom}}"
          t-on-click="resetCurrentSelect_ClickOutside">
         <div class="macro_form m-auto">
-            <t t-foreach="store.macro.quad_ids" t-as="quad" t-key="quad.id">
-                <div class="quad bg-dark " t-att-style="getQuadStyle(quad)">
-                    <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
-                        <HexHex id="hex.id" index="hex.index" color="hex.color" hex_asset_id="hex.hex_asset_id" />
+            <!-- VIEW V1-->
+            <!-- <t t-foreach="store.macro.quad_ids" t-as="quad" t-key="quad.id">-->
+            <!--     <div class="quad_v1 bg-dark " t-att-style="getQuadStyle(quad)">-->
+            <!--         <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">-->
+            <!--             <HexHex id="hex.id" index="hex.index" color="hex.color" hex_asset_id="hex.hex_asset_id" />-->
+            <!--         </t>-->
+            <!--     </div>-->
+            <!-- </t>-->
+            <!-- VIEW V2-->
+            <t t-foreach="store.macro.quad_rows" t-as="quad_row" t-key="quad_row[0].id">
+                <div class="d-flex bg-dark" style="margin-top: -25px;">
+                    <t t-foreach="quad_row" t-as="quad" t-key="quad.col">
+                        <div class="quad_v2 bg-dark" t-att-style="getQuadStyle(quad)">
+                            <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
+                                <HexHex id="hex.id" index="hex.index" color="hex.color" row="hex.row" col="hex.col" hex_asset_id="hex.hex_asset_id"/>
+                            </t>
+                        </div>
                     </t>
                 </div>
             </t>
