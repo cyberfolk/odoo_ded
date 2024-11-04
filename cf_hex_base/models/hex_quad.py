@@ -1,7 +1,8 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, Command
 from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
+from ..utility.constant import MACRO_MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
 from ..utility.constant import COLOR_HEX_LIST
 from ..utility.odoo_to_json import obj_odoo_to_json
@@ -20,6 +21,7 @@ class Quadrant(models.Model):
 
     hex_list = fields.Json(
         string="Hex list",
+        help="Campo d'appoggio per la creazione di hex_ids."
     )
 
     hex_ids = fields.One2many(
@@ -75,6 +77,12 @@ class Quadrant(models.Model):
         help="Confine Nord-Ovest"
     )
 
+    type = fields.Selection(
+        selection=MACRO_MAP_TYPE_SELECTION,
+        string="Tipo",
+        default="v1_19_q",
+    )
+
     row = fields.Integer(
         string="Riga",
     )
@@ -83,48 +91,37 @@ class Quadrant(models.Model):
         string="Colonna",
     )
 
-    @api.depends('index')
+    @api.depends('index', 'row', 'col', 'type')
     def _compute_code(self):
         for rec in self:
-            if rec.index:
+            if rec.type == "v1_19_q" and rec.index:
                 rec.code = (chr(ord('A') + rec.index - 1))
-            if rec.row is not None and rec.col is not None:
-                _row = format_int_v2(rec.row)
-                _col = format_int_v2(rec.col)
-                rec.code = f"{_row}:{_col}"
+            elif rec.type == "v2_nolimit_q":
+                _row = self.format_int_v2(rec.row)
+                _col = self.format_int_v2(rec.col)
+                rec.code = f"{_row}{_col}"
             else:
                 rec.code = 'void'
-
-    # @api.model_create_multi
-    # def create(self, vals):
-    #     quad = super(Quadrant, self).create(vals)
-    #     quad.name = f"Quadrante {quad.code}"
-    #     for i in range(16):
-    #         hex_vals = {
-    #             'row': i // 4,
-    #             'col': i % 4,
-    #             'color': "#ff0000",
-    #         }
-    #         hex_id = self.env['hex.hex'].create(hex_vals)
-    #         quad.hex_ids = [(4, hex_id.id)]
-    #     return quad
 
     @api.model_create_multi
     def create(self, vals):
         quad = super(Quadrant, self).create(vals)
         quad.name = f"Quadrante {quad.code}"
-        if quad.code == 'void':
-            return quad
-        if not quad.hex_list:
-            return quad
-        for index in quad.hex_list:
-            hex_vals = {
-                'quad_id': quad.index,
-                'index': index,
-                'color': COLOR_HEX_LIST[quad.index - 1],
-            }
-            hex_id = self.env['hex.hex'].create(hex_vals)
-            quad.hex_ids = [(4, hex_id.id)]
+        if quad.type == "v1_19_q":
+            if quad.code == 'void' or not quad.hex_list:
+                return quad
+            for index in quad.hex_list:
+                hex_vals = {'color': COLOR_HEX_LIST[quad.index - 1], 'index': index}
+                quad.hex_ids = [Command.create(hex_vals)]
+        elif quad.type == "v2_nolimit_q":
+            for i in range(16):
+                hex_vals = {
+                    'color': COLOR_HEX_LIST[(quad.row * 4 + quad.col) % 19],
+                    'type': "v2_nolimit_q",
+                    'row': i // 4,
+                    'col': i % 4
+                }
+                quad.hex_ids = [Command.create(hex_vals)]
         return quad
 
     def set_hexs_borders(self):
@@ -201,11 +198,3 @@ class Quadrant(models.Model):
         json_hex_list = obj_odoo_to_json(hex_list)
         return json_hex_list
     # endregion --------------------------------------------------------------------------------------------------------
-
-
-def format_int_v2(num):
-    """Ritorna '000' se num=0, altrimenti 'Nxx' o 'Pxx' in base al segno di num."""
-    if num == 0:
-        return "000"
-    prefix = "N" if num < 0 else "P"
-    return f"{prefix}{abs(num):02d}"

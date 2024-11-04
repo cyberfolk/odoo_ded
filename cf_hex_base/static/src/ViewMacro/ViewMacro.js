@@ -35,7 +35,7 @@ class ViewMacro extends Component {
         if (index) {
             return `${getAxesV1(index, 0.97)}; z-index: ${20 - index}; clip-path: ${POLYGON_QUAD_V1_LIST[index -1]};`;
         } else {
-            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -7.5px`;
+            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -10px`;
         }
     }
 
