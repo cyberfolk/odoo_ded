@@ -71,3 +71,9 @@ class HexMixin(models.AbstractModel):
         for record in self:
             if not record.name:
                 record.name = record.code
+
+    @staticmethod
+    def format_int_v2(num):
+        """Ritorna 'N<|num|>' o 'P<|num|>' in base al segno di num"""
+        prefix = "N" if num < 0 else "P"
+        return f"{prefix}{abs(num)}"
