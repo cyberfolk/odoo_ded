@@ -35,33 +35,33 @@ class ViewMacro extends Component {
         if (index) {
             return `${getAxesV1(index, 0.97)}; z-index: ${20 - index}; clip-path: ${POLYGON_QUAD_V1_LIST[index -1]};`;
         } else {
-            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -12.5px`;
+            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -7.5px`;
         }
     }
 
     resetCurrentSelect_ClickOutside(event) {
-        if (!event.target.closest('.hex')) {  // Check elemento cliccato non appartenga alla macro_form o ai suoi figli
+        if (!event.target.closest('.hex')) {  // Check se l'elemento cliccato è fuori dalla macro_form
             this.store.resetCurrentSelect();
         }
     }
     addRight(){
-        const res = this.orm.call("hex.macro", "add_right", [store.currentMapID], {})
-            // .then((result) => { return JSON.parse(result) })
+        this.orm.call("hex.macro", "add_right", [store.currentMapID], {})
+             .then((result) => { this.store.macro = JSON.parse(result) })
     }
 
     addTop(){
-        const res = this.orm.call("hex.macro", "add_top", [store.currentMapID], {})
-            // .then((result) => { return JSON.parse(result) })
+        this.orm.call("hex.macro", "add_top", [store.currentMapID], {})
+             .then((result) => { this.store.macro = JSON.parse(result) })
     }
 
     addBottom(){
-        const res = this.orm.call("hex.macro", "add_bottom", [store.currentMapID], {})
-            // .then((result) => { return JSON.parse(result) })
+        this.orm.call("hex.macro", "add_bottom", [store.currentMapID], {})
+             .then((result) => { this.store.macro = JSON.parse(result) })
     }
 
     addLeft(){
-        const res = this.orm.call("hex.macro", "add_left", [store.currentMapID], {})
-            // .then((result) => { return JSON.parse(result) })
+        this.orm.call("hex.macro", "add_left", [store.currentMapID], {})
+             .then((result) => { this.store.macro = JSON.parse(result) })
     }
 }
 

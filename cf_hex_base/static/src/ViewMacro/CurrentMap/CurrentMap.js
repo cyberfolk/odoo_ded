@@ -18,7 +18,7 @@ export class CurrentMap extends Component {
         this.orm = useService("orm");
 
         onWillStart(async () => {
-            store.mapList = await this.orm.call("hex.macro", "get_json_map_list", [], {})
+            this.store.mapList = await this.orm.call("hex.macro", "get_json_map_list", [], {})
                 .then((result) => { return JSON.parse(result) })
         })
     }
