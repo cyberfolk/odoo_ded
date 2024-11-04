@@ -3,7 +3,7 @@
         <field name="name">hex.macro.tree</field>
         <field name="model">hex.macro</field>
         <field name="arch" type="xml">
-            <tree edit="0" delete="0">
+            <tree>
                 <field name="name"/>
             </tree>
         </field>
@@ -21,16 +21,17 @@
                             <field name="name" class="oe_inline"/>
                         </h1>
                     </div>
-                    <!--                    <group>-->
-                    <!--                        <group>-->
-                    <!--                            <field name="row_min"/>-->
-                    <!--                            <field name="row_max"/>-->
-                    <!--                            <field name="row_num"/>-->
-                    <!--                            <field name="col_min"/>-->
-                    <!--                            <field name="col_max"/>-->
-                    <!--                            <field name="col_num"/>-->
-                    <!--                        </group>-->
-                    <!--                    </group>-->
+                    <group>
+                        <group>
+                            <field name="type"/>
+                            <!-- <field name="row_min"/>-->
+                            <!-- <field name="row_max"/>-->
+                            <!-- <field name="row_num"/>-->
+                            <!-- <field name="col_min"/>-->
+                            <!-- <field name="col_max"/>-->
+                            <!-- <field name="col_num"/>-->
+                        </group>
+                    </group>
                     <notebook>
                         <page string="Quadranti" name="page_quad_ids">
                             <field name="quad_ids"/>
