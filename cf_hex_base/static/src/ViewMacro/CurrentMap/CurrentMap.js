@@ -20,10 +20,14 @@ export class CurrentMap extends Component {
         onWillStart(async () => {
             this.store.mapList = await this.orm.call("hex.macro", "get_json_map_list", [], {})
                 .then((result) => { return JSON.parse(result) })
+            if (this.store.mapList[0]){
+                this.store.currentMapID = this.store.mapList[0].id
+                this.onChangeCurrentMapID()
+            }
         })
     }
-    async onChange(event) {
-        this.store.currentMapID = Number(event.target.value);
+
+    async onChangeCurrentMapID() {
         this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [this.store.currentMapID], {})
             .then((result) => { return JSON.parse(result) })
     }

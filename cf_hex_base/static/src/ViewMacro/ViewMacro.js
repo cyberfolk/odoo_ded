@@ -23,11 +23,6 @@ class ViewMacro extends Component {
         this.store = useStore({
             macro: null,
         })
-
-        onWillStart(async () => {
-            this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [1], {})
-                .then((result) => { return JSON.parse(result) })
-        })
     }
 
     getQuadStyle(quad) {
