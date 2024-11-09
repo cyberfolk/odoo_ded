@@ -8,8 +8,8 @@ import { HexHex } from '@cf_hex_base/ViewMacro/HexHex/HexHex';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { getAxesV1, getAxesV2, POLYGON_QUAD_V2, POLYGON_QUAD_V1_LIST } from '../utility/utils.js';
-import { store, useStore } from "../store";
+import { getAxesV1, getAxesV2, POLYGON_QUAD_V2, POLYGON_QUAD_V1_LIST } from '@cf_hex_base/utility/utils';
+import { store, useStore } from "@cf_hex_base/store";
 const actionRegistry = registry.category("actions");
 
 class ViewMacro extends Component {

@@ -1,8 +1,8 @@
 /** @odoo-module **/
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
-import { store, useStore } from "../../store";
-import { getAxesV1, getAxesV2 } from '../../utility/utils.js';
+import { store, useStore } from "@cf_hex_base/store";
+import { getAxesV1, getAxesV2 } from '@cf_hex_base/utility/utils';
 import { useService } from "@web/core/utils/hooks";
 
 export class HexHex extends Component {

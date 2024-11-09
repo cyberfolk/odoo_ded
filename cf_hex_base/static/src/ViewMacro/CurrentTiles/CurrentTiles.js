@@ -3,7 +3,7 @@ import { DirTiles } from '@cf_hex_base/ViewMacro/DirTiles/DirTiles';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { store, useStore } from "../../store";
+import { store, useStore } from "@cf_hex_base/store";
 
 export class CurrentTiles extends Component {
     static template = "CurrentTiles"

@@ -3,7 +3,7 @@ import { xml, Component, onWillStart, useState, onWillUpdateProps} from "@odoo/o
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
-import { getAxesV1 } from '../utility/utils.js';
+import { getAxesV1 } from '@cf_hex_base/utility/utils';
 const fieldRegistry = registry.category("fields");
 
 export class QuadField extends Component {
