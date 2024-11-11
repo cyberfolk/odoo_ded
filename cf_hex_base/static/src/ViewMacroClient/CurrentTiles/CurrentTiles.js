@@ -1,5 +1,5 @@
 /** @odoo-module **/
-import { DirTiles } from '@cf_hex_base/ViewMacro/DirTiles/DirTiles';
+import { DirTiles } from '@cf_hex_base/ViewMacroClient/DirTiles/DirTiles';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";

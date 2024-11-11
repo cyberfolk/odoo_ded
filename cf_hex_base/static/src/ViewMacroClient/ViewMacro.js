@@ -1,10 +1,10 @@
 /** @odoo-module **/
-import { ClearCurrent } from '@cf_hex_base/ViewMacro/ClearCurrent/ClearCurrent';
-import { CurrentColor } from '@cf_hex_base/ViewMacro/CurrentColor/CurrentColor';
-import { CurrentTiles } from '@cf_hex_base/ViewMacro/CurrentTiles/CurrentTiles';
-import { CurrentZoom } from '@cf_hex_base/ViewMacro/CurrentZoom/CurrentZoom';
-import { CurrentMap } from '@cf_hex_base/ViewMacro/CurrentMap/CurrentMap';
-import { HexHex } from '@cf_hex_base/ViewMacro/HexHex/HexHex';
+import { ClearCurrent } from '@cf_hex_base/ViewMacroClient/ClearCurrent/ClearCurrent';
+import { CurrentColor } from '@cf_hex_base/ViewMacroClient/CurrentColor/CurrentColor';
+import { CurrentTiles } from '@cf_hex_base/ViewMacroClient/CurrentTiles/CurrentTiles';
+import { CurrentZoom } from '@cf_hex_base/ViewMacroClient/CurrentZoom/CurrentZoom';
+import { CurrentMap } from '@cf_hex_base/ViewMacroClient/CurrentMap/CurrentMap';
+import { HexHex } from '@cf_hex_base/ViewMacroClient/HexHex/HexHex';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
