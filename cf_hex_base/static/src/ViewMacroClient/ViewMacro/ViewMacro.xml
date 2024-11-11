@@ -1,62 +1,38 @@
 <t t-name="ViewMacro">
-    <div class="view-macro__sideboard position-fixed w-25 p-3" style="z-index: 100;">
-        <CurrentMap/>
-        <CurrentZoom/>
-        <CurrentColor/>
-        <CurrentTiles/>
-        <ClearCurrent/>
-        <t t-if="store.macro">
-            <t t-if="store.macro.type == 'v2_nolimit_q'">
-                <div class="view-macro-controller d-flex justify-content-around mt-2">
-                    <button class="btn btn-primary" t-on-click="addBottom">Add Bot</button>
-                    <button class="btn btn-primary" t-on-click="addTop">Add Top</button>
-                </div>
-                <div class="view-macro-controller d-flex justify-content-around mt-2">
-                    <button class="btn btn-primary" t-on-click="addRight">Add DX</button>
-                    <button class="btn btn-primary" t-on-click="addLeft">Add SX</button>
-                </div>
-                <br/>
-            </t>
-        </t>
-    </div>
-
-    <div class="p-3" t-attf-style="zoom: {{store.zoom}}"
-         t-on-click="resetCurrentSelect_ClickOutside">
-        <t t-if="store.macro">
-            <!-- VIEW V1-->
-            <t t-if="store.macro.type == 'v1_19_q'">
-                <div class="macro_form mf_v1 m-auto">
-                    <t t-foreach="store.macro.quad_ids" t-as="quad" t-key="quad.id">
-                        <div class="quad_v1 bg-dark " t-att-style="getQuadStyle(quad)">
-                            <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
-                                <HexHex id="hex.id" index="hex.index" color="hex.color" hex_asset_id="hex.hex_asset_id"/>
-                            </t>
-                        </div>
-                    </t>
-                </div>
-            </t>
-            <!-- VIEW V2-->
-            <t t-else="">
-                <div class="macro_form m-auto">
-                    <t t-foreach="store.macro.quad_rows" t-as="quad_row" t-key="quad_row[0].id">
-                        <div class="d-flex bg-dark" style="margin-top: -22.5px;">
-                            <t t-foreach="quad_row" t-as="quad" t-key="quad.col">
-                                <div class="quad_v2 bg-dark" t-att-style="getQuadStyle(quad)">
-                                    <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
-                                        <HexHex id="hex.id" index="hex.index" color="hex.color" row="hex.row" col="hex.col" hex_asset_id="hex.hex_asset_id"/>
-                                    </t>
-                                </div>
-                            </t>
-                        </div>
-                    </t>
-                </div>
-            </t>
-        </t>
-        <t t-else="">
-            <div class="macro_form m-auto mt-5 text-center">
-                <h1>Nessuna Mappa</h1>
-                <h2>Creane una dal menù</h2>
+    <t t-if="store.macro">
+        <!-- VIEW V1-->
+        <t t-if="store.macro.type == 'v1_19_q'">
+            <div class="macro_form mf_v1 m-auto">
+                <t t-foreach="store.macro.quad_ids" t-as="quad" t-key="quad.id">
+                    <div class="quad_v1 bg-dark " t-att-style="getQuadStyleV1(quad)">
+                        <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
+                            <HexHex id="hex.id" index="hex.index" color="hex.color" hex_asset_id="hex.hex_asset_id"/>
+                        </t>
+                    </div>
+                </t>
             </div>
         </t>
-    </div>
+        <!-- VIEW V2-->
+        <t t-else="">
+            <div class="macro_form m-auto">
+                <t t-foreach="store.macro.quad_rows" t-as="quad_row" t-key="quad_row[0].id">
+                    <div class="d-flex">
+                        <t t-foreach="quad_row" t-as="quad" t-key="quad.col">
+                            <div class="quad_v2 bg-dark">
+                                <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
+                                    <HexHex id="hex.id" index="hex.index" color="hex.color" row="hex.row" col="hex.col" hex_asset_id="hex.hex_asset_id"/>
+                                </t>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </t>
+    <t t-else="">
+        <div class="macro_form m-auto mt-5 text-center">
+            <h1>Nessuna Mappa</h1>
+            <h2>Creane una dal menù</h2>
+        </div>
+    </t>
 </t>

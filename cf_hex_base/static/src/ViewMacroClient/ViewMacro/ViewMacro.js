@@ -1,21 +1,16 @@
 /** @odoo-module **/
-import { ClearCurrent } from '@cf_hex_base/ViewMacroClient/ClearCurrent/ClearCurrent';
-import { CurrentColor } from '@cf_hex_base/ViewMacroClient/CurrentColor/CurrentColor';
-import { CurrentTiles } from '@cf_hex_base/ViewMacroClient/CurrentTiles/CurrentTiles';
-import { CurrentZoom } from '@cf_hex_base/ViewMacroClient/CurrentZoom/CurrentZoom';
-import { CurrentMap } from '@cf_hex_base/ViewMacroClient/CurrentMap/CurrentMap';
+import { Component } from "@odoo/owl";
 import { HexHex } from '@cf_hex_base/ViewMacroClient/HexHex/HexHex';
 import { registry } from "@web/core/registry";
-import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { getAxesV1, getAxesV2, POLYGON_QUAD_V2, POLYGON_QUAD_V1_LIST } from '@cf_hex_base/utility/utils';
+import { getAxesV1, getAxesV2, POLYGON_QUAD_V1_LIST } from '@cf_hex_base/utility/utils';
 import { store, useStore } from "@cf_hex_base/store";
 const actionRegistry = registry.category("actions");
 
-class ViewMacro extends Component {
+export class ViewMacro extends Component {
     static template = "ViewMacro"
     static props = ["*"]
-    static components = { CurrentColor, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, HexHex };
+    static components = { HexHex };
 
     setup() {
         super.setup();
@@ -25,20 +20,13 @@ class ViewMacro extends Component {
         })
     }
 
-    getQuadStyle(quad) {
+    getQuadStyleV1(quad) {
         const index = quad.index
-        if (index) {
-            return `${getAxesV1(index, 0.97)}; z-index: ${20 - index}; clip-path: ${POLYGON_QUAD_V1_LIST[index -1]};`;
-        } else {
-            return `clip-path: ${POLYGON_QUAD_V2}; margin-left: -10px`;
-        }
+        const { asse_x, asse_y } = getAxesV1(index, 0.97);
+        const quadPath = POLYGON_QUAD_V1_LIST[index -1];
+        return `top: ${asse_y}; left: ${asse_x}; z-index: ${20 - index}; clip-path: ${quadPath};`;
     }
 
-    resetCurrentSelect_ClickOutside(event) {
-        if (!event.target.closest('.hex')) {  // Check se l'elemento cliccato è fuori dalla macro_form
-            this.store.resetCurrentSelect();
-        }
-    }
     addRight(){
         this.orm.call("hex.macro", "add_right", [store.currentMapID], {})
              .then((result) => { this.store.macro = JSON.parse(result) })
@@ -59,5 +47,3 @@ class ViewMacro extends Component {
              .then((result) => { this.store.macro = JSON.parse(result) })
     }
 }
-
-actionRegistry.add('ViewMacro', ViewMacro);

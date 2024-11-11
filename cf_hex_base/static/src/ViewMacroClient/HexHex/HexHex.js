@@ -1,8 +1,7 @@
 /** @odoo-module **/
-import { registry } from "@web/core/registry";
-import { Component, onWillStart, useState } from "@odoo/owl";
-import { store, useStore } from "@cf_hex_base/store";
+import { Component, useState } from "@odoo/owl";
 import { getAxesV1, getAxesV2 } from '@cf_hex_base/utility/utils';
+import { useStore } from "@cf_hex_base/store";
 import { useService } from "@web/core/utils/hooks";
 
 export class HexHex extends Component {
@@ -25,11 +24,9 @@ export class HexHex extends Component {
     }
 
     getHexStyle() {
-        if (this.state.index) {
-            return `${getAxesV1(this.state.index, 0.95)}; background-color: ${this.state.color};`
-        } else {
-            return `${getAxesV2(this.state.row, this.state.col)}; background-color: ${this.state.color};`
-        }
+        const { row, col, index, color } = this.state;
+        const { asse_x, asse_y } = index ? getAxesV1(index, 0.95) : getAxesV2(row, col);
+        return `top: ${asse_y}; left: ${asse_x}; background-color: ${color};`;
     }
 
     /**
@@ -74,5 +71,4 @@ export class HexHex extends Component {
             target: 'current'
         });
     }
-
 }
