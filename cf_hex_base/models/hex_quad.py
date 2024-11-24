@@ -124,6 +124,12 @@ class Quadrant(models.Model):
                 quad.hex_ids = [Command.create(hex_vals)]
         return quad
 
+    def unlink(self):
+        for rec in self:
+            for hex in rec.hex_ids:
+                hex.unlink()
+        return super(Quadrant, self).unlink()
+
     def set_hexs_borders(self):
         """Impostare i bordi degli Esagoni. Setta a void i bordi degli esagoni esterni."""
         hex_void = self.env.ref('cf_hex_base.hex_hex_void')
