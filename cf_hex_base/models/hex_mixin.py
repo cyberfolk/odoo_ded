@@ -29,10 +29,6 @@ class HexMixin(models.AbstractModel):
         help="Il valore di 'index' deve essere compreso tra 1 e 19.",
     )
 
-    color = fields.Char(
-        string='Color',
-    )
-
     @api.depends('code')
     def _compute_display_name(self):
         for rec in self:
@@ -75,3 +71,9 @@ class HexMixin(models.AbstractModel):
         for record in self:
             if not record.name:
                 record.name = record.code
+
+    @staticmethod
+    def format_int_v2(num):
+        """Ritorna 'N<|num|>' o 'P<|num|>' in base al segno di num"""
+        prefix = "N" if num < 0 else "P"
+        return f"{prefix}{abs(num)}"

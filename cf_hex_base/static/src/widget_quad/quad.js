@@ -3,7 +3,7 @@ import { xml, Component, onWillStart, useState, onWillUpdateProps} from "@odoo/o
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
-import { getAxes } from '../utility/utils.js';
+import { getAxesV1 } from '@cf_hex_base/utility/utils';
 const fieldRegistry = registry.category("fields");
 
 export class QuadField extends Component {
@@ -40,17 +40,17 @@ export class QuadField extends Component {
     }
 
     getHexStyle(hex) {
-        return `${getAxes(hex.index)}; background-color: ${hex.color}; filter: brightness(${100 - (1 + hex.circle_order) * hex.circle_number}%);`
+        return `${getAxesV1(hex.index)}; background-color: ${hex.color}; filter: brightness(${100 - (1 + hex.circle_order) * hex.circle_number}%);`
     }
 
     getHexMissingStyle(hex) {
         let index = hex.index + 6 ;
         index = index > 19 ? (hex.index - 6) : index;
-        return `${getAxes(index)}; background-color: #eeeeee;`
+        return `${getAxesV1(index)}; background-color: #eeeeee;`
     }
 
     getMissingHexStyle(index) {
-        return `${getAxes(index)}; background-color: #eeeeee;`
+        return `${getAxesV1(index)}; background-color: #eeeeee;`
     }
 }
 

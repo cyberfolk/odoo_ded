@@ -78,19 +78,51 @@ EXTERNAL_BORDERS_MAP = {
 }
 
 HEX_MISSING_INDEX = {
-    8:  ("border_N",  14, {"border_SE":  9, "border_S": 2,  "border_SW":  19}),
-    10: ("border_NE", 16, {"border_S":  11, "border_SW": 3,  "border_NW":  9}),
-    12: ("border_SE", 18, {"border_N":  11, "border_SW": 13, "border_NW":  4}),
-    14: ("border_S",   8, {"border_N":   5, "border_NE": 13, "border_NW": 15}),
-    16: ("border_SW", 10, {"border_N":  17, "border_NE": 6,  "border_SE": 15}),
-    18: ("border_NW", 12, {"border_NE": 19, "border_SE": 7,  "border_S":  17}),
+    8: ("border_N", 14, {"border_SE": 9, "border_S": 2, "border_SW": 19}),
+    10: ("border_NE", 16, {"border_S": 11, "border_SW": 3, "border_NW": 9}),
+    12: ("border_SE", 18, {"border_N": 11, "border_SW": 13, "border_NW": 4}),
+    14: ("border_S", 8, {"border_N": 5, "border_NE": 13, "border_NW": 15}),
+    16: ("border_SW", 10, {"border_N": 17, "border_NE": 6, "border_SE": 15}),
+    18: ("border_NW", 12, {"border_NE": 19, "border_SE": 7, "border_S": 17}),
 }
 
 SPECULAR_BORDERS_MAP = {
-    "border_N":  "border_S",
+    "border_N": "border_S",
     "border_NE": "border_SW",
     "border_SE": "border_NW",
-    "border_S":  "border_N",
+    "border_S": "border_N",
     "border_SW": "border_NE",
     "border_NW": "border_SE",
 }
+
+QUAD_LIST_V1 = [
+    {"index": 1, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 2, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19]},
+    {"index": 3, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19]},
+    {"index": 4, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19]},
+    {"index": 5, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 6, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 7, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 16, 17, 18, 19]},
+    {"index": 8, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19]},
+    {"index": 9, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 17, 19]},
+    {"index": 10, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19]},
+    {"index": 11, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 17, 19]},
+    {"index": 12, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19]},
+    {"index": 13, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 19]},
+    {"index": 14, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 15, "hex_list": [1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 16, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 14, 15, 16, 17, 18, 19]},
+    {"index": 17, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 16, 17, 18, 19]},
+    {"index": 18, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 16, 17, 18, 19]},
+    {"index": 19, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 17, 18, 19]}
+]
+
+MACRO_MAP_TYPE_SELECTION = [
+    ('v1_19_q', 'V1 19Q'),
+    ('v2_nolimit_q', 'V2 NOLIMIT Q'),
+]
+
+COLOR_HEX_LIST = [
+    "#ff0000", "#ff5000", "#ffa000", "#fff000", "#bfff00", "#6fff00", "#1fff00", "#00ff30", "#00ff80",
+    "#00ffd0", "#00dfff", "#008fff", "#003fff", "#1000ff", "#6000ff", "#b000ff", "#ff00ff", "#ff00af", "#ff005f",
+]

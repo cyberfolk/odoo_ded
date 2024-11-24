@@ -2,7 +2,7 @@
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { store, useStore } from "../../store";
+import { store, useStore } from "@cf_hex_base/store";
 
 export class CurrentColor extends Component {
     static template = "CurrentColor"

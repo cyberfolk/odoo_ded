@@ -3,7 +3,8 @@
 ********************************/
 $SQRT3: 1.732;
 $K_RATEO: $SQRT3 / 2; // Rapporto tra Height e Width in un esagono 
-$PADDING: 0.1; // Padding come percentuale
+$PADDING-V1: 0.1; // Padding come percentuale per V1
+$PADDING-V2: 0.1; // Padding come percentuale per V2
 
 /********************************
 *  POLYGON - HEX ORIZONTALE     *
@@ -37,8 +38,8 @@ $HF-HH: $HF-HW * $K_RATEO; // Hex Height
 $QF-HW_ARBITRARIA: 100px; // Hex Width Arbitraria
 $QF-HW_INIZIALE: $QF-HW_ARBITRARIA; // Hex Width Iniziale - Senza padding
 $QF-HH_INIZIALE: $QF-HW_INIZIALE * $K_RATEO; // Hex Height Iniziale - Senza padding
-$QF-HW: $QF-HW_INIZIALE * (1 - $PADDING); // Hex Width con padding
-$QF-HH: $QF-HH_INIZIALE * (1 - $PADDING); // Hex Height con padding
+$QF-HW: $QF-HW_INIZIALE * (1 - $PADDING-V1); // Hex Width con padding
+$QF-HH: $QF-HH_INIZIALE * (1 - $PADDING-V1); // Hex Height con padding
 $QF-QW: $QF-HW_INIZIALE * 4; // Quad Width
 $QF-QH: $QF-HH_INIZIALE * 5; // Quad Height
 
@@ -48,41 +49,17 @@ $QF-QH: $QF-HH_INIZIALE * 5; // Quad Height
 $MF-HW_ARBITRARIA: 60px; // Hex Width Arbitraria
 $MF-HW_INIZIALE: $MF-HW_ARBITRARIA; // Hex Width Iniziale - Senza padding
 $MF-HH_INIZIALE: $MF-HW_INIZIALE * $K_RATEO; // Hex Height Iniziale - Senza padding
-$MF-HW: $MF-HW_INIZIALE * (1 - $PADDING); // Hex Width con padding
-$MF-HH: $MF-HH_INIZIALE * (1 - $PADDING); // Hex Height con padding
-$MF-QW: $MF-HW_INIZIALE * 4; // Quad Width
-$MF-QH: $MF-HH_INIZIALE * 5; // Quad Height
+$MF-HW-V1: $MF-HW_INIZIALE * (1 - $PADDING-V1); // Hex Width  con padding V1
+$MF-HH-V1: $MF-HH_INIZIALE * (1 - $PADDING-V1); // Hex Height con padding V1
+$MF-HW-V2: $MF-HW_INIZIALE * (1 - $PADDING-V2); // Hex Width  con padding V2
+$MF-HH-V2: $MF-HH_INIZIALE * (1 - $PADDING-V2); // Hex Height con padding V2
+$MF-QW-V2: $MF-HW_INIZIALE * 3.25; // Quad Width  V2
+$MF-QH-V2: $MF-HH_INIZIALE * 4.50; // Quad Height V2
+$MF-QW-V1: $MF-HW_INIZIALE * 4; // Quad Width  V1
+$MF-QH-V1: $MF-HH_INIZIALE * 5; // Quad Height V1
 $MF-MW: $MF-HW_INIZIALE * 16; // Macro Width
 $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
 
-/********************************
-*  MACRO FORM - CLASSI          *
-********************************/
-.macro_form {
-    height: $MF-MH;
-    width: $MF-MW;
-    position: relative;
-
-    .quad {
-        width: $MF-QW;
-        height: $MF-QH;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
-
-    .hex:hover {
-        filter: brightness(40%) !important;
-    }
-
-    .hex {
-        width: $MF-HW;
-        height: $MF-HH;
-    }
-
-    .label_code {
-        font-size: 0.6rem;
-    }
-}
 
 /********************************
 *  QUAD FORM - CLASSI          *
@@ -111,13 +88,6 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
     }
 }
 
-.hex_form {
-    .hex_dim {
-        width: $HF-HW;
-        height: $HF-HH;
-    }
-}
-
 /********************************
 *  CLASSI - UTILITY             *
 ********************************/
@@ -137,6 +107,7 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
     @extend .p-2;
     @extend .rounded;
     width: fit-content;
+    min-width: 50%;
 
     .view-macro-controller__title{
         @extend .m-1;
@@ -165,6 +136,12 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Macro Height
     font-size: 80px;
     color: white;
     filter: drop-shadow(2px 4px 6px black);
+}
+
+.hv-center {
+    display: flex;
+    justify-content: center; /* Per centrare orizzontalmente */
+    align-items: center;     /* Per centrare verticalmente */
 }
 
 /********************************

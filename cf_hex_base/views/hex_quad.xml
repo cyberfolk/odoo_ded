@@ -3,13 +3,12 @@
         <field name="name">hex.quad.tree</field>
         <field name="model">hex.quad</field>
         <field name="arch" type="xml">
-            <tree edit="0" delete="0" create="0">
+            <tree>
                 <field name="name"/>
                 <field name="code"/>
                 <field name="index" readonly="1"/>
                 <field name="circle_order"/>
                 <field name="circle_number"/>
-                <field name="color" readonly="1"/>
                 <field name="macro_id"/>
                 <field name="border_N"/>
                 <field name="border_NE"/>
@@ -27,6 +26,9 @@
         <field name="arch" type="xml">
             <form js_class="quad_form">
                 <sheet>
+                    <header>
+                        <field name="id" widget="view_form_o2m" model="hex.quad" model_parent="hex.macro"/>
+                    </header>
                     <group>
                         <group col="1">
                             <group>
@@ -36,7 +38,7 @@
                                 <field name="hook_widget" widget="quad" nolabel="1"/>
                             </group>
                             <group string="Missing Hexes" name="quad_missing_ids">
-                                <field readonly="1" colspan="2" nolabel="1" name="missing_ids" widget='many2many_tags' />
+                                <field readonly="1" colspan="2" nolabel="1" name="missing_ids" widget='many2many_tags'/>
                             </group>
                         </group>
                         <group col="1">

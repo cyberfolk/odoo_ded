@@ -1,0 +1,13 @@
+<t t-name="ViewMacroClient">
+    <div class="view-macro__sideboard position-fixed w-25 p-3" style="z-index: 100;">
+        <CurrentMap/>
+        <CurrentZoom/>
+        <CurrentColor/>
+        <CurrentTiles/>
+        <ClearCurrent/>
+        <AddQuadrant/>
+    </div>
+    <div class="p-3" t-attf-style="zoom: {{store.zoom}}" t-on-click="resetCurrentSelect_ClickOutside">
+        <ViewMacro/>
+    </div>
+</t>

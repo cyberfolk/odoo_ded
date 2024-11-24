@@ -1,8 +1,7 @@
 /** @odoo-module **/
-import { registry } from "@web/core/registry";
-import { Component, onWillStart, useState } from "@odoo/owl";
-import { store, useStore } from "../../store";
-import { getAxes } from '../../utility/utils.js';
+import { Component, useState } from "@odoo/owl";
+import { getAxesV1, getAxesV2 } from '@cf_hex_base/utility/utils';
+import { useStore } from "@cf_hex_base/store";
 import { useService } from "@web/core/utils/hooks";
 
 export class HexHex extends Component {
@@ -12,9 +11,12 @@ export class HexHex extends Component {
     setup() {
         super.setup();
         this.orm = useService("orm")
+        this.action = useService("action");
         this.store = useStore()
         this.state = useState({
             id: this.props.id,
+            row: this.props.row,
+            col: this.props.col,
             index: this.props.index,
             color: this.props.color,
             hex_asset_id: this.props.hex_asset_id
@@ -22,7 +24,9 @@ export class HexHex extends Component {
     }
 
     getHexStyle() {
-        return `${getAxes(this.state.index, 0.95)}; background-color: ${this.state.color}; filter: brightness(${120 - 3 * this.state.index}%);`
+        const { row, col, index, color } = this.state;
+        const { asse_x, asse_y } = index ? getAxesV1(index, 0.95) : getAxesV2(row, col);
+        return `top: ${asse_y}; left: ${asse_x}; background-color: ${color};`;
     }
 
     /**
@@ -67,5 +71,4 @@ export class HexHex extends Component {
             target: 'current'
         });
     }
-
 }

@@ -1,23 +1,18 @@
 import json
-from odoo import api, fields, models, Command
 
-
-class HexAssetTile(models.Model):
-    _name = "hex.asset.tile"
-    _description = "Hexagonal Asset Tiles"
-
-    rotation = fields.Integer(string="Rotazione")
-    asset_id = fields.Many2one(
-        comodel_name='asset.tile',
-        string="Asset",
-        help="Assets contained in this hex"
-    )
+from odoo import api, fields, models
+from ..utility.constant import MACRO_MAP_TYPE_SELECTION
 
 
 class Hex(models.Model):
     _name = "hex.hex"
     _inherit = ['hex.mixin']
     _description = "Hexagonal cell"
+
+    name = fields.Char(
+        string="Name",
+        default=lambda self: self.code
+    )
 
     hex_asset_id = fields.Many2one(
         comodel_name='hex.asset.tile',
@@ -66,22 +61,46 @@ class Hex(models.Model):
         help="Confine Nord-Ovest"
     )
 
+    color = fields.Char(
+        string='Color',
+    )
+
+    type = fields.Selection(
+        selection=MACRO_MAP_TYPE_SELECTION,
+        string="Tipo",
+        default="v1_19_q",
+    )
+
+    row = fields.Integer(
+        string="Riga",
+    )
+
+    col = fields.Integer(
+        string="Colonna",
+    )
+
     @api.depends('index')
     def _compute_code(self):
-        for record in self:
-            if record.index:
-                code = f"{record.quad_id.code}"
-                code += f".{str(record.circle_order).zfill(2)}"
-                code += f".{str(record.circle_number).zfill(2)}"
+        for rec in self:
+            if rec.type == "v1_19_q" and rec.index:
+                code = f"{rec.quad_id.code}"
+                code += f".{str(rec.circle_order).zfill(2)}"
+                code += f".{str(rec.circle_number).zfill(2)}"
+            elif rec.type == "v2_nolimit_q":
+                quad_row = self.quad_id.row * 4
+                quad_col = self.quad_id.col * 4
+                _row = self.format_int_v2(quad_row + rec.row)
+                _col = self.format_int_v2(quad_col + rec.col)
+                code = f"{_row}{_col}"
             else:
                 code = 'void'
-            record.code = code
+            rec.code = code
 
+    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
     @api.model
     def change_hex_color(self, hex_id, current_color):
         """Metodo richiamato dal orm di view_macro.js
            Cambia il colore di un hex_id con current_color"""
-
         _hex = self.env['hex.hex'].browse(hex_id)
         _hex.color = current_color
 
@@ -89,7 +108,6 @@ class Hex(models.Model):
     def set_asset_tiles(self, hex_id, current_tile):
         """Metodo richiamato dal orm di view_macro.js
            Setta i parametri di hex_asset su hex_id"""
-
         _hex = self.env['hex.hex'].browse(hex_id)
         hex_asset_vals = {
             'asset_id': current_tile['tile_id'],
@@ -114,7 +132,6 @@ class Hex(models.Model):
                 'tile_id': self.hex_asset_id.asset_id.id,
             },
         }
-
         json_hex = json.dumps(dict_hex)
         return json_hex
-
+    # endregion --------------------------------------------------------------------------------------------------------

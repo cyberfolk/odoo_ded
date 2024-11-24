@@ -1,8 +1,10 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, Command
 from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
+from ..utility.constant import MACRO_MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
+from ..utility.constant import COLOR_HEX_LIST
 from ..utility.odoo_to_json import obj_odoo_to_json
 
 
@@ -10,14 +12,16 @@ class Quadrant(models.Model):
     _name = "hex.quad"
     _inherit = ['hex.mixin']
     _description = "Quadrant, contains Hexagons."
+    _order = 'row,col'
 
     macro_id = fields.Many2one(
         comodel_name='hex.macro',
         string="Macro Area",
     )
 
-    hex_list = fields.Char(
+    hex_list = fields.Json(
         string="Hex list",
+        help="Campo d'appoggio per la creazione di hex_ids."
     )
 
     hex_ids = fields.One2many(
@@ -30,10 +34,6 @@ class Quadrant(models.Model):
         comodel_name='hex.hex',
         relation='quad_hex_missing_rel',
         string="Missing IDs"
-    )
-
-    polygon = fields.Char(
-        string='Polygon'
     )
 
     hook_widget = fields.Char(
@@ -77,44 +77,58 @@ class Quadrant(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    @api.depends('index')
+    type = fields.Selection(
+        selection=MACRO_MAP_TYPE_SELECTION,
+        string="Tipo",
+        default="v1_19_q",
+    )
+
+    row = fields.Integer(
+        string="Riga",
+    )
+
+    col = fields.Integer(
+        string="Colonna",
+    )
+
+    @api.depends('index', 'row', 'col', 'type')
     def _compute_code(self):
         for rec in self:
-            if rec.index:
+            if rec.type == "v1_19_q" and rec.index:
                 rec.code = (chr(ord('A') + rec.index - 1))
+            elif rec.type == "v2_nolimit_q":
+                _row = self.format_int_v2(rec.row)
+                _col = self.format_int_v2(rec.col)
+                rec.code = f"{_row}{_col}"
             else:
                 rec.code = 'void'
-
-    @api.model
-    def get_json_quad(self, quad_id):
-        """Metodo richiamato dal orm di quad.js
-            :param quad_id: Id quadrante.
-            :return: Json del quadrante."""
-        self_quad = self.env['hex.quad'].browse(quad_id)[0]
-        json_quad = obj_odoo_to_json(self_quad)
-        return json_quad
 
     @api.model_create_multi
     def create(self, vals):
         quad = super(Quadrant, self).create(vals)
         quad.name = f"Quadrante {quad.code}"
-        if quad.code == 'void':
-            return quad
-        else:
-            hex_list = eval(vals[0].get('hex_list'))
-            for index in hex_list:
+        if quad.type == "v1_19_q":
+            if quad.code == 'void' or not quad.hex_list:
+                return quad
+            for index in quad.hex_list:
+                hex_vals = {'color': COLOR_HEX_LIST[quad.index - 1], 'index': index}
+                quad.hex_ids = [Command.create(hex_vals)]
+        elif quad.type == "v2_nolimit_q":
+            for i in range(16):
                 hex_vals = {
-                    'quad_id': quad.id,
-                    'index': index,
-                    'color': quad.color,
+                    'color': COLOR_HEX_LIST[(quad.row * 4 + quad.col) % 19],
+                    'type': "v2_nolimit_q",
+                    'row': i // 4,
+                    'col': i % 4
                 }
-                hex_id = self.env['hex.hex'].create(hex_vals)
-                hex_id.name = hex_id.code
-                quad.hex_ids = [(4, hex_id.id)]
-            hex_macro = self.env.ref('cf_hex_base.hex_macro_1')
-            hex_macro.quad_ids = [(4, quad.id)]
-            quad.macro_id = hex_macro
+                quad.hex_ids = [Command.create(hex_vals)]
         return quad
+
+    def unlink(self):
+        for rec in self:
+            for hex in rec.hex_ids:
+                hex.unlink()
+        return super(Quadrant, self).unlink()
 
     def set_hexs_borders(self):
         """Impostare i bordi degli Esagoni. Setta a void i bordi degli esagoni esterni."""
@@ -141,6 +155,31 @@ class Quadrant(models.Model):
                 if hex[border_key].code == 'void' and hex_border:
                     hex[border_key] = hex_border
 
+    def set_missing_ids(self):
+        """Popola il campo che contiene gli esagoni mancanti."""
+        all_index = list(range(1, 20))
+        missing_index_list = list(set(all_index) - set(self.hex_ids.mapped('index')))
+        for missing_index in missing_index_list:
+            border_quad, target_index, borders = HEX_MISSING_INDEX[missing_index]
+            missing_hex = self[border_quad].hex_ids.filtered(lambda x: x.index == target_index)
+            self.missing_ids = [(4, missing_hex.id)]
+
+            for border_key, border_idex in borders.items():
+                target_hex = self.hex_ids.filtered(lambda x: x.index == border_idex)
+                missing_hex[border_key] = target_hex
+                specular_borders_key = SPECULAR_BORDERS_MAP[border_key]
+                target_hex[specular_borders_key] = missing_hex
+
+    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
+    @api.model
+    def get_json_quad(self, quad_id):
+        """Metodo richiamato dal orm di quad.js
+            :param quad_id: Id quadrante.
+            :return: Json del quadrante."""
+        self_quad = self.env['hex.quad'].browse(quad_id)[0]
+        json_quad = obj_odoo_to_json(self_quad)
+        return json_quad
+
     @api.model
     def get_json_external_hexs(self, quad_id):
         """Metodo richiamato dal orm di quad.js
@@ -164,19 +203,4 @@ class Quadrant(models.Model):
         ]
         json_hex_list = obj_odoo_to_json(hex_list)
         return json_hex_list
-
-    def set_missing_ids(self):
-        """Popola il campo che contiene gli esagoni mancanti."""
-        all_index = list(range(1, 20))
-        missing_index_list = list(set(all_index) - set(self.hex_ids.mapped('index')))
-        for missing_index in missing_index_list:
-            border_quad, target_index, borders = HEX_MISSING_INDEX[missing_index]
-            missing_hex = self[border_quad].hex_ids.filtered(lambda x: x.index == target_index)
-            self.missing_ids = [(4, missing_hex.id)]
-
-            for border_key, border_idex in borders.items():
-                target_hex = self.hex_ids.filtered(lambda x: x.index == border_idex)
-                missing_hex[border_key] = target_hex
-                specular_borders_key = SPECULAR_BORDERS_MAP[border_key]
-                target_hex[specular_borders_key] = missing_hex
-
+    # endregion --------------------------------------------------------------------------------------------------------
