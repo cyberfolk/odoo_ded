@@ -87,10 +87,10 @@ class Hex(models.Model):
                 code += f".{str(rec.circle_order).zfill(2)}"
                 code += f".{str(rec.circle_number).zfill(2)}"
             elif rec.type == "v2_nolimit_q":
-                quad_row = self.quad_id.row * 4
-                quad_col = self.quad_id.col * 4
-                _row = self.format_int_v2(quad_row + rec.row)
-                _col = self.format_int_v2(quad_col + rec.col)
+                quad_row = rec.quad_id.row * 4
+                quad_col = rec.quad_id.col * 4
+                _row = rec.format_int_v2(quad_row + rec.row)
+                _col = rec.format_int_v2(quad_col + rec.col)
                 code = f"{_row}{_col}"
             else:
                 code = 'void'
