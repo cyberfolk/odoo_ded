@@ -21,9 +21,9 @@
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="biome_id"/>
+                            <field name="biome_id" required="1"/>
                             <field name="hex_id"/>
-                            <field name="sml"/>
+                            <field name="sml" required="1"/>
                         </group>
                     </group>
                 </sheet>

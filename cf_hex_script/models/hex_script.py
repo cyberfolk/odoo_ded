@@ -1,5 +1,4 @@
-import json
-from odoo import api, fields, models, Command, api
+from odoo import fields, models, api
 
 
 class HexScript(models.Model):
@@ -20,7 +19,8 @@ class HexScript(models.Model):
 
     sml = fields.Integer(
         string="SML",
-        help="Difficoltà Hex-Script. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'"
+        help="Difficoltà Hex-Script. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
+        default=1
     )
 
     hex_id = fields.Many2one(
@@ -41,7 +41,7 @@ class HexScript(models.Model):
             self.hex_id = self.hex_ids[0]
 
     def hex_inverse(self):
-        if len(self.hex_ids) > 0: # delete previous reference
+        if len(self.hex_ids) > 0:  # delete previous reference
             hex = self.env['hex.hex'].browse(self.hex_ids[0].id)
             hex.hex_id = False
         self.hex_id.hex_script_id = self  # set new reference
