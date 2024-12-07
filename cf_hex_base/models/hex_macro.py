@@ -76,6 +76,13 @@ class MacroArea(models.Model):
                 quad.set_missing_ids()
         return macro
 
+    def unlink(self):
+        for rec in self:
+            for quad in rec.quad_ids:
+                quad.unlink()
+        return super(MacroArea, self).unlink()
+
+
     def compute_quad_stats(self):
         for rec in self:
             if not self.quad_ids:
