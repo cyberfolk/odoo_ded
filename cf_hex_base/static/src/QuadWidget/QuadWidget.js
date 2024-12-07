@@ -8,7 +8,7 @@ const fieldRegistry = registry.category("fields");
 
 export class QuadField extends Component {
     static components = { };
-    static template = "quad_template";
+    static template = "QuadWidget";
 
     setup() {
         super.setup();
@@ -40,17 +40,20 @@ export class QuadField extends Component {
     }
 
     getHexStyle(hex) {
-        return `${getAxesV1(hex.index)}; background-color: ${hex.color}; filter: brightness(${100 - (1 + hex.circle_order) * hex.circle_number}%);`
+        const { asse_x, asse_y } = getAxesV1(hex.index, 0.95);
+        return `top: ${asse_y}; left: ${asse_x}; background-color: ${hex.color};`
     }
 
     getHexMissingStyle(hex) {
         let index = hex.index + 6 ;
         index = index > 19 ? (hex.index - 6) : index;
-        return `${getAxesV1(index)}; background-color: #eeeeee;`
+        const { asse_x, asse_y } = getAxesV1(index, 0.95);
+        return `top: ${asse_y}; left: ${asse_x}; background-color: #eeeeee;`
     }
 
     getMissingHexStyle(index) {
-        return `${getAxesV1(index)}; background-color: #eeeeee;`
+        const { asse_x, asse_y } = getAxesV1(index, 0.95);
+        return `top: ${asse_y}; left: ${asse_x}; background-color: #eeeeee;`
     }
 }
 
@@ -58,4 +61,4 @@ export const quadField = {
     component: QuadField,
 };
 
-fieldRegistry.add("quad", quadField);
+fieldRegistry.add("QuadWidget", quadField);
