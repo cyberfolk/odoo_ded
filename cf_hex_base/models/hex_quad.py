@@ -1,3 +1,5 @@
+import json
+
 from odoo import api, fields, models, Command
 from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
@@ -176,17 +178,29 @@ class Quadrant(models.Model):
         """Metodo richiamato dal orm di quad.js
             :param quad_id: Id quadrante.
             :return: Json del quadrante."""
-        self_quad = self.env['hex.quad'].browse(quad_id)[0]
-        json_quad = obj_odoo_to_json(self_quad)
+        quad_fields = ['id', 'code', 'index', 'row', 'col', 'hex_ids', 'missing_ids', 'type']
+        hex_fields = ['id', 'code', 'index', 'row', 'col', 'color', 'hex_asset_id']
+        hex_asset_fields = ['asset_id', 'rotation']
+
+        self_quad = self.env['hex.quad'].browse(quad_id)
+        quad_dict = self_quad.read(quad_fields)[0]
+        quad_dict['hex_ids'] = self_quad.hex_ids.read(hex_fields)
+        quad_dict['missing_ids'] = self_quad.missing_ids.read(hex_fields)
+        quad_dict['external_hexs'] = [x.read(hex_fields)[0] for x in self_quad.get_external_hexs() if x]
+
+        hex_assets = self.env['hex.asset.tile'].search([]).read(hex_asset_fields)
+        hex_assets_map = {x['id']: {'tile_id': x['asset_id'][0], 'rotation': x['rotation']} for x in hex_assets}
+        for _hex in quad_dict['hex_ids']:
+            if _hex['hex_asset_id']:
+                _id = _hex['hex_asset_id'][0]
+                _hex['hex_asset_id'] = hex_assets_map[_id]
+
+        json_quad = json.dumps(quad_dict)
         return json_quad
 
     @api.model
-    def get_json_external_hexs(self, quad_id):
-        """Metodo richiamato dal orm di quad.js
-            :param quad_id: Id quadrante.
-            :return: Json degli esagoni esterni."""
-        self_quad = self.env['hex.quad'].browse(quad_id)[0]
-        hex_00_01 = self_quad.hex_ids.filtered(lambda x: x.index == 1)
+    def get_external_hexs(self):
+        hex_00_01 = self.hex_ids.filtered(lambda x: x.index == 1)
         hex_02_01 = hex_00_01.border_N.border_N
         hex_02_03 = hex_02_01.border_SE.border_SE
         hex_02_05 = hex_02_03.border_S.border_S
@@ -201,6 +215,5 @@ class Quadrant(models.Model):
             hex_02_09.border_S, hex_02_09.border_SW, hex_02_09.border_NW,
             hex_02_11.border_SW, hex_02_11.border_NW, hex_02_11.border_N
         ]
-        json_hex_list = obj_odoo_to_json(hex_list)
-        return json_hex_list
+        return hex_list
     # endregion --------------------------------------------------------------------------------------------------------
