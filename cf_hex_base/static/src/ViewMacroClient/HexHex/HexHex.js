@@ -17,6 +17,8 @@ export class HexHex extends Component {
             id: this.props.id,
             row: this.props.row,
             col: this.props.col,
+            dim: this.props.dim,
+            code: this.props.code,
             index: this.props.index,
             color: this.props.color,
             hex_asset_id: this.props.hex_asset_id
@@ -35,9 +37,10 @@ export class HexHex extends Component {
      *  altrimenti cambia il colore del "hex".
      */
     async onClick(){
+        const tile_id = this.store.currentTile?.tile_id ?? null;
         if (this.store.currentColor)
             this.changeColorHex(this.state.id)
-        else if (this.store.currentTile.tile_id){
+        else if (tile_id){
             this.setAssetTiles(this.state.id)}
         else {
             this.goToViewForm(this.state.id)

@@ -6,7 +6,11 @@
                 <t t-foreach="store.macro.quad_ids" t-as="quad" t-key="quad.id">
                     <div class="quad_v1 bg-dark " t-att-style="getQuadStyleV1(quad)">
                         <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
-                            <HexHex id="hex.id" index="hex.index" color="hex.color" hex_asset_id="hex.hex_asset_id"/>
+                            <HexHex hex_asset_id="hex.hex_asset_id"
+                                    index="hex.index"
+                                    color="hex.color"
+                                    dim="'hex_mf_v1'"
+                                    id="hex.id"/>
                         </t>
                     </div>
                 </t>
@@ -20,7 +24,12 @@
                         <t t-foreach="quad_row" t-as="quad" t-key="quad.col">
                             <div class="quad_v2 bg-dark">
                                 <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
-                                    <HexHex id="hex.id" index="hex.index" color="hex.color" row="hex.row" col="hex.col" hex_asset_id="hex.hex_asset_id"/>
+                                    <HexHex hex_asset_id="hex.hex_asset_id"
+                                            color="hex.color"
+                                            dim="'hex_mf_v2'"
+                                            row="hex.row"
+                                            col="hex.col"
+                                            id="hex.id"/>
                                 </t>
                             </div>
                         </t>

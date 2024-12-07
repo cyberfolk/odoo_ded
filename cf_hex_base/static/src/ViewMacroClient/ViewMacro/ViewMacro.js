@@ -26,24 +26,4 @@ export class ViewMacro extends Component {
         const quadPath = POLYGON_QUAD_V1_LIST[index -1];
         return `top: ${asse_y}; left: ${asse_x}; z-index: ${20 - index}; clip-path: ${quadPath};`;
     }
-
-    addRight(){
-        this.orm.call("hex.macro", "add_right", [store.currentMapID], {})
-             .then((result) => { this.store.macro = JSON.parse(result) })
-    }
-
-    addTop(){
-        this.orm.call("hex.macro", "add_top", [store.currentMapID], {})
-             .then((result) => { this.store.macro = JSON.parse(result) })
-    }
-
-    addBottom(){
-        this.orm.call("hex.macro", "add_bottom", [store.currentMapID], {})
-             .then((result) => { this.store.macro = JSON.parse(result) })
-    }
-
-    addLeft(){
-        this.orm.call("hex.macro", "add_left", [store.currentMapID], {})
-             .then((result) => { this.store.macro = JSON.parse(result) })
-    }
 }

@@ -5,7 +5,7 @@ import { useService } from "@web/core/utils/hooks";
 import { onWillStart, Component, useState } from "@odoo/owl";
 
 export class viewFormO2m extends Component {
-    static props = {model: { type: String }};
+    static props = ['*'];
     static components = {}
     setup() {
         super.setup();

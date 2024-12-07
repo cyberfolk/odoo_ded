@@ -28,6 +28,7 @@ export class CurrentMap extends Component {
     }
 
     async onChangeCurrentMapID() {
+        this.store.currentMapID = parseInt(this.store.currentMapID, 10)
         this.store.macro = await this.orm.call("hex.macro", "get_json_macro", [this.store.currentMapID], {})
             .then((result) => { return JSON.parse(result) })
     }

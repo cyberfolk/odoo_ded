@@ -32,7 +32,7 @@
             '/cf_hex_base/static/src/utility/utils.js',
             '/cf_hex_base/static/src/store.js',
             '/cf_hex_base/static/src/scss/style.scss',
-            '/cf_hex_base/static/src/widget_quad/*',
+            '/cf_hex_base/static/src/QuadWidget/*',
             '/cf_hex_base/static/src/widget_view_o2m/*',
             '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.js',
             '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.xml',

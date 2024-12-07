@@ -19,7 +19,8 @@ export const store = reactive({
     },
 
     isCurrentSelectEmpty(){
-        return (!this.currentTile.tile_id && !this.currentColor)
+        const tile_id = this.currentTile?.tile_id ?? null;
+        return (!tile_id && !this.currentColor)
     }
 
 });
