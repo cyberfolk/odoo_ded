@@ -50,6 +50,23 @@ class HexScript(models.Model):
         help="Elenco NPC che si posso trovare in questo Esagono Scriptato."
     )
 
+    faction_ids = fields.Many2many(
+        comodel_name="faction.faction",
+        relation="faction_faction_hex_script_rel",
+        string="Fazioni",
+        help="Elenco Fazioni che si posso trovare in questo Esagono Scriptato."
+    )
+
+    structure_id = fields.Many2one(
+        comodel_name="structure.structure",
+        string="Struttura Principale",
+    )
+
+    creature_id = fields.Many2one(
+        comodel_name="creature.creature",
+        string="Creatura Principale",
+    )
+
 
     @api.depends('hex_ids')
     def compute_hex(self):

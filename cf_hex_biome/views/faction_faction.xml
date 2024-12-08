@@ -98,10 +98,10 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Info MM">
+                            <page string="Info MM" name="page_info_mm">
                                 <field name="description"/>
                             </page>
-                            <page string="Creature" name="creature_page">
+                            <page string="Creature" name="page_creatures">
                                 <group>
                                     <field name="desc_creature" nolabel="1" colspan="2"/>
                                 </group>
@@ -109,7 +109,7 @@
                                     <field name="creature_ids" nolabel="1" colspan="2"/>
                                 </group>
                             </page>
-                            <page string="Domande">
+                            <page string="Domande" name="page_questions">
                                 <group col="3">
                                     <group col="1" string="Info base:">
                                         <group string="1. Da quanti anni sono nella regione?">
@@ -186,21 +186,17 @@
                                     </group>
                                 </group>
                             </page>
-                            <page string="Fazioni figlie">
-                                <group string="Fazioni figlie" colspan="2">
-                                    <field name="child_ids" nolabel="1" colspan="2"/>
-                                </group>
+                            <page string="Fazioni figlie" name="page_child_factions">
+                                <field name="child_ids" nolabel="1" colspan="2"/>
                             </page>
-                            <page string="Scontri">
-                                <group string="Scontri della fazione" colspan="2">
-                                    <field name="encounter_ids" nolabel="1" colspan="2">
-                                        <tree>
-                                            <field name="sml"/>
-                                            <field name="name"/>
-                                            <field name="exp_adj"/>
-                                        </tree>
-                                    </field>
-                                </group>
+                            <page string="Scontri" name="page_encounters">
+                                <field name="encounter_ids" nolabel="1" colspan="2">
+                                    <tree>
+                                        <field name="sml"/>
+                                        <field name="name"/>
+                                        <field name="exp_adj"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </group>
