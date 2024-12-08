@@ -16,6 +16,7 @@ export class ImageField extends Component {
         this.state = useState({
             imageIds: this.props.record.data.image_secondary_ids?._currentIds ?? null,
         })
+        console.log(this.state.imageIds)
     }
 }
 

@@ -28,21 +28,56 @@
                             <field class="text-nowrap" name="name" nolabel="1"/>
                         </h1>
                     </div>
-                    <group class="mt-3">
+                    <group class="mt-3" col="6">
                         <group colspan="2">
-                            <field name="description"/>
                             <field name="biome_id" required="1"/>
                             <field name="hex_id" domain="[('hex_script_id', '=', False)]"/>
                             <field name="sml" required="1"/>
-                            <field name="wild_encounter_ids"/>
-                            <field name="random_encounter_ids"/>
-                            <field name="image_primary" widget="image"/>
-                            <field name="npc_ids"/>
                             <field name="structure_id"/>
+                            <!-- todo aggiungere restrizione su mostro figo o interessante -->
                             <field name="creature_id"/>
-                            <field name="image_secondary_ids" widget="many2many_binary"/>
-                            <field name="image_secondary_ids" widget="MultipleImage"/>
                         </group>
+                        <group colspan="2">
+                            <field name="random_encounter_ids" widget="many2many_tags"/>
+                            <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
+                            <field name="npc_ids" widget="many2many_tags"/>
+                        </group>
+                        <group colspan="2">
+                            <field name="image_primary" widget="image" nolabel="1" colspan="2"/>
+                        </group>
+                        <notebook>
+                            <page string="Descrizione" name="page_description">
+                                <field name="description"/>
+                            </page>
+                            <page string="Incontri Casuali" name="page_random_encounter_ids">
+                                <field name="random_encounter_ids" colspan="2" nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Scontri Selvaggi" name="page_wild_encounter_ids">
+                                <field name="wild_encounter_ids" colspan="2" nolabel="1">
+                                    <tree>
+                                        <field name="sml"/>
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="NPCs" name="page_npc_ids">
+                                <field name="npc_ids" colspan="2" nolabel="1">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="tag_ids"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Immagini" name="page_image_secondary_ids">
+                                <field name="image_secondary_ids" widget="MultipleImage"/>
+                                <field name="image_secondary_ids" widget="many2many_binary"/>
+                            </page>
+                        </notebook>
                     </group>
                 </sheet>
             </form>

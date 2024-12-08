@@ -65,7 +65,7 @@ class CreatureNpc(models.Model):
 
     hex_script_ids = fields.Many2many(
         comodel_name="hex.script",
-        # relation="creature_npc_hex_script_rel",
+        relation="creature_npc_hex_script_rel",
         string="Hex Script",
         help="Esagoni Scriptati dove è possibile trovare l'NPC."
     )
