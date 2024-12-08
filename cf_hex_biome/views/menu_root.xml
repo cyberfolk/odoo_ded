@@ -55,11 +55,6 @@
         <field name="context">{'search_default_filter_state_active_and_is_not_child':1}</field>
     </record>
 
-    <record id="action_exp_tool" model="ir.actions.client">
-        <field name="name">Exp Tool</field>
-        <field name="tag">exp_tool</field>
-    </record>
-
     <menuitem sequence="1" id="menu_biome" name="Biomi" parent="cf_hex_base.menu_root">
         <menuitem sequence="0" id="menu_biome_biome" name="Biomi" action="action_menu_biome_biome"/>
         <menuitem sequence="0" id="menu_structure_structure" name="Strutture" action="action_menu_structure_structure"/>
@@ -74,6 +69,5 @@
     <menuitem sequence="3" id="menu_faction" name="Fazioni" parent="cf_hex_base.menu_root">
         <menuitem sequence="0" id="menu_faction_faction" name="Fazioni" action="cf_hex_biome.action_menu_faction_faction"/>
     </menuitem>
-    <menuitem sequence="4" id="menu_exp_tool" name="Exp Tool" parent="cf_hex_base.menu_root" action="action_exp_tool"/>
     <menuitem sequence="5" id="menu_todo" name="TODO" parent="cf_hex_base.menu_root" action="action_menu_todo"/>
 </odoo>

@@ -1,7 +1,0 @@
-<t t-name="ExpTool">
-    <div class="container">
-        <h1>CIAO</h1>
-        <div t-esc="exp_table.key1"/>
-        <div t-esc="exp_table.key2"/>
-    </div>
-</t>
