@@ -8,6 +8,7 @@
                 <field name="biome_id"/>
                 <field name="hex_id"/>
                 <field name="sml"/>
+                <field name="npc_ids"/>
             </tree>
         </field>
     </record>
@@ -33,6 +34,7 @@
                             <field name="wild_encounter_ids"/>
                             <field name="random_encounter_ids"/>
                             <field name="image_primary" widget="image"/>
+                            <field name="npc_ids"/>
                         </group>
                     </group>
                 </sheet>

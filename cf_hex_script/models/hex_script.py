@@ -43,6 +43,14 @@ class HexScript(models.Model):
         string="Immagine",
     )
 
+    npc_ids = fields.Many2many(
+        comodel_name="creature.npc",
+        relation="creature_npc_hex_script_rel",
+        string="NPCs",
+        help="Elenco NPC che si posso trovare in questo Esagono Scriptato."
+    )
+
+
     @api.depends('hex_ids')
     def compute_hex(self):
         if len(self.hex_ids) > 0:

@@ -21,6 +21,7 @@
         "views/hex_script.xml",
         "views/random_encounter.xml",
         "views/creature_npc.xml",
+        "views/faction_faction.xml",
     ],
     'depends': ['cf_hex_base', 'cf_hex_biome'],
     'demo': [],

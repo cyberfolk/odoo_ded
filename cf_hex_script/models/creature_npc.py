@@ -63,10 +63,11 @@ class CreatureNpc(models.Model):
         string="Creatura di riferimento",
     )
 
-    #todo potrebbe essere m2m
-    hex_script_id = fields.Many2one(
+    hex_script_ids = fields.Many2many(
         comodel_name="hex.script",
+        # relation="creature_npc_hex_script_rel",
         string="Hex Script",
+        help="Esagoni Scriptati dove è possibile trovare l'NPC."
     )
 
     @api.depends("cr")

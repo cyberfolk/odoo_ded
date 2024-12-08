@@ -101,7 +101,7 @@
                             <page string="Info MM">
                                 <field name="description"/>
                             </page>
-                            <page string="Creature">
+                            <page string="Creature" name="creature_page">
                                 <group>
                                     <field name="desc_creature" nolabel="1" colspan="2"/>
                                 </group>

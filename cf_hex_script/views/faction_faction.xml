@@ -1,0 +1,16 @@
+<odoo>
+    <record id="faction_faction_view_form_inherited_script" model="ir.ui.view">
+        <field name="name">faction.faction.form</field>
+        <field name="model">faction.faction</field>
+        <field name="inherit_id" ref="cf_hex_biome.faction_faction_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='creature_page']" position="after">
+                <page string="NPC">
+                    <group>
+                        <field name="npc_ids" nolabel="1" colspan="2"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
