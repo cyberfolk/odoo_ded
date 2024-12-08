@@ -11,8 +11,15 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_menu_creature_npc" model="ir.actions.act_window">
+        <field name="name">Elenco NPC</field>
+        <field name="res_model">creature.npc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem sequence="6" id="menu_hex_script_root" name="Hex Script" parent="cf_hex_base.menu_root">
         <menuitem sequence="0" id="menu_hex_script" name="Hex Script" action="action_menu_hex_script"/>
-        <menuitem sequence="0" id="menu_random_encounter" name="Random Encounter" action="action_menu_random_encounter"/>
+        <menuitem sequence="1" id="menu_creature_npc" name="NPC" action="action_menu_creature_npc"/>
+        <menuitem sequence="2" id="menu_random_encounter" name="Random Encounter" action="action_menu_random_encounter"/>
     </menuitem>
 </odoo>
