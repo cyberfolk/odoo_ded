@@ -35,6 +35,10 @@ class HexScript(models.Model):
         inverse_name='hex_script_id'
     )
 
+    description = fields.Html(
+        string="Descrizione",
+    )
+
     @api.depends('hex_ids')
     def compute_hex(self):
         if len(self.hex_ids) > 0:
