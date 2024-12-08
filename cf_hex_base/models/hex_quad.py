@@ -7,7 +7,6 @@ from ..utility.constant import HEX_MISSING_INDEX
 from ..utility.constant import MACRO_MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
 from ..utility.constant import COLOR_HEX_LIST
-from ..utility.odoo_to_json import obj_odoo_to_json
 
 
 class Quadrant(models.Model):
