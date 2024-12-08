@@ -67,6 +67,12 @@ class HexScript(models.Model):
         string="Creatura Principale",
     )
 
+    image_secondary_ids = fields.Many2many(
+        'ir.attachment',
+        string="Altre Immagini",
+        domain=[('mimetype', 'ilike', 'image')],
+        help="Upload multiple images"
+    )
 
     @api.depends('hex_ids')
     def compute_hex(self):

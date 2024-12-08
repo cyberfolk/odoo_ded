@@ -27,4 +27,9 @@
     'demo': [],
     'application': False,
     'installable': True,
+    'assets': {
+        'web.assets_backend': [
+            '/cf_hex_script/static/src/MultipleImage/*',
+        ],
+    },
 }

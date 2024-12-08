@@ -29,7 +29,7 @@
                         </h1>
                     </div>
                     <group class="mt-3">
-                        <group>
+                        <group colspan="2">
                             <field name="description"/>
                             <field name="biome_id" required="1"/>
                             <field name="hex_id" domain="[('hex_script_id', '=', False)]"/>
@@ -40,6 +40,8 @@
                             <field name="npc_ids"/>
                             <field name="structure_id"/>
                             <field name="creature_id"/>
+                            <field name="image_secondary_ids" widget="many2many_binary"/>
+                            <field name="image_secondary_ids" widget="MultipleImage"/>
                         </group>
                     </group>
                 </sheet>
