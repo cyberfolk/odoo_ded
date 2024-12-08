@@ -19,6 +19,7 @@
         "views/hex_hex.xml",
         "views/biome_biome.xml",
         "views/hex_script.xml",
+        "views/random_encounter.xml",
     ],
     'depends': ['cf_hex_base', 'cf_hex_biome'],
     'demo': [],

@@ -49,3 +49,17 @@ class HexScript(models.Model):
             hex = self.env['hex.hex'].browse(self.hex_ids[0].id)
             hex.hex_id = False
         self.hex_id.hex_script_id = self  # set new reference
+
+    wild_encounter_ids = fields.Many2many(
+        comodel_name="creature.encounter",
+        relation="creature_encounter_hex_script_rel",
+        string="Scontri Selvaggi",
+        help="Scontri Selvaggi che si possono verificare nell'Esagono Scriptato.",
+    )
+
+    random_encounter_ids = fields.One2many(
+        comodel_name="random.encounter",
+        inverse_name="hex_script_id",
+        string="Incontri Casuali",
+        help="Incontri Casuali che si possono verificare nell'Esagono Scriptato.",
+    )

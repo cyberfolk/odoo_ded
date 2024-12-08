@@ -1,20 +1,19 @@
 <odoo>
-    <record id="hex_script_view_tree" model="ir.ui.view">
-        <field name="name">hex.script.tree</field>
-        <field name="model">hex.script</field>
+    <record id="random_encounter_view_tree" model="ir.ui.view">
+        <field name="name">random.encounter.tree</field>
+        <field name="model">random.encounter</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="biome_id"/>
-                <field name="hex_id"/>
-                <field name="sml"/>
+                <field name="description"/>
+                <field name="hex_script_id"/>
             </tree>
         </field>
     </record>
 
-    <record id="hex_script_view_form" model="ir.ui.view">
-        <field name="name">hex.script.form</field>
-        <field name="model">hex.script</field>
+    <record id="random_encounter_view_form" model="ir.ui.view">
+        <field name="name">random.encounter.form</field>
+        <field name="model">random.encounter</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -27,11 +26,7 @@
                     <group class="mt-3">
                         <group>
                             <field name="description"/>
-                            <field name="biome_id" required="1"/>
-                            <field name="hex_id" domain="[('hex_script_id', '=', False)]"/>
-                            <field name="sml" required="1"/>
-                            <field name="wild_encounter_ids"/>
-                            <field name="random_encounter_ids"/>
+                            <field name="hex_script_id"/>
                         </group>
                     </group>
                 </sheet>

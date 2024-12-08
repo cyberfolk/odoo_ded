@@ -5,6 +5,14 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem sequence="6" id="menu_hex_script" name="Hex Script"
-              parent="cf_hex_base.menu_root" action="action_menu_hex_script"/>
+    <record id="action_menu_random_encounter" model="ir.actions.act_window">
+        <field name="name">Elenco Incontri Random</field>
+        <field name="res_model">random.encounter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem sequence="6" id="menu_hex_script_root" name="Hex Script" parent="cf_hex_base.menu_root">
+        <menuitem sequence="0" id="menu_hex_script" name="Hex Script" action="action_menu_hex_script"/>
+        <menuitem sequence="0" id="menu_random_encounter" name="Random Encounter" action="action_menu_random_encounter"/>
+    </menuitem>
 </odoo>
