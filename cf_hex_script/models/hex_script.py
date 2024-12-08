@@ -39,6 +39,10 @@ class HexScript(models.Model):
         string="Descrizione",
     )
 
+    image_primary = fields.Image(
+        string="Immagine",
+    )
+
     @api.depends('hex_ids')
     def compute_hex(self):
         if len(self.hex_ids) > 0:

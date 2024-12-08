@@ -32,6 +32,7 @@
                             <field name="sml" required="1"/>
                             <field name="wild_encounter_ids"/>
                             <field name="random_encounter_ids"/>
+                            <field name="image_primary" widget="image"/>
                         </group>
                     </group>
                 </sheet>
