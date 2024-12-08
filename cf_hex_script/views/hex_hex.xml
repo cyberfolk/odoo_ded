@@ -16,7 +16,7 @@
         <field name="inherit_id" ref="cf_hex_base.hex_hex_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='quad_id']" position="after">
-                <field name="hex_script_id"/>
+                <field name="hex_script_id" domain="[('hex_ids', '=', False)]" />
             </xpath>
         </field>
     </record>
