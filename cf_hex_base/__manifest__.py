@@ -22,7 +22,12 @@
         "views/asset_tile.xml",
         "data/hex.xml",
     ],
-    'depends': ['base', 'web'],
+    'depends': [
+        'base',
+        'web',
+        'cf_o2m_expand_popup',
+        'cf_m2m_tags_link'
+    ],
     'demo': [],
     'application': True,
     'installable': True,
@@ -33,7 +38,6 @@
             '/cf_hex_base/static/src/store.js',
             '/cf_hex_base/static/src/scss/style.scss',
             '/cf_hex_base/static/src/QuadWidget/*',
-            '/cf_hex_base/static/src/widget_view_o2m/*',
             '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.js',
             '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.xml',
             '/cf_hex_base/static/src/ViewMacroClient/AddQuadrant/*',

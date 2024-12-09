@@ -27,7 +27,7 @@
             <form js_class="quad_form">
                 <sheet>
                     <header>
-                        <field name="id" widget="view_form_o2m" model="hex.quad" model_parent="hex.macro"/>
+                        <field name="id" widget="o2m_expand_popup" model="hex.quad" model_parent="hex.macro"/>
                     </header>
                     <group>
                         <group col="1">
