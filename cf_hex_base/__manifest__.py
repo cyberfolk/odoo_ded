@@ -4,8 +4,8 @@
 {
     'name': "Cyberfolk | Hex Base",
     'icon': '/cf_hex_base/static/description/icon.png',
-    'sequence': -100,
-    'version': '0.0.1',
+    'sequence': 1,
+    'version': '17.0',
     'category': 'Map',
     'author': "cyberfolk",
     'summary': "Introduce gli elementi base della Hex Map",

@@ -4,7 +4,7 @@
 {
     'name': "Cyberfolk | Hex Script",
     'icon': '/cf_hex_base/static/description/cyberfolk.png',
-    'sequence': -100,
+    'sequence': 4,
     'version': '0.0.1',
     'category': 'Map',
     'author': "cyberfolk",

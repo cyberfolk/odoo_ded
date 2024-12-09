@@ -4,7 +4,7 @@
 {
     'name': "Cyberfolk | Hex Data",
     'icon': '/cf_hex_base/static/description/cyberfolk.png',
-    'sequence': -99,
+    'sequence': 3,
     'version': '0.0.1',
     'category': 'Map',
     'author': "cyberfolk",
