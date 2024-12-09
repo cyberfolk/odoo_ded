@@ -23,13 +23,11 @@
         "views/creature_npc.xml",
         "views/faction_faction.xml",
     ],
-    'depends': ['cf_hex_base', 'cf_hex_biome'],
+    'depends': ['cf_hex_base', 'cf_hex_biome', 'cf_multiple_image'],
     'demo': [],
     'application': False,
     'installable': True,
     'assets': {
-        'web.assets_backend': [
-            '/cf_hex_script/static/src/MultipleImage/*',
-        ],
+        'web.assets_backend': [],
     },
 }
