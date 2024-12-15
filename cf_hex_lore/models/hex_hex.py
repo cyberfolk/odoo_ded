@@ -10,6 +10,11 @@ class HexHex(models.Model):
         help="Bioma contenuto in questo Hex-Script"
     )
 
+    color = fields.Char(
+        string='Color',
+        compute='_compute_color'
+    )
+
     sml = fields.Integer(
         string="SML",
         help="Difficoltà Hex-Script. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
@@ -68,3 +73,8 @@ class HexHex(models.Model):
         string="Incontri Casuali",
         help="Incontri Casuali che si possono verificare nell'Esagono Scriptato.",
     )
+
+    @api.depends('biome_id.color')
+    def _compute_color(self):
+        for record in self:
+            record.color = record.biome_id.color or '#DDDDDD'
