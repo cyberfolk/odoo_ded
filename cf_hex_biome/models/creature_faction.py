@@ -69,7 +69,7 @@ class FactionFaction(models.Model):
     )
 
     encounter_ids = fields.One2many(
-        comodel_name="encounter.fight",
+        comodel_name="creature.encounter",
         inverse_name="faction_id",
         string="Scontri",
         help="Scontri della fazione",

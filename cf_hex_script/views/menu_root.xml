@@ -5,9 +5,9 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="action_menu_encounter_interaction" model="ir.actions.act_window">
+    <record id="action_menu_encounter_encounter" model="ir.actions.act_window">
         <field name="name">Elenco Incontri Random</field>
-        <field name="res_model">encounter.interaction</field>
+        <field name="res_model">encounter.encounter</field>
         <field name="view_mode">tree,form</field>
     </record>
 

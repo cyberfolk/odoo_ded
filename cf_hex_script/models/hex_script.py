@@ -86,14 +86,14 @@ class HexScript(models.Model):
         self.hex_id.hex_script_id = self  # set new reference
 
     wild_encounter_ids = fields.Many2many(
-        comodel_name="encounter.fight",
-        relation="encounter_fight_hex_script_rel",
+        comodel_name="creature.encounter",
+        relation="creature_encounter_hex_script_rel",
         string="Scontri Selvaggi",
         help="Scontri Selvaggi che si possono verificare nell'Esagono Scriptato.",
     )
 
-    encounter_interaction_ids = fields.One2many(
-        comodel_name="encounter.interaction",
+    encounter_encounter_ids = fields.One2many(
+        comodel_name="encounter.encounter",
         inverse_name="hex_script_id",
         string="Incontri Casuali",
         help="Incontri Casuali che si possono verificare nell'Esagono Scriptato.",

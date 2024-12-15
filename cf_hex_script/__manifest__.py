@@ -19,7 +19,7 @@
         "views/hex_hex.xml",
         "views/biome_biome.xml",
         "views/hex_script.xml",
-        "views/encounter_interaction.xml",
+        "views/encounter_encounter.xml",
         "views/creature_npc.xml",
         "views/creature_faction.xml",
     ],

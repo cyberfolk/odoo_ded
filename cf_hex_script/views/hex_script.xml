@@ -38,7 +38,7 @@
                             <field name="creature_id"/>
                         </group>
                         <group colspan="2">
-                            <field name="encounter_interaction_ids" widget="many2many_tags"/>
+                            <field name="encounter_encounter_ids" widget="many2many_tags"/>
                             <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
                             <field name="npc_ids" widget="many2many_tags"/>
                         </group>
@@ -49,8 +49,8 @@
                             <page string="Descrizione" name="page_description">
                                 <field name="description"/>
                             </page>
-                            <page string="Incontri Casuali" name="page_encounter_interaction_ids">
-                                <field name="encounter_interaction_ids" colspan="2" nolabel="1">
+                            <page string="Incontri Casuali" name="page_encounter_encounter_ids">
+                                <field name="encounter_encounter_ids" colspan="2" nolabel="1">
                                     <tree>
                                         <field name="name"/>
                                         <field name="description"/>

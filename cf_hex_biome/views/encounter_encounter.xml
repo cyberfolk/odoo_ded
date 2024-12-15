@@ -1,19 +1,18 @@
 <odoo>
-    <record id="encounter_interaction_view_tree" model="ir.ui.view">
-        <field name="name">encounter.interaction.tree</field>
-        <field name="model">encounter.interaction</field>
+    <record id="encounter_encounter_view_tree" model="ir.ui.view">
+        <field name="name">encounter.encounter.tree</field>
+        <field name="model">encounter.encounter</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
                 <field name="description"/>
-                <field name="hex_script_id"/>
             </tree>
         </field>
     </record>
 
-    <record id="encounter_interaction_view_form" model="ir.ui.view">
-        <field name="name">encounter.interaction.form</field>
-        <field name="model">encounter.interaction</field>
+    <record id="encounter_encounter_view_form" model="ir.ui.view">
+        <field name="name">encounter.encounter.form</field>
+        <field name="model">encounter.encounter</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -26,7 +25,6 @@
                     <group class="mt-3">
                         <group>
                             <field name="description"/>
-                            <field name="hex_script_id"/>
                         </group>
                     </group>
                 </sheet>

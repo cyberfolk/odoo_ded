@@ -8,7 +8,7 @@ from odoo import models
 _logger = logging.getLogger(__name__)
 
 MAP_MODEL_PY = {
-    "encounter.fight": "encounters.py",
+    "creature.encounter": "encounters.py",
     "creature.faction": "factions.py"
 }
 

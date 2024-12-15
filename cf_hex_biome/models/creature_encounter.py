@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 
 class CreatureEncounter(models.Model):
-    _name = "encounter.fight"
+    _name = "creature.encounter"
     _description = "Scontro"
 
     # region FIELD -----------------------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ class CreatureEncounter(models.Model):
     )
 
     line_ids = fields.One2many(
-        comodel_name="encounter.fight.line",
+        comodel_name="creature.encounter.line",
         inverse_name="encounter_id",
         string="Linee",
         help="Linee dello scontro.",
@@ -60,7 +60,7 @@ class CreatureEncounter(models.Model):
 
     biome_ids = fields.Many2many(
         comodel_name="biome.biome",
-        relation="encounter_fight_biome_biome_rel",
+        relation="creature_encounter_biome_biome_rel",
         compute="_compute_biome_ids",
         string="Biomi",
         help="Biomi dove può verificarsi lo scontro.",

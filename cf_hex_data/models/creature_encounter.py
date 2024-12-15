@@ -24,8 +24,8 @@ MAP_SML_QTY = {
 
 
 class CreatureEncounter(models.Model):
-    _name = "encounter.fight"
-    _inherit = ['encounter.fight', 'mixin.import.py']
+    _name = "creature.encounter"
+    _inherit = ['creature.encounter', 'mixin.import.py']
 
     def _popolate_by_py(self, modulo):
         """Ereditato dal Mixin. Crea record partendo dal modulo '.py'."""

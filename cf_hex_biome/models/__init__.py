@@ -3,9 +3,9 @@ from . import structure_structure
 from . import creature_creature
 from . import creature_tag
 from . import creature_type
-from . import encounter_fight
-from . import encounter_fight_line
+from . import creature_encounter
+from . import creature_encounter_line
 from . import todo
 from . import creature_faction
 from . import creature_npc
-from . import encounter_interaction
+from . import encounter_encounter

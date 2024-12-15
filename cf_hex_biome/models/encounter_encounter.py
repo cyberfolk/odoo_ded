@@ -2,7 +2,7 @@ from odoo import fields, models, api
 
 
 class RandomEncounter(models.Model):
-    _name = "encounter.interaction"
+    _name = "encounter.encounter"
     _description = "Random Encounter"
 
     name = fields.Char(

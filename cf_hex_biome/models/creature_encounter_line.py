@@ -6,7 +6,7 @@ _logger = logging.getLogger(__name__)
 
 
 class CreatureEncounterLine(models.Model):
-    _name = "encounter.fight.line"
+    _name = "creature.encounter.line"
     _description = "Linee dello scontro"
     _order = 'cr desc'
 
@@ -17,7 +17,7 @@ class CreatureEncounterLine(models.Model):
     )
 
     encounter_id = fields.Many2one(
-        comodel_name="encounter.fight",
+        comodel_name="creature.encounter",
         string="Scontro",
         help="Scontro a cui appartiene la linea.",
     )
