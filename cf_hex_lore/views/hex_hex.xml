@@ -1,0 +1,86 @@
+<odoo>
+
+    <record id="hex_hex_view_tree_inherited" model="ir.ui.view">
+        <field name="name">hex.hex.tree.lore</field>
+        <field name="model">hex.hex</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_hex_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='id']" position="before">
+                <field name="biome_id"/>
+                <field name="sml"/>
+                <field name="npc_ids" widget="many2many_tags"/>
+                <field name="faction_ids" widget="many2many_tags"/>
+                <field name="structure_id"/>
+                <field name="creature_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    <record id="hex_script_view_form" model="ir.ui.view">-->
+    <!--        <field name="name">hex.script.form</field>-->
+    <!--        <field name="model">hex.script</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <form>-->
+    <!--                <sheet>-->
+    <!--                    <div class="oe_title" colspan="2">-->
+    <!--                        <label for="name" class="oe_inline"/>-->
+    <!--                        <h1>-->
+    <!--                            <field class="text-nowrap" name="name" nolabel="1"/>-->
+    <!--                        </h1>-->
+    <!--                    </div>-->
+    <!--                    <group class="mt-3" col="6">-->
+    <!--                        <group colspan="2">-->
+    <!--                            <field name="biome_id" required="1"/>-->
+    <!--                            <field name="hex_id" domain="[('hex__id', '=', False)]"/>-->
+    <!--                            <field name="sml" required="1"/>-->
+    <!--                            <field name="structure_id"/>-->
+    <!--                            &lt;!&ndash; todo aggiungere restrizione su mostro figo o interessante &ndash;&gt;-->
+    <!--                            <field name="creature_id"/>-->
+    <!--                        </group>-->
+    <!--                        <group colspan="2">-->
+    <!--                            <field name="encounter_encounter_ids" widget="many2many_tags"/>-->
+    <!--                            <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>-->
+    <!--                            <field name="npc_ids" widget="many2many_tags"/>-->
+    <!--                        </group>-->
+    <!--                        <group colspan="2">-->
+    <!--                            <field name="image" widget="image" nolabel="1" colspan="2"/>-->
+    <!--                        </group>-->
+    <!--                        <notebook>-->
+    <!--                            <page string="Descrizione" name="page_description">-->
+    <!--                                <field name="description"/>-->
+    <!--                            </page>-->
+    <!--                            <page string="Incontri Casuali" name="page_encounter_encounter_ids">-->
+    <!--                                <field name="encounter_encounter_ids" colspan="2" nolabel="1">-->
+    <!--                                    <tree>-->
+    <!--                                        <field name="name"/>-->
+    <!--                                        <field name="description"/>-->
+    <!--                                    </tree>-->
+    <!--                                </field>-->
+    <!--                            </page>-->
+    <!--                            <page string="Scontri Selvaggi" name="page_wild_encounter_ids">-->
+    <!--                                <field name="wild_encounter_ids" colspan="2" nolabel="1">-->
+    <!--                                    <tree>-->
+    <!--                                        <field name="sml"/>-->
+    <!--                                        <field name="name"/>-->
+    <!--                                    </tree>-->
+    <!--                                </field>-->
+    <!--                            </page>-->
+    <!--                            <page string="NPCs" name="page_npc_ids">-->
+    <!--                                <field name="npc_ids" colspan="2" nolabel="1">-->
+    <!--                                    <tree>-->
+    <!--                                        <field name="name"/>-->
+    <!--                                        <field name="tag_ids"/>-->
+    <!--                                    </tree>-->
+    <!--                                </field>-->
+    <!--                            </page>-->
+    <!--                            <page string="Immagini" name="page_image_gallery_ids">-->
+    <!--                                <field name="image_gallery_ids" widget="MultipleImage"/>-->
+    <!--                                <field name="image_gallery_ids" widget="many2many_binary"/>-->
+    <!--                            </page>-->
+    <!--                        </notebook>-->
+    <!--                    </group>-->
+    <!--                </sheet>-->
+    <!--            </form>-->
+    <!--        </field>-->
+    <!--    </record>-->
+</odoo>

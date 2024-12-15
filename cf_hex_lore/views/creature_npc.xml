@@ -1,11 +1,11 @@
 <odoo>
-    <record id="creature_npc_view_tree_inherited_script" model="ir.ui.view">
-        <field name="name">creature.npc.tree.scripted</field>
+    <record id="creature_npc_view_tree_inherited" model="ir.ui.view">
+        <field name="name">creature.npc.tree.lore</field>
         <field name="model">creature.npc</field>
         <field name="inherit_id" ref="cf_hex_biome.creature_npc_view_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='faction_ids']" position="after">
-                <field name="hex_script_ids" widget="many2many_tags"/>
+                <field name="hex_ids" widget="many2many_tags"/>
             </xpath>
         </field>
     </record>
@@ -16,7 +16,7 @@
         <field name="inherit_id" ref="cf_hex_biome.creature_npc_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='creature_id']" position="after">
-                <field name="hex_script_ids" widget="many2many_tags"/>
+                <field name="hex_ids" widget="many2many_tags"/>
             </xpath>
         </field>
     </record>

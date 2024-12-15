@@ -2,7 +2,7 @@
 # Powered by cyberfolk
 
 {
-    'name': "Cyberfolk | Hex Script",
+    'name': "Cyberfolk | Hex Lore",
     'icon': '/cf_hex_base/static/description/cyberfolk.png',
     'sequence': 4,
     'version': '0.0.1',
@@ -14,11 +14,8 @@
          esagoni, e li collegano ai relativi biomi e alle creature che lo popolano.""",
     'license': 'AGPL-3',
     'data': [
-        "security/ir.model.access.csv",
-        "views/menu_root.xml",
         "views/hex_hex.xml",
         "views/biome_biome.xml",
-        "views/hex_script.xml",
         "views/encounter_encounter.xml",
         "views/creature_npc.xml",
         "views/creature_faction.xml",

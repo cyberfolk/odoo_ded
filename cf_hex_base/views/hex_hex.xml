@@ -4,8 +4,8 @@
         <field name="model">hex.hex</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
                 <field name="code"/>
+                <field name="name"/>
                 <field name="color" readonly="1"/>
                 <field name="quad_id"/>
                 <field name="index" readonly="1"/>
