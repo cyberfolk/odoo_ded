@@ -16,7 +16,7 @@ def popolate_faction_encounter(self):
     _logger.info("DEPRECATE popolate_faction_encounter")
     pass
 
-    MAP_FACTION_ID = {x.name: x.id for x in self.env['faction.faction'].search([])}
+    MAP_FACTION_ID = {x.name: x.id for x in self.env['creature.faction'].search([])}
     MAP_CREATURE_ID = {x.name: x.id for x in self.env['creature.creature'].search([])}
     name_file_csv = 'faction_encounter.csv'
     file_path = (Path(__file__).resolve().parents[1] / 'data' / name_file_csv).as_posix()

@@ -25,8 +25,8 @@ def post_init_hook_cf_hex_data(env):
         env["creature.tag"].popolate_by_csv()
         env["creature.type"].popolate_by_csv()
         env["creature.creature"].popolate_by_csv()
-        env["faction.faction"].popolate_by_py()
-        env["creature.encounter"].popolate_by_py()
+        env["creature.faction"].popolate_by_py()
+        env["encounter.fight"].popolate_by_py()
         env["asset.tile"].load_images()
     except Exception as e:
         msg = (f"Errore nella funzione post_init_hook_cf_hex_data()\n"

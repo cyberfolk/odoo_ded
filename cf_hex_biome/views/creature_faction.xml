@@ -1,7 +1,7 @@
 <odoo>
-    <record id="faction_faction_view_search" model="ir.ui.view">
-        <field name="name">faction.faction.search</field>
-        <field name="model">faction.faction</field>
+    <record id="creature_faction_view_search" model="ir.ui.view">
+        <field name="name">creature.faction.search</field>
+        <field name="model">creature.faction</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
@@ -19,9 +19,9 @@
         </field>
     </record>
 
-    <record id="faction_faction_view_tree" model="ir.ui.view">
-        <field name="name">faction.faction.tree</field>
-        <field name="model">faction.faction</field>
+    <record id="creature_faction_view_tree" model="ir.ui.view">
+        <field name="name">creature.faction.tree</field>
+        <field name="model">creature.faction</field>
         <field name="arch" type="xml">
             <!--<tree editable="top">-->
             <tree>
@@ -45,9 +45,9 @@
         </field>
     </record>
 
-    <record id="faction_faction_view_kanban" model="ir.ui.view">
-        <field name="name">faction.faction.kanban</field>
-        <field name="model">faction.faction</field>
+    <record id="creature_faction_view_kanban" model="ir.ui.view">
+        <field name="name">creature.faction.kanban</field>
+        <field name="model">creature.faction</field>
         <field name="arch" type="xml">
             <kanban class="o_kanban_mobile" default_group_by="state">
                 <field name="name"/>
@@ -68,9 +68,9 @@
         </field>
     </record>
 
-    <record id="faction_faction_view_form" model="ir.ui.view">
-        <field name="name">faction.faction.form</field>
-        <field name="model">faction.faction</field>
+    <record id="creature_faction_view_form" model="ir.ui.view">
+        <field name="name">creature.faction.form</field>
+        <field name="model">creature.faction</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>

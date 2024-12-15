@@ -7,12 +7,12 @@ _logger = logging.getLogger(__name__)
 
 
 class FactionFaction(models.Model):
-    _name = "faction.faction"
+    _name = "creature.faction"
     _description = "Fazione"
 
     _sql_constraints = [
-        ('unique_faction_faction_name', 'UNIQUE(name)', 'Il nome della fazione deve essere univoco!'),
-        ('unique_faction_faction_code', 'UNIQUE(code)', 'Il code della fazione deve essere univoco!')
+        ('unique_creature_faction_name', 'UNIQUE(name)', 'Il nome della fazione deve essere univoco!'),
+        ('unique_creature_faction_code', 'UNIQUE(code)', 'Il code della fazione deve essere univoco!')
     ]
 
     # region FIELD -----------------------------------------------------------------------------------------------------
@@ -28,14 +28,14 @@ class FactionFaction(models.Model):
     )
 
     child_ids = fields.One2many(
-        comodel_name="faction.faction",
+        comodel_name="creature.faction",
         inverse_name="parent_id",
         string="Fazioni figlie",
         help="Fazioni figlie della fazione",
     )
 
     parent_id = fields.Many2one(
-        comodel_name="faction.faction",
+        comodel_name="creature.faction",
         string="Fazione Padre",
         help="Fazione Padre della fazione",
     )
@@ -63,13 +63,13 @@ class FactionFaction(models.Model):
 
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
-        relation="faction_faction_creature_creature_rel",
+        relation="creature_faction_creature_creature_rel",
         string="Creature",
         help="Creature della fazione",
     )
 
     encounter_ids = fields.One2many(
-        comodel_name="creature.encounter",
+        comodel_name="encounter.fight",
         inverse_name="faction_id",
         string="Scontri",
         help="Scontri della fazione",
@@ -101,7 +101,7 @@ class FactionFaction(models.Model):
 
     npc_ids = fields.Many2many(
         comodel_name="creature.npc",
-        relation="faction_faction_creature_npc_rel",
+        relation="creature_faction_creature_npc_rel",
         string="NPCs",
         help="NPC appartenenti alla fazione",
     )

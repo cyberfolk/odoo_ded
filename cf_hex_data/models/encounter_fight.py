@@ -24,8 +24,8 @@ MAP_SML_QTY = {
 
 
 class CreatureEncounter(models.Model):
-    _name = "creature.encounter"
-    _inherit = ['creature.encounter', 'mixin.import.py']
+    _name = "encounter.fight"
+    _inherit = ['encounter.fight', 'mixin.import.py']
 
     def _popolate_by_py(self, modulo):
         """Ereditato dal Mixin. Crea record partendo dal modulo '.py'."""
@@ -48,7 +48,7 @@ class CreatureEncounter(models.Model):
             # Map faction name to faction ID
             faction_name = encounter.pop('faction_name', None)
             if faction_name:
-                faction = self.env['faction.faction'].search([('name', '=', faction_name)], limit=1)
+                faction = self.env['creature.faction'].search([('name', '=', faction_name)], limit=1)
                 if not faction:
                     raise ValueError(f"Faction '{faction_name}' not found")
                 encounter['faction_id'] = faction.id
@@ -77,7 +77,7 @@ def popolate_faction_encounter(self):
     _logger.info("DEPRECATE popolate_faction_encounter")
     pass
 
-    MAP_FACTION_ID = {x.name: x.id for x in self.env['faction.faction'].search([])}
+    MAP_FACTION_ID = {x.name: x.id for x in self.env['creature.faction'].search([])}
     MAP_CREATURE_ID = {x.name: x.id for x in self.env['creature.creature'].search([])}
     name_file_csv = 'faction_encounter.csv'
     file_path = (Path(__file__).resolve().parents[1] / 'data' / name_file_csv).as_posix()

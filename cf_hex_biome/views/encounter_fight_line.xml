@@ -1,7 +1,7 @@
 <odoo>
-    <record id="creature_encounter_line_view_tree" model="ir.ui.view">
-        <field name="name">creature.encounter.line.tree</field>
-        <field name="model">creature.encounter.line</field>
+    <record id="encounter_fight_line_view_tree" model="ir.ui.view">
+        <field name="name">encounter.fight.line.tree</field>
+        <field name="model">encounter.fight.line</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -12,9 +12,9 @@
         </field>
     </record>
 
-    <record id="creature_encounter_line_view_form" model="ir.ui.view">
-        <field name="name">creature.encounter.line.form</field>
-        <field name="model">creature.encounter.line</field>
+    <record id="encounter_fight_line_view_form" model="ir.ui.view">
+        <field name="name">encounter.fight.line.form</field>
+        <field name="model">encounter.fight.line</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>

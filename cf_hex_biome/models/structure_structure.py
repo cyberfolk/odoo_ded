@@ -11,6 +11,11 @@ class StructureStructure(models.Model):
         help="Struttura"
     )
 
+    description = fields.Html(
+        string="Descrizione",
+        help="Descrizione della fazione",
+    )
+
     image = fields.Image(
         string="Immagine",
     )

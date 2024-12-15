@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 
 class CreatureEncounter(models.Model):
-    _name = "creature.encounter"
+    _name = "encounter.fight"
     _description = "Scontro"
 
     # region FIELD -----------------------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ class CreatureEncounter(models.Model):
     )
 
     line_ids = fields.One2many(
-        comodel_name="creature.encounter.line",
+        comodel_name="encounter.fight.line",
         inverse_name="encounter_id",
         string="Linee",
         help="Linee dello scontro.",
@@ -60,7 +60,7 @@ class CreatureEncounter(models.Model):
 
     biome_ids = fields.Many2many(
         comodel_name="biome.biome",
-        relation="creature_encounter_biome_biome_rel",
+        relation="encounter_fight_biome_biome_rel",
         compute="_compute_biome_ids",
         string="Biomi",
         help="Biomi dove può verificarsi lo scontro.",
@@ -74,7 +74,7 @@ class CreatureEncounter(models.Model):
     )
 
     faction_id = fields.Many2one(
-        comodel_name="faction.faction",
+        comodel_name="creature.faction",
         string="Fazione",
         help="Fazione dello scontro",
     )
@@ -172,7 +172,7 @@ class CreatureEncounter(models.Model):
             # Map faction name to faction ID
             faction_name = encounter.pop('faction_name', None)
             if faction_name:
-                faction = self.env['faction.faction'].search([('name', '=', faction_name)], limit=1)
+                faction = self.env['creature.faction'].search([('name', '=', faction_name)], limit=1)
                 if not faction:
                     raise ValueError(f"Faction '{faction_name}' not found")
                 encounter['faction_id'] = faction.id

@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hex_script,access_hex_script,model_hex_script,base.group_user,1,1,1,1
-access_random_encounter,access_random_encounter,model_random_encounter,base.group_user,1,1,1,1
+access_encounter_interaction,access_encounter_interaction,model_encounter_interaction,base.group_user,1,1,1,1
 access_creature_npc,access_creature_npc,model_creature_npc,base.group_user,1,1,1,1

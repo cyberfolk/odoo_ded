@@ -1,8 +1,8 @@
 <odoo>
-    <record id="faction_faction_view_form_inherited_script" model="ir.ui.view">
-        <field name="name">faction.faction.form</field>
-        <field name="model">faction.faction</field>
-        <field name="inherit_id" ref="cf_hex_biome.faction_faction_view_form"/>
+    <record id="creature_faction_view_form_inherited_script" model="ir.ui.view">
+        <field name="name">creature.faction.form</field>
+        <field name="model">creature.faction</field>
+        <field name="inherit_id" ref="cf_hex_biome.creature_faction_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//page[@name='page_creatures']" position="after">
                 <page string="Esagoni Scriptati">

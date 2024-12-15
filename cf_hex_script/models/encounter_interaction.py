@@ -2,7 +2,7 @@ from odoo import fields, models, api
 
 
 class RandomEncounter(models.Model):
-    _inherit = "random.encounter"
+    _inherit = "encounter.interaction"
     _description = "Random Encounter"
 
     hex_script_id = fields.Many2one(

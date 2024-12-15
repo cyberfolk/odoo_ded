@@ -5,6 +5,6 @@ from . import structure_structure
 from . import creature_creature
 from . import creature_tag
 from . import creature_type
-from . import creature_encounter
-from . import faction_faction
+from . import encounter_fight
+from . import creature_faction
 from . import asset_tile

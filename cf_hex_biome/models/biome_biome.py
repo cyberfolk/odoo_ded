@@ -64,8 +64,8 @@ class BiomeBiome(models.Model):
     )
 
     encounter_ids = fields.Many2many(
-        comodel_name="creature.encounter",
-        relation="creature_encounter_biome_biome_rel",
+        comodel_name="encounter.fight",
+        relation="encounter_fight_biome_biome_rel",
         string="Scontri del Bioma",
         help="Scontri che si possono verificare nel bioma.",
     )

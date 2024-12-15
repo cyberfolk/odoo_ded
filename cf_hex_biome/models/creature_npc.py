@@ -43,8 +43,8 @@ class CreatureNpc(models.Model):
     )
 
     faction_ids = fields.Many2many(
-        comodel_name="faction.faction",
-        relation="faction_faction_creature_npc_rel",
+        comodel_name="creature.faction",
+        relation="creature_faction_creature_npc_rel",
         string="Fazioni",
         help="Fazioni del NPC",
     )

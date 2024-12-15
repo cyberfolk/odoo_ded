@@ -6,8 +6,8 @@ _logger = logging.getLogger(__name__)
 
 
 class FactionFaction(models.Model):
-    _name = "faction.faction"
-    _inherit = ['faction.faction', 'mixin.import.py']
+    _name = "creature.faction"
+    _inherit = ['creature.faction', 'mixin.import.py']
 
     def get_data_str(self):
         """Recupera i dati del modello in formato stringa."""
@@ -76,11 +76,11 @@ class FactionFaction(models.Model):
         # Ciclo le fazioni per associare gli opportuni parent_id e child_ids
         for parent_info in parent_dikts:
             if parent_info.get('child_names'):
-                child_records = self.env['faction.faction'].search([('name', 'in', parent_info['child_names'])])
+                child_records = self.env['creature.faction'].search([('name', 'in', parent_info['child_names'])])
                 parent_info['child_ids'] = [(6, 0, child_records.ids)] if child_records else []
 
             if parent_info.get('parent_name'):
-                parent_record = self.env['faction.faction'].search([('name', '=', parent_info['parent_name'])])
+                parent_record = self.env['creature.faction'].search([('name', '=', parent_info['parent_name'])])
                 parent_info['parent_id'] = parent_record.id if parent_record else None
 
             faction_record = factions.filtered(lambda x: x.name == parent_info['name'])
