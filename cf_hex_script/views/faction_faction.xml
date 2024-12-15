@@ -5,11 +5,6 @@
         <field name="inherit_id" ref="cf_hex_biome.faction_faction_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//page[@name='page_creatures']" position="after">
-                <page string="NPC">
-                    <group>
-                        <field name="npc_ids" nolabel="1" colspan="2"/>
-                    </group>
-                </page>
                 <page string="Esagoni Scriptati">
                     <group>
                         <field name="hex_script_ids" nolabel="1" colspan="2"/>

@@ -7,3 +7,5 @@ from . import creature_encounter
 from . import creature_encounter_line
 from . import todo
 from . import faction_faction
+from . import creature_npc
+from . import random_encounter

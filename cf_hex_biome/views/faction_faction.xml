@@ -109,6 +109,11 @@
                                     <field name="creature_ids" nolabel="1" colspan="2"/>
                                 </group>
                             </page>
+                            <page string="NPC">
+                                <group>
+                                    <field name="npc_ids" nolabel="1" colspan="2"/>
+                                </group>
+                            </page>
                             <page string="Domande" name="page_questions">
                                 <group col="3">
                                     <group col="1" string="Info base:">

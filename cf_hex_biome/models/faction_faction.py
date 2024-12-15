@@ -99,6 +99,13 @@ class FactionFaction(models.Model):
         compute="_compute_desc_creature",
     )
 
+    npc_ids = fields.Many2many(
+        comodel_name="creature.npc",
+        relation="faction_faction_creature_npc_rel",
+        string="NPCs",
+        help="NPC appartenenti alla fazione",
+    )
+
     # Info base:
     n01_years_in_region = fields.Text(string="Da quanti anni sono nella regione?")
     n02_daily_operations = fields.Text(string="Quali sono le loro operazioni quotidiane?")

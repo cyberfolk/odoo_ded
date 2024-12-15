@@ -23,6 +23,8 @@
         "views/creature_encounter.xml",
         "views/creature_encounter_line.xml",
         "views/faction_faction.xml",
+        "views/random_encounter.xml",
+        "views/creature_npc.xml",
         "views/todo.xml",
     ],
     'depends': ['cf_hex_base', 'base', 'web'],
