@@ -43,7 +43,7 @@
                             <field name="npc_ids" widget="many2many_tags"/>
                         </group>
                         <group colspan="2">
-                            <field name="image_primary" widget="image" nolabel="1" colspan="2"/>
+                            <field name="image" widget="image" nolabel="1" colspan="2"/>
                         </group>
                         <notebook>
                             <page string="Descrizione" name="page_description">
@@ -73,9 +73,9 @@
                                     </tree>
                                 </field>
                             </page>
-                            <page string="Immagini" name="page_image_secondary_ids">
-                                <field name="image_secondary_ids" widget="MultipleImage"/>
-                                <field name="image_secondary_ids" widget="many2many_binary"/>
+                            <page string="Immagini" name="page_image_gallery_ids">
+                                <field name="image_gallery_ids" widget="MultipleImage"/>
+                                <field name="image_gallery_ids" widget="many2many_binary"/>
                             </page>
                         </notebook>
                     </group>

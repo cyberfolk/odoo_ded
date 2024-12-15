@@ -11,6 +11,10 @@ class StructureStructure(models.Model):
         help="Struttura"
     )
 
+    image = fields.Image(
+        string="Immagine",
+    )
+
     biome_ids = fields.Many2many(
         comodel_name="biome.biome",
         string="Biomi",

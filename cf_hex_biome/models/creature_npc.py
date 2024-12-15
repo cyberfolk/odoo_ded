@@ -54,7 +54,7 @@ class CreatureNpc(models.Model):
         help="Descrizione della Creatura",
     )
 
-    image_primary = fields.Image(
+    image = fields.Image(
         string="Immagine",
     )
 

@@ -32,7 +32,7 @@
                             <field name="type_id"/>
                             <field name="faction_ids" widget="many2many_tags"/>
                             <field name="description"/>
-                            <field name="image_primary"/>
+                            <field name="image"/>
                             <field name="creature_id"/>
                         </group>
                     </group>

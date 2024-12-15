@@ -39,7 +39,7 @@ class HexScript(models.Model):
         string="Descrizione",
     )
 
-    image_primary = fields.Image(
+    image = fields.Image(
         string="Immagine",
     )
 
@@ -67,7 +67,7 @@ class HexScript(models.Model):
         string="Creatura Principale",
     )
 
-    image_secondary_ids = fields.Many2many(
+    image_gallery_ids = fields.Many2many(
         'ir.attachment',
         string="Altre Immagini",
         domain=[('mimetype', 'ilike', 'image')],
