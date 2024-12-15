@@ -17,30 +17,6 @@ class BiomeBiome(models.Model):
         ('unique_biome_biome_name', 'UNIQUE(name)', 'Il nome del Bioma deve essere univoco!')
     ]
 
-    speed_of_travel = fields.Float(
-        string="Velocità",
-        help="Velocità di viaggio",
-        default=1
-    )
-
-    cd_food = fields.Integer(
-        string="CD Cibo",
-        default=13,
-        help="CD per trovare cibo",
-    )
-
-    cd_water = fields.Integer(
-        string="CD Acqua",
-        default=13,
-        help="CD per trovare Acqua",
-    )
-
-    cd_navigation = fields.Integer(
-        string="CD Navigazione",
-        default=13,
-        help="CD per Navigare",
-    )
-
     color = fields.Char(
         string="Colore",
         help="Colore",
@@ -87,48 +63,6 @@ class BiomeBiome(models.Model):
         help="Creature con Bassa probabilità di trovarle nel Bioma."
     )
 
-    creature_innocuous = fields.Many2many(
-        string="Creature Innocue",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Innocue presenti nel bioma."
-    )
-
-    creature_not_violent = fields.Many2many(
-        string="Creature Non Violente",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Non Violente presenti nel bioma."
-    )
-
-    creature_cool = fields.Many2many(
-        string="Creature Interessanti",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Interessanti presenti nel bioma."
-    )
-
-    creature_endemic = fields.Many2many(
-        string="Creature Endemiche",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Endemiche presenti nel bioma."
-    )
-
-    creature_social = fields.Many2many(
-        string="Creature Sociali",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Sociali presenti nel bioma."
-    )
-
-    creature_boss = fields.Many2many(
-        string="Creature Boss",
-        comodel_name="creature.creature",
-        compute="_compute_creature_boolean_tag",
-        help="Creature Boss presenti nel bioma."
-    )
-
     encounter_ids = fields.Many2many(
         comodel_name="creature.encounter",
         relation="creature_encounter_biome_biome_rel",
@@ -136,19 +70,76 @@ class BiomeBiome(models.Model):
         help="Scontri che si possono verificare nel bioma.",
     )
 
-    kanban_color_name = fields.Char(
-        string="Kanban Colore Nome",
-        compute="_compute_kanban_color_name",
-        help="Campo utility per impostare il colore del nome del bioma nella vista kanban.",
+    # region TABELLA DIFFICOLTà VIAGGIO --------------------------------------------------------------------------------
+    speed_of_travel = fields.Float(
+        string="Velocità",
+        help="Velocità di viaggio",
+        default=1
     )
 
-    @api.depends('color')
-    def _compute_kanban_color_name(self):
-        for record in self:
-            _is_dark = is_dark(record.color)
-            record.kanban_color_name = "#ffffff" if _is_dark else "#000000"
+    cd_food = fields.Integer(
+        string="CD Cibo",
+        default=13,
+        help="CD per trovare cibo",
+    )
 
-    def _compute_creature_boolean_tag(self):
+    cd_water = fields.Integer(
+        string="CD Acqua",
+        default=13,
+        help="CD per trovare Acqua",
+    )
+
+    cd_navigation = fields.Integer(
+        string="CD Navigazione",
+        default=13,
+        help="CD per Navigare",
+    )
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region CREATURE FILTRATI PER TAG ---------------------------------------------------------------------------------
+    creature_not_violent = fields.Many2many(
+        string="Creature Non Violente",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Non Violente presenti nel bioma."
+    )
+
+    creature_innocuous = fields.Many2many(
+        string="Creature Innocue",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Innocue presenti nel bioma."
+    )
+
+    creature_cool = fields.Many2many(
+        string="Creature Interessanti",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Interessanti presenti nel bioma."
+    )
+
+    creature_endemic = fields.Many2many(
+        string="Creature Endemiche",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Endemiche presenti nel bioma."
+    )
+
+    creature_social = fields.Many2many(
+        string="Creature Sociali",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Sociali presenti nel bioma."
+    )
+
+    creature_boss = fields.Many2many(
+        string="Creature Boss",
+        comodel_name="creature.creature",
+        compute="_compute_creature_grouped_by_tag",
+        help="Creature Boss presenti nel bioma."
+    )
+
+    def _compute_creature_grouped_by_tag(self):
         for record in self:
             creature = record.creature_high_prob_ids | record.creature_low_prob_ids
             self.creature_innocuous = creature.filtered(lambda x: x.is_innocuous)
@@ -157,3 +148,21 @@ class BiomeBiome(models.Model):
             self.creature_endemic = creature.filtered(lambda x: x.is_endemic)
             self.creature_social = creature.filtered(lambda x: x.is_social)
             self.creature_boss = creature.filtered(lambda x: x.is_boss)
+
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region UTILITY VISTA KANBAN --------------------------------------------------------------------------------------
+    kanban_color_name = fields.Char(
+        string="Kanban Colore Nome",
+        compute="_compute_kanban_color_name",
+        help="Campo utility per impostare il colore del nome del bioma nella vista kanban.",
+    )
+
+    @api.depends('color')
+    def _compute_kanban_color_name(self):
+        """Funzione di utility per la vista kanban che imposta il colore del nome a NERO o BIANCO,
+           in base alla luminosità del colore dello sfondo."""
+        for record in self:
+            _is_dark = is_dark(record.color)
+            record.kanban_color_name = "#ffffff" if _is_dark else "#000000"
+    # endregion --------------------------------------------------------------------------------------------------------

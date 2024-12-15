@@ -1,6 +1,6 @@
 import logging
 
-from odoo import fields, models, api, Command
+from odoo import fields, models, api
 from ..utility.exp import MAP_CR_EXP
 
 _logger = logging.getLogger(__name__)
