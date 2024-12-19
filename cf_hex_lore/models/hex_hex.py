@@ -74,6 +74,28 @@ class HexHex(models.Model):
         help="Incontri Casuali che si possono verificare nell'Esagono Scriptato.",
     )
 
+    completion_percentage = fields.Float(
+        string="Completamento",
+        compute="_compute_completion_percentage",
+        help="Percentuale di campi completati sul totale dei campi modello."
+    )
+
+    def _compute_completion_percentage(self):
+        target_fields = [
+            'sml', 'image', 'npc_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
+            'structure_id', 'image_gallery_ids', 'wild_encounter_ids', 'encounter_encounter_ids',
+        ]
+
+        for rec in self:
+            filled_fields = sum(1 for field in target_fields if rec[field])
+
+            filled_fields += 1 if rec.name != rec.code else 0  # Controllo aggiuntivo se 'name' è diverso da 'code'
+
+            filled_fields += 1 if rec.sml != 1 else 0  # Controllo aggiuntivo se 'sml' è diverso da 1
+
+            total_fields = len(target_fields) + 2  # +2 per i due controlli aggiuntivi
+            rec.completion_percentage = (filled_fields / total_fields) * 100 if total_fields else 0
+
     @api.depends('biome_id.color')
     def _compute_color(self):
         for record in self:
