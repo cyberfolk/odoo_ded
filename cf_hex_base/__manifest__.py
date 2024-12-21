@@ -19,7 +19,6 @@
         "views/hex_quad.xml",
         "views/hex_macro.xml",
         "views/filter_apps.xml",
-        "views/asset_tile.xml",
         "data/hex.xml",
     ],
     'depends': [
@@ -32,26 +31,5 @@
     'application': True,
     'installable': True,
     'post_init_hook': 'post_init_hook_cf_hex_base',
-    'assets': {
-        'web.assets_backend': [
-            '/cf_hex_base/static/src/utility/utils.js',
-            '/cf_hex_base/static/src/store.js',
-            '/cf_hex_base/static/src/scss/style.scss',
-            '/cf_hex_base/static/src/QuadWidget/*',
-            '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.js',
-            '/cf_hex_base/static/src/ViewMacroClient/ViewMacroClient.xml',
-            '/cf_hex_base/static/src/ViewMacroClient/AddQuadrant/*',
-            '/cf_hex_base/static/src/ViewMacroClient/ViewMacro/*',
-            '/cf_hex_base/static/src/ViewMacroClient/CurrentColor/*',
-            '/cf_hex_base/static/src/ViewMacroClient/CurrentZoom/*',
-            '/cf_hex_base/static/src/ViewMacroClient/CurrentTiles/*',
-            '/cf_hex_base/static/src/ViewMacroClient/CurrentMap/*',
-            '/cf_hex_base/static/src/ViewMacroClient/ClearCurrent/*',
-            '/cf_hex_base/static/src/ViewMacroClient/DirTiles/*',
-            '/cf_hex_base/static/src/ViewMacroClient/HexHex/*',
-        ],
-        'web.assets_frontend': [
-            '/cf_hex_base/static/src/scss/style.scss',
-        ]
-    },
+    'assets': {},
 }

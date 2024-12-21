@@ -14,12 +14,6 @@ class Hex(models.Model):
         default=lambda self: self.code
     )
 
-    hex_asset_id = fields.Many2one(
-        comodel_name='hex.asset.tile',
-        string="Hex Asset",
-        help="Hex Assets contained in this hex"
-    )
-
     quad_id = fields.Many2one(
         comodel_name='hex.quad',
         string="Quadrant",
@@ -95,43 +89,3 @@ class Hex(models.Model):
             else:
                 code = 'void'
             rec.code = code
-
-    # region METODI CHIAMATI DAJAVASCRIPT ------------------------------------------------------------------------------
-    @api.model
-    def change_hex_color(self, hex_id, current_color):
-        """Metodo richiamato dal orm di view_macro.js
-           Cambia il colore di un hex_id con current_color"""
-        _hex = self.env['hex.hex'].browse(hex_id)
-        _hex.color = current_color
-
-    @api.model
-    def set_asset_tiles(self, hex_id, current_tile):
-        """Metodo richiamato dal orm di view_macro.js
-           Setta i parametri di hex_asset su hex_id"""
-        _hex = self.env['hex.hex'].browse(hex_id)
-        hex_asset_vals = {
-            'asset_id': current_tile['tile_id'],
-            'rotation': current_tile['rotation']
-        }
-        if not _hex.hex_asset_id:
-            hex_asset = self.env['hex.asset.tile'].create(hex_asset_vals)
-            _hex.hex_asset_id = hex_asset.id
-        else:
-            _hex.hex_asset_id.write(hex_asset_vals)
-
-    @api.model
-    def get_json_hex(self):
-        """Metodo richiamato dal orm di HexHex.js
-            :return: Json del hex."""
-        dict_hex = {
-            'id': self.id,
-            'index': self.index,
-            'color': self.color,
-            'hex_asset_id': {
-                'rotation': self.hex_asset_id.rotation,
-                'tile_id': self.hex_asset_id.asset_id.id,
-            },
-        }
-        json_hex = json.dumps(dict_hex)
-        return json_hex
-    # endregion --------------------------------------------------------------------------------------------------------

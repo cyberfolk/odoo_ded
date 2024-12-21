@@ -34,8 +34,8 @@
                             <group>
                                 <field class="fw-bold h1" colspan="2" nolabel="1" readonly="1" name="name"/>
                             </group>
-                            <group>
-                                <field name="hook_widget" widget="QuadWidget" nolabel="1"/>
+                            <group name="group_hook_widget">
+                                <!-- Esteso con un xpath in un modulo successivo -->
                             </group>
                             <group string="Missing Hexes" name="quad_missing_ids">
                                 <field readonly="1" colspan="2" nolabel="1" name="missing_ids" widget='many2many_tags'/>
