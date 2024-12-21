@@ -58,7 +58,7 @@ class HexMixin(models.AbstractModel):
             else:
                 record.circle_number = None
 
-    # Ideati per altri Hex, Quad e Macro con le Form View
+    # Ideati per altri Hex, Quad e Map con le Form View
     # Ma avendole bloccate -> valutare di togliere questi metodi
     @api.constrains('index')
     def _check_index(self):

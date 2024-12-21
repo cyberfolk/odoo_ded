@@ -4,7 +4,7 @@ from odoo import api, fields, models, Command
 from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
-from ..utility.constant import MACRO_MAP_TYPE_SELECTION
+from ..utility.constant import MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
 from ..utility.constant import COLOR_HEX_LIST
 
@@ -15,9 +15,9 @@ class Quadrant(models.Model):
     _description = "Quadrant, contains Hexagons."
     _order = 'row,col'
 
-    macro_id = fields.Many2one(
-        comodel_name='hex.macro',
-        string="Macro Area",
+    map_id = fields.Many2one(
+        comodel_name='hex.map',
+        string="Mappa",
     )
 
     hex_list = fields.Json(
@@ -79,7 +79,7 @@ class Quadrant(models.Model):
     )
 
     type = fields.Selection(
-        selection=MACRO_MAP_TYPE_SELECTION,
+        selection=MAP_TYPE_SELECTION,
         string="Tipo",
         default="v1_19_q",
     )

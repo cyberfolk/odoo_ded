@@ -10,14 +10,14 @@
     'author': "cyberfolk",
     'summary': "Introduce gli elementi base della Hex Map",
     'description':
-        """In questa app vengono introdotti gli elementi base della Hex Map: ovvero Macro-area, Quadranti ed Esagoni.""",
+        """In questa app vengono introdotti gli elementi base della Hex Map: ovvero Mappe, Quadranti ed Esagoni.""",
     'license': 'AGPL-3',
     'data': [
         "security/ir.model.access.csv",
         "views/menu_root.xml",
         "views/hex_hex.xml",
         "views/hex_quad.xml",
-        "views/hex_macro.xml",
+        "views/hex_map.xml",
         "views/filter_apps.xml",
         "data/hex.xml",
     ],

@@ -1,7 +1,7 @@
 import json
 
 from odoo import api, fields, models
-from ..utility.constant import MACRO_MAP_TYPE_SELECTION
+from ..utility.constant import MAP_TYPE_SELECTION
 
 
 class Hex(models.Model):
@@ -60,7 +60,7 @@ class Hex(models.Model):
     )
 
     type = fields.Selection(
-        selection=MACRO_MAP_TYPE_SELECTION,
+        selection=MAP_TYPE_SELECTION,
         string="Tipo",
         default="v1_19_q",
     )

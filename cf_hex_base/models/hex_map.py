@@ -3,13 +3,13 @@ from itertools import groupby
 
 from odoo import fields, models, api, Command
 from ..utility.constant import BORDERS_MAP
-from ..utility.constant import MACRO_MAP_TYPE_SELECTION
+from ..utility.constant import MAP_TYPE_SELECTION
 from ..utility.constant import QUAD_LIST_V1
 
 
-class MacroArea(models.Model):
-    _name = "hex.macro"
-    _description = "Macro-Area, contains Quadrants."
+class HexMap(models.Model):
+    _name = "hex.map"
+    _description = "Mappa, contains Quadrants."
 
     name = fields.Char(
         string='Name',
@@ -18,11 +18,11 @@ class MacroArea(models.Model):
     quad_ids = fields.One2many(
         comodel_name='hex.quad',
         string="Quadrants",
-        inverse_name='macro_id',
+        inverse_name='map_id',
     )
 
     type = fields.Selection(
-        selection=MACRO_MAP_TYPE_SELECTION,
+        selection=MAP_TYPE_SELECTION,
         string="Tipo",
         default="v1_19_q",
     )
@@ -57,31 +57,30 @@ class MacroArea(models.Model):
             - I confini esterni degli Esagoni
             - La lista degli Esagoni mancanti
         """
-        macro = super().create(vals_list)
-        if macro.type == 'v2_nolimit_q':
+        map = super().create(vals_list)
+        if map.type == 'v2_nolimit_q':
             quad_vals = {"row": 0, "col": 0, "type": "v2_nolimit_q"}
-            macro.quad_ids = [Command.create(quad_vals)]
+            map.quad_ids = [Command.create(quad_vals)]
 
-        elif macro.type == 'v1_19_q':
+        elif map.type == 'v1_19_q':
             for quad_vals in QUAD_LIST_V1:
                 quad_vals['type'] = 'v1_19_q'
-                macro.quad_ids = [Command.create(quad_vals)]
+                map.quad_ids = [Command.create(quad_vals)]
 
-            macro.set_quads_borders()
-            for quad in macro.quad_ids:
+            map.set_quads_borders()
+            for quad in map.quad_ids:
                 quad.set_hexs_borders()
-            for quad in macro.quad_ids:
+            for quad in map.quad_ids:
                 quad.set_hexs_external_borders()
-            for quad in macro.quad_ids:
+            for quad in map.quad_ids:
                 quad.set_missing_ids()
-        return macro
+        return map
 
     def unlink(self):
         for rec in self:
             for quad in rec.quad_ids:
                 quad.unlink()
-        return super(MacroArea, self).unlink()
-
+        return super(HexMap, self).unlink()
 
     def compute_quad_stats(self):
         for rec in self:
@@ -101,27 +100,3 @@ class MacroArea(models.Model):
                 rec.col_min = min(col_set)
                 rec.col_max = max(col_set)
                 rec.col_num = rec.col_max - rec.col_min + 1
-
-    def add_right(self):
-        for row_i in range(self.row_min, self.row_max + 1):
-            quad_vals = {"type": "v2_nolimit_q", "row": row_i, "col": self.col_max + 1}
-            self.quad_ids = [Command.create(quad_vals)]
-        return self.get_json_macro(self.id)
-
-    def add_top(self):
-        for col_i in range(self.col_min, self.col_max + 1):
-            quad_vals = {"type": "v2_nolimit_q", "row": self.row_min - 1, "col": col_i}
-            self.quad_ids = [Command.create(quad_vals)]
-        return self.get_json_macro(self.id)
-
-    def add_bottom(self):
-        for col_i in range(self.col_min, self.col_max + 1):
-            quad_vals = {"type": "v2_nolimit_q", "row": self.row_max + 1, "col": col_i}
-            self.quad_ids = [Command.create(quad_vals)]
-        return self.get_json_macro(self.id)
-
-    def add_left(self):
-        for row_i in range(self.row_min, self.row_max + 1):
-            quad_vals = {"type": "v2_nolimit_q", "row": row_i, "col": self.col_min - 1}
-            self.quad_ids = [Command.create(quad_vals)]
-        return self.get_json_macro(self.id)

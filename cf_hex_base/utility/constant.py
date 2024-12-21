@@ -117,7 +117,7 @@ QUAD_LIST_V1 = [
     {"index": 19, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 17, 18, 19]}
 ]
 
-MACRO_MAP_TYPE_SELECTION = [
+MAP_TYPE_SELECTION = [
     ('v1_19_q', 'V1 19Q'),
     ('v2_nolimit_q', 'V2 NOLIMIT Q'),
 ]

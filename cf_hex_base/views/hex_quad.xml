@@ -6,10 +6,13 @@
             <tree>
                 <field name="name"/>
                 <field name="code"/>
-                <field name="index" readonly="1"/>
+                <field name="type"/>
+                <field name="index"/>
                 <field name="circle_order"/>
                 <field name="circle_number"/>
-                <field name="macro_id"/>
+                <field name="row"/>
+                <field name="col"/>
+                <field name="map_id"/>
                 <field name="border_N"/>
                 <field name="border_NE"/>
                 <field name="border_SE"/>
@@ -27,7 +30,7 @@
             <form js_class="quad_form">
                 <sheet>
                     <header>
-                        <field name="id" widget="o2m_expand_popup" model="hex.quad" model_parent="hex.macro"/>
+                        <field name="id" widget="o2m_expand_popup" model="hex.quad" model_parent="hex.map"/>
                     </header>
                     <group>
                         <group col="1">
