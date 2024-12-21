@@ -121,8 +121,3 @@ MAP_TYPE_SELECTION = [
     ('v1_19_q', 'V1 19Q'),
     ('v2_nolimit_q', 'V2 NOLIMIT Q'),
 ]
-
-COLOR_HEX_LIST = [
-    "#ff0000", "#ff5000", "#ffa000", "#fff000", "#bfff00", "#6fff00", "#1fff00", "#00ff30", "#00ff80",
-    "#00ffd0", "#00dfff", "#008fff", "#003fff", "#1000ff", "#6000ff", "#b000ff", "#ff00ff", "#ff00af", "#ff005f",
-]

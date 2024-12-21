@@ -55,10 +55,6 @@ class Hex(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    color = fields.Char(
-        string='Color',
-    )
-
     type = fields.Selection(
         selection=MAP_TYPE_SELECTION,
         string="Tipo",

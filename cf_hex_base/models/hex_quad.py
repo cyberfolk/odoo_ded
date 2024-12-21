@@ -6,7 +6,6 @@ from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
 from ..utility.constant import MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
-from ..utility.constant import COLOR_HEX_LIST
 
 
 class Quadrant(models.Model):
@@ -112,12 +111,11 @@ class Quadrant(models.Model):
             if quad.code == 'void' or not quad.hex_list:
                 return quad
             for index in quad.hex_list:
-                hex_vals = {'color': COLOR_HEX_LIST[quad.index - 1], 'index': index}
+                hex_vals = {'index': index}
                 quad.hex_ids = [Command.create(hex_vals)]
         elif quad.type == "v2_nolimit_q":
             for i in range(16):
                 hex_vals = {
-                    'color': COLOR_HEX_LIST[(quad.row * 4 + quad.col) % 19],
                     'type': "v2_nolimit_q",
                     'row': i // 4,
                     'col': i % 4
