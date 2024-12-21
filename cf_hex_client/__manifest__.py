@@ -8,9 +8,10 @@
     'version': '17.0',
     'category': 'Map',
     'author': "cyberfolk",
-    'summary': "Introduce gli elementi base della Hex Map",
+    'summary': "Introduce un interfaccia più semplice per le mappe.",
     'description':
-        """In questa app vengono introdotti gli elementi base della Hex Map: ovvero Mappe, Quadranti ed Esagoni.""",
+        """In questo modulo viene introdotto un menù che mette a disposizione un'interfaccia per poter
+        interagire direttamente con le mappe in modo più semplice.""",
     'license': 'AGPL-3',
     'data': [
         "security/ir.model.access.csv",
