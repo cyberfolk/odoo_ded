@@ -9,7 +9,7 @@ class BiomeBiome(models.Model):
 
     @api.model
     def get_json_biome_list(self):
-        """Metodo richiamato dal orm di CurrentColor.js
+        """Metodo richiamato dal orm di CurrentBiome.js
             :return: Json della lista di tutti i Biomi (in stato attivo) nel DB."""
         biome_fields = ['id', 'color', 'name', 'color_name_contrast']
         biome_list = self.env['biome.biome'].search([('state', '=', 'active')]).read(biome_fields)

@@ -37,7 +37,7 @@
             '/cf_hex_client/static/src/ViewMapClient/ViewMapClient.xml',
             '/cf_hex_client/static/src/ViewMapClient/AddQuadrant/*',
             '/cf_hex_client/static/src/ViewMapClient/ViewMap/*',
-            '/cf_hex_client/static/src/ViewMapClient/CurrentColor/*',
+            '/cf_hex_client/static/src/ViewMapClient/CurrentBiome/*',
             '/cf_hex_client/static/src/ViewMapClient/CurrentZoom/*',
             '/cf_hex_client/static/src/ViewMapClient/CurrentTiles/*',
             '/cf_hex_client/static/src/ViewMapClient/CurrentMap/*',

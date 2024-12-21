@@ -1,11 +1,11 @@
 /********************************
-*  CurrentColor Component       *
+*  CurrentBiome Component       *
 ********************************/
 
 $current-outline: 3px solid #000;
 $current-opacity: 0.5;
 
-.current-color {
+.current-biome {
     $self: &;
     @extend .view-map-controller;
 

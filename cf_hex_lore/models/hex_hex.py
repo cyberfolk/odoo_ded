@@ -10,11 +10,6 @@ class HexHex(models.Model):
         help="Bioma contenuto in questo Hex-Script"
     )
 
-    color = fields.Char(
-        string='Color',
-        compute='_compute_color'
-    )
-
     sml = fields.Integer(
         string="SML",
         help="Difficoltà Hex-Script. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
@@ -82,10 +77,9 @@ class HexHex(models.Model):
 
     def _compute_completion_percentage(self):
         target_fields = [
-            'sml', 'image', 'npc_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
+            'image', 'npc_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
             'structure_id', 'image_gallery_ids', 'wild_encounter_ids', 'encounter_encounter_ids',
         ]
-
         for rec in self:
             filled_fields = sum(1 for field in target_fields if rec[field])
 
@@ -95,8 +89,3 @@ class HexHex(models.Model):
 
             total_fields = len(target_fields) + 2  # +2 per i due controlli aggiuntivi
             rec.completion_percentage = (filled_fields / total_fields) * 100 if total_fields else 0
-
-    @api.depends('biome_id.color')
-    def _compute_color(self):
-        for record in self:
-            record.color = record.biome_id.color or '#DDDDDD'

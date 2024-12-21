@@ -68,15 +68,13 @@ class HexMap(models.Model):
         # Rifinisco la hex_map con solo i valori da passare al front_end
         for k, v in hex_map.items():
             for _hex in v:
-                if _hex['biome_id']:
-                    _id = _hex['biome_id'][0]
-                    _hex['color'] = biomes_map[_id]
+                if hex_asset_id := _hex.get('hex_asset_id'):  # Aggiorna hex_asset_id, se presente
+                    _hex['hex_asset_id'] = hex_assets_map[hex_asset_id[0]]
+                if biome_id := _hex.get('biome_id'):  # Assegna il colore basato su biome_id, se presente
+                    _hex['color'] = biomes_map[biome_id[0]]
                 else:
                     _hex['color'] = '#DDDDDD'
-                _hex.pop('biome_id')
-                if _hex['hex_asset_id']:
-                    _id = _hex['hex_asset_id'][0]
-                    _hex['hex_asset_id'] = hex_assets_map[_id]
+                _hex.pop('biome_id', None)
 
         dict_map = {
             'id': map_id,

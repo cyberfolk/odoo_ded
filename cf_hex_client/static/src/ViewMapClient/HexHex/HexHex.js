@@ -33,8 +33,9 @@ export class HexHex extends Component {
 
     /**
      * Gestisce l'azione di click su un oggetto "hex":
-     *  apre il form del "hex" se non è presente un colore corrente,
-     *  altrimenti cambia il colore del "hex".
+     *  - Se currentTile è impostato cambio il tile_id del Hex,
+     *  - Se currentBiome è impostato cambio il biome_id del Hex,
+     *  - Altrimenti vado alla vista Form del Hex.
      */
     async onClick(){
         const tile_id = this.store.currentTile?.tile_id ?? null;

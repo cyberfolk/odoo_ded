@@ -89,7 +89,6 @@
                                     <field name="circle_number" invisible="type != 'v1_19_q'"/>
                                     <field name="row" invisible="type != 'v2_nolimit_q'" readonly="1"/>
                                     <field name="col" invisible="type != 'v2_nolimit_q'" readonly="1"/>
-                                    <field name="color" readonly="1"/>
                                     <field name="quad_id" readonly="1"/>
                                 </group>
                                 <group name="group_map_params_right">

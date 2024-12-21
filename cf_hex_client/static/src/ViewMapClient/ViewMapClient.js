@@ -1,7 +1,7 @@
 /** @odoo-module **/
 import { Component } from "@odoo/owl";
 import { ClearCurrent } from '@cf_hex_client/ViewMapClient/ClearCurrent/ClearCurrent';
-import { CurrentColor } from '@cf_hex_client/ViewMapClient/CurrentColor/CurrentColor';
+import { CurrentBiome } from '@cf_hex_client/ViewMapClient/CurrentBiome/CurrentBiome';
 import { CurrentTiles } from '@cf_hex_client/ViewMapClient/CurrentTiles/CurrentTiles';
 import { AddQuadrant } from '@cf_hex_client/ViewMapClient/AddQuadrant/AddQuadrant';
 import { CurrentZoom } from '@cf_hex_client/ViewMapClient/CurrentZoom/CurrentZoom';
@@ -15,7 +15,7 @@ const actionRegistry = registry.category("actions");
 class ViewMapClient extends Component {
     static template = "ViewMapClient"
     static props = ["*"]
-    static components = { CurrentColor, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, ViewMap, AddQuadrant };
+    static components = { CurrentBiome, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, ViewMap, AddQuadrant };
 
     setup() {
         super.setup();

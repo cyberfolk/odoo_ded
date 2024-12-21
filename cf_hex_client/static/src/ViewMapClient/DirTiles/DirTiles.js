@@ -18,7 +18,7 @@ export class DirTiles extends Component {
     }
 
     setCurrentTile(tile_id){
-    store.currentColor = ''
+    store.currentBiome = ''
         if (this.store.currentTile.tile_id == tile_id){
             this.store.currentTile.rotation += 60
             this.store.currentTile.rotation %= 360

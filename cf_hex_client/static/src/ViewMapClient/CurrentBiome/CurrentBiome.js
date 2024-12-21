@@ -4,8 +4,8 @@ import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 import { store, useStore } from "@cf_hex_client/store";
 
-export class CurrentColor extends Component {
-    static template = "CurrentColor"
+export class CurrentBiome extends Component {
+    static template = "CurrentBiome"
     static props = ["*"]
 
     setup() {
