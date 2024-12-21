@@ -19,6 +19,11 @@ class Hex(models.Model):
         string="Quadrant",
     )
 
+    map_id = fields.Many2one(
+        related='quad_id.map_id',
+        store=True,
+    )
+
     border_N = fields.Many2one(
         comodel_name='hex.hex',
         string="N",

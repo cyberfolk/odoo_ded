@@ -1,4 +1,17 @@
 <odoo>
+    <record id="hex_quad_view_search" model="ir.ui.view">
+        <field name="name">hex.quad.search</field>
+        <field name="model">hex.quad</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="filter_type_v1_19_q" string="Tipo V1" domain="[('type', '=', 'v1_19_q')]"/>
+                <filter name="filter_type_v2_nolimit_q" string="Tipo V2" domain="[('type', '=', 'v2_nolimit_q')]"/>
+                <filter name="groupby_type" string="Tipo" context="{'group_by': 'type'}"/>
+                <filter name="groupby_map_id" string="Mappa" context="{'group_by': 'map_id'}"/>
+            </search>
+        </field>
+    </record>
+
     <record id="hex_quad_view_tree" model="ir.ui.view">
         <field name="name">hex.quad.tree</field>
         <field name="model">hex.quad</field>

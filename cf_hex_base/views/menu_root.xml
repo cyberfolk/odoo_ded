@@ -3,12 +3,14 @@
         <field name="name">Quadranti</field>
         <field name="res_model">hex.quad</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_groupby_map_id':1}</field>
     </record>
 
     <record id="action_menu_hex" model="ir.actions.act_window">
         <field name="name">Hex</field>
         <field name="res_model">hex.hex</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_groupby_map_id':1}</field>
     </record>
 
     <record id="action_menu_map" model="ir.actions.act_window">
