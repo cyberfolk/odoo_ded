@@ -17,18 +17,24 @@
         <field name="model">hex.hex</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="code"/>
                 <field name="name"/>
-                <field name="type" widget="badge"
+                <field name="code"/>
+                <field name="type" widget="badge" optional="show"
                        decoration-info="type  == 'v1_19_q'"
                        decoration-primary="type == 'v2_nolimit_q'"/>
-                <field name="quad_id"/>
-                <field name="map_id"/>
-                <field name="index" readonly="1"/>
-                <field name="circle_order"/>
-                <field name="circle_number"/>
-                <field name="row"/>
-                <field name="col"/>
+                <field name="quad_id" optional="show"/>
+                <field name="map_id" optional="show"/>
+                <field name="index" optional="hide"/>
+                <field name="circle_order" optional="hide"/>
+                <field name="circle_number" optional="hide"/>
+                <field name="row" optional="hide"/>
+                <field name="col" optional="hide"/>
+                <field name="border_N" optional="hide"/>
+                <field name="border_NE" optional="hide"/>
+                <field name="border_SE" optional="hide"/>
+                <field name="border_S" optional="hide"/>
+                <field name="border_SW" optional="hide"/>
+                <field name="border_NW" optional="hide"/>
             </tree>
         </field>
     </record>

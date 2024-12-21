@@ -14,11 +14,11 @@
     'license': 'AGPL-3',
     'data': [
         "security/ir.model.access.csv",
-        "views/menu_root.xml",
         "views/hex_hex.xml",
         "views/hex_quad.xml",
         "views/hex_map.xml",
         "views/filter_apps.xml",
+        "views/menu_root.xml",
         "data/hex.xml",
     ],
     'depends': [

@@ -19,6 +19,7 @@
         "views/encounter_encounter.xml",
         "views/creature_npc.xml",
         "views/creature_faction.xml",
+        "views/menu_root.xml",
     ],
     'depends': ['cf_hex_base', 'cf_hex_biome', 'cf_multiple_image'],
     'demo': [],

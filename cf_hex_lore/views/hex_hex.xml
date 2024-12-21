@@ -1,17 +1,16 @@
 <odoo>
-
     <record id="hex_hex_view_tree_inherited" model="ir.ui.view">
         <field name="name">hex.hex.tree.lore</field>
         <field name="model">hex.hex</field>
         <field name="inherit_id" ref="cf_hex_base.hex_hex_view_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='id']" position="before">
+            <xpath expr="//field[@name='col']" position="before">
                 <field name="biome_id"/>
                 <field name="sml"/>
-                <field name="npc_ids" widget="many2many_tags"/>
-                <field name="faction_ids" widget="many2many_tags"/>
-                <field name="structure_id"/>
-                <field name="creature_id"/>
+                <field name="npc_ids" widget="many2many_tags" optional="show"/>
+                <field name="faction_ids" widget="many2many_tags" optional="show"/>
+                <field name="structure_id" optional="show"/>
+                <field name="creature_id" optional="show"/>
                 <field name="completion_percentage" widget="progressbar"/>
             </xpath>
         </field>
