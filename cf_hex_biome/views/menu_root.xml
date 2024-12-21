@@ -83,5 +83,5 @@
     </menuitem>
 
     <menuitem sequence="5" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter" parent="cf_hex_base.menu_root"/>
-    <menuitem sequence="6" id="menu_todo" name="TODO" action="action_menu_todo" parent="cf_hex_base.menu_root"/>
+    <menuitem sequence="100" id="menu_todo" name="TODO" action="action_menu_todo" parent="cf_hex_base.menu_root"/>
 </odoo>

@@ -15,7 +15,11 @@
     'data': [
         "data/dev_cron.xml",
     ],
-    'depends': ['cf_hex_biome'],
+    'depends': [
+        'cf_hex_client',
+        'cf_hex_biome',
+        'cf_hex_lore',
+    ],
     'demo': [],
     'application': False,
     'installable': True,

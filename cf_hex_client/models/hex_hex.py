@@ -14,11 +14,11 @@ class Hex(models.Model):
     )
 
     @api.model
-    def change_hex_color(self, hex_id, current_color):
+    def change_hex_biome(self, hex_id, biome_id):
         """Metodo richiamato dal orm di view_map.js
-           Cambia il colore di un hex_id con current_color"""
+           Setta il campo biome_id del di hex_id"""
         _hex = self.env['hex.hex'].browse(hex_id)
-        _hex.color = current_color
+        _hex.biome_id = biome_id
 
     @api.model
     def set_asset_tiles(self, hex_id, current_tile):

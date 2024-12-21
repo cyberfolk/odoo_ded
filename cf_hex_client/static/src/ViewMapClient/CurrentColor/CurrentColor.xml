@@ -1,18 +1,18 @@
 <div t-name="CurrentColor" class="current-color mt-2">
     <div class="current-color__title" t-att-class="store.currentColor ? 'd-none' : ''">
-        <span>Dipingi Hex</span>
+        <span>Colloca Bioma</span>
     </div>
 
     <div class="current-color__hide-title" t-att-class="store.currentColor ? 'd-block' : ''">
-        <span>Scegli un Colore e dipingi gli Esagoni:</span>
+        <span>Scegli un Bioma e collocalo sugli Esagoni:</span>
     </div>
-    <div class="current-color__color-list mx-1" t-att-class="store.currentColor ? 'd-flex' : ''">
-        <t t-set="colorList" t-value="['#c7ffff','#FFDF00','#007F00','#2FDF2F','#FF7F00','#FF0000','#BF00FF','#00BFFF','#0000FF']"/>
-        <t t-foreach="colorList" t-as="_color" t-key="_color">
+    <div class="current-color__color-list mx-1 row">
+        <t t-foreach="store.biomeList" t-as="biome" t-key="biome">
             <button class="current-color__btn btn p-2 me-1"
-                    t-att-style="'background-color: ' + _color + ';'"
-                    t-on-click="() => this.setCurrentColor(_color)"
-                    t-att-class="store.currentColor == _color ? 'current-color__btn--active' : ''">
+                    t-att-style="'background-color: ' + biome.color + '; color: ' + biome.color_name_contrast"
+                    t-on-click="() => this.setCurrentBiome(biome)"
+                    t-att-class="store.currentBiome == biome.color ? 'current-color__btn--active' : ''"
+                    t-esc="biome.name">
             </button>
         </t>
     </div>

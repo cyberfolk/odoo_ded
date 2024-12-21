@@ -151,18 +151,18 @@ class BiomeBiome(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region UTILITY VISTA KANBAN --------------------------------------------------------------------------------------
-    kanban_color_name = fields.Char(
-        string="Kanban Colore Nome",
-        compute="_compute_kanban_color_name",
-        help="Campo utility per impostare il colore del nome del bioma nella vista kanban.",
+    # region UTILITY  --------------------------------------------------------------------------------------------------
+    color_name_contrast = fields.Char(
+        string="Colore Nome Contrasto",
+        compute="_compute_color_name_contrast",
+        help="Campo utility per impostare il colore del nome a contrasto col colore del bioma.",
     )
 
     @api.depends('color')
-    def _compute_kanban_color_name(self):
-        """Funzione di utility per la vista kanban che imposta il colore del nome a NERO o BIANCO,
+    def _compute_color_name_contrast(self):
+        """Funzione di utility per impostare il colore del nome a NERO o BIANCO,
            in base alla luminosità del colore dello sfondo."""
         for record in self:
             _is_dark = is_dark(record.color)
-            record.kanban_color_name = "#ffffff" if _is_dark else "#000000"
+            record.color_name_contrast = "#ffffff" if _is_dark else "#000000"
     # endregion --------------------------------------------------------------------------------------------------------

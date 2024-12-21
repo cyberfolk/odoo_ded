@@ -15,7 +15,7 @@ export const store = reactive({
 
     resetCurrentSelect(){
         this.currentTile.tile_id = ''
-        this.currentColor = ''
+        this.currentBiome = null
     },
 
     isCurrentSelectEmpty(){

@@ -12,12 +12,19 @@ export class CurrentColor extends Component {
         super.setup();
         this.store = useStore()
         this.store.add({
-            currentColor: "",
+            currentBiome: 0,
+        })
+        this.orm = useService("orm");
+
+        onWillStart(async () => {
+            this.store.biomeList = await this.orm.call("biome.biome", "get_json_biome_list", [], {})
+                .then((result) => { return JSON.parse(result) })
         })
     }
 
-    setCurrentColor(color){
+    setCurrentBiome(biome){
+        console.log(biome)
         this.store.resetCurrentSelect()
-        this.store.currentColor = color
+        this.store.currentBiome = biome
     }
 }

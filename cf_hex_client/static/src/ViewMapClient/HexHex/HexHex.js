@@ -38,17 +38,18 @@ export class HexHex extends Component {
      */
     async onClick(){
         const tile_id = this.store.currentTile?.tile_id ?? null;
-        if (this.store.currentColor)
-            this.changeColorHex(this.state.id)
+        if (this.store.currentBiome)
+            this.changeBiomeHex(this.state.id)
         else if (tile_id){
             this.setAssetTiles(this.state.id)}
         else {
             this.goToViewForm(this.state.id)
         }
     }
-    async changeColorHex(){
-        await this.orm.call("hex.hex", "change_hex_color", [this.state.id, this.store.currentColor], {});
-        this.state.color = this.store.currentColor
+    async changeBiomeHex(){
+        const biome_id = this.store.currentBiome?.id ?? null;
+        await this.orm.call("hex.hex", "change_hex_biome", [this.state.id, biome_id], {});
+        this.state.color = this.store.currentBiome.color
     }
 
     /**

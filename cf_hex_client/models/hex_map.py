@@ -46,19 +46,34 @@ class HexMap(models.Model):
             :return: Json delle Mappe."""
         map_id = int(map_id)
         self_map = self.env['hex.map'].browse(map_id)
+
+        # Definiamo i campi che ci interessano
+        hex_asset_fields = ['asset_id', 'rotation']
+        biome_fields = ['id', 'color']
         quad_fields = ['id', 'code', 'index', 'row', 'col', 'hex_ids']
-        hex_fields = ['id', 'code', 'index', 'row', 'col', 'color', 'hex_asset_id']
+        hex_fields = ['id', 'code', 'index', 'row', 'col', 'biome_id', 'hex_asset_id']
 
         # Otteniamo tutti i quad e i relativi hex in una singola query
         quads = self_map.quad_ids.read(quad_fields)
         hex_map = {quad['id']: self.env['hex.hex'].browse(quad['hex_ids']).read(hex_fields) for quad in quads}
 
-        # Aggiungo le info relative a gli hex_asset negli hex
-        hex_asset_fields = ['asset_id', 'rotation']
+        # Creo la mappa di raccordo per i Biomi
+        biomes = self.env['biome.biome'].search([('state', '=', 'active')]).read(biome_fields)
+        biomes_map = {x['id']: x['color'] for x in biomes}
+
+        # Creo la mappa di raccordo per gli Asset
         hex_assets = self.env['hex.asset.tile'].search([]).read(hex_asset_fields)
         hex_assets_map = {x['id']: {'tile_id': x['asset_id'][0], 'rotation': x['rotation']} for x in hex_assets}
+
+        # Rifinisco la hex_map con solo i valori da passare al front_end
         for k, v in hex_map.items():
             for _hex in v:
+                if _hex['biome_id']:
+                    _id = _hex['biome_id'][0]
+                    _hex['color'] = biomes_map[_id]
+                else:
+                    _hex['color'] = '#DDDDDD'
+                _hex.pop('biome_id')
                 if _hex['hex_asset_id']:
                     _id = _hex['hex_asset_id'][0]
                     _hex['hex_asset_id'] = hex_assets_map[_id]
