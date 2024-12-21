@@ -1,0 +1,15 @@
+<t t-name="AddQuadrant">
+    <t t-if="store.map">
+        <t t-if="store.map.type == 'v2_nolimit_q'">
+            <div class="view-map-controller d-flex justify-content-around mt-2">
+                <button class="btn btn-primary" t-on-click="addBottom">Add Bot</button>
+                <button class="btn btn-primary" t-on-click="addTop">Add Top</button>
+            </div>
+            <div class="view-map-controller d-flex justify-content-around mt-2">
+                <button class="btn btn-primary" t-on-click="addRight">Add DX</button>
+                <button class="btn btn-primary" t-on-click="addLeft">Add SX</button>
+            </div>
+            <br/>
+        </t>
+    </t>
+</t>

@@ -1,0 +1,19 @@
+/********************************
+*  CurrentZoom Component        *
+********************************/
+.current-zoom {
+    @extend .view-map-controller;
+    width: min-content;
+    display: flex;
+    align-items: center;
+
+    &__title{
+        @extend .view-map-controller__title;
+    }
+
+    &:hover {
+        button {
+            display: inline !important;
+        }
+  }
+}

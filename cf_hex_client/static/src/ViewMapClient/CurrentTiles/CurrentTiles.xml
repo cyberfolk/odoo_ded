@@ -1,0 +1,39 @@
+<div t-name="CurrentTiles" class="mt-2 current-tiles">
+    <div class="current-tiles__title-1" t-att-class="store.currentTile.tile_id? 'd-none': ''">
+        <span>Colloca Tiles</span>
+    </div>
+
+    <div class="current-tiles__hide-part" t-att-class="store.currentTile.tile_id? 'd-block': ''">
+        <div class="current-tiles__title-2">
+            <span>Scegli un Tiles e collocalo negli Esagoni:</span>
+        </div>
+        <div class="current-tiles__tiles-kit m-1">
+            <t t-foreach="store.tilesKit" t-as="dir_1" t-key="dir_1">
+                <t t-if="store.tilesKit[dir_1].tiles">
+                    <DirTiles tiles="store.tilesKit[dir_1]"/>
+                </t>
+                <t t-else="">
+                    <t t-foreach="store.tilesKit[dir_1]" t-as="dir_2" t-key="dir_2">
+                        <t t-if="store.tilesKit[dir_1][dir_2].tiles">
+                            <DirTiles tiles="store.tilesKit[dir_1][dir_2]"/>
+                        </t>
+                        <t t-else="">
+                            <t t-foreach="store.tilesKit[dir_1][dir_2]" t-as="dir_3" t-key="dir_3">
+                                <t t-if="store.tilesKit[dir_1][dir_2][dir_3].tiles">
+                                    <DirTiles tiles="store.tilesKit[dir_1][dir_2][dir_3]"/>
+                                </t>
+                                <t t-else="">
+                                    <t t-foreach="store.tilesKit[dir_1][dir_2][dir_3]" t-as="dir_4" t-key="dir_4">
+                                        <t t-if="store.tilesKit[dir_1][dir_2][dir_3][dir_4].tiles">
+                                            <DirTiles tiles="store.tilesKit[dir_1][dir_2][dir_3][dir_4]"/>
+                                        </t>
+                                    </t>
+                                </t>
+                            </t>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<odoo>
+    <record id="action_map_client" model="ir.actions.client">
+        <field name="name">Map Client</field>
+        <field name="tag">ViewMapClient</field>
+    </record>
+
+    <menuitem sequence="0" id="menu_map_client" name="Map Client" parent="cf_hex_base.menu_root" action="action_map_client"/>
+</odoo>
