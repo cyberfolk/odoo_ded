@@ -6,10 +6,15 @@
             <tree>
                 <field name="code"/>
                 <field name="name"/>
+                <field name="type" widget="badge"
+                       decoration-info="type  == 'v1_19_q'"
+                       decoration-primary="type == 'v2_nolimit_q'"/>
                 <field name="quad_id"/>
                 <field name="index" readonly="1"/>
                 <field name="circle_order"/>
                 <field name="circle_number"/>
+                <field name="row"/>
+                <field name="col"/>
                 <field name="id"/>
             </tree>
         </field>

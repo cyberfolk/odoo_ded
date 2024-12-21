@@ -5,6 +5,9 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="type" widget="badge"
+                       decoration-info="type  == 'v1_19_q'"
+                       decoration-primary="type == 'v2_nolimit_q'"/>
             </tree>
         </field>
     </record>
@@ -35,9 +38,9 @@
                                 <tree delete="0" create="0" edit="0">
                                     <field name="name"/>
                                     <field name="code"/>
-                                    <field name="index"/>
                                     <field name="row" column_invisible="parent.type != 'v2_nolimit_q'"/>
                                     <field name="col" column_invisible="parent.type != 'v2_nolimit_q'"/>
+                                    <field name="index" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="circle_order" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="circle_number" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="border_N" column_invisible="parent.type != 'v1_19_q'"/>
@@ -47,7 +50,6 @@
                                     <field name="border_SW" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="border_NW" column_invisible="parent.type != 'v1_19_q'"/>
                                 </tree>
-
                             </field>
                         </page>
                         <page string="Righe Colonne" name="page_row_col" invisible="type != 'v2_nolimit_q'">
