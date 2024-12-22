@@ -4,7 +4,6 @@ from odoo import api, fields, models, Command
 from ..utility.constant import BORDERS_MAP
 from ..utility.constant import EXTERNAL_BORDERS_MAP
 from ..utility.constant import HEX_MISSING_INDEX
-from ..utility.constant import MAP_TYPE_SELECTION
 from ..utility.constant import SPECULAR_BORDERS_MAP
 
 
@@ -77,12 +76,6 @@ class Quadrant(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    type = fields.Selection(
-        selection=MAP_TYPE_SELECTION,
-        string="Tipo",
-        default="v1_19_q",
-    )
-
     row = fields.Integer(
         string="Riga",
     )
@@ -111,12 +104,13 @@ class Quadrant(models.Model):
             if quad.code == 'void' or not quad.hex_list:
                 return quad
             for index in quad.hex_list:
-                hex_vals = {'index': index}
+                hex_vals = {'index': index, 'status': 'grid'}
                 quad.hex_ids = [Command.create(hex_vals)]
         elif quad.type == "v2_nolimit_q":
             for i in range(16):
                 hex_vals = {
                     'type': "v2_nolimit_q",
+                    'status': 'grid',
                     'row': i // 4,
                     'col': i % 4
                 }

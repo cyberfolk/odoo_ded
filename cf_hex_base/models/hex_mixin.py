@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from ..utility.constant import MAP_TYPE_SELECTION
 
 
 class HexMixin(models.AbstractModel):
@@ -27,6 +28,15 @@ class HexMixin(models.AbstractModel):
     index = fields.Integer(
         string='Index',
         help="Il valore di 'index' deve essere compreso tra 1 e 19.",
+    )
+
+    type = fields.Selection(
+        selection=MAP_TYPE_SELECTION,
+        string="Tipo",
+        default="v1_19_q",
+        help="Indica la tipologia della mappa:\n"
+             "[v1_19_q] -> Mappa limitata a 19 Quadranti messi a cerchio.\n"
+             "[v2_nolimit_q] -> Mappa con numero di Quadranti estendibile disposti a griglia."
     )
 
     @api.depends('code')

@@ -42,6 +42,9 @@
                             <field name="encounter_encounter_ids" widget="many2many_tags"/>
                             <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
                             <field name="npc_ids" widget="many2many_tags"/>
+                            <field name="status" widget="badge"
+                                   decoration-danger="status  == 'script'"
+                                   decoration-success="status == 'grid'"/>
                         </group>
                         <group colspan="2">
                             <field name="image" widget="image" nolabel="1" colspan="2"/>
@@ -83,7 +86,9 @@
                             <group name="group_map_params">
                                 <group name="group_map_params_left">
                                     <field name="code"/>
-                                    <field name="type" readonly="1"/>
+                                    <field name="type" widget="badge" optional="show"
+                                           decoration-info="type  == 'v1_19_q'"
+                                           decoration-primary="type == 'v2_nolimit_q'"/>
                                     <field name="index" readonly="1" invisible="type != 'v1_19_q'"/>
                                     <field name="circle_order" invisible="type != 'v1_19_q'"/>
                                     <field name="circle_number" invisible="type != 'v1_19_q'"/>

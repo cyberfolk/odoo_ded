@@ -1,7 +1,6 @@
-import json
-
 from odoo import api, fields, models
-from ..utility.constant import MAP_TYPE_SELECTION
+
+HEX_STATUS_SELECTION = [('script', 'SCRIPT'), ('grid', 'GRID')]
 
 
 class Hex(models.Model):
@@ -60,10 +59,13 @@ class Hex(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    type = fields.Selection(
-        selection=MAP_TYPE_SELECTION,
-        string="Tipo",
-        default="v1_19_q",
+    status = fields.Selection(
+        selection=HEX_STATUS_SELECTION,
+        string="Status",
+        default="script",
+        help="Indica la status dell'Hex:\n"
+             "[grid] -> Hex che appartiene a un Quadrante di una Mappa.\n"
+             "[script] -> Hex scollegato da Quadranti e da Mappe. Usato per contenere Lore provvisorie."
     )
 
     row = fields.Integer(
