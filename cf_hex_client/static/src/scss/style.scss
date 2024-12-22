@@ -106,6 +106,10 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Map Height
     transform: translate(-50%, 0);
 }
 
+.form-check-input:not(:checked) {
+  background-color: #ffffff;
+}
+
 /********************************
 *  FIX SCROLL ACTION.CLIENT      *
 ********************************/
