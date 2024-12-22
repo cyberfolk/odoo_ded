@@ -25,7 +25,6 @@
         "views/creature_faction.xml",
         "views/encounter_encounter.xml",
         "views/creature_npc.xml",
-        "views/todo.xml",
     ],
     'depends': ['cf_hex_base', 'base', 'web'],
     'demo': [],

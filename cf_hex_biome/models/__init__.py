@@ -5,7 +5,6 @@ from . import creature_tag
 from . import creature_type
 from . import creature_encounter
 from . import creature_encounter_line
-from . import todo
 from . import creature_faction
 from . import creature_npc
 from . import encounter_encounter

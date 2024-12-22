@@ -42,12 +42,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="action_menu_todo" model="ir.actions.act_window">
-        <field name="name">TODO</field>
-        <field name="res_model">todo</field>
-        <field name="view_mode">tree</field>
-    </record>
-
     <record id="action_menu_creature_faction" model="ir.actions.act_window">
         <field name="name">Fazioni</field>
         <field name="res_model">creature.faction</field>
@@ -83,5 +77,4 @@
     </menuitem>
 
     <menuitem sequence="5" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter" parent="cf_hex_base.menu_root"/>
-    <menuitem sequence="100" id="menu_todo" name="TODO" action="action_menu_todo" parent="cf_hex_base.menu_root"/>
 </odoo>
