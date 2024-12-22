@@ -11,8 +11,10 @@
 - **cf_hex_biome** In questo modulo vengono introdotti i Biomi, Le Creature, Le Fazioni e gli Scontri.
 - **cf_hex_lore** In questo modulo viene aggiunta la Lore sugli Hex mediante campi Descrizione, Immagini e altri campi
   relazionali che li collegano ai relativi biomi e alle creature che lo popolano.
-- **cf_hex_client** In questo modulo viene introdotto un menù che mette a disposizione un'interfaccia per poter
-  interagire direttamente con le mappe in modo più semplice.
+- **cf_hex_client** In questo modulo viene introdotto:
+    - Un'interfaccia per poter interagire direttamente con le mappe in modo più semplice.
+    - Il widget "QuadWidget" per visualizzare la mappa dei quadranti nei relativi Form.
+    - Il modello "asset_tile" che permette assegnare un immagine(Montagne/Alberi/Incroci/...) a uno specifico Hex.
 - **cf_hex_data** In questo modulo vengono caricati i dati dei modelli introdotti negli altri moduli.
 
 <img src="cf_hex_base/static/description/icon.png" width="250"/>

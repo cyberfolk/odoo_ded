@@ -8,10 +8,13 @@
     'version': '17.0',
     'category': 'Map',
     'author': "cyberfolk",
-    'summary': "Introduce un interfaccia più semplice per le mappe.",
+    'summary': "Introduce un interfaccia più semplice per le mappe, il widget QuadWidget e il modello asset_tile.",
     'description':
-        """In questo modulo viene introdotto un menù che mette a disposizione un'interfaccia per poter
-        interagire direttamente con le mappe in modo più semplice.""",
+        """In questo modulo viene introdotto:
+            - Un'interfaccia per poter interagire direttamente con le mappe in modo più semplice.
+            - Il widget "QuadWidget" per visualizzare la mappa dei quadranti nei relativi Form.
+            - Il modello "asset_tile" che permette assegnare un immagine(Montagne/Alberi/Incroci/...) a uno specifico Hex.
+        """,
     'license': 'AGPL-3',
     'data': [
         "security/ir.model.access.csv",
