@@ -1,5 +1,5 @@
 # CF | Hex Data
-**Initial commit**: 21/01/24
+**Initial commit**: 02/09/24
 
 **Technologies**: Odoo, Python, XML, HTML, SCSS e Bootstrap.
 

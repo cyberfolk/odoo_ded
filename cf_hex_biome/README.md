@@ -1,5 +1,5 @@
 # CF | Hex Biome
-**Initial commit**: 21/01/24
+**Initial commit**: 16/08/24
 
 **Technologies**: Odoo, Python, XML, HTML, SCSS e Bootstrap.
 
