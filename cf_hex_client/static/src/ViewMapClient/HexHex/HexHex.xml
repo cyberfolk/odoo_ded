@@ -7,5 +7,13 @@
         <img class="w-100" t-attf-class="rotate-{{state.hex_asset_id.rotation}}"
              t-att-src="'/web/image/asset.tile/' + state.hex_asset_id.tile_id + '/image'"/>
     </t>
-    <div class="label_code" t-esc="state.code"/>
-</div>
+    <!-- Etichetta del codice -->
+    <div class="label_code"
+         t-esc="state.code"
+         t-att-class="store?.showHexCode === false ? 'd-none' : ''"/>
+
+    <!-- Etichetta SML -->
+    <div class="label_sml"
+         t-esc="state.sml"
+         t-att-class="store?.showHexSml === false ? 'd-none' : ''"/>
+    </div>

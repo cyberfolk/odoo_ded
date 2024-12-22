@@ -9,6 +9,8 @@
                             <HexHex hex_asset_id="hex.hex_asset_id"
                                     index="hex.index"
                                     color="hex.color"
+                                    code="hex.code"
+                                    sml="hex.sml"
                                     dim="'hex_mf_v1'"
                                     id="hex.id"/>
                         </t>
@@ -26,6 +28,8 @@
                                 <t t-foreach="quad.hex_ids" t-as="hex" t-key="hex.id">
                                     <HexHex hex_asset_id="hex.hex_asset_id"
                                             color="hex.color"
+                                            code="hex.code"
+                                            sml="hex.sml"
                                             dim="'hex_mf_v2'"
                                             row="hex.row"
                                             col="hex.col"

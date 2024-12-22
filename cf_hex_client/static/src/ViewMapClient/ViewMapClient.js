@@ -6,6 +6,7 @@ import { CurrentTiles } from '@cf_hex_client/ViewMapClient/CurrentTiles/CurrentT
 import { AddQuadrant } from '@cf_hex_client/ViewMapClient/AddQuadrant/AddQuadrant';
 import { CurrentZoom } from '@cf_hex_client/ViewMapClient/CurrentZoom/CurrentZoom';
 import { CurrentMap } from '@cf_hex_client/ViewMapClient/CurrentMap/CurrentMap';
+import { HideShow } from '@cf_hex_client/ViewMapClient/HideShow/HideShow';
 import { ViewMap } from '@cf_hex_client/ViewMapClient/ViewMap/ViewMap';
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
@@ -15,7 +16,9 @@ const actionRegistry = registry.category("actions");
 class ViewMapClient extends Component {
     static template = "ViewMapClient"
     static props = ["*"]
-    static components = { CurrentBiome, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, ViewMap, AddQuadrant };
+    static components = {
+        CurrentBiome, CurrentZoom, CurrentMap, CurrentTiles, ClearCurrent, ViewMap, AddQuadrant, HideShow
+    };
 
     setup() {
         super.setup();

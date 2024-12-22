@@ -11,9 +11,12 @@ class Quadrant(models.Model):
         """Metodo richiamato dal orm di quad.js
             :param quad_id: Id quadrante.
             :return: Json del quadrante."""
+
+        # Definiamo i campi che ci interessano
         quad_fields = ['id', 'code', 'index', 'row', 'col', 'hex_ids', 'missing_ids', 'type']
-        hex_fields = ['id', 'code', 'index', 'row', 'col', 'color', 'hex_asset_id']
+        hex_fields = ['id', 'code', 'index', 'row', 'col', 'sml', 'biome_id', 'hex_asset_id']
         hex_asset_fields = ['asset_id', 'rotation']
+        biome_fields = ['id', 'color']
 
         self_quad = self.env['hex.quad'].browse(quad_id)
         quad_dict = self_quad.read(quad_fields)[0]
@@ -21,12 +24,23 @@ class Quadrant(models.Model):
         quad_dict['missing_ids'] = self_quad.missing_ids.read(hex_fields)
         quad_dict['external_hexs'] = [x.read(hex_fields)[0] for x in self_quad.get_external_hexs() if x]
 
+        # Creo la mappa di raccordo per i Biomi
+        biomes = self.env['biome.biome'].search([('state', '=', 'active')]).read(biome_fields)
+        biomes_map = {x['id']: x['color'] for x in biomes}
+
+        # Creo la mappa di raccordo per gli Asset
         hex_assets = self.env['hex.asset.tile'].search([]).read(hex_asset_fields)
         hex_assets_map = {x['id']: {'tile_id': x['asset_id'][0], 'rotation': x['rotation']} for x in hex_assets}
+
+        # Rifinisco la hex_map con solo i valori da passare al front_end
         for _hex in quad_dict['hex_ids']:
-            if _hex['hex_asset_id']:
-                _id = _hex['hex_asset_id'][0]
-                _hex['hex_asset_id'] = hex_assets_map[_id]
+            if hex_asset_id := _hex.get('hex_asset_id'):  # Aggiorna hex_asset_id, se presente
+                _hex['hex_asset_id'] = hex_assets_map[hex_asset_id[0]]
+            if biome_id := _hex.get('biome_id'):  # Assegna il colore basato su biome_id, se presente
+                _hex['color'] = biomes_map[biome_id[0]]
+            else:
+                _hex['color'] = '#DDDDDD'
+            _hex.pop('biome_id', None)
 
         json_quad = json.dumps(quad_dict)
         return json_quad

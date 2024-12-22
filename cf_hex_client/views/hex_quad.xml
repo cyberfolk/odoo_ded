@@ -1,0 +1,12 @@
+<odoo>
+    <record id="hex_quad_view_form" model="ir.ui.view">
+        <field name="name">hex.quad.form</field>
+        <field name="model">hex.quad</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_quad_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_hook_widget']" position="inside">
+                <field name="hook_widget" widget="QuadWidget" nolabel="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

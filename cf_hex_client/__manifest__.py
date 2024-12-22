@@ -17,6 +17,7 @@
         "security/ir.model.access.csv",
         "views/menu_root.xml",
         "views/asset_tile.xml",
+        "views/hex_quad.xml",
     ],
     'depends': [
         'base',
@@ -37,6 +38,7 @@
             '/cf_hex_client/static/src/ViewMapClient/ViewMapClient.js',
             '/cf_hex_client/static/src/ViewMapClient/ViewMapClient.xml',
             '/cf_hex_client/static/src/ViewMapClient/AddQuadrant/*',
+            '/cf_hex_client/static/src/ViewMapClient/HideShow/*',
             '/cf_hex_client/static/src/ViewMapClient/ViewMap/*',
             '/cf_hex_client/static/src/ViewMapClient/CurrentBiome/*',
             '/cf_hex_client/static/src/ViewMapClient/CurrentZoom/*',

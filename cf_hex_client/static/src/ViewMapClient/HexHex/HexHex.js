@@ -18,6 +18,7 @@ export class HexHex extends Component {
             row: this.props.row,
             col: this.props.col,
             dim: this.props.dim,
+            sml: this.props.sml,
             code: this.props.code,
             index: this.props.index,
             color: this.props.color,

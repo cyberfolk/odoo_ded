@@ -51,7 +51,7 @@ class HexMap(models.Model):
         hex_asset_fields = ['asset_id', 'rotation']
         biome_fields = ['id', 'color']
         quad_fields = ['id', 'code', 'index', 'row', 'col', 'hex_ids']
-        hex_fields = ['id', 'code', 'index', 'row', 'col', 'biome_id', 'hex_asset_id']
+        hex_fields = ['id', 'code', 'index', 'row', 'col', 'sml', 'biome_id', 'hex_asset_id']
 
         # Otteniamo tutti i quad e i relativi hex in una singola query
         quads = self_map.quad_ids.read(quad_fields)

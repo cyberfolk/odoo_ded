@@ -2,6 +2,7 @@
     <div class="view-map__sideboard position-fixed w-25 p-3" style="z-index: 100;">
         <CurrentMap/>
         <CurrentZoom/>
+        <HideShow/>
         <CurrentBiome/>
         <CurrentTiles/>
         <ClearCurrent/>
