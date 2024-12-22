@@ -65,16 +65,25 @@ class FactionFaction(models.Model):
             raise ValueError(f"'faction_childs_parents' not found in {name_file}")
 
         MAP_CREATURE_ID = {x.name: x.id for x in self.env['creature.creature'].search([])}
+        LIST_FACTIONS_ALREADY_EXIST = self.env['creature.faction'].search([]).mapped('name')
 
         # Creo le fazioni e le salvo in factions
+        filtered_factions_dikt = []
         for faction in faction_dikts:
+            if faction['name'] in LIST_FACTIONS_ALREADY_EXIST:
+                logging.warning(f"La fazione {faction['name']} esiste già (pt1)")
+                continue
             if faction['creature_names']:
                 faction['creature_ids'] = [MAP_CREATURE_ID.get(x) for x in faction['creature_names']]
             faction.pop('creature_names', None)
-        factions = self.create(faction_dikts)
+            filtered_factions_dikt.append(faction)
+        factions = self.create(filtered_factions_dikt)
 
         # Ciclo le fazioni per associare gli opportuni parent_id e child_ids
         for parent_info in parent_dikts:
+            if parent_info['name'] in LIST_FACTIONS_ALREADY_EXIST:
+                logging.warning(f"La fazione {parent_info['name']} esiste già (pt2)")
+                continue
             if parent_info.get('child_names'):
                 child_records = self.env['creature.faction'].search([('name', 'in', parent_info['child_names'])])
                 parent_info['child_ids'] = [(6, 0, child_records.ids)] if child_records else []
