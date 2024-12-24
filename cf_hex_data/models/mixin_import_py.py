@@ -9,7 +9,9 @@ _logger = logging.getLogger(__name__)
 
 MAP_MODEL_PY = {
     "creature.encounter": "encounters.py",
-    "creature.faction": "factions.py"
+    "creature.faction": "factions.py",
+    "creature.type": "creature_type.py",
+    "creature.tag": "creature_tag.py"
 }
 
 
@@ -62,10 +64,45 @@ class MixinImportPy(models.AbstractModel):
         finally:
             _logger.info(f"** END   ** popolate_by_py() - ({self._name})")
 
+    # region DA EREDITARE ALL'OCCORRENZA NEI MIXIN ---------------------------------------------------------------------
     def _popolate_by_py(self, modulo):
         """Da ereditare nei modelli che implementano il mixin."""
-        pass
+        data_dicts = getattr(modulo, 'dicts', None)
+        if data_dicts is None:
+            raise ValueError(f"'dicts' not found")
+
+        LIST_ALREADY_EXIST = self.search([]).mapped('name')
+
+        filtered_dicts = []
+        for dikt in data_dicts:
+            if dikt['name'] in LIST_ALREADY_EXIST:
+                logging.warning(f"Il {self._name} {dikt['name']} esiste già")
+                continue
+            filtered_dicts.append(dikt)
+        self.create(filtered_dicts)
 
     def get_data_str(self):
-        """Da ereditare nei modelli che implementano il mixin."""
-        pass
+        """Da ereditare nei modelli che implementano il mixin.
+        Recupera i dati del modello in una lista di dizionari."""
+        _logger.info(f"START get_data_str ({self._name})")
+
+        records = self.search([])
+        dicts = []
+        for rec in records:
+            dikt = self.from_rec_to_dikt(rec)
+            dicts.append(dikt)
+
+        dat_str = f'dicts = {dicts}\n'
+        _logger.info(f"END   get_data_str ({self._name})")
+        return dat_str
+
+    def from_rec_to_dikt(self, rec):
+        """Da ereditare nei modelli che implementano il mixin.
+            Trasforma un record di Odoo in un dizionario python che può essere salvato nell'apposito file data."""
+
+        dikt = {
+            'name': rec.name,
+        }
+
+        return dikt
+    # endregion --------------------------------------------------------------------------------------------------------
