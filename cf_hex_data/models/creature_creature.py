@@ -1,3 +1,5 @@
+import logging
+
 from odoo import models
 
 
@@ -15,7 +17,7 @@ class CreatureCreature(models.Model):
             'type_id': rec.type_id.name if rec.type_id else False,
             'tag_ids': [x.name for x in rec.tag_ids],
             'link_5et': rec.link_5et,
-            'description': rec.description,
+            'description': str(rec.description) if rec.description else '',
             'faction_ids': [x.name for x in rec.faction_ids],
             'biome_low_prob_ids': [x.name for x in rec.biome_low_prob_ids],
             'biome_high_prob_ids': [x.name for x in rec.biome_high_prob_ids],
