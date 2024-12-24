@@ -84,19 +84,19 @@ class HexMap(models.Model):
 
     def compute_quad_stats(self):
         for rec in self:
-            if not self.quad_ids:
-                rec.row_min = None
-                rec.row_max = None
-                rec.row_num = None
-                rec.col_min = None
-                rec.col_max = None
-                rec.col_num = None
-            else:
-                col_set = {x.col for x in self.quad_ids}
-                row_set = {x.row for x in self.quad_ids}
-                rec.row_min = min(row_set)
-                rec.row_max = max(row_set)
-                rec.row_num = rec.row_max - rec.row_min + 1
-                rec.col_min = min(col_set)
-                rec.col_max = max(col_set)
-                rec.col_num = rec.col_max - rec.col_min + 1
+            if not rec.quad_ids:  # Caso in cui non ci sono quad_ids
+                rec.row_min = rec.row_max = rec.row_num = None
+                rec.col_min = rec.col_max = rec.col_num = None
+                continue
+
+            # Calcolo dei set di righe e colonne
+            row_set = {quad.row for quad in rec.quad_ids}
+            col_set = {quad.col for quad in rec.quad_ids}
+
+            # Calcolo delle statistiche
+            rec.row_min = min(row_set)
+            rec.row_max = max(row_set)
+            rec.row_num = rec.row_max - rec.row_min + 1
+            rec.col_min = min(col_set)
+            rec.col_max = max(col_set)
+            rec.col_num = rec.col_max - rec.col_min + 1
