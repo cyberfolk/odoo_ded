@@ -8,10 +8,12 @@ from odoo import models
 _logger = logging.getLogger(__name__)
 
 MAP_MODEL_PY = {
+    "structure.structure": "structure_structure.py",
     "creature.encounter": "encounters.py",
     "creature.faction": "factions.py",
     "creature.type": "creature_type.py",
-    "creature.tag": "creature_tag.py"
+    "creature.tag": "creature_tag.py",
+    "biome.biome": "biome_biome.py",
 }
 
 
@@ -64,6 +66,14 @@ class MixinImportPy(models.AbstractModel):
         finally:
             _logger.info(f"** END   ** popolate_by_py() - ({self._name})")
 
+    # region UTILITY ---------------------------------------------------------------------------------------------------
+    def get_map_model_id(self, model_name):
+        model_records = self.env[model_name].search([])
+        MAP_MODEL_ID = {x.name: x.id for x in model_records}
+        return MAP_MODEL_ID
+
+    # endregion
+
     # region DA EREDITARE ALL'OCCORRENZA NEI MIXIN ---------------------------------------------------------------------
     def _popolate_by_py(self, modulo):
         """Da ereditare nei modelli che implementano il mixin."""
@@ -98,7 +108,7 @@ class MixinImportPy(models.AbstractModel):
 
     def from_rec_to_dikt(self, rec):
         """Da ereditare nei modelli che implementano il mixin.
-            Trasforma un record di Odoo in un dizionario python che può essere salvato nell'apposito file data."""
+            Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 
         dikt = {
             'name': rec.name,

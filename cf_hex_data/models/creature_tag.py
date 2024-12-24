@@ -6,7 +6,7 @@ class CreatureTag(models.Model):
     _inherit = ['creature.tag', 'mixin.import.py']
 
     def from_rec_to_dikt(self, rec):
-        """Da ereditare nei modelli che implementano il mixin."""
+        """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 
         dikt = {
             'name': rec.name,
