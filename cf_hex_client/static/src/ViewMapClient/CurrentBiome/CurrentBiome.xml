@@ -7,7 +7,7 @@
         <span>Scegli un Bioma e collocalo sugli Esagoni:</span>
     </div>
     <div class="current-biome__color-list mx-1 row">
-        <t t-foreach="store.biomeList" t-as="biome" t-key="biome">
+        <t t-foreach="store.biomeList" t-as="biome" t-key="biome.name">
             <button class="current-biome__btn btn p-2 me-1"
                     t-att-style="'background-color: ' + biome.color + '; color: ' + biome.color_name_contrast"
                     t-on-click="() => this.setCurrentBiome(biome)"
