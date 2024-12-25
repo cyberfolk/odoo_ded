@@ -20,11 +20,11 @@ def post_init_hook_cf_hex_data(env):
     """
     try:
         _logger.info("* START * post_init_hook_cf_hex_data()")
-        env["biome.biome"].popolate_by_csv()
-        env["structure.structure"].popolate_by_csv()
-        env["creature.tag"].popolate_by_csv()
-        env["creature.type"].popolate_by_csv()
-        env["creature.creature"].popolate_by_csv()
+        env["biome.biome"].popolate_by_py()
+        env["structure.structure"].popolate_by_py()
+        env["creature.tag"].popolate_by_py()
+        env["creature.type"].popolate_by_py()
+        env["creature.creature"].popolate_by_py()
         env["creature.faction"].popolate_by_py()
         env["creature.encounter"].popolate_by_py()
         env["asset.tile"].load_images()
