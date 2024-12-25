@@ -7,6 +7,7 @@ from odoo import models
 
 _logger = logging.getLogger(__name__)
 
+EXCLUDED_FIELDS = {'write_date', 'write_uid', 'create_date', 'create_uid', 'display_name', 'id'}
 MAP_MODEL_PY = {
     "structure.structure": "structure_structure.py",
     "creature.encounter": "creature_encounter.py",
@@ -73,6 +74,22 @@ class MixinImportPy(models.AbstractModel):
         MAP_MODEL_ID = {x.name: x.id for x in model_records}
         return MAP_MODEL_ID
 
+    def get_fields_dict(self):
+        fields_dict = {}
+        for name, field in self._fields.items():
+            if name in EXCLUDED_FIELDS or field.compute or field.related:
+                continue
+            fields_dict[name] = (field.type, field.comodel_name)
+            # fields_dict[name] = {
+            #     # 'type': field.type,
+            #     # 'comodel_name': field.comodel_name,
+            #     # 'readonly': field.readonly,
+            #     # 'default': field.default,
+            #     # 'domain': field.get('domain'),
+            #     # 'string': field.string,
+            # }
+        return fields_dict
+
     # endregion
 
     # region DA EREDITARE ALL'OCCORRENZA NEI MIXIN ---------------------------------------------------------------------
@@ -111,9 +128,7 @@ class MixinImportPy(models.AbstractModel):
         """Da ereditare nei modelli che implementano il mixin.
             Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 
-        dikt = {
-            'name': rec.name,
-        }
+        dikt = {'name': rec.name, }
 
         return dikt
     # endregion --------------------------------------------------------------------------------------------------------

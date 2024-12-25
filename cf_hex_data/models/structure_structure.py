@@ -33,3 +33,12 @@ class StructureStructure(models.Model):
             dikt['biome_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_ids']]
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
+
+
+# MODEL STRUCTURE ------------------------------------------------------------------------------------------------------
+# dikt_fields = {
+#     'biome_ids':   ('many2many', 'biome.biome'),
+#     'description': ('html', None),
+#     'image':       ('binary', None),
+#     'name':        ('char', None)
+# }

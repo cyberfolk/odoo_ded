@@ -20,3 +20,21 @@ class BiomeBiome(models.Model):
         }
 
         return dikt
+
+# MODEL STRUCTURE ------------------------------------------------------------------------------------------------------
+# dikt_fields = {
+#     'name':            ('char',      None),
+#     'color':           ('char',      None),
+#     'state':           ('selection', None),
+#     'cd_food':         ('integer',   None),
+#     'cd_water':        ('integer',   None),
+#     'cosmology':       ('selection', None),
+#     'cd_navigation':   ('integer',   None),
+#     'good_evil_axis':  ('selection', None),
+#     'speed_of_travel': ('float',     None),
+#     'hex_ids':                ('one2many',  'hex.hex'),
+#     'structure_ids':          ('many2many', 'structure.structure'),
+#     'encounter_ids':          ('many2many', 'creature.encounter'),
+#     'creature_high_prob_ids': ('many2many', 'creature.creature'),
+#     'creature_low_prob_ids':  ('many2many', 'creature.creature'),
+# }
