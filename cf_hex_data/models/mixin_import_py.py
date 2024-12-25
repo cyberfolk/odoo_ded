@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 
 MAP_MODEL_PY = {
     "structure.structure": "structure_structure.py",
-    "creature.encounter": "encounters.py",
+    "creature.encounter": "creature_encounter.py",
     "creature.creature": "creature_creature.py",
     "creature.faction": "factions.py",
     "creature.type": "creature_type.py",
