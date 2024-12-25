@@ -13,7 +13,7 @@ class StructureStructure(models.Model):
         dikt = {
             'name': rec.name,
             'description': str(rec.description),
-            'image': rec.image.decode('utf-8'),
+            'image': rec.image.decode('utf-8') if rec.image else '',
             'biome_ids': [x.name for x in rec.biome_ids]
         }
 

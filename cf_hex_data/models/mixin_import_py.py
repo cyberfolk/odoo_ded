@@ -16,6 +16,7 @@ MAP_MODEL_PY = {
     "creature.type": "creature_type.py",
     "creature.tag": "creature_tag.py",
     "biome.biome": "biome_biome.py",
+    "hex.hex": "hex_hex.py",
 }
 
 

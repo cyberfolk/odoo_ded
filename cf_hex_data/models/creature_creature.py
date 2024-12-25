@@ -13,7 +13,7 @@ class CreatureCreature(models.Model):
         dikt = {
             'name': rec.name,
             'cr': rec.cr,
-            'image': rec.image.decode('utf-8'),
+            'image': rec.image.decode('utf-8') if rec.image else '',
             'type_id': rec.type_id.name if rec.type_id else False,
             'tag_ids': [x.name for x in rec.tag_ids],
             'link_5et': rec.link_5et,
@@ -42,12 +42,23 @@ class CreatureCreature(models.Model):
             if dikt['name'] in LIST_ALREADY_EXIST:
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
                 continue
+
             dikt['type_id'] = MAP_TYPE_ID[dikt['type_id']] if dikt['type_id'] else False
-            dikt['tag_ids'] = [MAP_TAG_ID[x] for x in dikt['tag_ids']]
-            dikt['faction_ids'] = [MAP_FACTION_ID[x] for x in dikt['faction_ids']]
-            dikt['biome_low_prob_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_low_prob_ids']]
-            dikt['biome_high_prob_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_high_prob_ids']]
-            dikt['image'] = dikt['image'].encode('utf-8')
+            dikt['tag_ids'] = [MAP_TAG_ID.get(x) for x in dikt['tag_ids']] if dikt['tag_ids'] else False
+            dikt['faction_ids'] = [MAP_FACTION_ID.get(x) for x in dikt['faction_ids']] if dikt['faction_ids'] else False
+            dikt['biome_low_prob_ids'] = [MAP_BIOME_ID.get(x) for x in dikt['biome_low_prob_ids']] if dikt['biome_low_prob_ids'] else False
+            dikt['biome_high_prob_ids'] = [MAP_BIOME_ID.get(x) for x in dikt['biome_high_prob_ids']] if dikt['biome_high_prob_ids'] else False
+            dikt['image'] = dikt.get('image').encode('utf-8') if dikt.get('image') else False
+
+            if not MAP_TAG_ID:
+                dikt['tag_ids'] = False
+            if not MAP_TYPE_ID:
+                dikt['type_id'] = False
+            if not MAP_FACTION_ID:
+                dikt['faction_ids'] = False
+            if not MAP_BIOME_ID:
+                dikt['biome_low_prob_ids'] = False
+                dikt['biome_high_prob_ids'] = False
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
 
