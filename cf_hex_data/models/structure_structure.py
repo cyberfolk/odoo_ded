@@ -11,6 +11,8 @@ class StructureStructure(models.Model):
         """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
         dikt = {
             'name': rec.name,
+            'description': str(rec.description),
+            'image': rec.image.decode('utf-8'),
             'biome_ids': [x.name for x in rec.biome_ids]
         }
 
@@ -31,9 +33,9 @@ class StructureStructure(models.Model):
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
                 continue
             dikt['biome_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_ids']]
+            dikt['image'] = dikt['image'].encode('utf-8')
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
-
 
 # MODEL STRUCTURE ------------------------------------------------------------------------------------------------------
 # dikt_fields = {
