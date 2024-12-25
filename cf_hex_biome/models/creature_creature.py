@@ -132,6 +132,10 @@ class CreatureCreature(models.Model):
         help="Descrizione della Creatura",
     )
 
+    image = fields.Image(
+        string="Immagine",
+    )
+
     @api.depends("cr")
     def _compute_exp(self):
         for record in self:

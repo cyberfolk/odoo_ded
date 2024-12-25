@@ -7,7 +7,8 @@ class StructureStructure(models.Model):
     _name = "structure.structure"
     _inherit = ['structure.structure', 'mixin.import.py']
 
-    def from_rec_to_dikt(self, rec):
+    @staticmethod
+    def from_rec_to_dikt(rec):
         """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
         dikt = {
             'name': rec.name,

@@ -98,3 +98,40 @@ class FactionFaction(models.Model):
                     'parent_id': parent_info.get('parent_id', []),
                     'child_ids': parent_info.get('child_ids', []),
                 })
+
+
+# MODEL STRUCTURE ------------------------------------------------------------------------------------------------------
+# dikt_fields = {
+#     'name':                           ('char', None),
+#     'code':                           ('char', None),
+#     'description':                    ('html', None),
+#     'n01_years_in_region':            ('text', None),
+#     'n02_daily_operations':           ('text', None),
+#     'n03_feeding_habits':             ('text', None),
+#     'n04_handling_threats':           ('text', None),
+#     'n05_answering_powers':           ('text', None),
+#     'n06_scouts':                     ('text', None),
+#     'n07_key_positions_controlled':   ('text', None),
+#     'n08_boundary_marking':           ('text', None),
+#     'n09_territory_claiming':         ('text', None),
+#     'n10_base_structure':             ('text', None),
+#     'n11_base_origin':                ('text', None),
+#     'n12_base_purpose':               ('text', None),
+#     'n13_long_term_goals':            ('text', None),
+#     'n14_short_term_goals':           ('text', None),
+#     'n15_motivations':                ('text', None),
+#     'n16_goal_strategy':              ('text', None),
+#     'n17_leader_view_of_pcs':         ('text', None),
+#     'n18_contact_with_pcs':           ('text', None),
+#     'n19_possible_developments':      ('text', None),
+#     'n20_faction_theme':              ('text', None),
+#     'state':                          ('selection', None),
+#     'good_evil_axis':                 ('selection', None),
+#     'cosmology':                      ('selection', None),
+#     'child_ids':                      ('one2many',  'creature.faction'),
+#     'parent_id':                      ('many2one',  'creature.faction'),
+#     'encounter_ids':                  ('one2many',  'creature.encounter'),
+#     'creature_ids':                   ('many2many', 'creature.creature'),
+#     'npc_ids':                        ('many2many', 'creature.npc'),
+#     'hex_ids':                        ('many2many', 'hex.hex')
+# }

@@ -31,7 +31,8 @@ class CreatureEncounter(models.Model):
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
 
-    def from_rec_to_dikt(self, rec):
+    @staticmethod
+    def from_rec_to_dikt(rec):
         """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
         dikt = {
             'name': rec.name,

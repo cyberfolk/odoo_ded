@@ -80,14 +80,6 @@ class MixinImportPy(models.AbstractModel):
             if name in EXCLUDED_FIELDS or field.compute or field.related:
                 continue
             fields_dict[name] = (field.type, field.comodel_name)
-            # fields_dict[name] = {
-            #     # 'type': field.type,
-            #     # 'comodel_name': field.comodel_name,
-            #     # 'readonly': field.readonly,
-            #     # 'default': field.default,
-            #     # 'domain': field.get('domain'),
-            #     # 'string': field.string,
-            # }
         return fields_dict
 
     # endregion
@@ -124,7 +116,8 @@ class MixinImportPy(models.AbstractModel):
         _logger.info(f"END   get_data_str ({self._name})")
         return dat_str
 
-    def from_rec_to_dikt(self, rec):
+    @staticmethod
+    def from_rec_to_dikt(rec):
         """Da ereditare nei modelli che implementano il mixin.
             Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 

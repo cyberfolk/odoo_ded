@@ -7,13 +7,13 @@ class CreatureCreature(models.Model):
     _name = "creature.creature"
     _inherit = ['creature.creature', 'mixin.import.py']
 
-    # "Biomi %Alta", "Biomi %Bassa", "Fazioni", "Grado Sfida", "Link 5et", "Nome", "Tag", "Tipo", "Descrizione"
-
-    def from_rec_to_dikt(self, rec):
+    @staticmethod
+    def from_rec_to_dikt(rec):
         """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
         dikt = {
             'name': rec.name,
             'cr': rec.cr,
+            'image': rec.image.decode('utf-8'),
             'type_id': rec.type_id.name if rec.type_id else False,
             'tag_ids': [x.name for x in rec.tag_ids],
             'link_5et': rec.link_5et,
@@ -47,5 +47,20 @@ class CreatureCreature(models.Model):
             dikt['faction_ids'] = [MAP_FACTION_ID[x] for x in dikt['faction_ids']]
             dikt['biome_low_prob_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_low_prob_ids']]
             dikt['biome_high_prob_ids'] = [MAP_BIOME_ID[x] for x in dikt['biome_high_prob_ids']]
+            dikt['image'] = dikt['image'].encode('utf-8')
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
+
+# MODEL STRUCTURE ------------------------------------------------------------------------------------------------------
+# dikt_fields = {
+#     'name':                 ('char', None),
+#     'cr':                   ('float', None),
+#     'link_5et':             ('char', None),
+#     'description':          ('html', None),
+#     'image':                ('binary', None),
+#     'tag_ids':              ('many2many', 'creature.tag'),
+#     'type_id':              ('many2one', 'creature.type'),
+#     'biome_high_prob_ids':  ('many2many', 'biome.biome'),
+#     'biome_low_prob_ids':   ('many2many', 'biome.biome'),
+#     'faction_ids':          ('many2many', 'creature.faction'),
+# }
