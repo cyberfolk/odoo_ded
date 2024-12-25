@@ -22,13 +22,6 @@ class MixinImportPy(models.AbstractModel):
     _name = 'mixin.import.py'
     _description = 'Mixin per popolare i vari modelli da python'
 
-    def _get_file_path(self):
-        """Helper method to get the file path based on the model name."""
-        nome_file = MAP_MODEL_PY.get(self._name)
-        if not nome_file:
-            raise ValueError(f"No file mapping found for model {self._name}")
-        return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
-
     def download_data_py(self):
         """Scarica i dati del modello in un file '.py' mettendolo nella cartella 'data'."""
         _logger.info(f"START download_data_py ({self._name})")
@@ -68,6 +61,13 @@ class MixinImportPy(models.AbstractModel):
             _logger.info(f"** END   ** popolate_by_py() - ({self._name})")
 
     # region UTILITY ---------------------------------------------------------------------------------------------------
+    def _get_file_path(self):
+        """Helper method to get the file path based on the model name."""
+        nome_file = MAP_MODEL_PY.get(self._name)
+        if not nome_file:
+            raise ValueError(f"No file mapping found for model {self._name}")
+        return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
+
     def get_map_model_id(self, model_name):
         model_records = self.env[model_name].search([])
         MAP_MODEL_ID = {x.name: x.id for x in model_records}
