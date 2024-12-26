@@ -129,7 +129,7 @@ class MixinImportPy(models.AbstractModel):
                     dikt[f_name] = clean_list(dikt[f_name])
 
             rec = self.create(dikt)
-            stop = 0
+            DICT_MAP_MODEL_ID[self._name][rec.name] = rec.id
 
     def get_data_json(self):
         """Da ereditare nei modelli che implementano il mixin.

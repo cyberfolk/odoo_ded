@@ -1,0 +1,29 @@
+[
+    {
+        "name": "void",
+        "index": 0,
+        "type": "v1_19_q",
+        "quad_id": false,
+        "border_N": false,
+        "border_NE": false,
+        "border_SE": false,
+        "border_S": false,
+        "border_SW": false,
+        "border_NW": false,
+        "status": "script",
+        "row": 0,
+        "col": 0,
+        "biome_id": false,
+        "sml": 1,
+        "description": "",
+        "image": "",
+        "npc_ids": [],
+        "faction_ids": [],
+        "structure_id": false,
+        "creature_id": false,
+        "image_gallery_ids": [],
+        "wild_encounter_ids": [],
+        "encounter_encounter_ids": [],
+        "hex_asset_id": false
+    }
+]
