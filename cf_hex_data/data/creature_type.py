@@ -1,1 +1,0 @@
-dicts = [{'name': 'Aberrazione'}, {'name': 'Bestia'}, {'name': 'Celestiale'}, {'name': 'Costrutto'}, {'name': 'Drago'}, {'name': 'Elementale'}, {'name': 'Fatato'}, {'name': 'Gigante'}, {'name': 'Immondo'}, {'name': 'Melma'}, {'name': 'Mostruosità'}, {'name': 'Non Morto'}, {'name': 'Pianta'}, {'name': 'Umanoide'}]

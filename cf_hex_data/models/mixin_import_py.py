@@ -111,7 +111,7 @@ class MixinImportPy(models.AbstractModel):
 
         filtered_dicts = []
         for dikt in data_dicts:
-            if dikt['name'] in LIST_ALREADY_EXIST:
+            if dikt.get('name') in LIST_ALREADY_EXIST:
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
                 continue
             for f_name, f_info in self._fields.items():  # f_name  -> field_name, f_info -> field_info
@@ -157,7 +157,7 @@ class MixinImportPy(models.AbstractModel):
             f_value = rec[f_name]  # f_value -> field_value
             f_type = f_info.type  # f_type  -> field_type
 
-            if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
+            if (f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related) and f_name != 'name':
                 continue
             elif f_type in ['binary']:
                 dikt[f_name] = f_value.decode('utf-8') if f_value else ''

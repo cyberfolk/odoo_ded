@@ -1,0 +1,6690 @@
+[
+    {
+        "name": "Endemico: 11 x Dimitrodonte",
+        "line_ids": [
+            "11 x Dimitrodonte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Hadrosaurus",
+        "line_ids": [
+            "11 x Hadrosaurus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Pterodattilo",
+        "line_ids": [
+            "11 x Pterodattilo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Oblex Spawn",
+        "line_ids": [
+            "11 x Oblex Spawn"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Sorrowsworn, Wretched",
+        "line_ids": [
+            "11 x Sorrowsworn, Wretched"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Skeleton",
+        "line_ids": [
+            "11 x Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Zombie",
+        "line_ids": [
+            "11 x Zombie"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Gazer",
+        "line_ids": [
+            "7 x Gazer"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Velociraptor",
+        "line_ids": [
+            "7 x Velociraptor"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Gorilla",
+        "line_ids": [
+            "7 x Gorilla"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Orso Nero",
+        "line_ids": [
+            "7 x Orso Nero"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Sciame di Insetti",
+        "line_ids": [
+            "7 x Sciame di Insetti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Sciame di Vespe",
+        "line_ids": [
+            "7 x Sciame di Vespe"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Vespa Gigante",
+        "line_ids": [
+            "7 x Vespa Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Coccodrillo",
+        "line_ids": [
+            "7 x Coccodrillo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Squalo Tropicale",
+        "line_ids": [
+            "7 x Squalo Tropicale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit del Fumo ",
+        "line_ids": [
+            "7 x Mephit del Fumo "
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit del Magma",
+        "line_ids": [
+            "7 x Mephit del Magma"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit del Vapore",
+        "line_ids": [
+            "7 x Mephit del Vapore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit del Fango",
+        "line_ids": [
+            "7 x Mephit del Fango"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit del Ghiaccio ",
+        "line_ids": [
+            "7 x Mephit del Ghiaccio "
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mephit della Polvere",
+        "line_ids": [
+            "7 x Mephit della Polvere"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Magmin",
+        "line_ids": [
+            "7 x Magmin"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Melma Grigia",
+        "line_ids": [
+            "7 x Melma Grigia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Cuspide Letale",
+        "line_ids": [
+            "7 x Cuspide Letale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Worg",
+        "line_ids": [
+            "7 x Worg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mantoscuro",
+        "line_ids": [
+            "7 x Mantoscuro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Cockatrice",
+        "line_ids": [
+            "7 x Cockatrice"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Rugginofago",
+        "line_ids": [
+            "7 x Rugginofago"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Scheletro Cavallo da Guerra",
+        "line_ids": [
+            "7 x Scheletro Cavallo da Guerra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Shadow",
+        "line_ids": [
+            "7 x Shadow"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Deinonychus",
+        "line_ids": [
+            "4 x Deinonychus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Leone",
+        "line_ids": [
+            "4 x Leone"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Iena Gigante",
+        "line_ids": [
+            "4 x Iena Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Lupo Feroce",
+        "line_ids": [
+            "4 x Lupo Feroce"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Orso Bruno",
+        "line_ids": [
+            "4 x Orso Bruno"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Ragno Gigante",
+        "line_ids": [
+            "4 x Ragno Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Tigre",
+        "line_ids": [
+            "4 x Tigre"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Avvoltoio Gigante",
+        "line_ids": [
+            "4 x Avvoltoio Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Polipo Gigante",
+        "line_ids": [
+            "4 x Polipo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Sciame di Piragna",
+        "line_ids": [
+            "4 x Sciame di Piragna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Serpente di Fuoco",
+        "line_ids": [
+            "4 x Serpente di Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Vargouille",
+        "line_ids": [
+            "4 x Vargouille"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Arpia",
+        "line_ids": [
+            "4 x Arpia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Cane della Morte",
+        "line_ids": [
+            "4 x Cane della Morte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Spettro",
+        "line_ids": [
+            "4 x Spettro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Ghoul",
+        "line_ids": [
+            "4 x Ghoul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Otyugh",
+        "line_ids": [
+            "1 x Otyugh"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Brontosauro",
+        "line_ids": [
+            "1 x Brontosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Triceratopo",
+        "line_ids": [
+            "1 x Triceratopo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Sciame di Ratti Cranio",
+        "line_ids": [
+            "1 x Sciame di Ratti Cranio"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Coccodrillo Gigante",
+        "line_ids": [
+            "1 x Coccodrillo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Squalo Gigante",
+        "line_ids": [
+            "1 x Squalo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Elementare dell'Acqua",
+        "line_ids": [
+            "1 x Elementare dell'Acqua"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Elementare dell'Aria",
+        "line_ids": [
+            "1 x Elementare dell'Aria"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Elementale del Fuoco",
+        "line_ids": [
+            "1 x Elementale del Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Salamandra",
+        "line_ids": [
+            "1 x Salamandra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Elementare della Terra",
+        "line_ids": [
+            "1 x Elementare della Terra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Xorn",
+        "line_ids": [
+            "1 x Xorn"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Oblex Adult",
+        "line_ids": [
+            "1 x Oblex Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Catoblepa",
+        "line_ids": [
+            "1 x Catoblepa"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Fustigatore",
+        "line_ids": [
+            "1 x Fustigatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Kruthik Hive Lord",
+        "line_ids": [
+            "1 x Kruthik Hive Lord"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Remorhaz Young",
+        "line_ids": [
+            "1 x Remorhaz Young"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Gorgon",
+        "line_ids": [
+            "1 x Gorgon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Bulette",
+        "line_ids": [
+            "1 x Bulette"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Tlincalli",
+        "line_ids": [
+            "1 x Tlincalli"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Umber Hulk",
+        "line_ids": [
+            "1 x Umber Hulk"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Beholder Zombie",
+        "line_ids": [
+            "1 x Beholder Zombie"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Spawn of Kyuss",
+        "line_ids": [
+            "1 x Spawn of Kyuss"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Cumulo Strisciante",
+        "line_ids": [
+            "1 x Cumulo Strisciante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Gazer",
+        "line_ids": [
+            "9 x Gazer"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Velociraptor",
+        "line_ids": [
+            "9 x Velociraptor"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Gorilla",
+        "line_ids": [
+            "9 x Gorilla"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Orso Nero",
+        "line_ids": [
+            "9 x Orso Nero"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Sciame di Insetti",
+        "line_ids": [
+            "9 x Sciame di Insetti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Sciame di Vespe",
+        "line_ids": [
+            "9 x Sciame di Vespe"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Vespa Gigante",
+        "line_ids": [
+            "9 x Vespa Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Coccodrillo",
+        "line_ids": [
+            "9 x Coccodrillo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Squalo Tropicale",
+        "line_ids": [
+            "9 x Squalo Tropicale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit del Fumo ",
+        "line_ids": [
+            "9 x Mephit del Fumo "
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit del Magma",
+        "line_ids": [
+            "9 x Mephit del Magma"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit del Vapore",
+        "line_ids": [
+            "9 x Mephit del Vapore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit del Fango",
+        "line_ids": [
+            "9 x Mephit del Fango"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit del Ghiaccio ",
+        "line_ids": [
+            "9 x Mephit del Ghiaccio "
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mephit della Polvere",
+        "line_ids": [
+            "9 x Mephit della Polvere"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Magmin",
+        "line_ids": [
+            "9 x Magmin"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Melma Grigia",
+        "line_ids": [
+            "9 x Melma Grigia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Cuspide Letale",
+        "line_ids": [
+            "9 x Cuspide Letale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Worg",
+        "line_ids": [
+            "9 x Worg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mantoscuro",
+        "line_ids": [
+            "9 x Mantoscuro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Cockatrice",
+        "line_ids": [
+            "9 x Cockatrice"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Rugginofago",
+        "line_ids": [
+            "9 x Rugginofago"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Scheletro Cavallo da Guerra",
+        "line_ids": [
+            "9 x Scheletro Cavallo da Guerra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Shadow",
+        "line_ids": [
+            "9 x Shadow"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Deinonychus",
+        "line_ids": [
+            "5 x Deinonychus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Leone",
+        "line_ids": [
+            "5 x Leone"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Iena Gigante",
+        "line_ids": [
+            "5 x Iena Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Lupo Feroce",
+        "line_ids": [
+            "5 x Lupo Feroce"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Orso Bruno",
+        "line_ids": [
+            "5 x Orso Bruno"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ragno Gigante",
+        "line_ids": [
+            "5 x Ragno Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Tigre",
+        "line_ids": [
+            "5 x Tigre"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Avvoltoio Gigante",
+        "line_ids": [
+            "5 x Avvoltoio Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Polipo Gigante",
+        "line_ids": [
+            "5 x Polipo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Sciame di Piragna",
+        "line_ids": [
+            "5 x Sciame di Piragna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Serpente di Fuoco",
+        "line_ids": [
+            "5 x Serpente di Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Vargouille",
+        "line_ids": [
+            "5 x Vargouille"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Arpia",
+        "line_ids": [
+            "5 x Arpia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Cane della Morte",
+        "line_ids": [
+            "5 x Cane della Morte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Spettro",
+        "line_ids": [
+            "5 x Spettro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ghoul",
+        "line_ids": [
+            "5 x Ghoul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Fauce Gorgogliante",
+        "line_ids": [
+            "3 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Nothic",
+        "line_ids": [
+            "3 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Allosauro",
+        "line_ids": [
+            "3 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Plesiosauro",
+        "line_ids": [
+            "3 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Quetzalcoatlus",
+        "line_ids": [
+            "3 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Orso da Caverna",
+        "line_ids": [
+            "3 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Cinghiale Gigante",
+        "line_ids": [
+            "3 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "3 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "3 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Orso Polare",
+        "line_ids": [
+            "3 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Squalo Cacciatore",
+        "line_ids": [
+            "3 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "3 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Meenlock",
+        "line_ids": [
+            "3 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Ameba Paglierina",
+        "line_ids": [
+            "3 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Cubo Gelatinoso",
+        "line_ids": [
+            "3 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Peryton",
+        "line_ids": [
+            "3 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Grick",
+        "line_ids": [
+            "3 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Kruthik, Adult",
+        "line_ids": [
+            "3 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Ettercap",
+        "line_ids": [
+            "3 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Shadow Mastiff",
+        "line_ids": [
+            "3 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Carrion Crawler",
+        "line_ids": [
+            "3 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Mimic",
+        "line_ids": [
+            "3 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Ankheg",
+        "line_ids": [
+            "3 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Ghast",
+        "line_ids": [
+            "3 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Minotaur Skeleton",
+        "line_ids": [
+            "3 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Fuoco Fatuo",
+        "line_ids": [
+            "3 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Spectator",
+        "line_ids": [
+            "2 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Grell",
+        "line_ids": [
+            "2 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Anchilosauro",
+        "line_ids": [
+            "2 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Scorpione Gigante",
+        "line_ids": [
+            "2 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Killer Whale",
+        "line_ids": [
+            "2 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Lupo Invernale",
+        "line_ids": [
+            "2 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Flail Snail",
+        "line_ids": [
+            "2 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Segugio Infernale",
+        "line_ids": [
+            "2 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Cavallo degli incubi",
+        "line_ids": [
+            "2 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Slithering Tracker",
+        "line_ids": [
+            "2 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Manticora",
+        "line_ids": [
+            "2 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Trapper",
+        "line_ids": [
+            "2 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Phase Spider",
+        "line_ids": [
+            "2 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "2 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Yeti",
+        "line_ids": [
+            "2 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Displacer Beast",
+        "line_ids": [
+            "2 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Orsogufo",
+        "line_ids": [
+            "2 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Basilisco",
+        "line_ids": [
+            "2 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Cave Fisher",
+        "line_ids": [
+            "2 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Sword Wraith Warrior",
+        "line_ids": [
+            "2 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Wight",
+        "line_ids": [
+            "2 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Mummy",
+        "line_ids": [
+            "2 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Vampiric Mist",
+        "line_ids": [
+            "2 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Viverna",
+        "line_ids": [
+            "1 x Viverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 1 x Chimera",
+        "line_ids": [
+            "1 x Chimera"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Deinonychus",
+        "line_ids": [
+            "9 x Deinonychus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Leone",
+        "line_ids": [
+            "9 x Leone"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Iena Gigante",
+        "line_ids": [
+            "9 x Iena Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Lupo Feroce",
+        "line_ids": [
+            "9 x Lupo Feroce"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Orso Bruno",
+        "line_ids": [
+            "9 x Orso Bruno"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ragno Gigante",
+        "line_ids": [
+            "9 x Ragno Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Tigre",
+        "line_ids": [
+            "9 x Tigre"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Avvoltoio Gigante",
+        "line_ids": [
+            "9 x Avvoltoio Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Polipo Gigante",
+        "line_ids": [
+            "9 x Polipo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Sciame di Piragna",
+        "line_ids": [
+            "9 x Sciame di Piragna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Serpente di Fuoco",
+        "line_ids": [
+            "9 x Serpente di Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Vargouille",
+        "line_ids": [
+            "9 x Vargouille"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Arpia",
+        "line_ids": [
+            "9 x Arpia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Cane della Morte",
+        "line_ids": [
+            "9 x Cane della Morte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Spettro",
+        "line_ids": [
+            "9 x Spettro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ghoul",
+        "line_ids": [
+            "9 x Ghoul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Fauce Gorgogliante",
+        "line_ids": [
+            "5 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Nothic",
+        "line_ids": [
+            "5 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Allosauro",
+        "line_ids": [
+            "5 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Plesiosauro",
+        "line_ids": [
+            "5 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Quetzalcoatlus",
+        "line_ids": [
+            "5 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Orso da Caverna",
+        "line_ids": [
+            "5 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Cinghiale Gigante",
+        "line_ids": [
+            "5 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "5 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "5 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Orso Polare",
+        "line_ids": [
+            "5 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Squalo Cacciatore",
+        "line_ids": [
+            "5 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "5 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Meenlock",
+        "line_ids": [
+            "5 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ameba Paglierina",
+        "line_ids": [
+            "5 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Cubo Gelatinoso",
+        "line_ids": [
+            "5 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Peryton",
+        "line_ids": [
+            "5 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Grick",
+        "line_ids": [
+            "5 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Kruthik, Adult",
+        "line_ids": [
+            "5 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ettercap",
+        "line_ids": [
+            "5 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Shadow Mastiff",
+        "line_ids": [
+            "5 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Carrion Crawler",
+        "line_ids": [
+            "5 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Mimic",
+        "line_ids": [
+            "5 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ankheg",
+        "line_ids": [
+            "5 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ghast",
+        "line_ids": [
+            "5 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Minotaur Skeleton",
+        "line_ids": [
+            "5 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Fuoco Fatuo",
+        "line_ids": [
+            "5 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Spectator",
+        "line_ids": [
+            "3 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Grell",
+        "line_ids": [
+            "3 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Anchilosauro",
+        "line_ids": [
+            "3 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Scorpione Gigante",
+        "line_ids": [
+            "3 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Killer Whale",
+        "line_ids": [
+            "3 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Lupo Invernale",
+        "line_ids": [
+            "3 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Flail Snail",
+        "line_ids": [
+            "3 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Segugio Infernale",
+        "line_ids": [
+            "3 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Cavallo degli incubi",
+        "line_ids": [
+            "3 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Slithering Tracker",
+        "line_ids": [
+            "3 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Manticora",
+        "line_ids": [
+            "3 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Trapper",
+        "line_ids": [
+            "3 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Phase Spider",
+        "line_ids": [
+            "3 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "3 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Yeti",
+        "line_ids": [
+            "3 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Displacer Beast",
+        "line_ids": [
+            "3 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Orsogufo",
+        "line_ids": [
+            "3 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Basilisco",
+        "line_ids": [
+            "3 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Cave Fisher",
+        "line_ids": [
+            "3 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Sword Wraith Warrior",
+        "line_ids": [
+            "3 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Wight",
+        "line_ids": [
+            "3 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Mummy",
+        "line_ids": [
+            "3 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Vampiric Mist",
+        "line_ids": [
+            "3 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Deinonychus",
+        "line_ids": [
+            "10 x Deinonychus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Leone",
+        "line_ids": [
+            "10 x Leone"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Iena Gigante",
+        "line_ids": [
+            "10 x Iena Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Lupo Feroce",
+        "line_ids": [
+            "10 x Lupo Feroce"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Orso Bruno",
+        "line_ids": [
+            "10 x Orso Bruno"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ragno Gigante",
+        "line_ids": [
+            "10 x Ragno Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Tigre",
+        "line_ids": [
+            "10 x Tigre"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Avvoltoio Gigante",
+        "line_ids": [
+            "10 x Avvoltoio Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Polipo Gigante",
+        "line_ids": [
+            "10 x Polipo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Sciame di Piragna",
+        "line_ids": [
+            "10 x Sciame di Piragna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Serpente di Fuoco",
+        "line_ids": [
+            "10 x Serpente di Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Vargouille",
+        "line_ids": [
+            "10 x Vargouille"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Arpia",
+        "line_ids": [
+            "10 x Arpia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Cane della Morte",
+        "line_ids": [
+            "10 x Cane della Morte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Spettro",
+        "line_ids": [
+            "10 x Spettro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ghoul",
+        "line_ids": [
+            "10 x Ghoul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Fauce Gorgogliante",
+        "line_ids": [
+            "6 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Nothic",
+        "line_ids": [
+            "6 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Allosauro",
+        "line_ids": [
+            "6 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Plesiosauro",
+        "line_ids": [
+            "6 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Quetzalcoatlus",
+        "line_ids": [
+            "6 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Orso da Caverna",
+        "line_ids": [
+            "6 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Cinghiale Gigante",
+        "line_ids": [
+            "6 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "6 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "6 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Orso Polare",
+        "line_ids": [
+            "6 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Squalo Cacciatore",
+        "line_ids": [
+            "6 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "6 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Meenlock",
+        "line_ids": [
+            "6 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Ameba Paglierina",
+        "line_ids": [
+            "6 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Cubo Gelatinoso",
+        "line_ids": [
+            "6 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Peryton",
+        "line_ids": [
+            "6 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Grick",
+        "line_ids": [
+            "6 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Kruthik, Adult",
+        "line_ids": [
+            "6 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Ettercap",
+        "line_ids": [
+            "6 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Shadow Mastiff",
+        "line_ids": [
+            "6 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Carrion Crawler",
+        "line_ids": [
+            "6 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Mimic",
+        "line_ids": [
+            "6 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Ankheg",
+        "line_ids": [
+            "6 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Ghast",
+        "line_ids": [
+            "6 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Minotaur Skeleton",
+        "line_ids": [
+            "6 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Fuoco Fatuo",
+        "line_ids": [
+            "6 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Spectator",
+        "line_ids": [
+            "4 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Grell",
+        "line_ids": [
+            "4 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Anchilosauro",
+        "line_ids": [
+            "4 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Scorpione Gigante",
+        "line_ids": [
+            "4 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Killer Whale",
+        "line_ids": [
+            "4 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Lupo Invernale",
+        "line_ids": [
+            "4 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Flail Snail",
+        "line_ids": [
+            "4 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Segugio Infernale",
+        "line_ids": [
+            "4 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Cavallo degli incubi",
+        "line_ids": [
+            "4 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Slithering Tracker",
+        "line_ids": [
+            "4 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Manticora",
+        "line_ids": [
+            "4 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Trapper",
+        "line_ids": [
+            "4 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Phase Spider",
+        "line_ids": [
+            "4 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "4 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Yeti",
+        "line_ids": [
+            "4 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Displacer Beast",
+        "line_ids": [
+            "4 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Orsogufo",
+        "line_ids": [
+            "4 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Basilisco",
+        "line_ids": [
+            "4 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Cave Fisher",
+        "line_ids": [
+            "4 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Sword Wraith Warrior",
+        "line_ids": [
+            "4 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Wight",
+        "line_ids": [
+            "4 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Mummy",
+        "line_ids": [
+            "4 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Vampiric Mist",
+        "line_ids": [
+            "4 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Otyugh",
+        "line_ids": [
+            "2 x Otyugh"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Brontosauro",
+        "line_ids": [
+            "2 x Brontosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Triceratopo",
+        "line_ids": [
+            "2 x Triceratopo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Sciame di Ratti Cranio",
+        "line_ids": [
+            "2 x Sciame di Ratti Cranio"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Coccodrillo Gigante",
+        "line_ids": [
+            "2 x Coccodrillo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Squalo Gigante",
+        "line_ids": [
+            "2 x Squalo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Elementare dell'Acqua",
+        "line_ids": [
+            "2 x Elementare dell'Acqua"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Elementare dell'Aria",
+        "line_ids": [
+            "2 x Elementare dell'Aria"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Elementale del Fuoco",
+        "line_ids": [
+            "2 x Elementale del Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Salamandra",
+        "line_ids": [
+            "2 x Salamandra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Elementare della Terra",
+        "line_ids": [
+            "2 x Elementare della Terra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Xorn",
+        "line_ids": [
+            "2 x Xorn"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Oblex Adult",
+        "line_ids": [
+            "2 x Oblex Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Catoblepa",
+        "line_ids": [
+            "2 x Catoblepa"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Fustigatore",
+        "line_ids": [
+            "2 x Fustigatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Kruthik Hive Lord",
+        "line_ids": [
+            "2 x Kruthik Hive Lord"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Remorhaz Young",
+        "line_ids": [
+            "2 x Remorhaz Young"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Gorgon",
+        "line_ids": [
+            "2 x Gorgon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Bulette",
+        "line_ids": [
+            "2 x Bulette"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Tlincalli",
+        "line_ids": [
+            "2 x Tlincalli"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Umber Hulk",
+        "line_ids": [
+            "2 x Umber Hulk"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Beholder Zombie",
+        "line_ids": [
+            "2 x Beholder Zombie"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Spawn of Kyuss",
+        "line_ids": [
+            "2 x Spawn of Kyuss"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Cumulo Strisciante",
+        "line_ids": [
+            "2 x Cumulo Strisciante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Deinonychus",
+        "line_ids": [
+            "11 x Deinonychus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Leone",
+        "line_ids": [
+            "11 x Leone"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Iena Gigante",
+        "line_ids": [
+            "11 x Iena Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Lupo Feroce",
+        "line_ids": [
+            "11 x Lupo Feroce"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Orso Bruno",
+        "line_ids": [
+            "11 x Orso Bruno"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Ragno Gigante",
+        "line_ids": [
+            "11 x Ragno Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Tigre",
+        "line_ids": [
+            "11 x Tigre"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Avvoltoio Gigante",
+        "line_ids": [
+            "11 x Avvoltoio Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Polipo Gigante",
+        "line_ids": [
+            "11 x Polipo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Sciame di Piragna",
+        "line_ids": [
+            "11 x Sciame di Piragna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Serpente di Fuoco",
+        "line_ids": [
+            "11 x Serpente di Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Vargouille",
+        "line_ids": [
+            "11 x Vargouille"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Arpia",
+        "line_ids": [
+            "11 x Arpia"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Cane della Morte",
+        "line_ids": [
+            "11 x Cane della Morte"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Spettro",
+        "line_ids": [
+            "11 x Spettro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 11 x Ghoul",
+        "line_ids": [
+            "11 x Ghoul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Spectator",
+        "line_ids": [
+            "5 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Grell",
+        "line_ids": [
+            "5 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Anchilosauro",
+        "line_ids": [
+            "5 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Scorpione Gigante",
+        "line_ids": [
+            "5 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Killer Whale",
+        "line_ids": [
+            "5 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Lupo Invernale",
+        "line_ids": [
+            "5 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Flail Snail",
+        "line_ids": [
+            "5 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Segugio Infernale",
+        "line_ids": [
+            "5 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Cavallo degli incubi",
+        "line_ids": [
+            "5 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Slithering Tracker",
+        "line_ids": [
+            "5 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Manticora",
+        "line_ids": [
+            "5 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Trapper",
+        "line_ids": [
+            "5 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Phase Spider",
+        "line_ids": [
+            "5 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "5 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Yeti",
+        "line_ids": [
+            "5 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Displacer Beast",
+        "line_ids": [
+            "5 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Orsogufo",
+        "line_ids": [
+            "5 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Basilisco",
+        "line_ids": [
+            "5 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Cave Fisher",
+        "line_ids": [
+            "5 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Sword Wraith Warrior",
+        "line_ids": [
+            "5 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Wight",
+        "line_ids": [
+            "5 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Mummy",
+        "line_ids": [
+            "5 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Vampiric Mist",
+        "line_ids": [
+            "5 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Chuul",
+        "line_ids": [
+            "3 x Chuul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Stegosauro",
+        "line_ids": [
+            "3 x Stegosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Ettin",
+        "line_ids": [
+            "3 x Ettin"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Protoplasma Nero",
+        "line_ids": [
+            "3 x Protoplasma Nero"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Girallon",
+        "line_ids": [
+            "3 x Girallon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Banshee",
+        "line_ids": [
+            "3 x Banshee"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Fantasma",
+        "line_ids": [
+            "3 x Fantasma"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Flameskull",
+        "line_ids": [
+            "3 x Flameskull"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Segugi di Yeth",
+        "line_ids": [
+            "3 x Segugi di Yeth"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Viverna",
+        "line_ids": [
+            "2 x Viverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Chimera",
+        "line_ids": [
+            "2 x Chimera"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Fauce Gorgogliante",
+        "line_ids": [
+            "8 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Nothic",
+        "line_ids": [
+            "8 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Allosauro",
+        "line_ids": [
+            "8 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Plesiosauro",
+        "line_ids": [
+            "8 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Quetzalcoatlus",
+        "line_ids": [
+            "8 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Orso da Caverna",
+        "line_ids": [
+            "8 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Cinghiale Gigante",
+        "line_ids": [
+            "8 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "8 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "8 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Orso Polare",
+        "line_ids": [
+            "8 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Squalo Cacciatore",
+        "line_ids": [
+            "8 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "8 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Meenlock",
+        "line_ids": [
+            "8 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Ameba Paglierina",
+        "line_ids": [
+            "8 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Cubo Gelatinoso",
+        "line_ids": [
+            "8 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Peryton",
+        "line_ids": [
+            "8 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Grick",
+        "line_ids": [
+            "8 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Kruthik, Adult",
+        "line_ids": [
+            "8 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Ettercap",
+        "line_ids": [
+            "8 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Shadow Mastiff",
+        "line_ids": [
+            "8 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Carrion Crawler",
+        "line_ids": [
+            "8 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Mimic",
+        "line_ids": [
+            "8 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Ankheg",
+        "line_ids": [
+            "8 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Ghast",
+        "line_ids": [
+            "8 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Minotaur Skeleton",
+        "line_ids": [
+            "8 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 8 x Fuoco Fatuo",
+        "line_ids": [
+            "8 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Spectator",
+        "line_ids": [
+            "6 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Grell",
+        "line_ids": [
+            "6 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Anchilosauro",
+        "line_ids": [
+            "6 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Scorpione Gigante",
+        "line_ids": [
+            "6 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Killer Whale",
+        "line_ids": [
+            "6 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Lupo Invernale",
+        "line_ids": [
+            "6 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Flail Snail",
+        "line_ids": [
+            "6 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Segugio Infernale",
+        "line_ids": [
+            "6 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Cavallo degli incubi",
+        "line_ids": [
+            "6 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Slithering Tracker",
+        "line_ids": [
+            "6 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Manticora",
+        "line_ids": [
+            "6 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Trapper",
+        "line_ids": [
+            "6 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Phase Spider",
+        "line_ids": [
+            "6 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "6 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Yeti",
+        "line_ids": [
+            "6 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Displacer Beast",
+        "line_ids": [
+            "6 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Orsogufo",
+        "line_ids": [
+            "6 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Basilisco",
+        "line_ids": [
+            "6 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Cave Fisher",
+        "line_ids": [
+            "6 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Sword Wraith Warrior",
+        "line_ids": [
+            "6 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Wight",
+        "line_ids": [
+            "6 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Mummy",
+        "line_ids": [
+            "6 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 6 x Vampiric Mist",
+        "line_ids": [
+            "6 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Chuul",
+        "line_ids": [
+            "4 x Chuul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Stegosauro",
+        "line_ids": [
+            "4 x Stegosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Ettin",
+        "line_ids": [
+            "4 x Ettin"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Protoplasma Nero",
+        "line_ids": [
+            "4 x Protoplasma Nero"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Girallon",
+        "line_ids": [
+            "4 x Girallon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Banshee",
+        "line_ids": [
+            "4 x Banshee"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Fantasma",
+        "line_ids": [
+            "4 x Fantasma"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Flameskull",
+        "line_ids": [
+            "4 x Flameskull"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 4 x Segugi di Yeth",
+        "line_ids": [
+            "4 x Segugi di Yeth"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Fauce Gorgogliante",
+        "line_ids": [
+            "9 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Nothic",
+        "line_ids": [
+            "9 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Allosauro",
+        "line_ids": [
+            "9 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Plesiosauro",
+        "line_ids": [
+            "9 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Quetzalcoatlus",
+        "line_ids": [
+            "9 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Orso da Caverna",
+        "line_ids": [
+            "9 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Cinghiale Gigante",
+        "line_ids": [
+            "9 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "9 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "9 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Orso Polare",
+        "line_ids": [
+            "9 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Squalo Cacciatore",
+        "line_ids": [
+            "9 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "9 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Meenlock",
+        "line_ids": [
+            "9 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ameba Paglierina",
+        "line_ids": [
+            "9 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Cubo Gelatinoso",
+        "line_ids": [
+            "9 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Peryton",
+        "line_ids": [
+            "9 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Grick",
+        "line_ids": [
+            "9 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Kruthik, Adult",
+        "line_ids": [
+            "9 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ettercap",
+        "line_ids": [
+            "9 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Shadow Mastiff",
+        "line_ids": [
+            "9 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Carrion Crawler",
+        "line_ids": [
+            "9 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Mimic",
+        "line_ids": [
+            "9 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ankheg",
+        "line_ids": [
+            "9 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Ghast",
+        "line_ids": [
+            "9 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Minotaur Skeleton",
+        "line_ids": [
+            "9 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 9 x Fuoco Fatuo",
+        "line_ids": [
+            "9 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Otyugh",
+        "line_ids": [
+            "3 x Otyugh"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Brontosauro",
+        "line_ids": [
+            "3 x Brontosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Triceratopo",
+        "line_ids": [
+            "3 x Triceratopo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Sciame di Ratti Cranio",
+        "line_ids": [
+            "3 x Sciame di Ratti Cranio"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Coccodrillo Gigante",
+        "line_ids": [
+            "3 x Coccodrillo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Squalo Gigante",
+        "line_ids": [
+            "3 x Squalo Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Elementare dell'Acqua",
+        "line_ids": [
+            "3 x Elementare dell'Acqua"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Elementare dell'Aria",
+        "line_ids": [
+            "3 x Elementare dell'Aria"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Elementale del Fuoco",
+        "line_ids": [
+            "3 x Elementale del Fuoco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Salamandra",
+        "line_ids": [
+            "3 x Salamandra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Elementare della Terra",
+        "line_ids": [
+            "3 x Elementare della Terra"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Xorn",
+        "line_ids": [
+            "3 x Xorn"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Oblex Adult",
+        "line_ids": [
+            "3 x Oblex Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Catoblepa",
+        "line_ids": [
+            "3 x Catoblepa"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Fustigatore",
+        "line_ids": [
+            "3 x Fustigatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Kruthik Hive Lord",
+        "line_ids": [
+            "3 x Kruthik Hive Lord"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Remorhaz Young",
+        "line_ids": [
+            "3 x Remorhaz Young"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Gorgon",
+        "line_ids": [
+            "3 x Gorgon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Bulette",
+        "line_ids": [
+            "3 x Bulette"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Tlincalli",
+        "line_ids": [
+            "3 x Tlincalli"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Umber Hulk",
+        "line_ids": [
+            "3 x Umber Hulk"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Beholder Zombie",
+        "line_ids": [
+            "3 x Beholder Zombie"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Spawn of Kyuss",
+        "line_ids": [
+            "3 x Spawn of Kyuss"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 3 x Cumulo Strisciante",
+        "line_ids": [
+            "3 x Cumulo Strisciante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Fauce Gorgogliante",
+        "line_ids": [
+            "10 x Fauce Gorgogliante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Nothic",
+        "line_ids": [
+            "10 x Nothic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Allosauro",
+        "line_ids": [
+            "10 x Allosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Plesiosauro",
+        "line_ids": [
+            "10 x Plesiosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Quetzalcoatlus",
+        "line_ids": [
+            "10 x Quetzalcoatlus"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Orso da Caverna",
+        "line_ids": [
+            "10 x Orso da Caverna"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Cinghiale Gigante",
+        "line_ids": [
+            "10 x Cinghiale Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Sciame di Serpenti Velenosi",
+        "line_ids": [
+            "10 x Sciame di Serpenti Velenosi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Serpente Stritolatore Gigante",
+        "line_ids": [
+            "10 x Serpente Stritolatore Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Orso Polare",
+        "line_ids": [
+            "10 x Orso Polare"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Squalo Cacciatore",
+        "line_ids": [
+            "10 x Squalo Cacciatore"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Tigre dai Denti a Sciabola",
+        "line_ids": [
+            "10 x Tigre dai Denti a Sciabola"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Meenlock",
+        "line_ids": [
+            "10 x Meenlock"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ameba Paglierina",
+        "line_ids": [
+            "10 x Ameba Paglierina"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Cubo Gelatinoso",
+        "line_ids": [
+            "10 x Cubo Gelatinoso"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Peryton",
+        "line_ids": [
+            "10 x Peryton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Grick",
+        "line_ids": [
+            "10 x Grick"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Kruthik, Adult",
+        "line_ids": [
+            "10 x Kruthik, Adult"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ettercap",
+        "line_ids": [
+            "10 x Ettercap"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Shadow Mastiff",
+        "line_ids": [
+            "10 x Shadow Mastiff"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Carrion Crawler",
+        "line_ids": [
+            "10 x Carrion Crawler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Mimic",
+        "line_ids": [
+            "10 x Mimic"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ankheg",
+        "line_ids": [
+            "10 x Ankheg"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Ghast",
+        "line_ids": [
+            "10 x Ghast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Minotaur Skeleton",
+        "line_ids": [
+            "10 x Minotaur Skeleton"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 10 x Fuoco Fatuo",
+        "line_ids": [
+            "10 x Fuoco Fatuo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Spectator",
+        "line_ids": [
+            "7 x Spectator"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Grell",
+        "line_ids": [
+            "7 x Grell"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Anchilosauro",
+        "line_ids": [
+            "7 x Anchilosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Scorpione Gigante",
+        "line_ids": [
+            "7 x Scorpione Gigante"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Killer Whale",
+        "line_ids": [
+            "7 x Killer Whale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Lupo Invernale",
+        "line_ids": [
+            "7 x Lupo Invernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Flail Snail",
+        "line_ids": [
+            "7 x Flail Snail"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Segugio Infernale",
+        "line_ids": [
+            "7 x Segugio Infernale"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Cavallo degli incubi",
+        "line_ids": [
+            "7 x Cavallo degli incubi"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Slithering Tracker",
+        "line_ids": [
+            "7 x Slithering Tracker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Manticora",
+        "line_ids": [
+            "7 x Manticora"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Trapper",
+        "line_ids": [
+            "7 x Trapper"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Phase Spider",
+        "line_ids": [
+            "7 x Phase Spider"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Shadow Mastiff Alpha",
+        "line_ids": [
+            "7 x Shadow Mastiff Alpha"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Yeti",
+        "line_ids": [
+            "7 x Yeti"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Displacer Beast",
+        "line_ids": [
+            "7 x Displacer Beast"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Orsogufo",
+        "line_ids": [
+            "7 x Orsogufo"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Basilisco",
+        "line_ids": [
+            "7 x Basilisco"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Cave Fisher",
+        "line_ids": [
+            "7 x Cave Fisher"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Sword Wraith Warrior",
+        "line_ids": [
+            "7 x Sword Wraith Warrior"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Wight",
+        "line_ids": [
+            "7 x Wight"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Mummy",
+        "line_ids": [
+            "7 x Mummy"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 7 x Vampiric Mist",
+        "line_ids": [
+            "7 x Vampiric Mist"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Chuul",
+        "line_ids": [
+            "5 x Chuul"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Stegosauro",
+        "line_ids": [
+            "5 x Stegosauro"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Ettin",
+        "line_ids": [
+            "5 x Ettin"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Protoplasma Nero",
+        "line_ids": [
+            "5 x Protoplasma Nero"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Girallon",
+        "line_ids": [
+            "5 x Girallon"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Banshee",
+        "line_ids": [
+            "5 x Banshee"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Fantasma",
+        "line_ids": [
+            "5 x Fantasma"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Flameskull",
+        "line_ids": [
+            "5 x Flameskull"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 5 x Segugi di Yeth",
+        "line_ids": [
+            "5 x Segugi di Yeth"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Cloaker",
+        "line_ids": [
+            "2 x Cloaker"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Tirannosauro Rex",
+        "line_ids": [
+            "2 x Tirannosauro Rex"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Elemental Myrmidon, Earth",
+        "line_ids": [
+            "2 x Elemental Myrmidon, Earth"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Fomorian",
+        "line_ids": [
+            "2 x Fomorian"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Howler",
+        "line_ids": [
+            "2 x Howler"
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "Endemico: 2 x Corpse Flower ",
+        "line_ids": [
+            "2 x Corpse Flower "
+        ],
+        "faction_id": false
+    },
+    {
+        "name": "ORC: 1 x Tanarukk",
+        "line_ids": [
+            "1 x Tanarukk"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 2 x Orc Red Fang of Shargaas",
+        "line_ids": [
+            "2 x Orc Red Fang of Shargaas"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Orc Hand of Yurtrus + 7 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "5 x Orc Hand of Yurtrus",
+            "7 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orc Red Fang of Shargaas + 6 x Pipistrello Gigante",
+        "line_ids": [
+            "4 x Orc Red Fang of Shargaas",
+            "6 x Pipistrello Gigante"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Orog + 7 x Orco",
+        "line_ids": [
+            "5 x Orog",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 1 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Tanarukk",
+            "1 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Red Fang of Shargaas + 7 x Pipistrello Gigante",
+        "line_ids": [
+            "3 x Orc Red Fang of Shargaas",
+            "7 x Pipistrello Gigante"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 2 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "2 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 2 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "2 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orc Hand of Yurtrus + 7 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "4 x Orc Hand of Yurtrus",
+            "7 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orco Occhio Gruumsh + 5 x Orco",
+        "line_ids": [
+            "3 x Orco Occhio Gruumsh",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Claw of Luthic + 6 x Orco",
+        "line_ids": [
+            "3 x Orc Claw of Luthic",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 2 x Ogre + 4 x Half-Ogre",
+        "line_ids": [
+            "2 x Ogre",
+            "4 x Half-Ogre"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Orog + 5 x Orco",
+        "line_ids": [
+            "5 x Orog",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orco + 5 x Goblin",
+        "line_ids": [
+            "6 x Orco",
+            "5 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 1 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Tanarukk",
+            "1 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Red Fang of Shargaas + 5 x Pipistrello Gigante",
+        "line_ids": [
+            "3 x Orc Red Fang of Shargaas",
+            "5 x Pipistrello Gigante"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 2 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "2 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 2 x Orco Occhio Gruumsh",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "2 x Orco Occhio Gruumsh"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Hand of Yurtrus + 7 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "3 x Orc Hand of Yurtrus",
+            "7 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orco Occhio Gruumsh + 5 x Orco",
+        "line_ids": [
+            "3 x Orco Occhio Gruumsh",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Claw of Luthic + 7 x Orco",
+        "line_ids": [
+            "3 x Orc Claw of Luthic",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 2 x Ogre + 4 x Half-Ogre",
+        "line_ids": [
+            "2 x Ogre",
+            "4 x Half-Ogre"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orog + 7 x Orco",
+        "line_ids": [
+            "3 x Orog",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orco + 6 x Goblin",
+        "line_ids": [
+            "6 x Orco",
+            "6 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 5 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Red Fang of Shargaas",
+        "line_ids": [
+            "3 x Orc Red Fang of Shargaas"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 7 x Orco",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 7 x Orco",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Hand of Yurtrus + 5 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "3 x Orc Hand of Yurtrus",
+            "5 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orco Occhio Gruumsh + 5 x Orco",
+        "line_ids": [
+            "3 x Orco Occhio Gruumsh",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orc Claw of Luthic + 5 x Orco",
+        "line_ids": [
+            "3 x Orc Claw of Luthic",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 2 x Ogre + 3 x Half-Ogre",
+        "line_ids": [
+            "2 x Ogre",
+            "3 x Half-Ogre"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Orog + 5 x Orco",
+        "line_ids": [
+            "3 x Orog",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orco + 10 x Goblin",
+        "line_ids": [
+            "6 x Orco",
+            "10 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Hand of Yurtrus + 5 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "1 x Orc Hand of Yurtrus",
+            "5 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Occhio Gruumsh + 5 x Orco",
+        "line_ids": [
+            "1 x Orco Occhio Gruumsh",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Claw of Luthic + 5 x Orco",
+        "line_ids": [
+            "1 x Orc Claw of Luthic",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Ogre + 5 x Orco",
+        "line_ids": [
+            "1 x Ogre",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orog + 5 x Orco",
+        "line_ids": [
+            "1 x Orog",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orco + 7 x Goblin",
+        "line_ids": [
+            "4 x Orco",
+            "7 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Hand of Yurtrus + 4 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "1 x Orc Hand of Yurtrus",
+            "4 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Occhio Gruumsh + 4 x Orco",
+        "line_ids": [
+            "1 x Orco Occhio Gruumsh",
+            "4 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Claw of Luthic + 4 x Orco",
+        "line_ids": [
+            "1 x Orc Claw of Luthic",
+            "4 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Ogre + 4 x Orco",
+        "line_ids": [
+            "1 x Ogre",
+            "4 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orog + 4 x Orco",
+        "line_ids": [
+            "1 x Orog",
+            "4 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orco + 5 x Goblin",
+        "line_ids": [
+            "4 x Orco",
+            "5 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 7 x Orog + 7 x Orco",
+        "line_ids": [
+            "7 x Orog",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Aurochs + 8 x Orco",
+        "line_ids": [
+            "6 x Aurochs",
+            "8 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orc Hand of Yurtrus + 7 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "6 x Orc Hand of Yurtrus",
+            "7 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orc Red Fang of Shargaas + 7 x Pipistrello Gigante",
+        "line_ids": [
+            "4 x Orc Red Fang of Shargaas",
+            "7 x Pipistrello Gigante"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 7 x Orc Hand of Yurtrus + 7 x Orc Nurtured One of Yurtrus",
+        "line_ids": [
+            "7 x Orc Hand of Yurtrus",
+            "7 x Orc Nurtured One of Yurtrus"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Orc Red Fang of Shargaas + 7 x Pipistrello Gigante",
+        "line_ids": [
+            "5 x Orc Red Fang of Shargaas",
+            "7 x Pipistrello Gigante"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Aurochs + 9 x Orco",
+        "line_ids": [
+            "5 x Aurochs",
+            "9 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orog + 7 x Orco",
+        "line_ids": [
+            "6 x Orog",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 4 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "4 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 4 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "4 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orco Occhio Gruumsh + 3 x Aurochs + 7 x Orco",
+        "line_ids": [
+            "4 x Orco Occhio Gruumsh",
+            "3 x Aurochs",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 6 x Orc Claw of Luthic + 3 x Orso Bruno + 5 x Orco",
+        "line_ids": [
+            "6 x Orc Claw of Luthic",
+            "3 x Orso Bruno",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Ogre + 7 x Half-Ogre + 3 x Orco",
+        "line_ids": [
+            "4 x Ogre",
+            "7 x Half-Ogre",
+            "3 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 3 x Orco Occhio Gruumsh + 6 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "3 x Orco Occhio Gruumsh",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orco Occhio Gruumsh + 2 x Aurochs + 7 x Orco",
+        "line_ids": [
+            "4 x Orco Occhio Gruumsh",
+            "2 x Aurochs",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 5 x Orc Claw of Luthic + 3 x Orso Bruno + 6 x Orco",
+        "line_ids": [
+            "5 x Orc Claw of Luthic",
+            "3 x Orso Bruno",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 3 x Ogre + 6 x Half-Ogre + 5 x Orco",
+        "line_ids": [
+            "3 x Ogre",
+            "6 x Half-Ogre",
+            "5 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 3 x Orco Occhio Gruumsh + 6 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "3 x Orco Occhio Gruumsh",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 3 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "3 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Tanarukk + 2 x Orco Occhio Gruumsh + 7 x Orco",
+        "line_ids": [
+            "1 x Tanarukk",
+            "2 x Orco Occhio Gruumsh",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orc Blade of Ilneval + 3 x Orco Occhio Gruumsh + 6 x Orco",
+        "line_ids": [
+            "1 x Orc Blade of Ilneval",
+            "3 x Orco Occhio Gruumsh",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 1 x Orco Capotribù Guerriero + 3 x Orco Occhio Gruumsh + 6 x Orco",
+        "line_ids": [
+            "1 x Orco Capotribù Guerriero",
+            "3 x Orco Occhio Gruumsh",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orco Occhio Gruumsh + 1 x Aurochs + 7 x Orco",
+        "line_ids": [
+            "4 x Orco Occhio Gruumsh",
+            "1 x Aurochs",
+            "7 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Orc Claw of Luthic + 2 x Orso Bruno + 6 x Orco",
+        "line_ids": [
+            "4 x Orc Claw of Luthic",
+            "2 x Orso Bruno",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 2 x Ogre + 6 x Half-Ogre + 6 x Orco",
+        "line_ids": [
+            "2 x Ogre",
+            "6 x Half-Ogre",
+            "6 x Orco"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "ORC: 4 x Aurochs + 10 x Orco + 0 x Goblin",
+        "line_ids": [
+            "4 x Aurochs",
+            "10 x Orco",
+            "0 x Goblin"
+        ],
+        "faction_id": "Orchi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 8 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "8 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 1 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "1 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 10 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "10 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 4 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "4 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 26 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "26 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 13 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "13 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 8 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "8 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 3 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "3 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 38 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "38 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 20 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "20 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 11 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "11 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 7 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "7 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi + 3 x Bandito",
+        "line_ids": [
+            "5 x Capo dei Banditi",
+            "3 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 50 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "50 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 32 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "32 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 14 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "14 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 10 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "10 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi + 5 x Bandito",
+        "line_ids": [
+            "5 x Capo dei Banditi",
+            "5 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 6 x Capo dei Banditi + 1 x Bandito",
+        "line_ids": [
+            "6 x Capo dei Banditi",
+            "1 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 66 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "66 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 48 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "48 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 30 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "30 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 12 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "12 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi + 9 x Bandito",
+        "line_ids": [
+            "5 x Capo dei Banditi",
+            "9 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 6 x Capo dei Banditi + 5 x Bandito",
+        "line_ids": [
+            "6 x Capo dei Banditi",
+            "5 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 7 x Capo dei Banditi + 3 x Bandito",
+        "line_ids": [
+            "7 x Capo dei Banditi",
+            "3 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 78 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "78 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 60 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "60 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 42 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "42 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 24 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "24 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi + 10 x Bandito",
+        "line_ids": [
+            "5 x Capo dei Banditi",
+            "10 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 6 x Capo dei Banditi + 8 x Bandito",
+        "line_ids": [
+            "6 x Capo dei Banditi",
+            "8 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 7 x Capo dei Banditi + 4 x Bandito",
+        "line_ids": [
+            "7 x Capo dei Banditi",
+            "4 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 8 x Capo dei Banditi + 2 x Bandito",
+        "line_ids": [
+            "8 x Capo dei Banditi",
+            "2 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 1 x Capo dei Banditi + 94 x Bandito",
+        "line_ids": [
+            "1 x Capo dei Banditi",
+            "94 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 2 x Capo dei Banditi + 76 x Bandito",
+        "line_ids": [
+            "2 x Capo dei Banditi",
+            "76 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 3 x Capo dei Banditi + 58 x Bandito",
+        "line_ids": [
+            "3 x Capo dei Banditi",
+            "58 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 4 x Capo dei Banditi + 40 x Bandito",
+        "line_ids": [
+            "4 x Capo dei Banditi",
+            "40 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi + 22 x Bandito",
+        "line_ids": [
+            "5 x Capo dei Banditi",
+            "22 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 6 x Capo dei Banditi + 9 x Bandito",
+        "line_ids": [
+            "6 x Capo dei Banditi",
+            "9 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 7 x Capo dei Banditi + 7 x Bandito",
+        "line_ids": [
+            "7 x Capo dei Banditi",
+            "7 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 8 x Capo dei Banditi + 6 x Bandito",
+        "line_ids": [
+            "8 x Capo dei Banditi",
+            "6 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 9 x Capo dei Banditi + 1 x Bandito",
+        "line_ids": [
+            "9 x Capo dei Banditi",
+            "1 x Bandito"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 10 x Capo dei Banditi",
+        "line_ids": [
+            "10 x Capo dei Banditi"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 5 x Capo dei Banditi",
+        "line_ids": [
+            "5 x Capo dei Banditi"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 9 x Capo dei Banditi",
+        "line_ids": [
+            "9 x Capo dei Banditi"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 8 x Capo dei Banditi",
+        "line_ids": [
+            "8 x Capo dei Banditi"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "BNDT: 6 x Capo dei Banditi",
+        "line_ids": [
+            "6 x Capo dei Banditi"
+        ],
+        "faction_id": "Banditi"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 1 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "1 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Capitano + 2 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Capitano",
+            "2 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 1 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "1 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Capitano + 2 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Capitano",
+            "2 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Capitano",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Capitano"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 2 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "2 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 7 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "7 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Devastatore + 1 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Devastatore",
+            "1 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Capitano + 5 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Capitano",
+            "5 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Devastatore",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Devastatore"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Devastatore + 4 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Devastatore",
+            "4 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Capitano + 8 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Capitano",
+            "8 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Capitano + 4 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Capitano",
+            "4 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Devastatore + 1 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Devastatore",
+            "1 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 6 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "6 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Devastatore + 5 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Devastatore",
+            "5 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano + 4 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano",
+            "4 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 3 x Hobgoblin Capitano + 5 x Hobgoblin",
+        "line_ids": [
+            "3 x Hobgoblin Capitano",
+            "5 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Capitano + 5 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Capitano",
+            "5 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Devastatore + 1 x Hobgoblin Capitano",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Devastatore",
+            "1 x Hobgoblin Capitano"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano + 7 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano",
+            "7 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 3 x Hobgoblin Capitano + 8 x Hobgoblin",
+        "line_ids": [
+            "3 x Hobgoblin Capitano",
+            "8 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Capitano + 8 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Capitano",
+            "8 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano + 3 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano",
+            "3 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 3 x Hobgoblin Capitano + 11 x Hobgoblin",
+        "line_ids": [
+            "3 x Hobgoblin Capitano",
+            "11 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 1 x Hobgoblin Signore della Guerra + 1 x Hobgoblin Devastatore + 1 x Hobgoblin Capitano + 4 x Hobgoblin",
+        "line_ids": [
+            "1 x Hobgoblin Signore della Guerra",
+            "1 x Hobgoblin Devastatore",
+            "1 x Hobgoblin Capitano",
+            "4 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 2 x Hobgoblin Devastatore + 2 x Hobgoblin Capitano + 6 x Hobgoblin",
+        "line_ids": [
+            "2 x Hobgoblin Devastatore",
+            "2 x Hobgoblin Capitano",
+            "6 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "HOB: 4 x Hobgoblin Capitano + 10 x Hobgoblin",
+        "line_ids": [
+            "4 x Hobgoblin Capitano",
+            "10 x Hobgoblin"
+        ],
+        "faction_id": "Hobgoblin"
+    },
+    {
+        "name": "COB: 2 x Coboldo Scale Sorcerer + 3 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Dragonshield + 3 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Dragonshield",
+            "3 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 1 x Coboldo Scale Sorcerer + 1 x Coboldo Dragonshield + 3 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "1 x Coboldo Scale Sorcerer",
+            "1 x Coboldo Dragonshield",
+            "3 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Scale Sorcerer + 3 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Dragonshield + 3 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Dragonshield",
+            "3 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 1 x Coboldo Scale Sorcerer + 1 x Coboldo Dragonshield + 3 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "1 x Coboldo Scale Sorcerer",
+            "1 x Coboldo Dragonshield",
+            "3 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Dragonshield + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 1 x Coboldo Scale Sorcerer + 1 x Coboldo Dragonshield + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "1 x Coboldo Scale Sorcerer",
+            "1 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 2 x Coboldo Dragonshield + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "2 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 1 x Coboldo Dragonshield + 1 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "1 x Coboldo Scale Sorcerer",
+            "1 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 4 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 4 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "4 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 5 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 5 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "5 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Alato + 10 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "10 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 6 x Coboldo Dragonshield + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "6 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 3 x Coboldo Dragonshield + 3 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "3 x Coboldo Scale Sorcerer",
+            "3 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Dragonshield + 4 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 4 x Coboldo Dragonshield + 4 x Coboldo Scale Sorcerer + 4 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "4 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Dragonshield",
+            "4 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Dragonshield + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 4 x Coboldo Dragonshield + 4 x Coboldo Scale Sorcerer + 4 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "4 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Dragonshield",
+            "4 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Scale Sorcerer + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Scale Sorcerer",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Dragonshield + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Dragonshield",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 4 x Coboldo Dragonshield + 4 x Coboldo Scale Sorcerer + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "4 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Dragonshield",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Scale Sorcerer + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Scale Sorcerer",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 8 x Coboldo Dragonshield + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "8 x Coboldo Dragonshield",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 4 x Coboldo Dragonshield + 4 x Coboldo Scale Sorcerer + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "4 x Coboldo Scale Sorcerer",
+            "4 x Coboldo Dragonshield",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 10 x Coboldo Scale Sorcerer + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "10 x Coboldo Scale Sorcerer",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 10 x Coboldo Dragonshield + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "10 x Coboldo Dragonshield",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 5 x Coboldo Dragonshield + 5 x Coboldo Scale Sorcerer + 10 x Coboldo Alato + 12 x Coboldo",
+        "line_ids": [
+            "5 x Coboldo Scale Sorcerer",
+            "5 x Coboldo Dragonshield",
+            "10 x Coboldo Alato",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 10 x Coboldo Scale Sorcerer + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "10 x Coboldo Scale Sorcerer",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 10 x Coboldo Dragonshield + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "10 x Coboldo Dragonshield",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "COB: 5 x Coboldo Dragonshield + 5 x Coboldo Scale Sorcerer + 10 x Coboldo Inventore + 12 x Coboldo",
+        "line_ids": [
+            "5 x Coboldo Scale Sorcerer",
+            "5 x Coboldo Dragonshield",
+            "10 x Coboldo Inventore",
+            "12 x Coboldo"
+        ],
+        "faction_id": "Coboldi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Sciamano + 3 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Sciamano",
+            "3 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 2 x Lucertoloide Sciamano + 1 x Lucertoloide",
+        "line_ids": [
+            "2 x Lucertoloide Sciamano",
+            "1 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 1 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Sciamano + 5 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Sciamano",
+            "5 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 2 x Lucertoloide Sciamano + 2 x Lucertoloide",
+        "line_ids": [
+            "2 x Lucertoloide Sciamano",
+            "2 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 1 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 1 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "1 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "1 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 3 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "3 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 2 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "2 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "2 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 6 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 2 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 6 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 1 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "1 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 2 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "2 x Lucertoloide Sciamano",
+            "2 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 2 x Lucertoloide Sciamano + 2 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "2 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 4 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "4 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 3 x Lucertoloide Sciamano + 7 x Lucertoloide",
+        "line_ids": [
+            "3 x Lucertoloide Sciamano",
+            "7 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 4 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "4 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 9 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "9 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 4 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "4 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 9 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "9 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 1 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "1 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "2 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 2 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 5 x Lucertoloide Sciamano + 5 x Lucertoloide",
+        "line_ids": [
+            "5 x Lucertoloide Sciamano",
+            "5 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 3 x Lucertoloide Sciamano + 9 x Lucertoloide",
+        "line_ids": [
+            "3 x Lucertoloide Sciamano",
+            "9 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 5 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "5 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 11 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "11 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 5 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "5 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 11 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "11 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "2 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 2 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 5 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "5 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 5 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "5 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 3 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "3 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "2 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 2 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 6 x Lucertoloide Sciamano + 5 x Lucertoloide",
+        "line_ids": [
+            "6 x Lucertoloide Sciamano",
+            "5 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 6 x Lucertoloide Sciamano + 5 x Lucertoloide",
+        "line_ids": [
+            "6 x Lucertoloide Sciamano",
+            "5 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 6 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "6 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 6 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "6 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 3 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "3 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 3 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "3 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Re + 2 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Regina",
+            "2 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 7 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "7 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 7 x Lucertoloide Sciamano + 6 x Lucertoloide",
+        "line_ids": [
+            "7 x Lucertoloide Sciamano",
+            "6 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 8 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "8 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 8 x Lucertoloide Sciamano",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "8 x Lucertoloide Sciamano"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Re + 4 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "4 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 4 x Lucertoloide Sciamano + 8 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Regina",
+            "4 x Lucertoloide Sciamano",
+            "8 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "LCRT: 1 x Lucertoloide Regina + 1 x Lucertoloide Re + 4 x Lucertoloide Sciamano + 4 x Lucertoloide",
+        "line_ids": [
+            "1 x Lucertoloide Re",
+            "1 x Lucertoloide Regina",
+            "4 x Lucertoloide Sciamano",
+            "4 x Lucertoloide"
+        ],
+        "faction_id": "Lucertoloidi"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Flesh Gnawer + 4 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Flesh Gnawer",
+            "4 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Signore del Branco + 4 x Gnoll Hunter",
+        "line_ids": [
+            "1 x Gnoll Signore del Branco",
+            "4 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Flesh Gnawer + 4 x Gnoll Hunter",
+        "line_ids": [
+            "2 x Gnoll Flesh Gnawer",
+            "4 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Signore del Branco + 4 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll Signore del Branco",
+            "4 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Flesh Gnawer + 5 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Flesh Gnawer",
+            "5 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Signore del Branco + 5 x Gnoll Hunter",
+        "line_ids": [
+            "1 x Gnoll Signore del Branco",
+            "5 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Flesh Gnawer + 5 x Gnoll Hunter",
+        "line_ids": [
+            "2 x Gnoll Flesh Gnawer",
+            "5 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Signore del Branco + 5 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll Signore del Branco",
+            "5 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Flind",
+        "line_ids": [
+            "1 x Gnoll Flind"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Signore del Branco + 3 x Gnoll Flesh Gnawer + 6 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll Signore del Branco",
+            "3 x Gnoll Flesh Gnawer",
+            "6 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Flesh Gnawer + 8 x Gnoll",
+        "line_ids": [
+            "3 x Gnoll Flesh Gnawer",
+            "8 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Signore del Branco + 8 x Gnoll Hunter",
+        "line_ids": [
+            "2 x Gnoll Signore del Branco",
+            "8 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Flesh Gnawer + 8 x Gnoll Hunter",
+        "line_ids": [
+            "3 x Gnoll Flesh Gnawer",
+            "8 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Signore del Branco + 8 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Signore del Branco",
+            "8 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Flind",
+        "line_ids": [
+            "1 x Gnoll Flind"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 2 x Gnoll Signore del Branco + 4 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "2 x Gnoll Signore del Branco",
+            "4 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 6 x Maw Demon",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "6 x Maw Demon"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Signore del Branco + 2 x Gnoll Flesh Gnawer + 7 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Signore del Branco",
+            "2 x Gnoll Flesh Gnawer",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 2 x Gnoll Flesh Gnawer + 7 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "2 x Gnoll Flesh Gnawer",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 5 x Gnoll Flesh Gnawer + 8 x Gnoll",
+        "line_ids": [
+            "5 x Gnoll Flesh Gnawer",
+            "8 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Signore del Branco + 7 x Gnoll Hunter",
+        "line_ids": [
+            "3 x Gnoll Signore del Branco",
+            "7 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 5 x Gnoll Flesh Gnawer + 7 x Gnoll Hunter",
+        "line_ids": [
+            "5 x Gnoll Flesh Gnawer",
+            "7 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Signore del Branco + 7 x Gnoll",
+        "line_ids": [
+            "3 x Gnoll Signore del Branco",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 2 x Gnoll Signore del Branco + 7 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "2 x Gnoll Signore del Branco",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 7 x Maw Demon",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "7 x Maw Demon"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Signore del Branco + 2 x Gnoll Flesh Gnawer + 7 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Signore del Branco",
+            "2 x Gnoll Flesh Gnawer",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 2 x Gnoll Signore del Branco + 2 x Gnoll Flesh Gnawer + 3 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "2 x Gnoll Signore del Branco",
+            "2 x Gnoll Flesh Gnawer",
+            "3 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 7 x Gnoll Flesh Gnawer + 7 x Gnoll",
+        "line_ids": [
+            "7 x Gnoll Flesh Gnawer",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Signore del Branco + 9 x Gnoll Hunter",
+        "line_ids": [
+            "3 x Gnoll Signore del Branco",
+            "9 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 7 x Gnoll Flesh Gnawer + 7 x Gnoll Hunter",
+        "line_ids": [
+            "7 x Gnoll Flesh Gnawer",
+            "7 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 3 x Gnoll Signore del Branco + 9 x Gnoll",
+        "line_ids": [
+            "3 x Gnoll Signore del Branco",
+            "9 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Flind + 1 x Gnoll Signore del Branco",
+        "line_ids": [
+            "1 x Gnoll Flind",
+            "1 x Gnoll Signore del Branco"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 5 x Maw Demon",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "5 x Maw Demon"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 3 x Gnoll Flesh Gnawer + 3 x Gnoll",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "3 x Gnoll Flesh Gnawer",
+            "3 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll Signore del Branco + 6 x Gnoll Flesh Gnawer + 6 x Gnoll",
+        "line_ids": [
+            "2 x Gnoll Signore del Branco",
+            "6 x Gnoll Flesh Gnawer",
+            "6 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 4 x Gnoll Signore del Branco + 10 x Gnoll Hunter",
+        "line_ids": [
+            "4 x Gnoll Signore del Branco",
+            "10 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 4 x Gnoll Signore del Branco + 10 x Gnoll",
+        "line_ids": [
+            "4 x Gnoll Signore del Branco",
+            "10 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll Flind + 1 x Gnoll zanna di Yeenoghu",
+        "line_ids": [
+            "1 x Gnoll Flind",
+            "1 x Gnoll zanna di Yeenoghu"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 6 x Maw Demon",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "6 x Maw Demon"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 2 x Gnoll Flesh Gnawer",
+        "line_ids": [
+            "2 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "2 x Gnoll Flesh Gnawer"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 4 x Gnoll Signore del Branco + 5 x Gnoll Flesh Gnawer + 5 x Gnoll",
+        "line_ids": [
+            "4 x Gnoll Signore del Branco",
+            "5 x Gnoll Flesh Gnawer",
+            "5 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 5 x Gnoll Signore del Branco + 9 x Gnoll Hunter",
+        "line_ids": [
+            "5 x Gnoll Signore del Branco",
+            "9 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 5 x Gnoll Signore del Branco + 9 x Gnoll",
+        "line_ids": [
+            "5 x Gnoll Signore del Branco",
+            "9 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Shoosuva + 1 x Gnoll zanna di Yeenoghu + 4 x Gnoll Flesh Gnawer",
+        "line_ids": [
+            "1 x Shoosuva",
+            "1 x Gnoll zanna di Yeenoghu",
+            "4 x Gnoll Flesh Gnawer"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 1 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 3 x Gnoll Flesh Gnawer + 4 x Maw Demon",
+        "line_ids": [
+            "1 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "4 x Maw Demon",
+            "3 x Gnoll Flesh Gnawer"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 2 x Gnoll zanna di Yeenoghu + 3 x Gnoll Signore del Branco + 5 x Gnoll Flesh Gnawer",
+        "line_ids": [
+            "2 x Gnoll zanna di Yeenoghu",
+            "3 x Gnoll Signore del Branco",
+            "5 x Gnoll Flesh Gnawer"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 6 x Gnoll Signore del Branco + 4 x Gnoll Flesh Gnawer + 4 x Gnoll",
+        "line_ids": [
+            "6 x Gnoll Signore del Branco",
+            "4 x Gnoll Flesh Gnawer",
+            "4 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 7 x Gnoll Signore del Branco + 7 x Gnoll Hunter",
+        "line_ids": [
+            "7 x Gnoll Signore del Branco",
+            "7 x Gnoll Hunter"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GNLL: 7 x Gnoll Signore del Branco + 7 x Gnoll",
+        "line_ids": [
+            "7 x Gnoll Signore del Branco",
+            "7 x Gnoll"
+        ],
+        "faction_id": "Gnoll"
+    },
+    {
+        "name": "GOB: 2 x Goblin Capo + 5 x Goblin",
+        "line_ids": [
+            "2 x Goblin Capo",
+            "5 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 2 x Goblin Capo + 2 x Worg + 2 x Goblin",
+        "line_ids": [
+            "2 x Goblin Capo",
+            "2 x Worg",
+            "2 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 2 x Goblin Capo + 8 x Goblin",
+        "line_ids": [
+            "2 x Goblin Capo",
+            "8 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 2 x Goblin Capo + 2 x Worg + 4 x Goblin",
+        "line_ids": [
+            "2 x Goblin Capo",
+            "2 x Worg",
+            "4 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 6 x Goblin Capo + 7 x Goblin",
+        "line_ids": [
+            "6 x Goblin Capo",
+            "7 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 4 x Goblin Capo + 4 x Worg + 6 x Goblin",
+        "line_ids": [
+            "4 x Goblin Capo",
+            "4 x Worg",
+            "6 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 6 x Goblin Capo + 7 x Goblin",
+        "line_ids": [
+            "6 x Goblin Capo",
+            "7 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 4 x Goblin Capo + 4 x Worg + 6 x Goblin",
+        "line_ids": [
+            "4 x Goblin Capo",
+            "4 x Worg",
+            "6 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 8 x Goblin Capo + 7 x Goblin",
+        "line_ids": [
+            "8 x Goblin Capo",
+            "7 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 5 x Goblin Capo + 5 x Worg + 5 x Goblin",
+        "line_ids": [
+            "5 x Goblin Capo",
+            "5 x Worg",
+            "5 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 8 x Goblin Capo + 8 x Goblin",
+        "line_ids": [
+            "8 x Goblin Capo",
+            "8 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 5 x Goblin Capo + 5 x Worg + 12 x Goblin",
+        "line_ids": [
+            "5 x Goblin Capo",
+            "5 x Worg",
+            "12 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 9 x Goblin Capo + 9 x Goblin",
+        "line_ids": [
+            "9 x Goblin Capo",
+            "9 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 6 x Goblin Capo + 6 x Worg + 12 x Goblin",
+        "line_ids": [
+            "6 x Goblin Capo",
+            "6 x Worg",
+            "12 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 11 x Goblin Capo + 11 x Goblin",
+        "line_ids": [
+            "11 x Goblin Capo",
+            "11 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "GOB: 7 x Goblin Capo + 7 x Worg + 14 x Goblin",
+        "line_ids": [
+            "7 x Goblin Capo",
+            "7 x Worg",
+            "14 x Goblin"
+        ],
+        "faction_id": "Goblin"
+    },
+    {
+        "name": "BGB: 1 x Bugbear Chief + 1 x Bugbear",
+        "line_ids": [
+            "1 x Bugbear Chief",
+            "1 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 1 x Bugbear Chief + 2 x Bugbear",
+        "line_ids": [
+            "1 x Bugbear Chief",
+            "2 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 2 x Bugbear Chief + 3 x Bugbear",
+        "line_ids": [
+            "2 x Bugbear Chief",
+            "3 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 3 x Bugbear Chief + 3 x Bugbear",
+        "line_ids": [
+            "3 x Bugbear Chief",
+            "3 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 2 x Bugbear Chief + 5 x Bugbear",
+        "line_ids": [
+            "2 x Bugbear Chief",
+            "5 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 3 x Bugbear Chief + 4 x Bugbear",
+        "line_ids": [
+            "3 x Bugbear Chief",
+            "4 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 2 x Bugbear Chief + 6 x Bugbear",
+        "line_ids": [
+            "2 x Bugbear Chief",
+            "6 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 4 x Bugbear Chief + 3 x Bugbear",
+        "line_ids": [
+            "4 x Bugbear Chief",
+            "3 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 3 x Bugbear Chief + 6 x Bugbear",
+        "line_ids": [
+            "3 x Bugbear Chief",
+            "6 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 4 x Bugbear Chief + 4 x Bugbear",
+        "line_ids": [
+            "4 x Bugbear Chief",
+            "4 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 3 x Bugbear Chief + 7 x Bugbear",
+        "line_ids": [
+            "3 x Bugbear Chief",
+            "7 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 5 x Bugbear Chief + 4 x Bugbear",
+        "line_ids": [
+            "5 x Bugbear Chief",
+            "4 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "BGB: 3 x Bugbear Chief + 9 x Bugbear",
+        "line_ids": [
+            "3 x Bugbear Chief",
+            "9 x Bugbear"
+        ],
+        "faction_id": "Bugbear"
+    },
+    {
+        "name": "MLGN: 2 x Rampicante Maligno + 4 x Ago Maligno + 5 x Arbusto Maligno",
+        "line_ids": [
+            "2 x Rampicante Maligno",
+            "4 x Ago Maligno",
+            "5 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 3 x Rampicante Maligno + 4 x Ago Maligno + 6 x Arbusto Maligno",
+        "line_ids": [
+            "3 x Rampicante Maligno",
+            "4 x Ago Maligno",
+            "6 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 4 x Rampicante Maligno + 7 x Ago Maligno + 14 x Arbusto Maligno",
+        "line_ids": [
+            "4 x Rampicante Maligno",
+            "7 x Ago Maligno",
+            "14 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 6 x Rampicante Maligno + 9 x Ago Maligno + 14 x Arbusto Maligno",
+        "line_ids": [
+            "6 x Rampicante Maligno",
+            "9 x Ago Maligno",
+            "14 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 8 x Rampicante Maligno + 11 x Ago Maligno + 14 x Arbusto Maligno",
+        "line_ids": [
+            "8 x Rampicante Maligno",
+            "11 x Ago Maligno",
+            "14 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 11 x Rampicante Maligno + 14 x Ago Maligno + 14 x Arbusto Maligno",
+        "line_ids": [
+            "11 x Rampicante Maligno",
+            "14 x Ago Maligno",
+            "14 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 14 x Rampicante Maligno + 14 x Ago Maligno + 14 x Arbusto Maligno",
+        "line_ids": [
+            "14 x Rampicante Maligno",
+            "14 x Ago Maligno",
+            "14 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    },
+    {
+        "name": "MLGN: 14 x Rampicante Maligno + 14 x Ago Maligno + 28 x Arbusto Maligno",
+        "line_ids": [
+            "14 x Rampicante Maligno",
+            "14 x Ago Maligno",
+            "28 x Arbusto Maligno"
+        ],
+        "faction_id": "Maligni"
+    }
+]
