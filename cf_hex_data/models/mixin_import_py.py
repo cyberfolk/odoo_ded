@@ -66,12 +66,30 @@ class MixinImportPy(models.AbstractModel):
         return MAP_MODEL_ID
 
     def get_fields_dict(self):
+        """Ritorna un dict[campo: (tipo, comodel)] e un dict[categoria: [lista campi]]."""
         fields_dict = {}
-        for name, field in self._fields.items():
-            if name in EXCLUDED_FIELDS or field.compute or field.related:
+        group_fields = {
+            'base': [],
+            'one2many': [],
+            'many2one': [],
+            'many2many': []
+        }
+
+        for field_name, field in self._fields.items():
+            # Ignora i campi esclusi o quelli con compute/related
+            if field_name in EXCLUDED_FIELDS or field.compute or field.related:
                 continue
-            fields_dict[name] = (field.type, field.comodel_name)
-        return fields_dict
+
+            # Aggiungi al dizionario dei campi
+            fields_dict[field_name] = (field.type, field.comodel_name)
+
+            # Classifica il campo in base al tipo
+            if field.type in group_fields:
+                group_fields[field.type].append(field_name)
+            else:
+                group_fields['base'].append(field_name)
+
+        return fields_dict, group_fields
 
     # endregion
 
@@ -91,6 +109,60 @@ class MixinImportPy(models.AbstractModel):
                 continue
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
+
+        # data_dicts = getattr(modulo, 'dicts', None)
+        # if data_dicts is None:
+        #     raise ValueError(f"'dicts' not found")
+        # LIST_ALREADY_EXIST = self.search([]).mapped('name')
+        # MAP_TAG_ID         = self.get_map_model_id('creature.tag')
+        # MAP_TYPE_ID        = self.get_map_model_id('creature.type')
+        # MAP_FACTION_ID     = self.get_map_model_id('creature.faction')
+        # MAP_BIOME_ID       = self.get_map_model_id('biome.biome')
+        # MAP_STRUCTURE_ID   = self.get_map_model_id('structure.structure')
+        #
+        # filtered_dicts = []
+        # for dikt in data_dicts:
+        #     if dikt['name'] in LIST_ALREADY_EXIST:
+        #         logging.warning(f"Il {self._name} {dikt['name']} esiste già")
+        #         continue
+        #
+        #     dikt['type_id']             = MAP_TYPE_ID[dikt['type_id']] if dikt.get('type_id') else False
+        #     dikt['structure_ids']       = [MAP_STRUCTURE_ID.get(x) for x in dikt['structure_ids']]       if dikt.get('structure_ids')       else False
+        #     dikt['tag_ids']             = [MAP_TAG_ID.get(x)       for x in dikt['tag_ids']]             if dikt.get('tag_ids')             else False
+        #     dikt['faction_ids']         = [MAP_FACTION_ID.get(x)   for x in dikt['faction_ids']]         if dikt.get('faction_ids')         else False
+        #     dikt['biome_low_prob_ids']  = [MAP_BIOME_ID.get(x)     for x in dikt['biome_low_prob_ids']]  if dikt.get('biome_low_prob_ids')  else False
+        #     dikt['biome_high_prob_ids'] = [MAP_BIOME_ID.get(x)     for x in dikt['biome_high_prob_ids']] if dikt.get('biome_high_prob_ids') else False
+        #     dikt['image']               = dikt.get('image').encode('utf-8') if dikt.get('image') else False
+        #
+        #     if not MAP_STRUCTURE_ID:
+        #         dikt['structure_ids'] = False
+        #     if not MAP_TAG_ID:
+        #         dikt['tag_ids'] = False
+        #     if not MAP_TYPE_ID:
+        #         dikt['type_id'] = False
+        #     if not MAP_FACTION_ID:
+        #         dikt['faction_ids'] = False
+        #     if not MAP_BIOME_ID:
+        #         dikt['biome_low_prob_ids'] = False
+        #         dikt['biome_high_prob_ids'] = False
+        #
+        #     if 'structure_ids' not in list(self._fields.keys()):
+        #         dikt.pop('structure_ids')
+        #     if 'tag_ids' not in list(self._fields.keys()):
+        #         dikt.pop('tag_ids')
+        #     if 'type_id' not in list(self._fields.keys()):
+        #         dikt.pop('type_id')
+        #     if 'faction_ids' not in list(self._fields.keys()):
+        #         dikt.pop('faction_ids')
+        #     if 'biome_low_prob_ids' not in list(self._fields.keys()):
+        #         dikt.pop('biome_low_prob_ids')
+        #     if 'biome_high_prob_ids' not in list(self._fields.keys()):
+        #         dikt.pop('biome_high_prob_ids')
+        #     if 'image' not in list(self._fields.keys()):
+        #         dikt.pop('image')
+        #
+        #     filtered_dicts.append(dikt)
+        # self.create(filtered_dicts)
 
     def get_data_str(self):
         """Da ereditare nei modelli che implementano il mixin.
@@ -113,6 +185,22 @@ class MixinImportPy(models.AbstractModel):
             Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 
         dikt = {'name': rec.name, }
+        # dikt = {}
+        # for name in rec.fields_get():  # name -> field_name
+        #     value = rec[name]   # value -> field_value
+        #
+        #     if name == 'image':
+        #         dikt['image'] = value.decode('utf-8') if value else '',
+        #     elif name == 'description':
+        #         dikt['description'] = str(value) if value else '',
+        #     elif name in group_fields['base']:
+        #         dikt[name] = value
+        #     elif name in group_fields['many2one']:
+        #         dikt[name] = value.name if value else False
+        #     elif name in group_fields['many2many']:
+        #         dikt[name] = [x.name for x in value] if value else []
+        #     elif name in group_fields['one2many']:
+        #         dikt[name] = [x.name for x in value] if value else []
 
         return dikt
     # endregion --------------------------------------------------------------------------------------------------------
