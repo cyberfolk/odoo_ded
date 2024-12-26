@@ -108,92 +108,30 @@ class MixinImportPy(models.AbstractModel):
             raise ValueError(f"'dicts' not found")
 
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
+        DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
 
         filtered_dicts = []
         for dikt in data_dicts:
             if dikt['name'] in LIST_ALREADY_EXIST:
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
                 continue
+            for f_name, f_info in self._fields.items():  # f_name  -> field_name, f_info -> field_info
+                f_value = dikt.get(f_name)               # f_value -> field_value
+                f_type = f_info.type                     # f_type  -> field_type
+                f_comodel = f_info.comodel_name
+                MAP_MODEL_ID = DICT_MAP_MODEL_ID.get(f_comodel)
+                if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
+                    continue
+                elif f_type in ['binary']:
+                    dikt[f_name] = dikt.get('image').encode('utf-8') if dikt.get('image') else False
+                elif f_type in ['many2one']:
+                    dikt[f_name] = MAP_MODEL_ID.get(f_value) if f_value else False
+                elif f_type in ['many2many', 'one2many']:
+                    dikt[f_name] = [MAP_MODEL_ID.get(x) for x in f_value] if f_value else False
+                    dikt[f_name] = clean_list(dikt[f_name])
+
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
-
-        # -------------------------------------------------------
-        # data_dicts = getattr(modulo, 'dicts', None)
-        # if data_dicts is None:
-        #     raise ValueError(f"'dicts' not found")
-        #
-        # LIST_ALREADY_EXIST = self.search([]).mapped('name')
-        # DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
-        #
-        # filtered_dicts = []
-        # for dikt in data_dicts:
-        #     if dikt['name'] in LIST_ALREADY_EXIST:
-        #         logging.warning(f"Il {self._name} {dikt['name']} esiste già")
-        #         continue
-        #     for f_name, f_info in self._fields.items():  # f_name  -> field_name, f_info -> field_info
-        #         if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
-        #             continue
-        #         f_value = dikt[f_name]  # f_value -> field_value
-        #         f_type = f_info.type    # f_type  -> field_type
-        #
-        #         stop = 0
-        #
-        #     filtered_dicts.append(dikt)
-        # self.create(filtered_dicts)
-        # -------------------------------------------------------
-        # data_dicts = getattr(modulo, 'dicts', None)
-        # if data_dicts is None:
-        #     raise ValueError(f"'dicts' not found")
-        # LIST_ALREADY_EXIST = self.search([]).mapped('name')
-        # MAP_TAG_ID         = self.get_map_model_id('creature.tag')
-        # MAP_TYPE_ID        = self.get_map_model_id('creature.type')
-        # MAP_FACTION_ID     = self.get_map_model_id('creature.faction')
-        # MAP_BIOME_ID       = self.get_map_model_id('biome.biome')
-        # MAP_STRUCTURE_ID   = self.get_map_model_id('structure.structure')
-        #
-        # filtered_dicts = []
-        # for dikt in data_dicts:
-        #     if dikt['name'] in LIST_ALREADY_EXIST:
-        #         logging.warning(f"Il {self._name} {dikt['name']} esiste già")
-        #         continue
-        #
-        #     dikt['type_id']             = MAP_TYPE_ID[dikt['type_id']] if dikt.get('type_id') else False
-        #     dikt['structure_ids']       = [MAP_STRUCTURE_ID.get(x) for x in dikt['structure_ids']]       if dikt.get('structure_ids')       else False
-        #     dikt['tag_ids']             = [MAP_TAG_ID.get(x)       for x in dikt['tag_ids']]             if dikt.get('tag_ids')             else False
-        #     dikt['faction_ids']         = [MAP_FACTION_ID.get(x)   for x in dikt['faction_ids']]         if dikt.get('faction_ids')         else False
-        #     dikt['biome_low_prob_ids']  = [MAP_BIOME_ID.get(x)     for x in dikt['biome_low_prob_ids']]  if dikt.get('biome_low_prob_ids')  else False
-        #     dikt['biome_high_prob_ids'] = [MAP_BIOME_ID.get(x)     for x in dikt['biome_high_prob_ids']] if dikt.get('biome_high_prob_ids') else False
-        #     dikt['image']               = dikt.get('image').encode('utf-8') if dikt.get('image') else False
-        #
-        #     if not MAP_STRUCTURE_ID:
-        #         dikt['structure_ids'] = False
-        #     if not MAP_TAG_ID:
-        #         dikt['tag_ids'] = False
-        #     if not MAP_TYPE_ID:
-        #         dikt['type_id'] = False
-        #     if not MAP_FACTION_ID:
-        #         dikt['faction_ids'] = False
-        #     if not MAP_BIOME_ID:
-        #         dikt['biome_low_prob_ids'] = False
-        #         dikt['biome_high_prob_ids'] = False
-        #
-        #     if 'structure_ids' not in list(self._fields.keys()):
-        #         dikt.pop('structure_ids')
-        #     if 'tag_ids' not in list(self._fields.keys()):
-        #         dikt.pop('tag_ids')
-        #     if 'type_id' not in list(self._fields.keys()):
-        #         dikt.pop('type_id')
-        #     if 'faction_ids' not in list(self._fields.keys()):
-        #         dikt.pop('faction_ids')
-        #     if 'biome_low_prob_ids' not in list(self._fields.keys()):
-        #         dikt.pop('biome_low_prob_ids')
-        #     if 'biome_high_prob_ids' not in list(self._fields.keys()):
-        #         dikt.pop('biome_high_prob_ids')
-        #     if 'image' not in list(self._fields.keys()):
-        #         dikt.pop('image')
-        #
-        #     filtered_dicts.append(dikt)
-        # self.create(filtered_dicts)
 
     def get_data_str(self):
         """Da ereditare nei modelli che implementano il mixin.
@@ -235,3 +173,14 @@ class MixinImportPy(models.AbstractModel):
 
         return dikt
     # endregion --------------------------------------------------------------------------------------------------------
+
+
+def clean_list(_list):
+    """Rimuove tutti i valori None da una lista e ritorna la lista filtrata.
+        Se la lista risultante è vuota, ritorna False. """
+    if not _list:
+        return False
+    if not isinstance(_list, list):
+        raise ValueError("Il parametro deve essere una lista.")
+    filtered_list = [x for x in _list if x is not None]  # Filtra i valori None
+    return filtered_list if filtered_list else False  # Ritorna None se la lista filtrata è vuota
