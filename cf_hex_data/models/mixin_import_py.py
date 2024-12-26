@@ -91,6 +91,13 @@ class MixinImportPy(models.AbstractModel):
 
         return fields_dict, group_fields
 
+    def get_dict_map_model_id(self):
+        DICT_MAP_MODEL_ID = {}
+        for f_name, f_info in self._fields.items():
+            comodel_name = f_info.comodel_name
+            if comodel_name:
+                DICT_MAP_MODEL_ID[comodel_name] = self.get_map_model_id(comodel_name)
+        return DICT_MAP_MODEL_ID
     # endregion
 
     # region DA EREDITARE ALL'OCCORRENZA NEI MIXIN ---------------------------------------------------------------------
@@ -110,6 +117,30 @@ class MixinImportPy(models.AbstractModel):
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
 
+        # -------------------------------------------------------
+        # data_dicts = getattr(modulo, 'dicts', None)
+        # if data_dicts is None:
+        #     raise ValueError(f"'dicts' not found")
+        #
+        # LIST_ALREADY_EXIST = self.search([]).mapped('name')
+        # DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
+        #
+        # filtered_dicts = []
+        # for dikt in data_dicts:
+        #     if dikt['name'] in LIST_ALREADY_EXIST:
+        #         logging.warning(f"Il {self._name} {dikt['name']} esiste già")
+        #         continue
+        #     for f_name, f_info in self._fields.items():  # f_name  -> field_name, f_info -> field_info
+        #         if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
+        #             continue
+        #         f_value = dikt[f_name]  # f_value -> field_value
+        #         f_type = f_info.type    # f_type  -> field_type
+        #
+        #         stop = 0
+        #
+        #     filtered_dicts.append(dikt)
+        # self.create(filtered_dicts)
+        # -------------------------------------------------------
         # data_dicts = getattr(modulo, 'dicts', None)
         # if data_dicts is None:
         #     raise ValueError(f"'dicts' not found")
@@ -184,23 +215,23 @@ class MixinImportPy(models.AbstractModel):
         """Da ereditare nei modelli che implementano il mixin.
             Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
 
-        dikt = {'name': rec.name, }
-        # dikt = {}
-        # for name in rec.fields_get():  # name -> field_name
-        #     value = rec[name]   # value -> field_value
-        #
-        #     if name == 'image':
-        #         dikt['image'] = value.decode('utf-8') if value else '',
-        #     elif name == 'description':
-        #         dikt['description'] = str(value) if value else '',
-        #     elif name in group_fields['base']:
-        #         dikt[name] = value
-        #     elif name in group_fields['many2one']:
-        #         dikt[name] = value.name if value else False
-        #     elif name in group_fields['many2many']:
-        #         dikt[name] = [x.name for x in value] if value else []
-        #     elif name in group_fields['one2many']:
-        #         dikt[name] = [x.name for x in value] if value else []
+        dikt = {}
+        for f_name, f_info in rec._fields.items():  # f_name  -> field_name, f_info -> field_info
+            f_value = rec[f_name]                   # f_value -> field_value
+            f_type = f_info.type                    # f_type  -> field_type
+
+            if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
+                continue
+            elif f_type in ['binary']:
+                dikt[f_name] = f_value.decode('utf-8') if f_value else ''
+            elif f_type in ['html']:
+                dikt['description'] = str(f_value) if f_value else ''
+            elif f_type in ['many2one']:
+                dikt[f_name] = f_value.name if f_value else False
+            elif f_type in ['many2many', 'one2many']:
+                dikt[f_name] = [x.name for x in f_value] if f_value else []
+            else:
+                dikt[f_name] = f_value
 
         return dikt
     # endregion --------------------------------------------------------------------------------------------------------

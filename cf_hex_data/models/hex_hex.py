@@ -24,26 +24,26 @@ class HexHex(models.Model):
         _logger.info(f"END   get_data_str ({self._name})")
         return dat_str
 
-    @staticmethod
-    def from_rec_to_dikt(rec):
-        """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
-        dikt = {
-            'name': rec.name,
-            'status': 'script',
-            'sml': rec.sml,
-            'description': str(rec.description) if rec.description else '',
-            'image': rec.image.decode('utf-8') if rec.image else '',
-            'structure_id': rec.structure_id.name if rec.structure_id else False,
-            'creature_id': rec.creature_id.name if rec.creature_id else False,
-            'biome_id': rec.biome_id.name if rec.biome_id else False,
-            'npc_ids': [x.name for x in rec.npc_ids],
-            'faction_ids': [x.name for x in rec.faction_ids],
-            # 'encounter_encounter_ids': [x.name for x in rec.encounter_encounter_ids],
-            # 'image_gallery_ids': [x.name for x in rec.image_gallery_ids],
-            # 'wild_encounter_ids': [x.name for x in rec.wild_encounter_ids],
-        }
-
-        return dikt
+    # @staticmethod
+    # def from_rec_to_dikt(rec):
+    #     """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
+    #     dikt = {
+    #         'name': rec.name,
+    #         'status': 'script',
+    #         'sml': rec.sml,
+    #         'description': str(rec.description) if rec.description else '',
+    #         'image': rec.image.decode('utf-8') if rec.image else '',
+    #         'structure_id': rec.structure_id.name if rec.structure_id else False,
+    #         'creature_id': rec.creature_id.name if rec.creature_id else False,
+    #         'biome_id': rec.biome_id.name if rec.biome_id else False,
+    #         'npc_ids': [x.name for x in rec.npc_ids],
+    #         'faction_ids': [x.name for x in rec.faction_ids],
+    #         # 'encounter_encounter_ids': [x.name for x in rec.encounter_encounter_ids],
+    #         # 'image_gallery_ids': [x.name for x in rec.image_gallery_ids],
+    #         # 'wild_encounter_ids': [x.name for x in rec.wild_encounter_ids],
+    #     }
+    #
+    #     return dikt
 
     def _popolate_by_py(self, modulo):
         """OVERRIDE: ..."""

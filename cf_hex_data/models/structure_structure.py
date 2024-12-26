@@ -7,17 +7,17 @@ class StructureStructure(models.Model):
     _name = "structure.structure"
     _inherit = ['structure.structure', 'mixin.import.py']
 
-    @staticmethod
-    def from_rec_to_dikt(rec):
-        """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
-        dikt = {
-            'name': rec.name,
-            'description': str(rec.description) if rec.description else '',
-            'image': rec.image.decode('utf-8') if rec.image else '',
-            'biome_ids': [x.name for x in rec.biome_ids]
-        }
-
-        return dikt
+    # @staticmethod
+    # def from_rec_to_dikt(rec):
+    #     """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
+    #     dikt = {
+    #         'name': rec.name,
+    #         'description': str(rec.description) if rec.description else '',
+    #         'image': rec.image.decode('utf-8') if rec.image else '',
+    #         'biome_ids': [x.name for x in rec.biome_ids]
+    #     }
+    #
+    #     return dikt
 
     def _popolate_by_py(self, modulo):
         """OVERRIDE: ..."""
