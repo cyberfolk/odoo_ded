@@ -12,7 +12,7 @@ class StructureStructure(models.Model):
         """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
         dikt = {
             'name': rec.name,
-            'description': str(rec.description),
+            'description': str(rec.description) if rec.description else '',
             'image': rec.image.decode('utf-8') if rec.image else '',
             'biome_ids': [x.name for x in rec.biome_ids]
         }

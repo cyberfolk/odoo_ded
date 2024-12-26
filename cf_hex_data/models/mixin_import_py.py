@@ -8,16 +8,6 @@ from odoo import models
 _logger = logging.getLogger(__name__)
 
 EXCLUDED_FIELDS = {'write_date', 'write_uid', 'create_date', 'create_uid', 'display_name', 'id'}
-MAP_MODEL_PY = {
-    "structure.structure": "structure_structure.py",
-    "creature.encounter": "creature_encounter.py",
-    "creature.creature": "creature_creature.py",
-    "creature.faction": "factions.py",
-    "creature.type": "creature_type.py",
-    "creature.tag": "creature_tag.py",
-    "biome.biome": "biome_biome.py",
-    "hex.hex": "hex_hex.py",
-}
 
 
 class MixinImportPy(models.AbstractModel):
@@ -65,7 +55,7 @@ class MixinImportPy(models.AbstractModel):
     # region UTILITY ---------------------------------------------------------------------------------------------------
     def _get_file_path(self):
         """Helper method to get the file path based on the model name."""
-        nome_file = MAP_MODEL_PY.get(self._name)
+        nome_file = self._name.replace('.', '_') + '.py'
         if not nome_file:
             raise ValueError(f"No file mapping found for model {self._name}")
         return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
