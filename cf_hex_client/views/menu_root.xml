@@ -4,5 +4,13 @@
         <field name="tag">ViewMapClient</field>
     </record>
 
+    <record id="action_menu_asset_tile" model="ir.actions.act_window">
+        <field name="name">Asset</field>
+        <field name="res_model">asset.tile</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem sequence="0" id="menu_map_client" name="Map Client" parent="cf_hex_base.menu_root" action="action_map_client"/>
+    <menuitem sequence="2" id="menu_hex_map_conf_asset" name="Asset" action="action_menu_asset_tile"
+              parent="cf_hex_base.menu_hex_map_conf"/>
 </odoo>

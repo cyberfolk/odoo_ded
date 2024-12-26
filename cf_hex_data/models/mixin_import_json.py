@@ -10,9 +10,9 @@ _logger = logging.getLogger(__name__)
 EXCLUDED_FIELDS = {'write_date', 'write_uid', 'create_date', 'create_uid', 'display_name', 'id'}
 
 
-class MixinImportPy(models.AbstractModel):
+class MixinImportJson(models.AbstractModel):
     _name = 'mixin.import.json'
-    _description = 'Mixin per popolare i vari modelli da python'
+    _description = 'Mixin per popolare i modelli da Json'
 
     def download_json(self):
         """Scarica i dati del modello in un file '.py' mettendolo nella cartella 'data'."""

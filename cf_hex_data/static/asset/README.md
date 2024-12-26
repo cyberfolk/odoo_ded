@@ -1,8 +1,5 @@
 ## Utilizzo
 
-1. Se si modificano le immagini o la struttura della cartella `tile`, occorre rilanciare lo
-   script `6_get_tiles_dict.py`, per ottenere il file `asset_tile.py` e spostarlo nella cartella `data`
-
 ## Tools per correggere gli assets
 
 | Name                                                  | Usato per                                                          |

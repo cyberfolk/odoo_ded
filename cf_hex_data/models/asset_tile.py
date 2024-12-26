@@ -1,8 +1,10 @@
 import base64
-import os
+import logging
 from pathlib import Path
 
 from odoo import models, api
+
+_logger = logging.getLogger(__name__)
 
 
 class AssetTile(models.Model):
@@ -11,6 +13,7 @@ class AssetTile(models.Model):
 
     @api.model
     def load_images(self):
+        _logger.info(f"START load_images ({self._name})")
         # Percorso della cartella con le immagini
         file_path = Path(__file__).resolve().parents[1] / 'static/asset/tile'
 
@@ -23,9 +26,14 @@ class AssetTile(models.Model):
                 img_data = img_file.read()
                 img_base64 = base64.b64encode(img_data)
 
+                if self.search([('name', '=', img_path.name)]):
+                    _logger.warning(f'Il {self._name} {img_path.name} esiste già')
+                    continue
+
                 # Crea un record con l'immagine
                 self.create({
-                    'name': img_path.name,  # Usa il nome del file come nome del record o personalizza
+                    'name': img_path.name,  # Usa il nome del file come nome del record
                     'image': img_base64,
                     'sub_dir': sub_dir,
                 })
+        _logger.info(f"END   load_images ({self._name})")
