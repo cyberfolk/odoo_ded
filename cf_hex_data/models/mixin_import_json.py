@@ -57,40 +57,12 @@ class MixinImportPy(models.AbstractModel):
     def _get_file_path(self):
         """Helper method to get the file path based on the model name."""
         nome_file = self._name.replace('.', '_') + '.json'
-        if not nome_file:
-            raise ValueError(f"No file mapping found for model {self._name}")
         return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
 
     def get_map_model_id(self, model_name):
         model_records = self.env[model_name].search([])
         MAP_MODEL_ID = {x.name: x.id for x in model_records}
         return MAP_MODEL_ID
-
-    def get_fields_dict(self):
-        """Ritorna un dict[campo: (tipo, comodel)] e un dict[categoria: [lista campi]]."""
-        fields_dict = {}
-        group_fields = {
-            'base': [],
-            'one2many': [],
-            'many2one': [],
-            'many2many': []
-        }
-
-        for field_name, field in self._fields.items():
-            # Ignora i campi esclusi o quelli con compute/related
-            if field_name in EXCLUDED_FIELDS or field.compute or field.related:
-                continue
-
-            # Aggiungi al dizionario dei campi
-            fields_dict[field_name] = (field.type, field.comodel_name)
-
-            # Classifica il campo in base al tipo
-            if field.type in group_fields:
-                group_fields[field.type].append(field_name)
-            else:
-                group_fields['base'].append(field_name)
-
-        return fields_dict, group_fields
 
     def get_dict_map_model_id(self):
         DICT_MAP_MODEL_ID = {}
