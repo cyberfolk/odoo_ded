@@ -109,7 +109,6 @@ class MixinImportPy(models.AbstractModel):
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
         DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
 
-        filtered_dicts = []
         for dikt in data_dicts:
             if dikt.get('name') in LIST_ALREADY_EXIST:
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
@@ -129,8 +128,8 @@ class MixinImportPy(models.AbstractModel):
                     dikt[f_name] = [MAP_MODEL_ID.get(x) for x in f_value] if f_value else False
                     dikt[f_name] = clean_list(dikt[f_name])
 
-            filtered_dicts.append(dikt)
-        self.create(filtered_dicts)
+            rec = self.create(dikt)
+            stop = 0
 
     def get_data_json(self):
         """Da ereditare nei modelli che implementano il mixin.
