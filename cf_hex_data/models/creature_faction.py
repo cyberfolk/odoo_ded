@@ -9,9 +9,9 @@ class FactionFaction(models.Model):
     _name = "creature.faction"
     _inherit = ['creature.faction', 'mixin.import.py']
 
-    def get_data_str(self):
+    def get_data_json(self):
         """Recupera i dati del modello in formato stringa."""
-        _logger.info("START get_data_str")
+        _logger.info("START get_data_json")
 
         # Fetch faction and structure the data
         factions = self.search([])

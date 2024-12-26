@@ -1,4 +1,4 @@
-import importlib.util
+import json
 import logging
 import os
 from pathlib import Path
@@ -14,11 +14,11 @@ class MixinImportPy(models.AbstractModel):
     _name = 'mixin.import.py'
     _description = 'Mixin per popolare i vari modelli da python'
 
-    def download_data_py(self):
+    def download_json(self):
         """Scarica i dati del modello in un file '.py' mettendolo nella cartella 'data'."""
-        _logger.info(f"START download_data_py ({self._name})")
+        _logger.info(f"START download_json ({self._name})")
 
-        data_str = self.get_data_str()
+        data_str = self.get_data_json()
         file_path = self._get_file_path()
 
         try:
@@ -28,34 +28,35 @@ class MixinImportPy(models.AbstractModel):
         except IOError as e:
             _logger.error(f"Failed to write to {file_path}: {e}")
         finally:
-            _logger.info(f"END download_data_py ({self._name})")
+            _logger.info(f"END   download_json ({self._name})")
 
-    def popolate_by_py(self):
-        """Crea record partendo dal file '.py' nella cartella 'data'."""
+    def popolate_by_json(self):
+        """Crea record partendo dal file '.json' nella cartella 'data'."""
         _logger.info(f"** START ** popolate_by_py() - ({self._name})")
         try:
             file_path = self._get_file_path()
             if not os.path.exists(file_path):
                 raise FileNotFoundError(f"File not found: {file_path}")
 
-            spec = importlib.util.spec_from_file_location(Path(file_path).stem, file_path)
-            modulo = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(modulo)
+            with open(file_path, 'r', encoding='utf-8') as file:
+                json_data = json.load(file)
 
-            self._popolate_by_py(modulo)
+            self._popolate_by_json(json_data)
 
+        except json.JSONDecodeError as e:
+            _logger.error(f"** ERROR ** Failed to decode JSON: {e}")
         except FileNotFoundError as e:
             _logger.error(f"** ERROR ** File not found: {e}")
         except Exception as e:
-            _logger.error(f"** ERROR ** popolate_by_py() - ({self._name})")
+            _logger.error(f"** ERROR ** popolate_by_json() - ({self._name})")
             _logger.exception(e)
         finally:
-            _logger.info(f"** END   ** popolate_by_py() - ({self._name})")
+            _logger.info(f"** END   ** popolate_by_json() - ({self._name})")
 
     # region UTILITY ---------------------------------------------------------------------------------------------------
     def _get_file_path(self):
         """Helper method to get the file path based on the model name."""
-        nome_file = self._name.replace('.', '_') + '.py'
+        nome_file = self._name.replace('.', '_') + '.json'
         if not nome_file:
             raise ValueError(f"No file mapping found for model {self._name}")
         return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
@@ -98,14 +99,12 @@ class MixinImportPy(models.AbstractModel):
             if comodel_name:
                 DICT_MAP_MODEL_ID[comodel_name] = self.get_map_model_id(comodel_name)
         return DICT_MAP_MODEL_ID
+
     # endregion
 
     # region DA EREDITARE ALL'OCCORRENZA NEI MIXIN ---------------------------------------------------------------------
-    def _popolate_by_py(self, modulo):
+    def _popolate_by_json(self, data_dicts):
         """Da ereditare nei modelli che implementano il mixin."""
-        data_dicts = getattr(modulo, 'dicts', None)
-        if data_dicts is None:
-            raise ValueError(f"'dicts' not found")
 
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
         DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
@@ -116,8 +115,8 @@ class MixinImportPy(models.AbstractModel):
                 logging.warning(f"Il {self._name} {dikt['name']} esiste già")
                 continue
             for f_name, f_info in self._fields.items():  # f_name  -> field_name, f_info -> field_info
-                f_value = dikt.get(f_name)               # f_value -> field_value
-                f_type = f_info.type                     # f_type  -> field_type
+                f_value = dikt.get(f_name)  # f_value -> field_value
+                f_type = f_info.type  # f_type  -> field_type
                 f_comodel = f_info.comodel_name
                 MAP_MODEL_ID = DICT_MAP_MODEL_ID.get(f_comodel)
                 if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
@@ -133,10 +132,10 @@ class MixinImportPy(models.AbstractModel):
             filtered_dicts.append(dikt)
         self.create(filtered_dicts)
 
-    def get_data_str(self):
+    def get_data_json(self):
         """Da ereditare nei modelli che implementano il mixin.
         Recupera i dati del modello in una lista di dizionari."""
-        _logger.info(f"START get_data_str ({self._name})")
+        _logger.info(f"START get_data_json ({self._name})")
 
         records = self.search([])
         dicts = []
@@ -144,9 +143,9 @@ class MixinImportPy(models.AbstractModel):
             dikt = self.from_rec_to_dikt(rec)
             dicts.append(dikt)
 
-        dat_str = f'dicts = {dicts}\n'
-        _logger.info(f"END   get_data_str ({self._name})")
-        return dat_str
+        dicts_json = json.dumps(dicts, indent=4, ensure_ascii=False)
+        _logger.info(f"END   get_data_json ({self._name})")
+        return dicts_json
 
     @staticmethod
     def from_rec_to_dikt(rec):
@@ -155,8 +154,8 @@ class MixinImportPy(models.AbstractModel):
 
         dikt = {}
         for f_name, f_info in rec._fields.items():  # f_name  -> field_name, f_info -> field_info
-            f_value = rec[f_name]                   # f_value -> field_value
-            f_type = f_info.type                    # f_type  -> field_type
+            f_value = rec[f_name]  # f_value -> field_value
+            f_type = f_info.type  # f_type  -> field_type
 
             if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
                 continue
@@ -184,3 +183,13 @@ def clean_list(_list):
         raise ValueError("Il parametro deve essere una lista.")
     filtered_list = [x for x in _list if x is not None]  # Filtra i valori None
     return filtered_list if filtered_list else False  # Ritorna None se la lista filtrata è vuota
+
+
+def read_json_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        try:
+            json_data = json.load(file)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Errore nella decodifica del file JSON: {e}")
+
+    return json_data
