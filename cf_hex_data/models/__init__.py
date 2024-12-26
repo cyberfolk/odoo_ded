@@ -1,4 +1,4 @@
-from . import mixin_import_py
+from . import mixin_import_json
 from . import biome_biome
 from . import structure_structure
 from . import creature_creature

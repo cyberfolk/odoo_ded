@@ -11,7 +11,7 @@ EXCLUDED_FIELDS = {'write_date', 'write_uid', 'create_date', 'create_uid', 'disp
 
 
 class MixinImportPy(models.AbstractModel):
-    _name = 'mixin.import.py'
+    _name = 'mixin.import.json'
     _description = 'Mixin per popolare i vari modelli da python'
 
     def download_json(self):

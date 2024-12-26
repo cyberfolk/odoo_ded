@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class FactionFaction(models.Model):
     _name = "creature.faction"
-    _inherit = ['creature.faction', 'mixin.import.py']
+    _inherit = ['creature.faction', 'mixin.import.json']
 
 #     def get_data_json(self):
 #         """Recupera i dati del modello in formato stringa."""

@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class HexHex(models.Model):
     _name = "hex.hex"
-    _inherit = ['hex.hex', 'mixin.import.py']
+    _inherit = ['hex.hex', 'mixin.import.json']
 
     # def get_data_json(self):
     #     """OVERRIDE: Recupera i dati del modello in una lista di dizionari.

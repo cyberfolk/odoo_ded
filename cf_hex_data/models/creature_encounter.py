@@ -6,7 +6,7 @@ from odoo import models
 
 class CreatureEncounter(models.Model):
     _name = "creature.encounter"
-    _inherit = ['creature.encounter', 'mixin.import.py']
+    _inherit = ['creature.encounter', 'mixin.import.json']
 
     # def _popolate_by_py(self, modulo):
     #     """OVERRIDE: ..."""
