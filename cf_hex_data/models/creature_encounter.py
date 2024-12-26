@@ -8,43 +8,6 @@ class CreatureEncounter(models.Model):
     _name = "creature.encounter"
     _inherit = ['creature.encounter', 'mixin.import.json']
 
-    # def _popolate_by_py(self, modulo):
-    #     """OVERRIDE: ..."""
-    #     data_dicts = getattr(modulo, 'dicts', None)
-    #     if data_dicts is None:
-    #         raise ValueError(f"'dicts' not found")
-    #
-    #     LIST_ALREADY_EXIST = self.search([]).mapped('name')
-    #     MAP_CREATURE_ID = self.get_map_model_id('creature.creature')
-    #     MAP_FACTION_ID = self.get_map_model_id('creature.faction')
-    #
-    #     filtered_dicts = []
-    #     for dikt in data_dicts:
-    #         if dikt['name'] in LIST_ALREADY_EXIST:
-    #             logging.warning(f"Il {self._name} {dikt['name']} esiste già")
-    #             continue
-    #         dikt['faction_id'] = MAP_FACTION_ID[dikt['faction_id']] if dikt['faction_id'] else False
-    #         dikt['line_ids'] = [(0, 0, {
-    #             'creature_qty': x['creature_qty'],
-    #             'creature_id': MAP_CREATURE_ID[x['creature_id']] if x['creature_id'] else False
-    #         }) for x in dikt['line_ids']]
-    #         filtered_dicts.append(dikt)
-    #     self.create(filtered_dicts)
-    #
-    # @staticmethod
-    # def from_rec_to_dikt(rec):
-    #     """OVERRIDE: Trasforma un record di Odoo in un dizionario che può essere salvato nell'apposito file data."""
-    #     dikt = {
-    #         'name': rec.name,
-    #         'faction_id': rec.faction_id.name if rec.faction_id else False,
-    #         "line_ids": [{
-    #             'creature_qty': x.creature_qty,
-    #             'creature_id': x.creature_id.name if x.creature_id else False
-    #         } for x in rec.line_ids]
-    #     }
-    #
-    #     return dikt
-
 
 # region METODI DEPRECATI ------------------------------------------------------------------------------------------
 def popolate_endemic_encounter(self):

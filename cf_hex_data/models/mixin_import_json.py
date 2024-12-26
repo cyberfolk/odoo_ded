@@ -32,7 +32,7 @@ class MixinImportPy(models.AbstractModel):
 
     def popolate_by_json(self):
         """Crea record partendo dal file '.json' nella cartella 'data'."""
-        _logger.info(f"** START ** popolate_by_py() - ({self._name})")
+        _logger.info(f"** START ** popolate_by_json() - ({self._name})")
         try:
             file_path = self._get_file_path()
             if not os.path.exists(file_path):
@@ -59,18 +59,15 @@ class MixinImportPy(models.AbstractModel):
         nome_file = self._name.replace('.', '_') + '.json'
         return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
 
-    def get_map_model_id(self, model_name):
-        model_records = self.env[model_name].search([])
-        MAP_MODEL_ID = {x.name: x.id for x in model_records}
-        return MAP_MODEL_ID
-
-    def get_dict_map_model_id(self):
-        DICT_MAP_MODEL_ID = {}
+    def get_comodel_map(self):
+        COMODEL_MAP = {}
         for f_name, f_info in self._fields.items():
             comodel_name = f_info.comodel_name
             if comodel_name:
-                DICT_MAP_MODEL_ID[comodel_name] = self.get_map_model_id(comodel_name)
-        return DICT_MAP_MODEL_ID
+                comodel_records = self.env[comodel_name].search([])
+                MAP_MODEL_ID = {x.name: x.id for x in comodel_records}
+                COMODEL_MAP[comodel_name] = MAP_MODEL_ID
+        return COMODEL_MAP
 
     # endregion
 
@@ -79,7 +76,7 @@ class MixinImportPy(models.AbstractModel):
         """Da ereditare nei modelli che implementano il mixin."""
 
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
-        DICT_MAP_MODEL_ID = self.get_dict_map_model_id()
+        COMODEL_MAP = self.get_comodel_map()
 
         for dikt in data_dicts:
             if dikt.get('name') in LIST_ALREADY_EXIST:
@@ -89,7 +86,7 @@ class MixinImportPy(models.AbstractModel):
                 f_value = dikt.get(f_name)  # f_value -> field_value
                 f_type = f_info.type  # f_type  -> field_type
                 f_comodel = f_info.comodel_name
-                MAP_MODEL_ID = DICT_MAP_MODEL_ID.get(f_comodel)
+                MAP_MODEL_ID = COMODEL_MAP.get(f_comodel)
                 if f_name in EXCLUDED_FIELDS or f_info.compute or f_info.related:
                     continue
                 elif f_type in ['binary']:
@@ -101,7 +98,8 @@ class MixinImportPy(models.AbstractModel):
                     dikt[f_name] = clean_list(dikt[f_name])
 
             rec = self.create(dikt)
-            DICT_MAP_MODEL_ID[self._name][rec.name] = rec.id
+            if self._name in COMODEL_MAP:
+                COMODEL_MAP[self._name][rec.name] = rec.id
 
     def get_data_json(self):
         """Da ereditare nei modelli che implementano il mixin.
@@ -154,13 +152,3 @@ def clean_list(_list):
         raise ValueError("Il parametro deve essere una lista.")
     filtered_list = [x for x in _list if x is not None]  # Filtra i valori None
     return filtered_list if filtered_list else False  # Ritorna None se la lista filtrata è vuota
-
-
-def read_json_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        try:
-            json_data = json.load(file)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Errore nella decodifica del file JSON: {e}")
-
-    return json_data
