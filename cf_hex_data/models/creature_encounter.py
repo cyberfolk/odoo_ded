@@ -26,8 +26,9 @@ class CreatureEncounter(models.Model):
         """OVERRIDE: ..."""
 
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
-        MAP_CREATURE_ID = self.get_map_model_id('creature.creature')
-        MAP_FACTION_ID = self.get_map_model_id('creature.faction')
+        COMODEL_MAP = self.get_comodel_map()
+        MAP_CREATURE_ID = COMODEL_MAP['creature.creature']
+        MAP_FACTION_ID = COMODEL_MAP['creature.faction']
 
         for dikt in data_dicts:
             if dikt['name'] in LIST_ALREADY_EXIST:
