@@ -26,7 +26,6 @@ def post_init_hook_cf_hex_data(env):
         env["creature.type"].popolate_by_json()
         env["creature.creature"].popolate_by_json()
         env["creature.faction"].popolate_by_json()
-        env["creature.encounter.line"].popolate_by_json()
         env["creature.encounter"].popolate_by_json()
         env["hex.hex"].popolate_by_json()
         env["asset.tile"].load_images()

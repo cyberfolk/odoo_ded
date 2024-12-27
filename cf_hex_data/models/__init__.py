@@ -5,7 +5,6 @@ from . import creature_creature
 from . import creature_tag
 from . import creature_type
 from . import creature_encounter
-from . import creature_encounter_line
 from . import creature_faction
 from . import asset_tile
 from . import hex_hex
