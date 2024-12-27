@@ -22,7 +22,7 @@ class CreatureEncounter(models.Model):
 
         return dikt
 
-    def _popolate_by_json(self, modulo):
+    def _popolate_by_json(self, data_dicts):
         """OVERRIDE: ..."""
 
         LIST_ALREADY_EXIST = self.search([]).mapped('name')
