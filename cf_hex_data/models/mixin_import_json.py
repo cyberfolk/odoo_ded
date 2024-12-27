@@ -3,7 +3,7 @@ import logging
 import os
 from pathlib import Path
 
-from odoo import models
+from odoo import models, api
 
 _logger = logging.getLogger(__name__)
 
@@ -106,7 +106,8 @@ class MixinImportJson(models.AbstractModel):
         Recupera i dati del modello in una lista di dizionari."""
         _logger.info(f"START get_data_json ({self._name})")
 
-        records = self.search([])
+        restrict_domain = self.get_restrict_domain()
+        records = self.search(restrict_domain)
         dicts = []
         for rec in records:
             dikt = self.from_rec_to_dikt(rec)
@@ -140,7 +141,26 @@ class MixinImportJson(models.AbstractModel):
                 dikt[f_name] = f_value
 
         return dikt
+
+    @staticmethod
+    def get_restrict_domain():
+        """Da ereditare nei modelli che implementano il mixin."""
+        return []
+
     # endregion --------------------------------------------------------------------------------------------------------
+
+    @api.model
+    def trigger_stored_compute(self):
+        # Ottieni tutti i campi del modello corrente
+        fields_to_compute = [
+            field_name for field_name, field in self._fields.items()
+            if field.store and field.compute
+        ]
+
+        if fields_to_compute:
+            # Forza il ricalcolo dei campi
+            for record in self:
+                record.write({field: record[field] for field in fields_to_compute})
 
 
 def clean_list(_list):
