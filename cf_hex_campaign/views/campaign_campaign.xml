@@ -1,0 +1,71 @@
+<odoo>
+    <record id="campaign_campaign_view_tree" model="ir.ui.view">
+        <field name="name">campaign.campaign.tree.base</field>
+        <field name="model">campaign.campaign</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="image"/>
+                <field name="master_id"/>
+                <field name="player_ids"/>
+                <field name="pg_ids"/>
+                <field name="state"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="session_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="campaign_campaign_view_form" model="ir.ui.view">
+        <field name="name">campaign.campaign.form.base</field>
+        <field name="model">campaign.campaign</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" colspan="2">
+                        <label for="name" class="oe_inline"/>
+                        <h1>
+                            <field class="text-nowrap" name="name" nolabel="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="master_id"/>
+                            <field name="state"/>
+                            <field name="start_date" string="Dates" widget="daterange"
+                                   options="{'end_date_field': 'end_date'}"/>
+                            <field name="end_date" invisible="1"/>
+                            <field name="player_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field colspan="2" name="image" widget="image" nolabel="1" style="width: 50%"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Descrizione" name="page_description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Sessioni" name="page_session_ids">
+                            <field name="session_ids">
+                                <tree editable="top">
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                    <field name="master_id"/>
+                                    <field name="player_ids" widget="many2many_tags"/>
+                                    <field name="pg_ids" widget="many2many_tags"/>
+                                    <field name="date"/>
+                                    <field name="campaign_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="PG" name="page_pg_ids">
+                            <field name="pg_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

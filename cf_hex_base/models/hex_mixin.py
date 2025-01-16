@@ -73,7 +73,7 @@ class HexMixin(models.AbstractModel):
     @api.constrains('index')
     def _check_index(self):
         for record in self:
-            if record.index < 1 or record.index > 19:
+            if record.index < 0 or record.index > 19:
                 raise ValidationError("Il valore di 'index' deve essere compreso tra 1 e 19.")
 
     @api.constrains('name')

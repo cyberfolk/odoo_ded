@@ -86,3 +86,105 @@ MAP_LEVEL_EXP = {
     "19": (2400, 4900, 7300, 10900, 30000),
     "20": (2800, 5700, 8500, 12700, 40000),
 }
+
+MAP_LEVEL_EXP_PG = {
+    1: 0,
+    2: 300,
+    3: 900,
+    4: 2700,
+    5: 6500,
+    6: 14000,
+    7: 23000,
+    8: 34000,
+    9: 48000,
+    10: 64000,
+    11: 85000,
+    12: 100000,
+    13: 120000,
+    14: 140000,
+    15: 165000,
+    16: 195000,
+    17: 225000,
+    18: 265000,
+    19: 305000,
+    20: 355000,
+}
+
+
+def get_level_by_exp(exp):
+    """
+    Calcola il livello di un personaggio (PG) basato sull'esperienza (EXP) secondo D&D 5e.
+
+    :param exp: int - Punti esperienza del personaggio
+    :return: int - Livello del personaggio
+    """
+    livello = 1
+    for lvl, soglia in sorted(MAP_LEVEL_EXP_PG.items()):
+        if exp >= soglia:
+            livello = lvl
+        else:
+            break
+
+    return livello
+
+
+def get_exp_bar(livello):
+    """
+    Calcola la barra di esperienza necessaria per salire al livello successivo in D&D 5e.
+
+    :param livello: int - Il livello attuale del personaggio (1-19)
+    :return: tuple - Esperienza attuale minima e totale necessaria per il prossimo livello (exp_min, exp_totale)
+    """
+    if livello < 1 or livello >= 20:
+        raise ValueError("Il livello deve essere compreso tra 1 e 19 (inclusi).")
+
+    # Esperienza attuale minima per il livello corrente
+    exp_min = MAP_LEVEL_EXP_PG[livello]
+    # Esperienza totale necessaria per raggiungere il livello successivo
+    exp_totale = MAP_LEVEL_EXP_PG[livello + 1]
+
+    exp_bar = exp_totale - exp_min
+    return exp_bar
+
+
+def get_exp_next_level(exp):
+    """
+    Calcola l'esperienza minima necessaria per il livello successivo rispetto all'attuale esperienza.
+
+    :param exp: int - Punti esperienza attuali del personaggio
+    :return: int - Esperienza minima necessaria per il livello successivo
+    """
+    # Trova il livello corrente
+    livello_attuale = 1
+    for lvl, soglia in sorted(MAP_LEVEL_EXP_PG.items()):
+        if exp >= soglia:
+            livello_attuale = lvl
+        else:
+            break
+
+    # Controlla se il livello successivo è disponibile
+    if livello_attuale >= 20:
+        return None  # Nessun livello successivo, il personaggio è al massimo livello
+
+    # Esperienza minima necessaria per il livello successivo
+    exp_prossimo = MAP_LEVEL_EXP_PG[livello_attuale + 1]
+
+    return exp_prossimo
+
+
+def get_budget_exp(level_list):
+    """Calcola l'esperienza Scontro Easy, Scontro Medium, Scontro Hard, Scontro Deadly e Daily Budget del party inteso
+    come somma dei parametri calcolati sui singoli livelli dei membri del party
+
+    :param level_list: list - Lista dei livelli dei PG
+    :return: tuple - (Easy, Medium, Hard, Deadly, Budget) livelli di esperienza relativi al party.
+    """
+    Easy, Medium, Hard, Deadly, Budget = 0, 0, 0, 0, 0
+    for pg in level_list:
+        easy, medium, hard, deadly, budget = MAP_LEVEL_EXP[f'{pg}']
+        Easy += easy
+        Medium += medium
+        Hard += hard
+        Deadly += deadly
+        Budget += budget
+    return Easy, Medium, Hard, Deadly, Budget

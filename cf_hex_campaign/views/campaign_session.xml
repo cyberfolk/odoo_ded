@@ -1,0 +1,147 @@
+<odoo>
+    <record id="campaign_session_view_tree" model="ir.ui.view">
+        <field name="name">campaign.session.tree.base</field>
+        <field name="model">campaign.session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="image"/>
+                <field name="master_id"/>
+                <field name="player_ids" widget="many2many_tags"/>
+                <field name="pg_ids" widget="many2many_tags"/>
+                <field name="date"/>
+                <field name="campaign_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="campaign_session_view_form" model="ir.ui.view">
+        <field name="name">campaign.session.form.base</field>
+        <field name="model">campaign.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="pg_ids" invisible="1"/>
+                    <div class="oe_title" colspan="2">
+                        <label for="name" class="oe_inline"/>
+                        <h1>
+                            <field class="text-nowrap" name="name" nolabel="1"/>
+                        </h1>
+                    </div>
+                    <div class="w-50 d-flex" colspan="1">
+                        <div style="width: 8%" class="o_form_label fw-bold pe-3">Master</div>
+                        <field style="width: 18%" name="master_id"/>
+                        <div class="o_form_label fw-bold pe-3">Data</div>
+                        <field style="width: 15%" name="date"/>
+                        <div class="o_form_label fw-bold px-3">Campagna</div>
+                        <field style="width: 30%" name="campaign_id"/>
+                    </div>
+                    <group>
+                        <group>
+                            <group string="Exp Base" colspan="2">
+                                <group colspan="2">
+                                    <div class="w-100 d-flex" colspan="2">
+                                        <div style="width: 15%" class="o_form_label fw-bold pe-3">Tesori e Info</div>
+                                        <field style="width: 45%" name="treasure_and_info_description"/>
+                                        <div class="o_form_label fw-bold px-3">Difficoltà</div>
+                                        <field style="width: 5%" name="treasure_and_info_difficulty" widget="percentage"/>
+                                        <div class="o_form_label fw-bold ps-3">&#8594;</div>
+                                        <div class="o_form_label fw-bold ps-3">Exp</div>
+                                        <div class="o_form_label fw-bold ps-3">+</div>
+                                        <field style="width: 5%" name="treasure_and_info_exp"/>
+                                    </div>
+                                    <div class="w-100 d-flex" colspan="2">
+                                        <div style="width: 15%" class="o_form_label fw-bold pe-3">Missione</div>
+                                        <field style="width: 45%" name="mission_id"/>
+                                        <div class="o_form_label fw-bold px-3">Difficoltà</div>
+                                        <field style="width: 5%" name="mission_id_difficulty" widget="percentage"/>
+                                        <div class="o_form_label fw-bold ps-3">&#8594;</div>
+                                        <div class="o_form_label fw-bold ps-3">Exp</div>
+                                        <div class="o_form_label fw-bold ps-3">+</div>
+                                        <field style="width: 5%" name="mission_id_exp"/>
+                                    </div>
+                                    <div class="w-100 d-flex" colspan="2">
+                                        <div style="width: 60%"/>
+                                        <div style="width: 14%" class="o_form_label fw-bold px-3">Hex Visti</div>
+                                        <field style="width: 5%" name="n_hex_crossed"/>
+                                        <div class="o_form_label fw-bold ps-3">&#8594;</div>
+                                        <div class="o_form_label fw-bold ps-3">Exp</div>
+                                        <div class="o_form_label fw-bold ps-3">+</div>
+                                        <field style="width: 5%" name="n_hex_crossed_exp"/>
+                                    </div>
+                                    <div class="w-100 d-flex" colspan="2">
+                                        <div style="width: 60%"/>
+                                        <div class="o_form_label fw-bold px-3">Scontri</div>
+                                        <div style="width: 2%"/>
+                                        <field style="width: 5.2%; text-decoration: line-through;" name="encounter_ids_exp"/>
+                                        <div class="o_form_label fw-bold ps-3">&#8594;</div>
+                                        <div class="o_form_label fw-bold ps-3">Exp</div>
+                                        <div class="o_form_label fw-bold ps-3">+</div>
+                                        <field style="width: 5%" name="encounter_ids_exp_adj"/>
+                                    </div>
+
+                                </group>
+                            </group>
+                        </group>
+                        <group string="Info Derivate">
+                            <group colspan="1">
+                                <field string="Exp Scontro Facile" name="encounter_easy_exp"/>
+                                <field string="Exp Scontro Medio" name="encounter_medium_exp"/>
+                                <field string="Exp Scontro Difficile" name="encounter_hard_exp"/>
+                                <field string="Exp Scontro Mortale" name="encounter_deadly_exp"/>
+                            </group>
+                            <group colspan="1">
+                                <field string="Party Media Exp" name="party_avg_exp"/>
+                                <field string="Party Media Liv" name="party_avg_level"/>
+                                <field string="Exp Barra" name="party_avg_exp_bar"/>
+                                <field string="Exp Budget" name="daily_budget_exp"/>
+                                <field string="Exp Soglia" name="exp_soglia"/>
+                            </group>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Calcolo Exp" name="page_exp">
+                            <field name="pg_exp_line_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="pg_id" domain="[('id', 'not in', parent.pg_ids)]"/>
+                                    <field name="player_id"/>
+                                    <field string="Exp I" name="exp_start"/>
+                                    <field string="Liv I" name="liv_start"/>
+                                    <field string="Exp Bar" name="exp_bar"/>
+                                    <field string="Exp Level up" name="exp_next_level"/>
+                                    <field string="R%" name="role_percentage" widget="percentage"/>
+                                    <field string="Ruolo" name="role"/>
+                                    <field string="A%" name="help_percentage" widget="percentage"/>
+                                    <field string="Aiuto" name="help"/>
+                                    <field string="RP%" name="rp_percentage" widget="percentage"/>
+                                    <field string="RP" name="rp" help="Role Play"/>
+                                    <field string="R Exp" name="role_exp"/>
+                                    <field string="A Exp" name="help_exp"/>
+                                    <field string="RP Exp" name="rp_exp"/>
+                                    <field string="Exp Presa" name="exp_gained"/>
+                                    <field string="Exp F" name="exp_end"/>
+                                    <field string="Exp FF" name="exp_end_adj"/>
+                                    <field string="Liv F" name="liv_end"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Scontri" name="page_encounter_ids">
+                            <field name="encounter_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="sml"/>
+                                    <field name="exp_adj" string="Exp"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Descrizione" name="page_description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

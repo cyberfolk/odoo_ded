@@ -1,0 +1,44 @@
+<odoo>
+    <record id="campaign_mission_view_tree" model="ir.ui.view">
+        <field name="name">campaign.mission.tree.base</field>
+        <field name="model">campaign.mission</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="image"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="campaign_mission_view_form" model="ir.ui.view">
+        <field name="name">campaign.mission.form.base</field>
+        <field name="model">campaign.mission</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" colspan="2">
+                        <label for="name" class="oe_inline"/>
+                        <h1>
+                            <field class="text-nowrap" name="name" nolabel="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="state"/>
+                        </group>
+                        <group>
+                            <field colspan="2" name="image" widget="image" nolabel="1" style="width: 50%"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Descrizione" name="page_description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
