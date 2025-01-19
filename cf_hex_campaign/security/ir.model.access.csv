@@ -3,4 +3,4 @@ access_campaign_pg,access_campaign_pg,model_campaign_pg,base.group_user,1,1,1,1
 access_campaign_session,access_campaign_session,model_campaign_session,base.group_user,1,1,1,1
 access_campaign_campaign,access_campaign_campaign,model_campaign_campaign,base.group_user,1,1,1,1
 access_campaign_mission,access_campaign_mission,model_campaign_mission,base.group_user,1,1,1,1
-access_campaign_session_pg_exp,access_campaign_session_pg_exp,model_campaign_session_pg_exp,base.group_user,1,1,1,1
+access_campaign_session_pg,access_campaign_session_pg,model_campaign_session_pg,base.group_user,1,1,1,1

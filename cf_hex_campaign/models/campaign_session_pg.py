@@ -2,8 +2,8 @@ from odoo import fields, models, api
 from ...cf_hex_biome.utility.exp import get_level_by_exp, get_exp_bar, get_exp_next_level
 
 
-class CampaignSessionPgExp(models.Model):
-    _name = "campaign.session.pg.exp"
+class CampaignSessionPg(models.Model):
+    _name = "campaign.session.pg"
     _description = "Righe d'appoggio per il computo dell'exp dei PG"
 
     session_id = fields.Many2one(
@@ -38,11 +38,23 @@ class CampaignSessionPgExp(models.Model):
         compute="_compute_exp_next_level",
         help="Exp da raggiungere per salire di livello."
     )
-    exp_gained = fields.Integer(
-        string="Exp Guadagnata",
-        compute="_compute_exp_gained",
+    exp_gained_single = fields.Integer(
+        string="Exp Guadagnata Singola",
+        compute="_compute_exp_gained_single",
+        help="Esperienza che il player ha guadagnata in questa sessione Singolarmente. "
+             "Comprende: Ruolo, RP, Aiuto."
+    )
+    exp_gained_common = fields.Integer(
+        string="Exp Guadagnata Comune",
+        related="session_id.exp_gained_common",
         help="Esperienza che il player ha guadagnata in questa sessione. "
-             "Comprende: Ruolo, RP, Aiuto, Tesori/Info, Missione, Hex-Visti, Scontri"
+             "Comprende: Tesori/Info, Missione, Hex-Visti, Scontri/(Numero di player)."
+    )
+    exp_gained_total = fields.Integer(
+        string="Exp Guadagnata Totale",
+        compute="_compute_exp_gained_total",
+        help="Esperienza che il player ha guadagnata in questa sessione. "
+             "Comprende: Exp Guadagnata Comune + Exp Guadagnata Singola."
     )
     exp_end = fields.Integer(
         string="Exp Finale",
@@ -100,6 +112,10 @@ class CampaignSessionPgExp(models.Model):
         compute="_compute_rp_exp",
         help="Esperienza derivante dal Role Play, proporzionale alla % di Role Play di quel player."
     )
+    date = fields.Date(
+        string="Data",
+        related="session_id.date",
+    )
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -122,43 +138,35 @@ class CampaignSessionPgExp(models.Model):
         for rec in self:
             rec.exp_next_level = get_exp_next_level(rec.exp_start)
 
-    @api.depends('role_percentage', 'session_id')
+    @api.depends('role_percentage', 'session_id.party_exp_bar')
     def _compute_role_exp(self):
         for rec in self:
-            if not rec.session_id:
-                return 0
-            else:
-                rec.role_exp = rec.session_id.party_avg_exp_bar * rec.role_percentage
+            rec.role_exp = rec.session_id.party_exp_bar * rec.role_percentage if rec.session_id else 0
 
-    @api.depends('help_percentage', 'session_id')
+    @api.depends('help_percentage', 'session_id.party_exp_bar')
     def _compute_help_exp(self):
         for rec in self:
-            if not rec.session_id:
-                return 0
-            else:
-                rec.help_exp = rec.session_id.party_avg_exp_bar * rec.help_percentage
+            rec.help_exp = rec.session_id.party_exp_bar * rec.help_percentage if rec.session_id else 0
 
-    @api.depends('rp_percentage', 'session_id')
+    @api.depends('rp_percentage', 'session_id.party_exp_bar')
     def _compute_rp_exp(self):
         for rec in self:
-            if not rec.session_id:
-                return 0
-            else:
-                rec.rp_exp = rec.session_id.party_avg_exp_bar * rec.rp_percentage
+            rec.rp_exp = rec.session_id.party_exp_bar * rec.rp_percentage if rec.session_id else 0
 
-    @api.depends('session_id', 'role_exp', 'help_exp', 'rp_exp')
-    def _compute_exp_gained(self):
+    @api.depends('role_exp', 'help_exp', 'rp_exp')
+    def _compute_exp_gained_single(self):
         for rec in self:
-            encounter_ids_exp_adj = self.session_id.encounter_ids_exp_adj if self.session_id else 0
-            treasure_and_info_exp = self.session_id.treasure_and_info_exp if self.session_id else 0
-            n_hex_crossed_exp = self.session_id.n_hex_crossed_exp if self.session_id else 0
-            mission_id_exp = self.session_id.mission_id_exp if self.session_id else 0
-            rec.exp_gained = rec.rp_exp + rec.help_exp + rec.role_exp + encounter_ids_exp_adj + treasure_and_info_exp + n_hex_crossed_exp + mission_id_exp
+            rec.exp_gained_single = rec.rp_exp + rec.help_exp + rec.role_exp
 
-    @api.depends('exp_start', 'exp_gained')
+    @api.depends('exp_gained_common', 'exp_gained_single')
+    def _compute_exp_gained_total(self):
+        for rec in self:
+            rec.exp_gained_total = rec.exp_gained_common + rec.exp_gained_single
+
+    @api.depends('exp_start', 'exp_gained_total')
     def _compute_exp_end(self):
         for rec in self:
-            rec.exp_end = rec.exp_start + rec.exp_gained
+            rec.exp_end = rec.exp_start + rec.exp_gained_single + rec.session_id.exp_gained_common
 
     @api.depends('session_id', 'exp_end')
     def _compute_exp_end_adj(self):

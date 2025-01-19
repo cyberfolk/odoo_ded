@@ -1,0 +1,5 @@
+<t t-name="PxWidget">
+    <div class="o_field_px_widget">
+        <span t-esc="displayValue"/>
+    </div>
+</t>

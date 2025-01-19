@@ -34,9 +34,8 @@
                         <group>
                             <field name="master_id"/>
                             <field name="state"/>
-                            <field name="start_date" string="Dates" widget="daterange"
-                                   options="{'end_date_field': 'end_date'}"/>
-                            <field name="end_date" invisible="1"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
                             <field name="player_ids" widget="many2many_tags"/>
                         </group>
                         <group>
@@ -56,12 +55,21 @@
                                     <field name="player_ids" widget="many2many_tags"/>
                                     <field name="pg_ids" widget="many2many_tags"/>
                                     <field name="date"/>
-                                    <field name="campaign_id"/>
                                 </tree>
                             </field>
                         </page>
                         <page string="PG" name="page_pg_ids">
-                            <field name="pg_ids"/>
+                            <field name="pg_ids">
+                                <tree editable="top">
+                                    <field name="name"/>
+                                    <field name="player_id"/>
+                                    <field name="level"/>
+                                    <field name="exp"/>
+                                    <field name="race_s"/>
+                                    <field name="race_s"/>
+                                    <field name="class_s"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

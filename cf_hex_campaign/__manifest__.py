@@ -21,6 +21,16 @@
         "views/res_partner.xml",
         "views/campaign_mission.xml",
     ],
+    'assets': {
+        'web.assets_backend': [
+            '/cf_hex_campaign/static/src/css/style.css',
+            '/cf_hex_campaign/static/src/FieldPxWidget/*',
+        ],
+        'web.assets_frontend': [
+            '/cf_hex_campaign/static/src/css/style.css',
+        ]
+    },
+
     'post_init_hook': 'post_init_hook_cf_hex_campaign',
     'depends': ['cf_hex_biome', 'contacts'],
     'demo': [],

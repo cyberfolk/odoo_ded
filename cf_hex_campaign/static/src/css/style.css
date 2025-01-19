@@ -1,0 +1,178 @@
+/* #region VARIABILI */
+:root {
+  --cf-color-role: #ffa40059;
+}
+
+:root {
+  --cf-color-help: #97ff1c85;
+}
+
+:root {
+  --cf-color-rp: #1cffd54d;
+}
+
+:root {
+  --cf-color-eg: #fffc7678;
+}
+
+/* #endregion */
+
+/* #region CLASSI UTILITY */
+
+.cf-bg-role {
+  background-color: var(--cf-color-role) !important;
+}
+
+.cf-bg-help {
+  background-color: var(--cf-color-help) !important;
+}
+
+.cf-bg-rp {
+  background-color: var(--cf-color-rp) !important;
+}
+
+/* #endregion */
+
+/* #region ROLE */
+th[data-name="role"],
+th[data-name="role_percentage"],
+th[data-name="role_exp"],
+td[name="role"],
+td[name="role_percentage"],
+td[name="role_exp"] {
+  background-color: var(--cf-color-role) !important;
+}
+
+th[data-name="role"] *,
+td[name="role"],
+th[data-name="role_exp"] *,
+td[name="role_exp"] {
+  text-align: center !important;
+}
+
+th[data-name="role"] {
+  width: 60px !important;
+}
+
+th[data-name="role_percentage"] {
+  width: 40px !important;
+}
+
+th[data-name="role_exp"] {
+  width: 55px !important;
+}
+
+/* #endregion */
+
+
+/* #region HELP */
+th[data-name="help_percentage"],
+th[data-name="help_exp"],
+td[name="help_percentage"],
+td[name="help_exp"] {
+  background-color: var(--cf-color-help) !important;
+}
+
+th[data-name="help_exp"] *,
+td[name="help_exp"] {
+  text-align: center !important;
+}
+
+th[data-name="help_percentage"] {
+  width: 40px !important;
+}
+
+th[data-name="help_exp"] {
+  width: 55px !important;
+}
+
+/* #endregion */
+
+/* #region RP */
+th[data-name="rp_percentage"],
+th[data-name="rp_exp"],
+td[name="rp_percentage"],
+td[name="rp_exp"] {
+  background-color: var(--cf-color-rp) !important;
+}
+
+th[data-name="rp_exp"] *,
+td[name="rp_exp"] {
+  text-align: center !important;
+}
+
+th[data-name="rp_percentage"] {
+  width: 50px !important;
+}
+
+th[data-name="rp_exp"] {
+  width: 55px !important;
+}
+
+/* #endregion */
+
+/* #region Exp Gained */
+th[data-name="exp_gained_common"],
+th[data-name="exp_gained_single"],
+th[data-name="exp_gained_total"],
+td[name="exp_gained_common"],
+td[name="exp_gained_single"],
+td[name="exp_gained_total"] {
+  background-color: var(--cf-color-eg) !important;
+}
+
+th[data-name="exp_gained_common"] *,
+th[data-name="exp_gained_single"] *,
+th[data-name="exp_gained_total"] *,
+td[name="exp_gained_common"],
+td[name="exp_gained_single"],
+td[name="exp_gained_total"] {
+  text-align: center !important;
+}
+
+th[data-name="exp_gained_common"] {
+  width: 70px !important;
+}
+
+th[data-name="exp_gained_single"] {
+  width: 70px !important;
+}
+
+th[data-name="exp_gained_total"] {
+  width: 70px !important;
+}
+
+/* #endregion */
+
+
+[data-name="exp_start"] {
+  width: 55px !important;
+}
+
+[data-name="liv_start"] {
+  width: 40px !important;
+  text-align: center !important;
+  color: #8e8e8e !important;
+}
+
+[data-name="liv_start"] * {
+  text-align: center !important;
+}
+
+[data-name="exp_bar"] {
+  width: 55px !important;
+  color: #8e8e8e !important;
+}
+
+[data-name="exp_next_level"] {
+  color: #8e8e8e !important;
+}
+
+[data-name="exp_next_level"] * ,
+[name="exp_next_level"]{
+  text-align: start !important;
+}
+
+[data-name="exp_gained"] * {
+  text-align: center !important;
+}

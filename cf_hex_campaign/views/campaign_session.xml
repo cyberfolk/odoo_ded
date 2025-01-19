@@ -6,7 +6,6 @@
             <tree>
                 <field name="name"/>
                 <field name="description"/>
-                <field name="image"/>
                 <field name="master_id"/>
                 <field name="player_ids" widget="many2many_tags"/>
                 <field name="pg_ids" widget="many2many_tags"/>
@@ -38,20 +37,20 @@
                         <field style="width: 30%" name="campaign_id"/>
                     </div>
                     <group>
-                        <group>
-                            <group string="Exp Base" colspan="2">
-                                <group colspan="2">
-                                    <div class="w-100 d-flex" colspan="2">
+                        <group name="common_exp_group1">
+                            <group name="common_exp_group2" string="Exp Comune" colspan="2">
+                                <group name="common_exp_group3" colspan="2">
+                                    <div name="div_treasure_info" class="w-100 d-flex" colspan="2">
                                         <div style="width: 15%" class="o_form_label fw-bold pe-3">Tesori e Info</div>
-                                        <field style="width: 45%" name="treasure_and_info_description"/>
+                                        <field style="width: 45%" name="treasure_info_description"/>
                                         <div class="o_form_label fw-bold px-3">Difficoltà</div>
-                                        <field style="width: 5%" name="treasure_and_info_difficulty" widget="percentage"/>
+                                        <field style="width: 5%" name="treasure_info_difficulty" widget="percentage"/>
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 5%" name="treasure_and_info_exp"/>
+                                        <field style="width: 8%" name="treasure_info_exp" widget="PxWidget"/>
                                     </div>
-                                    <div class="w-100 d-flex" colspan="2">
+                                    <div name="div_mission_id" class="w-100 d-flex" colspan="2">
                                         <div style="width: 15%" class="o_form_label fw-bold pe-3">Missione</div>
                                         <field style="width: 45%" name="mission_id"/>
                                         <div class="o_form_label fw-bold px-3">Difficoltà</div>
@@ -59,71 +58,121 @@
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 5%" name="mission_id_exp"/>
+                                        <field style="width: 8%" name="mission_id_exp" widget="PxWidget"/>
                                     </div>
-                                    <div class="w-100 d-flex" colspan="2">
+                                    <div name="div_encounter" class="w-100 d-flex" colspan="2">
+                                        <div class="o_form_label fw-bold pe-3">Scontri</div>
+                                        <field style="width: 46.5%;" name="encounter_exp" widget="PxWidget"/>
+                                        <div class="o_form_label fw-bold px-3">&#8594;</div>
+                                        <label class="o_form_label fw-bold pe-3" string="ADJ" for="encounter_exp_adj" />
+                                        <field style="width: 8%; text-decoration: line-through;" name="encounter_exp_adj" widget="PxWidget"/>
+                                        <div class="o_form_label fw-bold ps-3">&#8594;</div>
+                                        <div class="o_form_label fw-bold ps-3">Exp</div>
+                                        <div class="o_form_label fw-bold ps-3">+</div>
+                                        <field style="width: 8%" name="encounter_exp_split" widget="PxWidget"/>
+                                    </div>
+                                    <div name="div_n_hex_crossed" class="w-100 d-flex" colspan="2">
                                         <div style="width: 60%"/>
                                         <div style="width: 14%" class="o_form_label fw-bold px-3">Hex Visti</div>
                                         <field style="width: 5%" name="n_hex_crossed"/>
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 5%" name="n_hex_crossed_exp"/>
+                                        <field style="width: 8%" name="n_hex_crossed_exp" widget="PxWidget"/>
                                     </div>
-                                    <div class="w-100 d-flex" colspan="2">
-                                        <div style="width: 60%"/>
-                                        <div class="o_form_label fw-bold px-3">Scontri</div>
-                                        <div style="width: 2%"/>
-                                        <field style="width: 5.2%; text-decoration: line-through;" name="encounter_ids_exp"/>
+                                    <div name="div_exp_gained_common" class="w-100 d-flex" colspan="2">
+                                        <div style="width: 61.5%"/>
+                                        <div class="o_form_label fw-bold">Tot Exp Comune</div>
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 5%" name="encounter_ids_exp_adj"/>
+                                        <field style="width: 8%" name="exp_gained_common" widget="PxWidget"/>
                                     </div>
-
                                 </group>
                             </group>
                         </group>
                         <group string="Info Derivate">
                             <group colspan="1">
-                                <field string="Exp Scontro Facile" name="encounter_easy_exp"/>
-                                <field string="Exp Scontro Medio" name="encounter_medium_exp"/>
-                                <field string="Exp Scontro Difficile" name="encounter_hard_exp"/>
-                                <field string="Exp Scontro Mortale" name="encounter_deadly_exp"/>
+                                <div name="div_exp_encounter_easy" class="w-100 d-flex" colspan="2">
+                                    <span class="text-muted">Le % indicano quanto uno <b>Scontro</b> (ADJ) incide sulla Barra Exp di un singolo PG.
+                                    </span>
+                                </div>
+                                <div name="div_exp_encounter_easy" class="w-100 d-flex" colspan="2">
+                                    <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Facile</div>
+                                    <field name="encounter_easy_exp" style="width: 20%" widget="PxWidget"/>
+                                    <div class="text-muted d-flex">
+                                        <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
+                                        <field class="pe-1" name="encounter_easy_exp_percentage" nolabel="1" widget="percentage"/>
+                                    </div>
+                                </div>
+                                <div name="div_exp_encounter_medium" class="w-100 d-flex" colspan="2">
+                                    <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Medio</div>
+                                    <field name="encounter_medium_exp" style="width: 20%" widget="PxWidget"/>
+                                    <div class="text-muted d-flex">
+                                        <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
+                                        <field class="pe-1" name="encounter_medium_exp_percentage" nolabel="1" widget="percentage"/>
+                                    </div>
+                                </div>
+                                <div name="div_exp_encounter_hard" class="w-100 d-flex" colspan="2">
+                                    <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Difficile</div>
+                                    <field name="encounter_hard_exp" style="width: 20%" widget="PxWidget"/>
+                                    <div class="text-muted d-flex">
+                                        <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
+                                        <field class="pe-1" name="encounter_hard_exp_percentage" nolabel="1" widget="percentage"/>
+                                    </div>
+                                </div>
+                                <div name="div_exp_encounter_deadly" class="w-100 d-flex" colspan="2">
+                                    <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Mortale</div>
+                                    <field name="encounter_deadly_exp" style="width: 20%" widget="PxWidget"/>
+                                    <div class="text-muted d-flex">
+                                        <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
+                                        <field class="pe-1" name="encounter_deadly_exp_percentage" nolabel="1" widget="percentage"/>
+                                    </div>
+                                </div>
                             </group>
                             <group colspan="1">
-                                <field string="Party Media Exp" name="party_avg_exp"/>
+                                <field string="Party Media Exp" name="party_avg_exp" widget="PxWidget"/>
                                 <field string="Party Media Liv" name="party_avg_level"/>
-                                <field string="Exp Barra" name="party_avg_exp_bar"/>
-                                <field string="Exp Budget" name="daily_budget_exp"/>
-                                <field string="Exp Soglia" name="exp_soglia"/>
+                                <field string="Exp Barra" name="party_exp_bar" widget="PxWidget"/>
+                                <field string="Exp Budget" name="daily_budget_exp" widget="PxWidget"/>
+                                <field string="Exp Soglia" name="exp_soglia" widget="PxWidget"/>
                             </group>
-
                         </group>
                     </group>
                     <notebook>
                         <page string="Calcolo Exp" name="page_exp">
-                            <field name="pg_exp_line_ids" nolabel="1" colspan="2">
+                            <field name="session_pg_ids" nolabel="1" colspan="2">
                                 <tree editable="bottom">
                                     <field name="pg_id" domain="[('id', 'not in', parent.pg_ids)]"/>
                                     <field name="player_id"/>
-                                    <field string="Exp I" name="exp_start"/>
-                                    <field string="Liv I" name="liv_start"/>
-                                    <field string="Exp Bar" name="exp_bar"/>
-                                    <field string="Exp Level up" name="exp_next_level"/>
-                                    <field string="R%" name="role_percentage" widget="percentage"/>
+                                    <field string="Exp I" name="exp_start" class="text-end"/>
+                                    <field string="Liv I" name="liv_start" class="text-center text-muted"/>
+                                    <field string="Exp Bar" name="exp_bar" class="text-center text-muted"/>
+                                    <field string="Exp Liv Up" name="exp_next_level" class="text-center text-muted"/>
+                                    <!--3 Field Exp Role-->
                                     <field string="Ruolo" name="role"/>
+                                    <field string="R%" name="role_percentage" widget="percentage"/>
+                                    <field string="Exp R" name="role_exp"/>
+                                    <!--2 Field Exp Help-->
                                     <field string="A%" name="help_percentage" widget="percentage"/>
-                                    <field string="Aiuto" name="help"/>
+                                    <field string="Exp A" name="help_exp"/>
+                                    <!--2 Field Exp RP-->
                                     <field string="RP%" name="rp_percentage" widget="percentage"/>
-                                    <field string="RP" name="rp" help="Role Play"/>
-                                    <field string="R Exp" name="role_exp"/>
-                                    <field string="A Exp" name="help_exp"/>
-                                    <field string="RP Exp" name="rp_exp"/>
-                                    <field string="Exp Presa" name="exp_gained"/>
-                                    <field string="Exp F" name="exp_end"/>
-                                    <field string="Exp FF" name="exp_end_adj"/>
-                                    <field string="Liv F" name="liv_end"/>
+                                    <field string="Exp RP" name="rp_exp"/>
+                                    <!--Exp Guadagnata-->
+                                    <field string="📈Com" name="exp_gained_common" class="text-center"/>
+                                    <field string="📈Single" name="exp_gained_single" class="text-center"/>
+                                    <field string="📈Tot" name="exp_gained_total" class="text-center"/>
+                                    <!--Other Fields-->
+                                    <field string="Exp F" name="exp_end"
+                                           decoration-bf="exp_end &lt;= parent.exp_soglia"
+                                           decoration-danger="exp_end &lt;= parent.exp_soglia"
+                                    />
+                                    <field string="Exp FF" name="exp_end_adj"
+                                           decoration-bf="exp_end_adj == parent.exp_soglia"
+                                           decoration-success="exp_end_adj == parent.exp_soglia"
+                                    />
+                                    <field string="Liv F" name="liv_end" style="text-align: center;"/>
                                 </tree>
                             </field>
                         </page>

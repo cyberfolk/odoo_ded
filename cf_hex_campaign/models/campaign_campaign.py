@@ -44,12 +44,12 @@ class CampaignCampaign(models.Model):
         help="Stato della campagna",
     )
 
-    start_date = fields.Datetime(
+    start_date = fields.Date(
         string="Data di inizio",
         help="Data di inizio della campagna",
     )
 
-    end_date = fields.Datetime(
+    end_date = fields.Date(
         string="Data di fine",
         help="Data di fine della campagna",
     )
