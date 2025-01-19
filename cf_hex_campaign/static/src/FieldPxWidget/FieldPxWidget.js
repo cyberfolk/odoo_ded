@@ -10,13 +10,11 @@ export class PxField extends Component {
     static template = "PxWidget";
 
     setup() {
-        console.log(this);
         const { record, name } = this.props;
+        this.state = useState({
+            valueFormatted: record?.data?.[name] ? `${record?.data?.[name]} px` : ""
+        })
         this.value = record?.data?.[name]
-    }
-
-    get displayValue() {
-        return this.value ? `${this.value} px` : "";
     }
 }
 

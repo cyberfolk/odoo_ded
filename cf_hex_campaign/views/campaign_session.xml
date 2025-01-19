@@ -11,6 +11,7 @@
                 <field name="pg_ids" widget="many2many_tags"/>
                 <field name="date"/>
                 <field name="campaign_id"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
@@ -20,8 +21,15 @@
         <field name="model">campaign.session</field>
         <field name="arch" type="xml">
             <form>
+                <field name="state" invisible="1"/>
+                <field name="pg_ids" invisible="1"/>
+                <header>
+                    <button type="object" string="Conferma" class="btn-primary" name="action_confirm" invisible="state != 'draft'"/>
+                    <button type="object" string="Riporta a Bozza" class="btn-secondary" name="action_return_to_draft" invisible="state != 'confirmed'"/>
+                </header>
                 <sheet>
-                    <field name="pg_ids" invisible="1"/>
+                    <widget name="web_ribbon" title="Bozza" bg_color="text-bg-secondary" invisible="state != 'draft' "/>
+                    <widget name="web_ribbon" title="Processata" bg_color="text-bg-success" invisible="state != 'confirmed'"/>
                     <div class="oe_title" colspan="2">
                         <label for="name" class="oe_inline"/>
                         <h1>
@@ -48,7 +56,7 @@
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 8%" name="treasure_info_exp" widget="PxWidget"/>
+                                        <field style="width: 8%" name="treasure_info_exp"/>
                                     </div>
                                     <div name="div_mission_id" class="w-100 d-flex" colspan="2">
                                         <div style="width: 15%" class="o_form_label fw-bold pe-3">Missione</div>
@@ -58,18 +66,18 @@
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 8%" name="mission_id_exp" widget="PxWidget"/>
+                                        <field style="width: 8%" name="mission_id_exp"/>
                                     </div>
                                     <div name="div_encounter" class="w-100 d-flex" colspan="2">
                                         <div class="o_form_label fw-bold pe-3">Scontri</div>
-                                        <field style="width: 46.5%;" name="encounter_exp" widget="PxWidget"/>
+                                        <field style="width: 46.5%;" name="encounter_exp"/>
                                         <div class="o_form_label fw-bold px-3">&#8594;</div>
                                         <label class="o_form_label fw-bold pe-3" string="ADJ" for="encounter_exp_adj" />
-                                        <field style="width: 8%; text-decoration: line-through;" name="encounter_exp_adj" widget="PxWidget"/>
+                                        <field style="width: 8%; text-decoration: line-through;" name="encounter_exp_adj"/>
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 8%" name="encounter_exp_split" widget="PxWidget"/>
+                                        <field style="width: 8%" name="encounter_exp_split"/>
                                     </div>
                                     <div name="div_n_hex_crossed" class="w-100 d-flex" colspan="2">
                                         <div style="width: 60%"/>
@@ -78,7 +86,7 @@
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 8%" name="n_hex_crossed_exp" widget="PxWidget"/>
+                                        <field style="width: 8%" name="n_hex_crossed_exp"/>
                                     </div>
                                     <div name="div_exp_gained_common" class="w-100 d-flex" colspan="2">
                                         <div style="width: 61.5%"/>
@@ -86,7 +94,7 @@
                                         <div class="o_form_label fw-bold ps-3">&#8594;</div>
                                         <div class="o_form_label fw-bold ps-3">Exp</div>
                                         <div class="o_form_label fw-bold ps-3">+</div>
-                                        <field style="width: 8%" name="exp_gained_common" widget="PxWidget"/>
+                                        <field style="width: 8%" name="exp_gained_common"/>
                                     </div>
                                 </group>
                             </group>
@@ -99,7 +107,7 @@
                                 </div>
                                 <div name="div_exp_encounter_easy" class="w-100 d-flex" colspan="2">
                                     <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Facile</div>
-                                    <field name="encounter_easy_exp" style="width: 20%" widget="PxWidget"/>
+                                    <field name="encounter_easy_exp" style="width: 20%"/>
                                     <div class="text-muted d-flex">
                                         <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
                                         <field class="pe-1" name="encounter_easy_exp_percentage" nolabel="1" widget="percentage"/>
@@ -107,7 +115,7 @@
                                 </div>
                                 <div name="div_exp_encounter_medium" class="w-100 d-flex" colspan="2">
                                     <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Medio</div>
-                                    <field name="encounter_medium_exp" style="width: 20%" widget="PxWidget"/>
+                                    <field name="encounter_medium_exp" style="width: 20%"/>
                                     <div class="text-muted d-flex">
                                         <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
                                         <field class="pe-1" name="encounter_medium_exp_percentage" nolabel="1" widget="percentage"/>
@@ -115,7 +123,7 @@
                                 </div>
                                 <div name="div_exp_encounter_hard" class="w-100 d-flex" colspan="2">
                                     <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Difficile</div>
-                                    <field name="encounter_hard_exp" style="width: 20%" widget="PxWidget"/>
+                                    <field name="encounter_hard_exp" style="width: 20%"/>
                                     <div class="text-muted d-flex">
                                         <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
                                         <field class="pe-1" name="encounter_hard_exp_percentage" nolabel="1" widget="percentage"/>
@@ -123,7 +131,7 @@
                                 </div>
                                 <div name="div_exp_encounter_deadly" class="w-100 d-flex" colspan="2">
                                     <div class="o_form_label fw-bold" style="width: 45%">Exp Scontro Mortale</div>
-                                    <field name="encounter_deadly_exp" style="width: 20%" widget="PxWidget"/>
+                                    <field name="encounter_deadly_exp" style="width: 20%"/>
                                     <div class="text-muted d-flex">
                                         <div class="o_form_label fw-bold pe-3 ">&#8594;</div>
                                         <field class="pe-1" name="encounter_deadly_exp_percentage" nolabel="1" widget="percentage"/>
@@ -131,11 +139,11 @@
                                 </div>
                             </group>
                             <group colspan="1">
-                                <field string="Party Media Exp" name="party_avg_exp" widget="PxWidget"/>
+                                <field string="Party Media Exp" name="party_avg_exp"/>
                                 <field string="Party Media Liv" name="party_avg_level"/>
-                                <field string="Exp Barra" name="party_exp_bar" widget="PxWidget"/>
-                                <field string="Exp Budget" name="daily_budget_exp" widget="PxWidget"/>
-                                <field string="Exp Soglia" name="exp_soglia" widget="PxWidget"/>
+                                <field string="Exp Barra" name="party_exp_bar"/>
+                                <field string="Exp Budget" name="daily_budget_exp"/>
+                                <field string="Exp Soglia" name="exp_soglia"/>
                             </group>
                         </group>
                     </group>

@@ -56,6 +56,11 @@ class CampaignSessionPg(models.Model):
         help="Esperienza che il player ha guadagnata in questa sessione. "
              "Comprende: Exp Guadagnata Comune + Exp Guadagnata Singola."
     )
+    exp_gained_adj = fields.Integer(
+        string="Exp Guadagnata Totale",
+        compute="_compute_exp_gained_adj",
+        help="Differenza tra 'Exp Finale Adj' e 'Exp Iniziale'."
+    )
     exp_end = fields.Integer(
         string="Exp Finale",
         compute="_compute_exp_end",
@@ -116,6 +121,10 @@ class CampaignSessionPg(models.Model):
         string="Data",
         related="session_id.date",
     )
+    state = fields.Selection(
+        string="Stato",
+        related="session_id.state",
+    )
 
     # ------------------------------------------------------------------------------------------------------------------
 
@@ -163,6 +172,11 @@ class CampaignSessionPg(models.Model):
         for rec in self:
             rec.exp_gained_total = rec.exp_gained_common + rec.exp_gained_single
 
+    @api.depends('exp_start', 'exp_end_adj')
+    def _compute_exp_gained_adj(self):
+        for rec in self:
+            rec.exp_gained_adj = rec.exp_end_adj - rec.exp_start
+
     @api.depends('exp_start', 'exp_gained_total')
     def _compute_exp_end(self):
         for rec in self:
@@ -171,10 +185,8 @@ class CampaignSessionPg(models.Model):
     @api.depends('session_id', 'exp_end')
     def _compute_exp_end_adj(self):
         for rec in self:
-            if rec.session_id.exp_soglia < rec.exp_end:
-                rec.exp_end_adj = rec.exp_end
-            else:
-                rec.exp_end_adj = rec.session_id.exp_soglia
+            exp_soglia = rec.session_id.exp_soglia if rec.session_id else 0
+            rec.exp_end_adj = rec.exp_end if (exp_soglia < rec.exp_end) else exp_soglia
 
     @api.depends('exp_end_adj')
     def _compute_liv_end(self):

@@ -1,5 +1,5 @@
 <t t-name="PxWidget">
     <div class="o_field_px_widget">
-        <span t-esc="displayValue"/>
+        <span t-esc="state.valueFormatted"/>
     </div>
 </t>

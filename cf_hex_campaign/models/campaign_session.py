@@ -9,7 +9,11 @@ class CampaignSession(models.Model):
     name = fields.Char(
         string="Nome",
     )
-
+    state = fields.Selection(
+        string="Stato",
+        selection=[("draft", "Bozza"), ("confirmed", "Confermata")],
+        default="draft",
+    )
     description = fields.Html(
         string="Descrizione",
         help="Descrizione della Campagna",
@@ -205,7 +209,7 @@ class CampaignSession(models.Model):
     @api.depends('session_pg_ids')
     def _compute_party_avg_exp(self):
         for rec in self:
-            rec.party_avg_exp = sum(pg.exp_start for pg in rec.session_pg_ids) / (len(rec.session_pg_ids) or 1) or 0
+            rec.party_avg_exp = sum([pg.exp_start for pg in rec.session_pg_ids]) / (len(rec.session_pg_ids) or 1) or 0
 
     @api.depends('party_avg_exp')
     def _compute_party_avg_level(self):
@@ -284,3 +288,9 @@ class CampaignSession(models.Model):
     def _compute_exp_gained_common(self):
         for rec in self:
             rec.exp_gained_common = rec.mission_id_exp + rec.encounter_exp_split + rec.n_hex_crossed_exp + rec.treasure_info_exp
+
+    def action_confirm(self):
+        self.state = 'confirmed'
+
+    def action_return_to_draft(self):
+        self.state = 'draft'

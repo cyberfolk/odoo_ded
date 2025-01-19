@@ -28,6 +28,7 @@ class CampaignPg(models.Model):
     exp = fields.Integer(
         string="EXP",
         compute="_compute_exp",
+        # default="900"
     )
 
     level = fields.Integer(
@@ -67,8 +68,5 @@ class CampaignPg(models.Model):
     @api.depends('session_pg_ids.exp_end_adj')
     def _compute_exp(self):
         for rec in self:
-            last_session_pg = rec.session_pg_ids[0] if rec.session_pg_ids else None
-            if not last_session_pg:
-                rec.exp = 900
-            else:
-                rec.exp = last_session_pg.exp_end_adj if last_session_pg else rec.exp
+            session_pg_confirmed = rec.session_pg_ids.filtered(lambda x: x.state == 'confirmed')
+            rec.exp = 900 + sum([x.exp_gained_adj for x in session_pg_confirmed])
