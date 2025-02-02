@@ -2,7 +2,7 @@
 
 **Initial commit**: 21/01/24
 
-**Technologies**: Odoo, Python, XML, HTML, SCSS e Bootstrap.
+**Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap.
 
 - **cf_hex_client** In questo modulo viene introdotto:
     - Un'interfaccia per poter interagire direttamente con le mappe in modo più semplice.
