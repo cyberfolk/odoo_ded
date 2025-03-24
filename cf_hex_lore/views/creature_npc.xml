@@ -15,7 +15,7 @@
         <field name="model">creature.npc</field>
         <field name="inherit_id" ref="cf_hex_biome.creature_npc_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='creature_id']" position="after">
+            <xpath expr="//field[@name='faction_ids']" position="after">
                 <field name="hex_ids" widget="many2many_tags"/>
             </xpath>
         </field>

@@ -1,0 +1,25 @@
+<odoo>
+    <record id="cf_paperformat" model="report.paperformat">
+        <field name="name">Cyberfolk | paperformat</field>
+        <field name="default" eval="False"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">0</field>
+    </record>
+
+    <record id="action_report_spell_list" model="ir.actions.report">
+        <field name="name">Stampa</field>
+        <field name="model">creature.npc.roster</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">cf_hex_biome.report_creature_npc_roster_template</field>
+        <field name="report_file">cf_hex_biome.report_creature_npc_roster_template</field>
+        <field name="binding_model_id" ref="model_creature_npc_roster"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="cf_hex_biome.cf_paperformat"/>
+    </record>
+</odoo>

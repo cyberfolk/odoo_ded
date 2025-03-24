@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_creature_npc_roster_template">
+        <t t-call="web.basic_layout">
+            <style>
+                .npc-card {
+                background-color: #007bff;
+                color: white;
+                border-radius: 0.25rem;
+                text-align: center;
+                width: 50%;
+                height: 467px;
+                }
+            </style>
+
+            <t t-set="npc_list" t-value="docs[0].npc_ids"/>
+            <t t-set="npc_list_grouped2" t-value="[npc_list[i:i+2] for i in range(0, len(npc_list), 2)]"/>
+            <t t-foreach="npc_list_grouped2" t-as="npc_sublist2">
+                <div class="d-flex" style="page-break-inside: avoid;">
+                    <t t-foreach="npc_sublist2" t-as="npc">
+                        <div class="npc-card">
+                            <h1>
+                                <t t-esc="npc.name"/>
+                            </h1>
+                            <div class="m-auto" style="width: 80%; height: 80%; overflow: hidden;">
+                                <img t-if="npc.image" class="h-100"
+                                     t-att-src="image_data_uri(npc.image)"/>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+
+        </t>
+    </template>
+</odoo>

@@ -61,6 +61,12 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_menu_creature_npc_roster" model="ir.actions.act_window">
+        <field name="name">Elenco NPC</field>
+        <field name="res_model">creature.npc.roster</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem sequence="1" id="menu_biome_root" name="Biomi" parent="cf_hex_base.menu_root">
         <menuitem sequence="0" id="menu_biome" name="Biomi" action="action_menu_biome_biome"/>
         <menuitem sequence="0" id="menu_structure" name="Strutture" action="action_menu_structure_structure"/>
@@ -74,6 +80,7 @@
         <menuitem sequence="4" id="menu_creature_encounter_line" name="Creature Scontri Linee" action="action_menu_creature_encounter_line"/>
         <menuitem sequence="5" id="menu_faction" name="Fazioni" action="cf_hex_biome.action_menu_creature_faction"/>
         <menuitem sequence="6" id="menu_creature_npc" name="NPC" action="action_menu_creature_npc"/>
+        <menuitem sequence="6" id="menu_creature_npc_roster" name="NPC Roster" action="action_menu_creature_npc_roster"/>
     </menuitem>
 
     <menuitem sequence="5" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter" parent="cf_hex_base.menu_root"/>

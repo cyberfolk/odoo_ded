@@ -15,6 +15,10 @@ class CreatureNpc(models.Model):
         required=True,
     )
 
+    titles = fields.Char(
+        string="Titoli",
+    )
+
     _sql_constraints = [
         ('unique_creature_npc_name', 'UNIQUE(name)', 'Il nome del NPC deve essere univoco!')
     ]
