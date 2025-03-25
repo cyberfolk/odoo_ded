@@ -36,17 +36,49 @@
     <template id="report_creature_npc_roster_template_v2">
         <t t-call="web.basic_layout">
             <style>
+                @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&amp;display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&amp;display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&amp;family=EB+Garamond&amp;display=swap');
+
                 .cell {
-                border: 1px solid black;
-                border-radius: 0.5rem;
-                height: 467px;
+                border: 6px double #8B0000; /* dark red medieval border */
+                border-radius: 1rem;
+                height: 465px;
+                page-break-inside: avoid;
+                margin-bottom: 0.2rem;
+                background: #fdf3dc; /* parchment background */
+                box-shadow: 0 0 10px #00000080;
+                <!-- TODO Scegliere font o questo o toglierlo e lasciare quello di default che è più leggibile -->
+                <!-- font-family: 'EB Garamond', serif;-->
+                color: #2b1d0e;
+                }
+
+                .cell-dx {
+                border-right: 6px double #8B0000;
+                height: 100%;
+                width: 50%;
+                }
+
+                .cell h1 {
+                font-family: 'Cinzel Decorative', cursive;
+                color: #4b0000;
+                text-shadow: 1px 1px #f2e1c2;
+                border-bottom: 2px solid #4b0000;
+                padding-bottom: 0.3rem;
+                margin-bottom: 0.5rem;
+                }
+
+                .cell .description {
+                font-size: 14px;
+                line-height: 1.5;
+                color: #3b2a1a;
                 }
             </style>
 
             <t t-set="npc_list" t-value="docs[0].npc_ids"/>
             <t t-foreach="npc_list" t-as="npc">
-                <div class="cell row" style="page-break-inside: avoid;">
-                    <div class="w-50 h-100">
+                <div class="cell row">
+                    <div class="cell-dx">
                         <div class="m-auto w-100 h-100" style="overflow: hidden;">
                             <img t-if="npc.image" style="width: 100%; border-radius:  0.5rem 0 0 0.5rem;"
                                  t-att-src="image_data_uri(npc.image)"/>
