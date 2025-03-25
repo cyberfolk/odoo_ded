@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_creature_npc_roster_template">
+    <template id="report_creature_npc_roster_template_v1">
         <t t-call="web.basic_layout">
             <style>
                 .npc-card {
@@ -22,7 +22,7 @@
                                 <t t-esc="npc.name"/>
                             </h1>
                             <div class="m-auto" style="height: 90%; overflow: hidden;">
-                                <img t-if="npc.image" style="width: 100%; border-radius: 0 0 0.5rem 0.5rem;"
+                                <img t-if="npc.image" style="height: 100%; border-radius: 0 0 0.5rem 0.5rem;"
                                      t-att-src="image_data_uri(npc.image)"/>
                             </div>
                         </div>
@@ -32,4 +32,37 @@
 
         </t>
     </template>
+
+    <template id="report_creature_npc_roster_template_v2">
+        <t t-call="web.basic_layout">
+            <style>
+                .cell {
+                border: 1px solid black;
+                border-radius: 0.5rem;
+                height: 467px;
+                }
+            </style>
+
+            <t t-set="npc_list" t-value="docs[0].npc_ids"/>
+            <t t-foreach="npc_list" t-as="npc">
+                <div class="cell row" style="page-break-inside: avoid;">
+                    <div class="w-50 h-100">
+                        <div class="m-auto w-100 h-100" style="overflow: hidden;">
+                            <img t-if="npc.image" style="width: 100%; border-radius:  0.5rem 0 0 0.5rem;"
+                                 t-att-src="image_data_uri(npc.image)"/>
+                        </div>
+                    </div>
+                    <div class="w-50 h-100 p-3">
+                        <h1>
+                            <t t-esc="npc.name"/>
+                        </h1>
+                        <t t-esc="npc.description"/>
+                    </div>
+
+                </div>
+            </t>
+
+        </t>
+    </template>
+
 </odoo>
