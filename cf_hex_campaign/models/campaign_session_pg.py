@@ -57,7 +57,7 @@ class CampaignSessionPg(models.Model):
              "Comprende: Exp Guadagnata Comune + Exp Guadagnata Singola."
     )
     exp_gained_adj = fields.Integer(
-        string="Exp Guadagnata Totale",
+        string="Exp Guadagnata Totale Adj",
         compute="_compute_exp_gained_adj",
         help="Differenza tra 'Exp Finale Adj' e 'Exp Iniziale'."
     )

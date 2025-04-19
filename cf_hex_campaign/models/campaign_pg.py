@@ -51,9 +51,10 @@ class CampaignPg(models.Model):
         string="Campagna",
     )
 
-    session_pg_ids = fields.One2many(
+    session_pg_ids = fields.Many2many(
         comodel_name="campaign.session.pg",
         compute="_compute_session_pg_ids",
+        store=True,
     )
 
     @api.depends('exp')
