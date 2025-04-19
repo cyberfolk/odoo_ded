@@ -1,0 +1,3 @@
+<odoo>
+    <menuitem sequence="0" id="menu_root" name="D&amp;D" web_icon="cf_ded_base,static/description/icon.png"/>
+</odoo>

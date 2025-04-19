@@ -1,0 +1,16 @@
+<odoo>
+    <record id="action_menu_spell" model="ir.actions.act_window">
+        <field name="name">Incantesimi</field>
+        <field name="res_model">spell</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_menu_spell_list" model="ir.actions.act_window">
+        <field name="name">Liste Incantesimi</field>
+        <field name="res_model">spell.list</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem sequence="1" id="menu_spell" name="Incantesimi" action="action_menu_spell" parent="cf_ded_base.menu_root"/>
+    <menuitem sequence="2" id="menu_spell_list" name="Liste Incantesimi" action="action_menu_spell_list" parent="cf_ded_base.menu_root"/>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_spell_list_template">
+        <t t-call="web.html_container">
+            <style>
+                #cf_main {
+                height: 100%;
+                width: 100%;
+                background-color: red;
+                display: flex;
+                }
+                .card{
+                height: 30%;
+                width: 30%;
+                background-color: blue;}
+            </style>
+            <div id="cf_main">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-foreach="doc.spell_ids" t-as="spell">
+                        <div class="card">
+                            <h1 t-esc="spell.name"/>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

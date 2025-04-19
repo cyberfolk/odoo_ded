@@ -1,0 +1,75 @@
+<odoo>
+    <record id="spell_view_tree" model="ir.ui.view">
+        <field name="name">spell.tree.base</field>
+        <field name="model">spell</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="level"/>
+                <field name="name"/>
+                <field name="school"/>
+                <field name="sub_school" optional="hide"/>
+                <field name="descriptors" optional="hide"/>
+                <field name="components" optional="hide"/>
+                <field name="casting_time" optional="show" string="TCast"/>
+                <field name="range" optional="show" string="Raggio"/>
+                <field name="target_area_effect" optional="hide"/>
+                <field name="duration" optional="show"/>
+                <field name="saving_throw" optional="show" string="TS"/>
+                <field name="spell_resistance" optional="show" string="RI"/>
+                <field name="material_component" optional="show" string="Componenti"/>
+                <field name="target" optional="show"/>
+                <field name="effect" optional="show"/>
+                <field name="area" optional="show"/>
+                <field name="base_spell" optional="hide"/>
+                <field name="xp_cost" optional="hide"/>
+                <field name="focus" optional="hide"/>
+                <field name="blurb" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="spell_view_form" model="ir.ui.view">
+        <field name="name">spell.form.base</field>
+        <field name="model">spell</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" colspan="2">
+                        <label for="name" class="oe_inline"/>
+                        <h1>
+                            <field class="text-nowrap" name="name" nolabel="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="school"/>
+                            <field name="sub_school"/>
+                            <field name="descriptors"/>
+                            <field name="level"/>
+                            <field name="components"/>
+                            <field name="casting_time"/>
+                            <field name="range"/>
+                            <field name="target_area_effect"/>
+                            <field name="duration"/>
+                            <field name="saving_throw"/>
+                            <field name="spell_resistance"/>
+                            <field name="material_component"/>
+                            <field name="target"/>
+                            <field name="effect"/>
+                            <field name="area"/>
+                            <field name="base_spell"/>
+                            <field name="xp_cost"/>
+                            <field name="focus"/>
+                            <field name="blurb"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Descrizione" name="page_description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

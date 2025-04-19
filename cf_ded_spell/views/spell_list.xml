@@ -1,0 +1,33 @@
+<odoo>
+    <record id="spell_list_view_tree" model="ir.ui.view">
+        <field name="name">spell.list.tree.base</field>
+        <field name="model">spell.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="spell_list_view_form" model="ir.ui.view">
+        <field name="name">spell.list.form.base</field>
+        <field name="model">spell.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title" colspan="2">
+                        <label for="name" class="oe_inline"/>
+                        <h1>
+                            <field class="text-nowrap" name="name" nolabel="1"/>
+                        </h1>
+                    </div>
+                    <notebook>
+                        <page string="Incantesimi" name="page_spell">
+                            <field name="spell_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
