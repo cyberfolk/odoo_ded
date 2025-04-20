@@ -31,8 +31,7 @@
         ]
     },
 
-    'post_init_hook': 'post_init_hook_cf_ded_campaign',
-    'depends': ['cf_ded_base', 'contacts'],
+    'depends': ['cf_ded_base', 'base'],
     'demo': [],
     'application': False,
     'installable': True,
