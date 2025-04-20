@@ -1,0 +1,3479 @@
+[
+    {
+        "name": "Cavallo",
+        "creature_ids": [
+            "Mulo",
+            "Pony",
+            "Cavallo Selvaggio",
+            "Cavallo da Galoppo",
+            "Cavallo da Tiro",
+            "Cavallo da Guerra",
+            "Cavallo degli incubi",
+            "Scheletro Cavallo da Guerra"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cane",
+        "creature_ids": [
+            "Intellect Devourer",
+            "Mastino",
+            "Cane Intermittente",
+            "Segugio Infernale",
+            "Shadow Mastiff",
+            "Shadow Mastiff Alpha",
+            "Cane della Morte",
+            "Leucrotta",
+            "Segugi di Yeth"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Bestia",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Manta",
+        "creature_ids": [
+            "Mantoscuro",
+            "Trapper"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Dinosauro",
+        "creature_ids": [
+            "Dimitrodonte",
+            "Hadrosaurus",
+            "Pterodattilo",
+            "Velociraptor",
+            "Deinonychus",
+            "Allosauro",
+            "Plesiosauro",
+            "Quetzalcoatlus",
+            "Anchilosauro",
+            "Stegosauro",
+            "Brontosauro",
+            "Triceratopo",
+            "Tirannosauro Rex"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Minore",
+        "creature_ids": [
+            "Mane",
+            "Dretch",
+            "Quasit",
+            "Babau"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Maggiore",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Diavolo",
+        "creature_ids": [
+            "Lemure",
+            "Imp",
+            "Diavolo Spinato",
+            "Diavolo Barbuto",
+            "Diavolo Uncinato",
+            "Diavolo delle Catene",
+            "Diavolo d'Ossa",
+            "Diavolo Cornuto",
+            "Erinni",
+            "Diavolo del ghiaccio ",
+            "Diavolo della Fossa",
+            "Arciduca",
+            "Duca",
+            "Nupperibo",
+            "Merregon",
+            "White Abishai",
+            "Armanite",
+            "Black Abishai",
+            "Orthon",
+            "Narzugon",
+            "Green Abishai",
+            "Hellfire Engine",
+            "Titivilus",
+            "Blue Abishai",
+            "Red Abishai",
+            "Hutijin",
+            "Moloch",
+            "Geryon",
+            "Zuggtmoy",
+            "Zariel"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Immondo",
+        "creature_ids": [
+            "Incubo",
+            "Succube",
+            "Cambion",
+            "Stench Kow",
+            "Vargouille",
+            "Segugio Infernale",
+            "Cavallo degli incubi",
+            "Howler"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Demone",
+        "creature_ids": [
+            "Oni",
+            "Mane",
+            "Dretch",
+            "Quasit",
+            "Babau",
+            "Demone d'Ombra",
+            "Barlgura",
+            "Vrock",
+            "Chasme",
+            "Hezrou",
+            "Glabrezu",
+            "Yochlol",
+            "Nalfeshnee",
+            "Marilith",
+            "Goristro",
+            "Balor",
+            "Rutterkin",
+            "Bulezau",
+            "Dybbuk",
+            "Maurezhi",
+            "Alkilith",
+            "Wastrilith",
+            "Nabassu",
+            "Sibriex",
+            "Bael",
+            "Molydeus",
+            "Baphomet",
+            "Fraz-Urb'luu",
+            "Juiblex",
+            "Graz'zt",
+            "Yeenoghu",
+            "Demogorgon",
+            "Orcus",
+            "Draegloth",
+            "Maw Demon",
+            "Gnoll zanna di Yeenoghu",
+            "Shoosuva",
+            "Tanarukk"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Yugoloth",
+        "creature_ids": [
+            "Barghest",
+            "Merrenoloth",
+            "Mezzoloth",
+            "Dhergoloth",
+            "Canoloth",
+            "Nycaloth",
+            "Hydroloth",
+            "Yagnoloth",
+            "Arcanaloth",
+            "Oinoloth",
+            "Ultroloth"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Mechanus",
+        "creature_ids": [
+            "Monodrone",
+            "Duodrone",
+            "Tridrone",
+            "Quadrone",
+            "Pentadrone",
+            "Marut"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Terra",
+        "creature_ids": [
+            "Elementare della Terra",
+            "Flail Snail",
+            "Dao",
+            "Gargoyle",
+            "Xorn",
+            "Galeb Duhr",
+            "Elemental Myrmidon, Earth",
+            "Zaratan",
+            "Tarrasque"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Acqua",
+        "creature_ids": [
+            "Elementare dell'Acqua",
+            "Marid",
+            "Fatale dell'acqua",
+            "Elemental Myrmidon, Water",
+            "Morkoth",
+            "Leviathan",
+            "Kraken"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Fatato",
+        "creature_ids": [
+            "Drago Fatato Arancione",
+            "Drago Fatato Blu",
+            "Drago Fatato Giallo",
+            "Drago Fatato Indaco",
+            "Drago Fatato Rosso",
+            "Drago Fatato Verde",
+            "Drago Fatato Viola",
+            "Fomorian",
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Aria",
+        "creature_ids": [
+            "Elementare dell'Aria",
+            "Djinni",
+            "Cacciatore Invisibile",
+            "Elemental Myrmidon, Air",
+            "Elder Tempest",
+            "Aarakockra"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Goblin",
+        "creature_ids": [
+            "Barghest",
+            "Worg",
+            "Goblin",
+            "Goblin Capo",
+            "Goblin Nilbog",
+            "Buoyahg Buoyahg Buoyahg",
+            "Booyahg Caster",
+            "Booyahg Frusta",
+            "Booyahg Wielder"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Hobgoblin",
+        "creature_ids": [
+            "Hobgoblin",
+            "Hobgoblin Iorn Shadow",
+            "Hobgoblin Capitano",
+            "Hobgoblin Devastatore",
+            "Hobgoblin Signore della Guerra"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Bugbear",
+        "creature_ids": [
+            "Bugbear",
+            "Bugbear Chief"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Pianta",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Insetto",
+        "creature_ids": [
+            "Centopiedi Gigante",
+            "Sciame di Insetti",
+            "Flail Snail",
+            "Meenlock",
+            "Kruthik Young",
+            "Kruthik, Adult",
+            "Kruthik Hive Lord",
+            "Steeder Male",
+            "Steeder Female"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ragno",
+        "creature_ids": [
+            "Ragno",
+            "Ragno Lupo Gigante",
+            "Ragno Gigante",
+            "Chitine",
+            "Choldrith",
+            "Drider",
+            "Ettercap",
+            "Phase Spider"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Vegetale Animato",
+        "creature_ids": [
+            "Cespuglio risvegliato",
+            "Albero Risvegliato",
+            "Cumulo Strisciante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Miconide",
+        "creature_ids": [
+            "Miconide Germoglio",
+            "Miconide Adulto",
+            "Quaggoth Spore Servant",
+            "Miconide Sovrano"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Fungo",
+        "creature_ids": [
+            "Miconide Germoglio",
+            "Miconide Adulto",
+            "Quaggoth Spore Servant",
+            "Miconide Sovrano",
+            "Boleto Stridente",
+            "Fungo Viola"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Vegepygmy",
+        "creature_ids": [
+            "Vegepygmy",
+            "Vegepygmy Thorny",
+            "Vegepygmy Chief"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Tipo 1",
+        "creature_ids": [
+            "Demone d'Ombra",
+            "Barlgura",
+            "Vrock"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tipo 2",
+        "creature_ids": [
+            "Chasme",
+            "Hezrou"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tipo 3",
+        "creature_ids": [
+            "Glabrezu",
+            "Yochlol"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tipo 4",
+        "creature_ids": [
+            "Nalfeshnee"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tipo 5",
+        "creature_ids": [
+            "Marilith"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tipo 6",
+        "creature_ids": [
+            "Goristro",
+            "Balor"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 01",
+        "creature_ids": [
+            "Lemure"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 02",
+        "creature_ids": [
+            "Imp"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 03",
+        "creature_ids": [
+            "Diavolo Spinato"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 04",
+        "creature_ids": [
+            "Diavolo Barbuto"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 05",
+        "creature_ids": [
+            "Diavolo Uncinato"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 06",
+        "creature_ids": [
+            "Diavolo delle Catene"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 07",
+        "creature_ids": [
+            "Diavolo d'Ossa"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 08",
+        "creature_ids": [
+            "Diavolo Cornuto"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 09",
+        "creature_ids": [
+            "Erinni"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 10",
+        "creature_ids": [
+            "Diavolo del ghiaccio "
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 11",
+        "creature_ids": [
+            "Diavolo della Fossa"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 12",
+        "creature_ids": [
+            "Arciduca"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rank 13",
+        "creature_ids": [
+            "Duca",
+            "Hutijin",
+            "Moloch",
+            "Geryon",
+            "Zuggtmoy",
+            "Zariel"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Drago",
+        "creature_ids": [
+            "Half-Red Dragon Veteran"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Drago Cromatico",
+        "creature_ids": [
+            "Drago d'Ombra Rosso Giovane",
+            "Drago Bianco Cucciolo",
+            "Drago Bianco Giovane",
+            "Drago Bianco Adulto",
+            "Drago Bianco Antico",
+            "Draco Guardia Bianca",
+            "Draco Guardia Blu",
+            "Drago Blu Cucciolo",
+            "Drago Blu Giovane",
+            "Drago Blu Adulto",
+            "Drago Blu Antico",
+            "Drago Nero Cucciolo",
+            "Drago Nero Giovane",
+            "Drago Nero Adulto",
+            "Drago Nero Antico",
+            "Draco Guardia Nera",
+            "Draco Guardia Rossa",
+            "Drago Rosso Cucciolo",
+            "Drago Rosso Giovane",
+            "Drago Rosso Adulto",
+            "Drago Rosso Antico",
+            "Draco Guardia Verde",
+            "Drago Verde Cucciolo",
+            "Drago Verde Giovane",
+            "Drago Verde Adulto",
+            "Drago Verde Antico"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Drago Metallico",
+        "creature_ids": [
+            "Drago d'Oro Cucciolo",
+            "Drago d'Oro Giovane",
+            "Drago d'Oro Adulto",
+            "Drago d'Oro Antico",
+            "Drago d'Ottone Cucciolo",
+            "Drago d'Ottone Giovane",
+            "Drago d'Ottone Adulto",
+            "Drago d'Ottone Antico",
+            "Drago di Rame Cucciolo",
+            "Drago di Rame Giovane",
+            "Drago di Rame Adulto",
+            "Drago di Rame Antico"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Drago metallico",
+        "creature_ids": [
+            "Drago d'Argento Cucciolo",
+            "Drago d'Argento Giovane",
+            "Drago d'Argento Adulto",
+            "Drago d'Argento Antico",
+            "Drago di Bronzo Cucciolo",
+            "Drago di Bronzo Giovane",
+            "Drago di Bronzo Adulto",
+            "Drago di Bronzo Antico"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Drago Guardia",
+        "creature_ids": [
+            "Drago Guardia Bianco",
+            "Drago Guardia Blu",
+            "Drago Guardia Nero",
+            "Drago Guardia Rosso"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Drago Fatato",
+        "creature_ids": [
+            "Drago Fatato Arancione",
+            "Drago Fatato Blu",
+            "Drago Fatato Giallo",
+            "Drago Fatato Indaco",
+            "Drago Fatato Rosso",
+            "Drago Fatato Verde",
+            "Drago Fatato Viola"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cucciolo",
+        "creature_ids": [
+            "Drago Bianco Cucciolo",
+            "Drago Blu Cucciolo",
+            "Drago Nero Cucciolo",
+            "Drago Rosso Cucciolo",
+            "Drago Verde Cucciolo",
+            "Drago d'Argento Cucciolo",
+            "Drago di Bronzo Cucciolo",
+            "Drago d'Oro Cucciolo",
+            "Drago d'Ottone Cucciolo",
+            "Drago di Rame Cucciolo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Giovane",
+        "creature_ids": [
+            "Drago d'Ombra Rosso Giovane",
+            "Drago Bianco Giovane",
+            "Drago Blu Giovane",
+            "Drago Nero Giovane",
+            "Drago Rosso Giovane",
+            "Drago Verde Giovane",
+            "Drago d'Argento Giovane",
+            "Drago di Bronzo Giovane",
+            "Drago d'Oro Giovane",
+            "Drago d'Ottone Giovane",
+            "Drago di Rame Giovane"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Adulto",
+        "creature_ids": [
+            "Drago Bianco Adulto",
+            "Drago Blu Adulto",
+            "Drago Nero Adulto",
+            "Drago Rosso Adulto",
+            "Drago Verde Adulto",
+            "Drago d'Argento Adulto",
+            "Drago di Bronzo Adulto",
+            "Drago d'Oro Adulto",
+            "Drago d'Ottone Adulto",
+            "Drago di Rame Adulto"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Antico",
+        "creature_ids": [
+            "Drago Bianco Antico",
+            "Drago Blu Antico",
+            "Drago Nero Antico",
+            "Drago Rosso Antico",
+            "Drago Verde Antico",
+            "Drago d'Argento Antico",
+            "Drago di Bronzo Antico",
+            "Drago d'Oro Antico",
+            "Drago d'Ottone Antico",
+            "Drago di Rame Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Bianco",
+        "creature_ids": [
+            "Drago Bianco Cucciolo",
+            "Drago Bianco Giovane",
+            "Drago Bianco Adulto",
+            "Drago Bianco Antico",
+            "Draco Guardia Bianca",
+            "Drago Guardia Bianco"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Verde",
+        "creature_ids": [
+            "Slaad Verde",
+            "Draco Guardia Verde",
+            "Drago Verde Cucciolo",
+            "Drago Verde Giovane",
+            "Drago Verde Adulto",
+            "Drago Verde Antico",
+            "Drago Fatato Verde"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Arancione",
+        "creature_ids": [
+            "Drago Fatato Arancione"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Giallo",
+        "creature_ids": [
+            "Drago Fatato Giallo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Indaco",
+        "creature_ids": [
+            "Drago Fatato Indaco"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Blu",
+        "creature_ids": [
+            "Slaad Blu",
+            "Draco Guardia Blu",
+            "Drago Blu Cucciolo",
+            "Drago Blu Giovane",
+            "Drago Blu Adulto",
+            "Drago Blu Antico",
+            "Drago Fatato Blu",
+            "Drago Guardia Blu",
+            "Adult Blue Dracholich"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Nero",
+        "creature_ids": [
+            "Drago Nero Cucciolo",
+            "Drago Nero Giovane",
+            "Drago Nero Adulto",
+            "Drago Nero Antico",
+            "Draco Guardia Nera",
+            "Drago Guardia Nero"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Viola",
+        "creature_ids": [
+            "Drago Fatato Viola"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rosso",
+        "creature_ids": [
+            "Slaad Rosso",
+            "Drago d'Ombra Rosso Giovane",
+            "Draco Guardia Rossa",
+            "Drago Rosso Cucciolo",
+            "Drago Rosso Giovane",
+            "Drago Rosso Adulto",
+            "Drago Rosso Antico",
+            "Drago Fatato Rosso",
+            "Drago Guardia Rosso",
+            "Half-Red Dragon Veteran"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Grigio",
+        "creature_ids": [
+            "Slaad Grigio"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Mummia",
+        "creature_ids": [
+            "Mummy",
+            "Mummy Lord"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Non Morto",
+        "creature_ids": [],
+        "is_faction": true
+    },
+    {
+        "name": "Vampiro",
+        "creature_ids": [
+            "Vampire Spawn",
+            "Vampire"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Zombie",
+        "creature_ids": [
+            "Alhoon",
+            "Mind Flayer Lich",
+            "Crawling Claw",
+            "Zombie",
+            "Ogre Zombie",
+            "Beholder Zombie",
+            "Revenant",
+            "Spawn of Kyuss",
+            "Death Knight"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Scheletro",
+        "creature_ids": [
+            "Gnoll Witherling",
+            "Skeleton",
+            "Scheletro Cavallo da Guerra",
+            "Minotaur Skeleton",
+            "Flameskull"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Lich",
+        "creature_ids": [
+            "Adult Blue Dracholich",
+            "Demilich",
+            "Lich"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Fantasma",
+        "creature_ids": [
+            "Bone Naga Spirit",
+            "Spettro",
+            "Sword Wraith Warrior",
+            "Wight",
+            "Banshee",
+            "Fantasma",
+            "Allip",
+            "Wraith",
+            "Sword Wraith Commander"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ghoul",
+        "creature_ids": [
+            "Ghoul",
+            "Ghast"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ombra",
+        "creature_ids": [
+            "Drago d'Ombra Rosso Giovane"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Oro",
+        "creature_ids": [
+            "Drago d'Oro Cucciolo",
+            "Drago d'Oro Giovane",
+            "Drago d'Oro Adulto",
+            "Drago d'Oro Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Argento",
+        "creature_ids": [
+            "Drago d'Argento Cucciolo",
+            "Drago d'Argento Giovane",
+            "Drago d'Argento Adulto",
+            "Drago d'Argento Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Bronzo",
+        "creature_ids": [
+            "Drago di Bronzo Cucciolo",
+            "Drago di Bronzo Giovane",
+            "Drago di Bronzo Adulto",
+            "Drago di Bronzo Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rame",
+        "creature_ids": [
+            "Drago di Rame Cucciolo",
+            "Drago di Rame Giovane",
+            "Drago di Rame Adulto",
+            "Drago di Rame Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ottone",
+        "creature_ids": [
+            "Drago d'Ottone Cucciolo",
+            "Drago d'Ottone Giovane",
+            "Drago d'Ottone Adulto",
+            "Drago d'Ottone Antico"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ogre",
+        "creature_ids": [
+            "Ciclope",
+            "Half-Ogre",
+            "Ogre",
+            "Ogre Bolt Launcher",
+            "Ogre Howdah",
+            "Ogre Chain Brute",
+            "Ogre Battering Ram",
+            "Ogre Zombie"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Orco",
+        "creature_ids": [
+            "Oni",
+            "Tanarukk",
+            "Orc Nurtured One of Yurtrus",
+            "Orco",
+            "Orc Claw of Luthic",
+            "Orc Hand of Yurtrus",
+            "Orco Occhio Gruumsh",
+            "Orog",
+            "Orc Red Fang of Shargaas",
+            "Orc Blade of Ilneval",
+            "Orco Capotribù Guerriero"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Aberrazione",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Beholder",
+        "creature_ids": [
+            "Gazer",
+            "Spectator",
+            "Gauth",
+            "Death Kiss",
+            "Beholder",
+            "Mindwitness",
+            "Tiranno della Morte",
+            "Beholder Zombie"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Aboleth",
+        "creature_ids": [
+            "Chuul",
+            "Aboleth "
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Mind Flayer",
+        "creature_ids": [
+            "Intellect Devourer",
+            "Mindwitness",
+            "Mind Flayer",
+            "Mind Flayer Arcanist",
+            "Mind Flayer Psion",
+            "Ulitharid",
+            "Neothelid",
+            "Elder Brain",
+            "Ratti Cranio",
+            "Sciame di Ratti Cranio",
+            "Oblex Spawn",
+            "Oblex Adult",
+            "Oblex Elder",
+            "Alhoon",
+            "Mind Flayer Lich",
+            "Grimlock"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Slaad",
+        "creature_ids": [
+            "Slaad Tadpole",
+            "Slaad Rosso",
+            "Slaad Blu",
+            "Slaad Verde",
+            "Slaad Grigio",
+            "Slaad della Morte"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Star Spawn",
+        "creature_ids": [
+            "Star Spawn Grue",
+            "Star Spawn Mangler",
+            "Star Spawn Hulk",
+            "Star Spawn Seer",
+            "Star Spawn Larva "
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Githzerai",
+        "creature_ids": [
+            "Githzerai Monaco",
+            "Githzerai Zerth",
+            "Githzerai Enlightened",
+            "Githzerai Anarch"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Githyanki",
+        "creature_ids": [
+            "Githyanki Guerriero",
+            "Githyanki Cavalliere",
+            "Githyanki Gish",
+            "Githyanki Kith'rak",
+            "Githyanki Supreme Commander"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Sahuagin",
+        "creature_ids": [
+            "Sahuagin",
+            "Sahuagin Sacerdotessa",
+            "Sahuagin Barone"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Firenewt",
+        "creature_ids": [
+            "Gigante Strider",
+            "Firenewt Warriror",
+            "Firenewt Warlock of Imix"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Lucertoloide",
+        "creature_ids": [
+            "Lucertoloide",
+            "Lucertoloide Sciamano",
+            "Lucertoloide Re",
+            "Lucertoloide Regina"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Neogi",
+        "creature_ids": [
+            "Neogi Hatchling",
+            "Neogi",
+            "Neogi Master",
+            "Gray Render"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Yuan-Ti",
+        "creature_ids": [
+            "Yuan-ti Malison 3",
+            "Yuan-ti Mind Whisperer",
+            "Yuan-ti Nightmare Speaker",
+            "Yuan-ti Pit Master",
+            "Yuan-Ti Abominio",
+            "Yuan-ti Malison 1",
+            "Yuan-ti Malison 2",
+            "Yuan-ti Anathema",
+            "Yuan-Ti Sangue Puro",
+            "Yuan-Ti Broodguard"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Xvart",
+        "creature_ids": [
+            "Xvart",
+            "Xvart Warlock of Raxivort"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Coboldo",
+        "creature_ids": [
+            "Coboldo",
+            "Coboldo Alato",
+            "Coboldo Inventore",
+            "Coboldo Dragonshield",
+            "Coboldo Scale Sorcerer"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Maligno",
+        "creature_ids": [
+            "Arbusto Maligno",
+            "Ago Maligno",
+            "Rampicante Maligno"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Gnoll",
+        "creature_ids": [
+            "Maw Demon",
+            "Gnoll zanna di Yeenoghu",
+            "Shoosuva",
+            "Gnoll Witherling",
+            "Gnoll",
+            "Gnoll Hunter",
+            "Gnoll Flesh Gnawer",
+            "Gnoll Signore del Branco",
+            "Gnoll Flind"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Tortle",
+        "creature_ids": [
+            "Tortle",
+            "Tortle Druid"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Grung",
+        "creature_ids": [
+            "Grung",
+            "Grung Wildling",
+            "Grung Elite Warrior"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Troll",
+        "creature_ids": [
+            "Troll",
+            "Troll Venom",
+            "Troll Rot",
+            "Troll Spirit",
+            "Troll, Dire"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Licantropo",
+        "creature_ids": [
+            "Sciacallo Mannaro",
+            "Ratto Mannaro",
+            "Lupo Mannaro",
+            "Cinghiale Mannaro",
+            "Tigre Mannara",
+            "Orso Mannaro"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Bullywug",
+        "creature_ids": [
+            "Froghemoth",
+            "Bullywug"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Genio",
+        "creature_ids": [
+            "Marid",
+            "Djinni",
+            "Efreeti",
+            "Dao"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Kuo-toa",
+        "creature_ids": [
+            "Kuo-toa",
+            "Kuo-toa Esecutore",
+            "Kuo-toa Sacerdote"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "NPC",
+        "creature_ids": [
+            "Accolito",
+            "Sacerdote",
+            "Kraken Priest",
+            "War Priest",
+            "Guardia",
+            "Guerriero Tribale",
+            "Picchiatore",
+            "Berserker",
+            "Archer",
+            "Veterano",
+            "Cavalliere",
+            "Martial Arts Adept",
+            "Gladiatore",
+            "Blackguard",
+            "Champion",
+            "Warlord",
+            "Bandito",
+            "Capo dei Banditi",
+            "Swashbuckler",
+            "Master Thief",
+            "Assassino",
+            "Druido",
+            "Archdruid",
+            "Cultista",
+            "Apprentice Wizard",
+            "Cultusta Fanatico",
+            "Illusionist",
+            "Enchanter",
+            "Transmuter",
+            "Conjurer",
+            "Mago",
+            "Diviner",
+            "Abjurer",
+            "Evoker",
+            "Necromancer",
+            "Archimago",
+            "Warlock of the Archfey",
+            "Warlock of the Great Old One",
+            "Warlock of the Immondo",
+            "Popolano",
+            "Nobile",
+            "Scout",
+            "Spia",
+            "Bard"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Sociale",
+        "creature_ids": [
+            "Aboleth ",
+            "Gauth",
+            "Death Kiss",
+            "Beholder",
+            "Mindwitness",
+            "Mind Flayer",
+            "Mind Flayer Arcanist",
+            "Mind Flayer Psion",
+            "Ulitharid",
+            "Neothelid",
+            "Elder Brain",
+            "Neogi Hatchling",
+            "Neogi",
+            "Neogi Master",
+            "Slaad Tadpole",
+            "Slaad Rosso",
+            "Slaad Blu",
+            "Slaad Verde",
+            "Slaad Grigio",
+            "Slaad della Morte",
+            "Monodrone",
+            "Duodrone",
+            "Tridrone",
+            "Quadrone",
+            "Pentadrone",
+            "Drago d'Ombra Rosso Giovane",
+            "Drago Bianco Cucciolo",
+            "Drago Bianco Giovane",
+            "Drago Bianco Adulto",
+            "Drago Bianco Antico",
+            "Draco Guardia Bianca",
+            "Draco Guardia Blu",
+            "Drago Blu Cucciolo",
+            "Drago Blu Giovane",
+            "Drago Blu Adulto",
+            "Drago Blu Antico",
+            "Drago Nero Cucciolo",
+            "Drago Nero Giovane",
+            "Drago Nero Adulto",
+            "Drago Nero Antico",
+            "Draco Guardia Nera",
+            "Draco Guardia Rossa",
+            "Drago Rosso Cucciolo",
+            "Drago Rosso Giovane",
+            "Drago Rosso Adulto",
+            "Drago Rosso Antico",
+            "Draco Guardia Verde",
+            "Drago Verde Cucciolo",
+            "Drago Verde Giovane",
+            "Drago Verde Adulto",
+            "Drago Verde Antico",
+            "Drago Fatato Arancione",
+            "Drago Fatato Blu",
+            "Drago Fatato Giallo",
+            "Drago Fatato Indaco",
+            "Drago Fatato Rosso",
+            "Drago Fatato Verde",
+            "Drago Fatato Viola",
+            "Drago Guardia Bianco",
+            "Drago Guardia Blu",
+            "Drago Guardia Nero",
+            "Drago Guardia Rosso",
+            "Drago d'Argento Cucciolo",
+            "Drago d'Argento Giovane",
+            "Drago d'Argento Adulto",
+            "Drago d'Argento Antico",
+            "Drago di Bronzo Cucciolo",
+            "Drago di Bronzo Giovane",
+            "Drago di Bronzo Adulto",
+            "Drago di Bronzo Antico",
+            "Drago d'Oro Cucciolo",
+            "Drago d'Oro Giovane",
+            "Drago d'Oro Adulto",
+            "Drago d'Oro Antico",
+            "Drago d'Ottone Cucciolo",
+            "Drago d'Ottone Giovane",
+            "Drago d'Ottone Adulto",
+            "Drago d'Ottone Antico",
+            "Drago di Rame Cucciolo",
+            "Drago di Rame Giovane",
+            "Drago di Rame Adulto",
+            "Drago di Rame Antico",
+            "Marid",
+            "Djinni",
+            "Azer",
+            "Efreeti",
+            "Dao",
+            "Megera Marina",
+            "Megera Verde",
+            "Annis Hag",
+            "Bheur Hag",
+            "Boggle",
+            "Pixie",
+            "Spiritello",
+            "Satiro",
+            "Darkling",
+            "Driade",
+            "Quickling",
+            "Darkling Elder",
+            "Redcap",
+            "Korred",
+            "Gigante delle Colline",
+            "Mouth of Grolantor",
+            "Gigante del Fuoco",
+            "Gigante del Fuoco - Dreadnought",
+            "Gigante del Gelo",
+            "Gigante del Gelo - Everlasting One",
+            "Gigante delle Nuvole",
+            "Gigante delle Nuvole - Smiling One",
+            "Gigante delle Pietre",
+            "Gigante delle Pietre - Dreamwalker",
+            "Gigante delle Tempeste",
+            "Gigante delle Tempeste - Quinta essenza",
+            "Ciclope",
+            "Half-Ogre",
+            "Ogre",
+            "Ogre Bolt Launcher",
+            "Ogre Howdah",
+            "Ogre Chain Brute",
+            "Ogre Battering Ram",
+            "Oni",
+            "Troll",
+            "Troll Venom",
+            "Troll Rot",
+            "Troll Spirit",
+            "Troll, Dire",
+            "Mane",
+            "Dretch",
+            "Quasit",
+            "Babau",
+            "Demone d'Ombra",
+            "Barlgura",
+            "Vrock",
+            "Chasme",
+            "Hezrou",
+            "Glabrezu",
+            "Yochlol",
+            "Nalfeshnee",
+            "Marilith",
+            "Goristro",
+            "Balor",
+            "Rutterkin",
+            "Bulezau",
+            "Dybbuk",
+            "Maurezhi",
+            "Alkilith",
+            "Wastrilith",
+            "Nabassu",
+            "Sibriex",
+            "Bael",
+            "Molydeus",
+            "Baphomet",
+            "Fraz-Urb'luu",
+            "Juiblex",
+            "Graz'zt",
+            "Yeenoghu",
+            "Demogorgon",
+            "Orcus",
+            "Lemure",
+            "Imp",
+            "Diavolo Spinato",
+            "Diavolo Barbuto",
+            "Diavolo Uncinato",
+            "Diavolo delle Catene",
+            "Diavolo d'Ossa",
+            "Diavolo Cornuto",
+            "Erinni",
+            "Diavolo del ghiaccio ",
+            "Diavolo della Fossa",
+            "Arciduca",
+            "Duca",
+            "Nupperibo",
+            "Merregon",
+            "White Abishai",
+            "Armanite",
+            "Black Abishai",
+            "Orthon",
+            "Narzugon",
+            "Green Abishai",
+            "Hellfire Engine",
+            "Titivilus",
+            "Blue Abishai",
+            "Red Abishai",
+            "Hutijin",
+            "Moloch",
+            "Geryon",
+            "Zuggtmoy",
+            "Zariel",
+            "Draegloth",
+            "Maw Demon",
+            "Gnoll zanna di Yeenoghu",
+            "Shoosuva",
+            "Barghest",
+            "Incubo",
+            "Succube",
+            "Cambion",
+            "Megera Notturna",
+            "Tanarukk",
+            "Merrenoloth",
+            "Mezzoloth",
+            "Dhergoloth",
+            "Canoloth",
+            "Nycaloth",
+            "Hydroloth",
+            "Yagnoloth",
+            "Arcanaloth",
+            "Oinoloth",
+            "Ultroloth",
+            "Rakshasa",
+            "Banderhobb",
+            "Naga Spirituale",
+            "Naga Guardiana",
+            "Yuan-ti Malison 3",
+            "Yuan-ti Mind Whisperer",
+            "Yuan-ti Nightmare Speaker",
+            "Yuan-ti Pit Master",
+            "Yuan-Ti Abominio",
+            "Yuan-ti Malison 1",
+            "Yuan-ti Malison 2",
+            "Yuan-ti Anathema",
+            "Doppelganger",
+            "Centauro",
+            "Merrow",
+            "Alhoon",
+            "Mind Flayer Lich",
+            "Bone Naga Spirit",
+            "Bone Naga Guardian",
+            "Tiranno della Morte",
+            "Adult Blue Dracholich",
+            "Demilich",
+            "Lich",
+            "Mummy Lord",
+            "Vampire Spawn",
+            "Vampire",
+            "Arbusto Maligno",
+            "Ago Maligno",
+            "Rampicante Maligno",
+            "Miconide Germoglio",
+            "Miconide Adulto",
+            "Quaggoth Spore Servant",
+            "Miconide Sovrano",
+            "Treant",
+            "Vegepygmy",
+            "Vegepygmy Thorny",
+            "Vegepygmy Chief",
+            "Bugbear",
+            "Bugbear Chief",
+            "Bullywug",
+            "Coboldo",
+            "Coboldo Alato",
+            "Coboldo Inventore",
+            "Coboldo Dragonshield",
+            "Coboldo Scale Sorcerer",
+            "Half-Red Dragon Veteran",
+            "Drow",
+            "Drow Combattente Scelto",
+            "Drow Mago",
+            "Drow Sacerdotessa di Lolth",
+            "Drow House Captain",
+            "Drow Shadowblade",
+            "Drow Arachnomancer",
+            "Drow Inquisitor",
+            "Drow Favored Consort",
+            "Drow Matron Mother",
+            "Duergar",
+            "Duergar Soulblade",
+            "Duergar Hammerer",
+            "Duergar Kavalrachni",
+            "Duergar Mind Master",
+            "Duergar Stone Guard",
+            "Duergar Xarrorn",
+            "Duergar Screamer",
+            "Duergar Warlord",
+            "Duergar Despot",
+            "Firenewt Warriror",
+            "Firenewt Warlock of Imix",
+            "Githyanki Guerriero",
+            "Githyanki Cavalliere",
+            "Githyanki Gish",
+            "Githyanki Kith'rak",
+            "Githyanki Supreme Commander",
+            "Githzerai Monaco",
+            "Githzerai Zerth",
+            "Githzerai Enlightened",
+            "Githzerai Anarch",
+            "Gnoll",
+            "Gnoll Hunter",
+            "Gnoll Flesh Gnawer",
+            "Gnoll Signore del Branco",
+            "Gnoll Flind",
+            "Goblin",
+            "Goblin Capo",
+            "Goblin Nilbog",
+            "Buoyahg Buoyahg Buoyahg",
+            "Booyahg Caster",
+            "Booyahg Frusta",
+            "Booyahg Wielder",
+            "Grung",
+            "Grung Wildling",
+            "Grung Elite Warrior",
+            "Hobgoblin",
+            "Hobgoblin Iorn Shadow",
+            "Hobgoblin Capitano",
+            "Hobgoblin Devastatore",
+            "Hobgoblin Signore della Guerra",
+            "Kuo-toa",
+            "Kuo-toa Esecutore",
+            "Kuo-toa Sacerdote",
+            "Sciacallo Mannaro",
+            "Ratto Mannaro",
+            "Lupo Mannaro",
+            "Cinghiale Mannaro",
+            "Tigre Mannara",
+            "Orso Mannaro",
+            "Lucertoloide",
+            "Lucertoloide Sciamano",
+            "Lucertoloide Re",
+            "Lucertoloide Regina",
+            "Sea Spawn",
+            "Deep Scion",
+            "Grimlock",
+            "Accolito",
+            "Sacerdote",
+            "Kraken Priest",
+            "War Priest",
+            "Guardia",
+            "Guerriero Tribale",
+            "Picchiatore",
+            "Berserker",
+            "Archer",
+            "Veterano",
+            "Cavalliere",
+            "Martial Arts Adept",
+            "Gladiatore",
+            "Blackguard",
+            "Champion",
+            "Warlord",
+            "Bandito",
+            "Capo dei Banditi",
+            "Swashbuckler",
+            "Master Thief",
+            "Assassino",
+            "Druido",
+            "Archdruid",
+            "Cultista",
+            "Apprentice Wizard",
+            "Cultusta Fanatico",
+            "Illusionist",
+            "Enchanter",
+            "Transmuter",
+            "Conjurer",
+            "Mago",
+            "Diviner",
+            "Abjurer",
+            "Evoker",
+            "Necromancer",
+            "Archimago",
+            "Warlock of the Archfey",
+            "Warlock of the Great Old One",
+            "Warlock of the Immondo",
+            "Popolano",
+            "Nobile",
+            "Scout",
+            "Spia",
+            "Bard",
+            "Orc Nurtured One of Yurtrus",
+            "Orco",
+            "Orc Claw of Luthic",
+            "Orc Hand of Yurtrus",
+            "Orco Occhio Gruumsh",
+            "Orog",
+            "Orc Red Fang of Shargaas",
+            "Orc Blade of Ilneval",
+            "Orco Capotribù Guerriero",
+            "Aarakockra",
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter",
+            "Sahuagin",
+            "Sahuagin Sacerdotessa",
+            "Sahuagin Barone",
+            "Shadar-Kai Shadow Dancer",
+            "Shadar-Kai Gloom Weaver",
+            "Shadar-Kai Soul Monger",
+            "Tortle",
+            "Tortle Druid",
+            "Xvart",
+            "Xvart Warlock of Raxivort",
+            "Yuan-Ti Sangue Puro",
+            "Yuan-Ti Broodguard",
+            "Derro",
+            "Derro Savant",
+            "Merfolk",
+            "Troglodita",
+            "Kenku",
+            "Deep Gnome (Svirfneblin)",
+            "Thri-kreen",
+            "Quaggoth",
+            "Giff"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Mago",
+        "creature_ids": [
+            "Buoyahg Buoyahg Buoyahg",
+            "Cultista",
+            "Apprentice Wizard",
+            "Cultusta Fanatico",
+            "Illusionist",
+            "Enchanter",
+            "Transmuter",
+            "Conjurer",
+            "Mago",
+            "Diviner",
+            "Abjurer",
+            "Evoker",
+            "Necromancer",
+            "Archimago"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Drow",
+        "creature_ids": [
+            "Balhannoth",
+            "Draegloth",
+            "Chitine",
+            "Choldrith",
+            "Drider",
+            "Drow",
+            "Drow Combattente Scelto",
+            "Drow Mago",
+            "Drow Sacerdotessa di Lolth",
+            "Drow House Captain",
+            "Drow Shadowblade",
+            "Drow Arachnomancer",
+            "Drow Inquisitor",
+            "Drow Favored Consort",
+            "Drow Matron Mother"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Nano",
+        "creature_ids": [
+            "Duergar",
+            "Duergar Soulblade",
+            "Duergar Hammerer",
+            "Duergar Kavalrachni",
+            "Duergar Mind Master",
+            "Duergar Stone Guard",
+            "Duergar Xarrorn",
+            "Duergar Screamer",
+            "Duergar Warlord",
+            "Duergar Despot"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Chierico",
+        "creature_ids": [
+            "Accolito",
+            "Sacerdote",
+            "Kraken Priest",
+            "War Priest"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Combattente",
+        "creature_ids": [
+            "Guardia",
+            "Guerriero Tribale",
+            "Picchiatore",
+            "Berserker",
+            "Archer",
+            "Veterano",
+            "Cavalliere",
+            "Martial Arts Adept",
+            "Gladiatore",
+            "Blackguard",
+            "Champion",
+            "Warlord"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Criminale",
+        "creature_ids": [
+            "Bandito",
+            "Capo dei Banditi",
+            "Swashbuckler",
+            "Master Thief",
+            "Assassino"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Duergar",
+        "creature_ids": [
+            "Steeder Male",
+            "Steeder Female",
+            "Duergar",
+            "Duergar Soulblade",
+            "Duergar Hammerer",
+            "Duergar Kavalrachni",
+            "Duergar Mind Master",
+            "Duergar Stone Guard",
+            "Duergar Xarrorn",
+            "Duergar Screamer",
+            "Duergar Warlord",
+            "Duergar Despot"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Elfo",
+        "creature_ids": [
+            "Drow",
+            "Drow Combattente Scelto",
+            "Drow Mago",
+            "Drow Sacerdotessa di Lolth",
+            "Drow House Captain",
+            "Drow Shadowblade",
+            "Drow Arachnomancer",
+            "Drow Inquisitor",
+            "Drow Favored Consort",
+            "Drow Matron Mother",
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter",
+            "Shadar-Kai Shadow Dancer",
+            "Shadar-Kai Gloom Weaver",
+            "Shadar-Kai Soul Monger"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Warlock",
+        "creature_ids": [
+            "Death lock Wight",
+            "Death lock",
+            "Death lock Mastermind ",
+            "Warlock of the Archfey",
+            "Warlock of the Great Old One",
+            "Warlock of the Immondo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Druido",
+        "creature_ids": [
+            "Druido",
+            "Archdruid"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Shadar-Kai",
+        "creature_ids": [
+            "Shadow Mastiff",
+            "Shadow Mastiff Alpha",
+            "Shadar-Kai Shadow Dancer",
+            "Shadar-Kai Gloom Weaver",
+            "Shadar-Kai Soul Monger"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Gigante",
+        "creature_ids": [
+            "Scarabeo di Fuoco Gigante",
+            "Ratto Gigante",
+            "Donnola Gigante",
+            "Granchio Gigante",
+            "Rana Gigante",
+            "Centopiedi Gigante",
+            "Gufo Gigante",
+            "Lucertola Gigante",
+            "Pipistrello Gigante",
+            "Ragno Lupo Gigante",
+            "Serpente Velenoso Gigante",
+            "Tasso Gigante",
+            "Vespa Gigante",
+            "Capra Gigante",
+            "Cavalluccio Marino Gigante",
+            "Iena Gigante",
+            "Ragno Gigante",
+            "Avvoltoio Gigante",
+            "Polipo Gigante",
+            "Rospo Gigante",
+            "Cinghiale Gigante",
+            "Serpente Stritolatore Gigante",
+            "Aquila Gigante",
+            "Alce Gigante",
+            "Scorpione Gigante",
+            "Coccodrillo Gigante",
+            "Squalo Gigante",
+            "Gorilla Gigante",
+            "Gigante delle Colline",
+            "Mouth of Grolantor",
+            "Gigante del Fuoco",
+            "Gigante del Fuoco - Dreadnought",
+            "Gigante del Gelo",
+            "Gigante del Gelo - Everlasting One",
+            "Gigante delle Nuvole",
+            "Gigante delle Nuvole - Smiling One",
+            "Gigante delle Pietre",
+            "Gigante delle Pietre - Dreamwalker",
+            "Gigante delle Tempeste",
+            "Gigante delle Tempeste - Quinta essenza",
+            "Gigante Strider",
+            "Behir"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Pietre",
+        "creature_ids": [
+            "Gigante delle Pietre",
+            "Gigante delle Pietre - Dreamwalker"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Nuvole",
+        "creature_ids": [
+            "Gigante delle Nuvole",
+            "Gigante delle Nuvole - Smiling One"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ghiaccio",
+        "creature_ids": [
+            "Frost Salamander",
+            "Gigante del Gelo",
+            "Gigante del Gelo - Everlasting One"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tempeste",
+        "creature_ids": [
+            "Gigante delle Tempeste",
+            "Gigante delle Tempeste - Quinta essenza"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Colline",
+        "creature_ids": [
+            "Gigante delle Colline",
+            "Mouth of Grolantor"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Fuoco",
+        "creature_ids": [
+            "Scarabeo di Fuoco Gigante",
+            "Elementale del Fuoco",
+            "Phoenix",
+            "Azer",
+            "Efreeti",
+            "Magmin",
+            "Serpente di Fuoco",
+            "Salamandra",
+            "Elemental Myrmidon, Fire",
+            "Gigante del Fuoco",
+            "Gigante del Fuoco - Dreadnought",
+            "Segugio Infernale"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Endemico",
+        "creature_ids": [
+            "Chuul",
+            "Gazer",
+            "Spectator",
+            "Fauce Gorgogliante",
+            "Nothic",
+            "Grell",
+            "Otyugh",
+            "Cloaker",
+            "Dimitrodonte",
+            "Hadrosaurus",
+            "Pterodattilo",
+            "Velociraptor",
+            "Deinonychus",
+            "Allosauro",
+            "Plesiosauro",
+            "Quetzalcoatlus",
+            "Anchilosauro",
+            "Stegosauro",
+            "Brontosauro",
+            "Triceratopo",
+            "Tirannosauro Rex",
+            "Gorilla",
+            "Orso Nero",
+            "Sciame di Insetti",
+            "Sciame di Vespe",
+            "Vespa Gigante",
+            "Coccodrillo",
+            "Squalo Tropicale",
+            "Leone",
+            "Iena Gigante",
+            "Lupo Feroce",
+            "Orso Bruno",
+            "Ragno Gigante",
+            "Tigre",
+            "Avvoltoio Gigante",
+            "Polipo Gigante",
+            "Sciame di Piragna",
+            "Orso da Caverna",
+            "Cinghiale Gigante",
+            "Sciame di Serpenti Velenosi",
+            "Serpente Stritolatore Gigante",
+            "Orso Polare",
+            "Squalo Cacciatore",
+            "Tigre dai Denti a Sciabola",
+            "Scorpione Gigante",
+            "Killer Whale",
+            "Lupo Invernale",
+            "Sciame di Ratti Cranio",
+            "Coccodrillo Gigante",
+            "Squalo Gigante",
+            "Gorilla Gigante",
+            "Viverna",
+            "Mephit del Fumo ",
+            "Mephit del Magma",
+            "Mephit del Vapore",
+            "Mephit del Fango",
+            "Mephit del Ghiaccio ",
+            "Mephit della Polvere",
+            "Elementare dell'Acqua",
+            "Elemental Myrmidon, Water",
+            "Elementare dell'Aria",
+            "Elemental Myrmidon, Air",
+            "Elementale del Fuoco",
+            "Phoenix",
+            "Magmin",
+            "Serpente di Fuoco",
+            "Salamandra",
+            "Elemental Myrmidon, Fire",
+            "Elementare della Terra",
+            "Flail Snail",
+            "Xorn",
+            "Elemental Myrmidon, Earth",
+            "Meenlock",
+            "Fomorian",
+            "Ettin",
+            "Vargouille",
+            "Segugio Infernale",
+            "Cavallo degli incubi",
+            "Howler",
+            "Oblex Spawn",
+            "Oblex Adult",
+            "Oblex Elder",
+            "Melma Grigia",
+            "Ameba Paglierina",
+            "Cubo Gelatinoso",
+            "Slithering Tracker",
+            "Protoplasma Nero",
+            "Peryton",
+            "Manticora",
+            "Catoblepa",
+            "Chimera",
+            "Roc",
+            "Cuspide Letale",
+            "Fustigatore",
+            "Behir",
+            "Worg",
+            "Grick",
+            "Grick Alpha",
+            "Kruthik Young",
+            "Kruthik, Adult",
+            "Kruthik Hive Lord",
+            "Mantoscuro",
+            "Trapper",
+            "Ettercap",
+            "Phase Spider",
+            "Remorhaz Young",
+            "Remorhaz",
+            "Shadow Mastiff",
+            "Shadow Mastiff Alpha",
+            "Sorrowsworn, Wretched",
+            "Sorrowsworn, Lost",
+            "Sorrowsworn, Lonely",
+            "Sorrowsworn, Hungry",
+            "Sorrowsworn, Angry",
+            "Astral Dreadnought",
+            "Kraken",
+            "Tarrasque",
+            "Carrion Crawler",
+            "Verme Porpureo",
+            "Yeti",
+            "Yeti Abominevole",
+            "Cockatrice",
+            "Rugginofago",
+            "Arpia",
+            "Cane della Morte",
+            "Mimic",
+            "Ankheg",
+            "Displacer Beast",
+            "Orsogufo",
+            "Basilisco",
+            "Cave Fisher",
+            "Girallon",
+            "Gorgon",
+            "Bulette",
+            "Tlincalli",
+            "Umber Hulk",
+            "Spettro",
+            "Sword Wraith Warrior",
+            "Wight",
+            "Banshee",
+            "Fantasma",
+            "Ghoul",
+            "Ghast",
+            "Mummy",
+            "Skeleton",
+            "Scheletro Cavallo da Guerra",
+            "Minotaur Skeleton",
+            "Flameskull",
+            "Crawling Claw",
+            "Zombie",
+            "Beholder Zombie",
+            "Spawn of Kyuss",
+            "Shadow",
+            "Fuoco Fatuo",
+            "Vampiric Mist",
+            "Segugi di Yeth",
+            "Cumulo Strisciante",
+            "Corpse Flower "
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Mutaforma",
+        "creature_ids": [
+            "Slaad Verde",
+            "Slaad Grigio",
+            "Slaad della Morte",
+            "Incubo",
+            "Succube",
+            "Rakshasa",
+            "Yuan-ti Malison 3",
+            "Yuan-ti Mind Whisperer",
+            "Yuan-ti Nightmare Speaker",
+            "Yuan-ti Pit Master",
+            "Yuan-Ti Abominio",
+            "Yuan-ti Malison 1",
+            "Yuan-ti Malison 2",
+            "Yuan-ti Anathema",
+            "Mimic",
+            "Doppelganger",
+            "Vampire",
+            "Deep Scion"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Megera",
+        "creature_ids": [
+            "Megera Marina",
+            "Megera Verde",
+            "Annis Hag",
+            "Bheur Hag",
+            "Megera Notturna",
+            "Banderhobb"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Elementale",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Mephit",
+        "creature_ids": [
+            "Mephit del Fumo ",
+            "Mephit del Magma",
+            "Mephit del Vapore",
+            "Mephit del Fango",
+            "Mephit del Ghiaccio ",
+            "Mephit della Polvere"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Celestiale",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Angelo",
+        "creature_ids": [
+            "Deva",
+            "Planetar",
+            "Solar"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Innocuo",
+        "creature_ids": [
+            "Gatto",
+            "Rana",
+            "Aquila",
+            "Babbuino",
+            "Cervo",
+            "Corvi",
+            "Donnola",
+            "Falco",
+            "Gufo",
+            "Iena",
+            "Lucertola",
+            "Pipistrello",
+            "Ragno",
+            "Riccio",
+            "Scarabeo di Fuoco Gigante",
+            "Sciacallo",
+            "Scorpione",
+            "Tasso",
+            "Volpe",
+            "Avvoltoio",
+            "Capra",
+            "Cavalluccio Marino",
+            "Granchio",
+            "Piragna",
+            "Polipo",
+            "Mastino",
+            "Ratto Gigante",
+            "Donnola Gigante",
+            "Falco di Sangue",
+            "Serpente Velenoso",
+            "Serpente Volante",
+            "Uccello Stigeo",
+            "Cammello",
+            "Delfino",
+            "Granchio Gigante",
+            "Mulo",
+            "Pony",
+            "Cavallo Selvaggio",
+            "Sciame di Ratti",
+            "Rana Gigante",
+            "Alce",
+            "Beccoaguzzo",
+            "Centopiedi Gigante",
+            "Cinghiale",
+            "Gufo Gigante",
+            "Lucertola Gigante",
+            "Lupo",
+            "Pantera",
+            "Pipistrello Gigante",
+            "Ragno Lupo Gigante",
+            "Sciame di Corvi",
+            "Sciame di Pipistrelli",
+            "Serpente Stritolatore",
+            "Serpente Velenoso Gigante",
+            "Tasso Gigante",
+            "Cavallo da Galoppo",
+            "Cavallo da Tiro",
+            "Deep Rothe",
+            "Mucca",
+            "Ox",
+            "Capra Gigante",
+            "Cavallo da Guerra",
+            "Cavalluccio Marino Gigante",
+            "Swarm of Rot Grubs",
+            "Rospo Gigante",
+            "Cane Intermittente",
+            "Boleto Stridente",
+            "Fungo Viola",
+            "Spora Gassosa"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Golem",
+        "creature_ids": [
+            "Golem di Carne",
+            "Golem di Argilla",
+            "Golem Di Pietra",
+            "Golem Di Ferro"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Costrutto",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Steeder",
+        "creature_ids": [
+            "Steeder Male",
+            "Steeder Female"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Boss",
+        "creature_ids": [
+            "Aboleth ",
+            "Gauth",
+            "Death Kiss",
+            "Beholder",
+            "Elder Brain",
+            "Star Spawn Seer",
+            "Star Spawn Larva ",
+            "Marut",
+            "Drago d'Ombra Rosso Giovane",
+            "Testuggine Dragona",
+            "Marid",
+            "Morkoth",
+            "Leviathan",
+            "Djinni",
+            "Cacciatore Invisibile",
+            "Elder Tempest",
+            "Phoenix",
+            "Efreeti",
+            "Dao",
+            "Zaratan",
+            "Megera Marina",
+            "Megera Verde",
+            "Annis Hag",
+            "Bheur Hag",
+            "Gigante del Fuoco - Dreadnought",
+            "Gigante del Gelo - Everlasting One",
+            "Gigante delle Nuvole - Smiling One",
+            "Gigante delle Pietre - Dreamwalker",
+            "Gigante delle Tempeste - Quinta essenza",
+            "Baphomet",
+            "Fraz-Urb'luu",
+            "Juiblex",
+            "Graz'zt",
+            "Yeenoghu",
+            "Demogorgon",
+            "Orcus",
+            "Diavolo della Fossa",
+            "Arciduca",
+            "Duca",
+            "Hutijin",
+            "Moloch",
+            "Geryon",
+            "Zuggtmoy",
+            "Zariel",
+            "Megera Notturna",
+            "Minotauro",
+            "Froghemoth",
+            "Behir",
+            "Kruthik Hive Lord",
+            "Astral Dreadnought",
+            "Kraken",
+            "Tarrasque",
+            "Yuan-ti Anathema",
+            "Leucrotta",
+            "Lamia",
+            "Medusa",
+            "Hydra",
+            "Tiranno della Morte",
+            "Wraith",
+            "Sword Wraith Commander",
+            "Adult Blue Dracholich",
+            "Demilich",
+            "Lich",
+            "Mummy Lord",
+            "Death Knight",
+            "Bodak",
+            "Boneclaw",
+            "Eidolon",
+            "Devourer",
+            "Skull Lord",
+            "Nightwalker",
+            "Treant"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Marino",
+        "creature_ids": [
+            "Sea Spawn",
+            "Deep Scion"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Non Violento",
+        "creature_ids": [
+            "Flumph",
+            "Aurochs",
+            "Aquila Gigante",
+            "Rinoceronte",
+            "Alce Gigante",
+            "Elefante",
+            "Mammoth",
+            "Ippopotamo",
+            "Deva",
+            "Planetar",
+            "Solar",
+            "Pegaso",
+            "Couatl",
+            "Unicorn",
+            "Ki-rin",
+            "Empireo",
+            "Golem di Carne",
+            "Golem di Argilla",
+            "Golem Di Pietra",
+            "Golem Di Ferro",
+            "Homunculus",
+            "Spada Volante",
+            "Armatura Animata",
+            "Spaventapasseri",
+            "Tappeto Soffocante",
+            "Orrore Corazzato",
+            "Guardiano Protettore",
+            "Pseudodrago",
+            "Drago Fatato Arancione",
+            "Drago Fatato Blu",
+            "Drago Fatato Giallo",
+            "Drago Fatato Indaco",
+            "Drago Fatato Rosso",
+            "Drago Fatato Verde",
+            "Drago Fatato Viola",
+            "Drago d'Argento Cucciolo",
+            "Drago d'Argento Giovane",
+            "Drago d'Argento Adulto",
+            "Drago d'Argento Antico",
+            "Drago di Bronzo Cucciolo",
+            "Drago di Bronzo Giovane",
+            "Drago di Bronzo Adulto",
+            "Drago di Bronzo Antico",
+            "Drago d'Oro Cucciolo",
+            "Drago d'Oro Giovane",
+            "Drago d'Oro Adulto",
+            "Drago d'Oro Antico",
+            "Drago d'Ottone Cucciolo",
+            "Drago d'Ottone Giovane",
+            "Drago d'Ottone Adulto",
+            "Drago d'Ottone Antico",
+            "Drago di Rame Cucciolo",
+            "Drago di Rame Giovane",
+            "Drago di Rame Adulto",
+            "Drago di Rame Antico",
+            "Fatale dell'acqua",
+            "Azer",
+            "Gargoyle",
+            "Galeb Duhr",
+            "Boggle",
+            "Pixie",
+            "Spiritello",
+            "Satiro",
+            "Darkling",
+            "Driade",
+            "Quickling",
+            "Darkling Elder",
+            "Redcap",
+            "Korred",
+            "Incubo",
+            "Succube",
+            "Cambion",
+            "Stench Kow",
+            "Rakshasa",
+            "Ippogrifo",
+            "Grifone",
+            "Naga Guardiana",
+            "Ginosfinge",
+            "Androsfinge",
+            "Gray Render",
+            "Centauro",
+            "Merrow",
+            "Cespuglio risvegliato",
+            "Albero Risvegliato",
+            "Wood Woad",
+            "Githzerai Monaco",
+            "Githzerai Zerth",
+            "Githzerai Enlightened",
+            "Githzerai Anarch",
+            "Aarakockra",
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter",
+            "Merfolk",
+            "Troglodita",
+            "Kenku",
+            "Deep Gnome (Svirfneblin)",
+            "Thri-kreen",
+            "Quaggoth",
+            "Giff"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Mostruosità",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Yeti",
+        "creature_ids": [
+            "Yeti",
+            "Yeti Abominevole"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Sfinge",
+        "creature_ids": [
+            "Ginosfinge",
+            "Androsfinge"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Grick",
+        "creature_ids": [
+            "Grick",
+            "Grick Alpha"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Remorhaz",
+        "creature_ids": [
+            "Remorhaz Young",
+            "Remorhaz"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Sorrowsworn",
+        "creature_ids": [
+            "Sorrowsworn, Wretched",
+            "Sorrowsworn, Lost",
+            "Sorrowsworn, Lonely",
+            "Sorrowsworn, Hungry",
+            "Sorrowsworn, Angry"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Naga",
+        "creature_ids": [
+            "Naga Spirituale",
+            "Naga Guardiana",
+            "Bone Naga Spirit",
+            "Bone Naga Guardian"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Fustigatore",
+        "creature_ids": [
+            "Cuspide Letale",
+            "Fustigatore"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Titano",
+        "creature_ids": [
+            "Astral Dreadnought",
+            "Kraken",
+            "Tarrasque"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Kruthik",
+        "creature_ids": [
+            "Kruthik Young",
+            "Kruthik, Adult",
+            "Kruthik Hive Lord"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Verme",
+        "creature_ids": [
+            "Carrion Crawler",
+            "Verme Porpureo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Bestia Magica",
+        "creature_ids": [
+            "Ippogrifo",
+            "Peryton",
+            "Grifone",
+            "Minotauro",
+            "Manticora",
+            "Catoblepa",
+            "Chimera",
+            "Roc"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Quaggoth",
+        "creature_ids": [
+            "Quaggoth"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Giff",
+        "creature_ids": [
+            "Giff"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Melma",
+        "creature_ids": [
+            "Oblex Spawn",
+            "Oblex Adult",
+            "Oblex Elder",
+            "Melma Grigia",
+            "Ameba Paglierina",
+            "Cubo Gelatinoso",
+            "Slithering Tracker",
+            "Protoplasma Nero"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Oblex",
+        "creature_ids": [
+            "Oblex Spawn",
+            "Oblex Adult",
+            "Oblex Elder"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Servitore",
+        "creature_ids": [
+            "Chuul",
+            "Intellect Devourer",
+            "Star Spawn Grue",
+            "Balhannoth",
+            "Ratti Cranio",
+            "Sciame di Ratti Cranio",
+            "Clockwork Bronze Scout",
+            "Clockwork Iron Cobra",
+            "Clockwork Stone Defender",
+            "Clockwork Oaken Bolter",
+            "Frost Salamander",
+            "Lemure",
+            "Imp",
+            "Nupperibo",
+            "Chitine",
+            "Choldrith",
+            "Drider",
+            "Behir",
+            "Banderhobb",
+            "Shadow Mastiff",
+            "Skulk",
+            "Gray Render",
+            "Gnoll Witherling",
+            "Ogre Zombie",
+            "Grimlock"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Signore",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Aarakockra",
+        "creature_ids": [
+            "Aarakockra"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Eladrin",
+        "creature_ids": [
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Derro",
+        "creature_ids": [
+            "Derro",
+            "Derro Savant"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Merfolk",
+        "creature_ids": [
+            "Merfolk"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Troglodita",
+        "creature_ids": [
+            "Troglodita"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Kenku",
+        "creature_ids": [
+            "Kenku"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Gnomo",
+        "creature_ids": [
+            "Clockwork Bronze Scout",
+            "Clockwork Iron Cobra",
+            "Clockwork Stone Defender",
+            "Clockwork Oaken Bolter",
+            "Deep Gnome (Svirfneblin)"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Thri-kreen",
+        "creature_ids": [
+            "Thri-kreen"
+        ],
+        "is_faction": true
+    },
+    {
+        "name": "Sconosciuto",
+        "creature_ids": [
+            "Gazer",
+            "Spectator",
+            "Gauth",
+            "Star Spawn Grue",
+            "Star Spawn Mangler",
+            "Star Spawn Hulk",
+            "Star Spawn Seer",
+            "Star Spawn Larva ",
+            "Choker",
+            "Berbalang",
+            "Balhannoth",
+            "Stone Cursed",
+            "Orrore Corazzato",
+            "Cadaver Collector",
+            "Retriever",
+            "Steel Predator",
+            "Draco Guardia Verde",
+            "Drago Guardia Bianco",
+            "Drago Guardia Blu",
+            "Drago Guardia Nero",
+            "Drago Guardia Rosso",
+            "Fomorian",
+            "Mane",
+            "Dretch",
+            "Quasit",
+            "Babau",
+            "Demone d'Ombra",
+            "Barlgura",
+            "Vrock",
+            "Chasme",
+            "Hezrou",
+            "Glabrezu",
+            "Yochlol",
+            "Nalfeshnee",
+            "Marilith",
+            "Goristro",
+            "Balor",
+            "Rutterkin",
+            "Bulezau",
+            "Dybbuk",
+            "Maurezhi",
+            "Alkilith",
+            "Wastrilith",
+            "Nabassu",
+            "Sibriex",
+            "Bael",
+            "Molydeus",
+            "Diavolo Spinato",
+            "Diavolo Barbuto",
+            "Diavolo Uncinato",
+            "Diavolo delle Catene",
+            "Diavolo d'Ossa",
+            "Diavolo Cornuto",
+            "Erinni",
+            "Diavolo del ghiaccio ",
+            "Nupperibo",
+            "Merregon",
+            "White Abishai",
+            "Armanite",
+            "Black Abishai",
+            "Orthon",
+            "Narzugon",
+            "Green Abishai",
+            "Hellfire Engine",
+            "Titivilus",
+            "Blue Abishai",
+            "Red Abishai",
+            "Howler",
+            "Oblex Spawn",
+            "Oblex Adult",
+            "Oblex Elder",
+            "Melma Grigia",
+            "Ameba Paglierina",
+            "Cubo Gelatinoso",
+            "Slithering Tracker",
+            "Protoplasma Nero",
+            "Fustigatore",
+            "Kruthik Young",
+            "Kruthik, Adult",
+            "Kruthik Hive Lord",
+            "Naga Spirituale",
+            "Sorrowsworn, Wretched",
+            "Sorrowsworn, Lost",
+            "Sorrowsworn, Lonely",
+            "Sorrowsworn, Hungry",
+            "Sorrowsworn, Angry",
+            "Steeder Male",
+            "Steeder Female",
+            "Verme Porpureo",
+            "Skulk",
+            "Meazel",
+            "Hook Horror",
+            "Gray Render",
+            "Nagpa",
+            "Sword Wraith Warrior",
+            "Allip",
+            "Sword Wraith Commander",
+            "Adult Blue Dracholich",
+            "Death lock Wight",
+            "Death lock",
+            "Death lock Mastermind ",
+            "Boneclaw",
+            "Eidolon",
+            "Devourer",
+            "Skull Lord",
+            "Half-Red Dragon Veteran",
+            "Sea Spawn",
+            "Deep Scion",
+            "Xvart",
+            "Xvart Warlock of Raxivort",
+            "Derro",
+            "Derro Savant"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Interessante",
+        "creature_ids": [
+            "Aboleth ",
+            "Gazer",
+            "Spectator",
+            "Gauth",
+            "Death Kiss",
+            "Beholder",
+            "Elder Brain",
+            "Flumph",
+            "Fauce Gorgogliante",
+            "Nothic",
+            "Grell",
+            "Otyugh",
+            "Cloaker",
+            "Elefante",
+            "Mammoth",
+            "Ippopotamo",
+            "Deva",
+            "Planetar",
+            "Solar",
+            "Pegaso",
+            "Couatl",
+            "Unicorn",
+            "Ki-rin",
+            "Empireo",
+            "Golem di Carne",
+            "Golem di Argilla",
+            "Golem Di Pietra",
+            "Golem Di Ferro",
+            "Marut",
+            "Homunculus",
+            "Guardiano Protettore",
+            "Viverna",
+            "Drago d'Ombra Rosso Giovane",
+            "Testuggine Dragona",
+            "Drago Bianco Cucciolo",
+            "Drago Bianco Giovane",
+            "Drago Bianco Adulto",
+            "Drago Bianco Antico",
+            "Draco Guardia Bianca",
+            "Draco Guardia Blu",
+            "Drago Blu Cucciolo",
+            "Drago Blu Giovane",
+            "Drago Blu Adulto",
+            "Drago Blu Antico",
+            "Drago Nero Cucciolo",
+            "Drago Nero Giovane",
+            "Drago Nero Adulto",
+            "Drago Nero Antico",
+            "Draco Guardia Nera",
+            "Draco Guardia Rossa",
+            "Drago Rosso Cucciolo",
+            "Drago Rosso Giovane",
+            "Drago Rosso Adulto",
+            "Drago Rosso Antico",
+            "Drago Verde Cucciolo",
+            "Drago Verde Giovane",
+            "Drago Verde Adulto",
+            "Drago Verde Antico",
+            "Drago Fatato Arancione",
+            "Drago Fatato Blu",
+            "Drago Fatato Giallo",
+            "Drago Fatato Indaco",
+            "Drago Fatato Rosso",
+            "Drago Fatato Verde",
+            "Drago Fatato Viola",
+            "Drago d'Argento Cucciolo",
+            "Drago d'Argento Giovane",
+            "Drago d'Argento Adulto",
+            "Drago d'Argento Antico",
+            "Drago di Bronzo Cucciolo",
+            "Drago di Bronzo Giovane",
+            "Drago di Bronzo Adulto",
+            "Drago di Bronzo Antico",
+            "Drago d'Oro Cucciolo",
+            "Drago d'Oro Giovane",
+            "Drago d'Oro Adulto",
+            "Drago d'Oro Antico",
+            "Drago d'Ottone Cucciolo",
+            "Drago d'Ottone Giovane",
+            "Drago d'Ottone Adulto",
+            "Drago d'Ottone Antico",
+            "Drago di Rame Cucciolo",
+            "Drago di Rame Giovane",
+            "Drago di Rame Adulto",
+            "Drago di Rame Antico",
+            "Elementare dell'Acqua",
+            "Marid",
+            "Elemental Myrmidon, Water",
+            "Morkoth",
+            "Leviathan",
+            "Elementare dell'Aria",
+            "Djinni",
+            "Cacciatore Invisibile",
+            "Elemental Myrmidon, Air",
+            "Elder Tempest",
+            "Elementale del Fuoco",
+            "Phoenix",
+            "Azer",
+            "Efreeti",
+            "Elemental Myrmidon, Fire",
+            "Elementare della Terra",
+            "Flail Snail",
+            "Xorn",
+            "Galeb Duhr",
+            "Elemental Myrmidon, Earth",
+            "Zaratan",
+            "Megera Marina",
+            "Megera Verde",
+            "Annis Hag",
+            "Bheur Hag",
+            "Boggle",
+            "Pixie",
+            "Spiritello",
+            "Satiro",
+            "Darkling",
+            "Driade",
+            "Quickling",
+            "Darkling Elder",
+            "Redcap",
+            "Korred",
+            "Cane Intermittente",
+            "Gigante delle Colline",
+            "Mouth of Grolantor",
+            "Gigante del Fuoco",
+            "Gigante del Fuoco - Dreadnought",
+            "Gigante del Gelo",
+            "Gigante del Gelo - Everlasting One",
+            "Gigante delle Nuvole",
+            "Gigante delle Nuvole - Smiling One",
+            "Gigante delle Pietre",
+            "Gigante delle Pietre - Dreamwalker",
+            "Gigante delle Tempeste",
+            "Gigante delle Tempeste - Quinta essenza",
+            "Ciclope",
+            "Incubo",
+            "Succube",
+            "Cambion",
+            "Vargouille",
+            "Segugio Infernale",
+            "Cavallo degli incubi",
+            "Howler",
+            "Megera Notturna",
+            "Rakshasa",
+            "Catoblepa",
+            "Chimera",
+            "Roc",
+            "Froghemoth",
+            "Fustigatore",
+            "Behir",
+            "Grick Alpha",
+            "Banderhobb",
+            "Naga Spirituale",
+            "Naga Guardiana",
+            "Ettercap",
+            "Phase Spider",
+            "Remorhaz Young",
+            "Remorhaz",
+            "Ginosfinge",
+            "Androsfinge",
+            "Astral Dreadnought",
+            "Kraken",
+            "Tarrasque",
+            "Cockatrice",
+            "Rugginofago",
+            "Arpia",
+            "Cane della Morte",
+            "Mimic",
+            "Ankheg",
+            "Hook Horror",
+            "Leucrotta",
+            "Doppelganger",
+            "Displacer Beast",
+            "Orsogufo",
+            "Basilisco",
+            "Cave Fisher",
+            "Girallon",
+            "Lamia",
+            "Gorgon",
+            "Bulette",
+            "Tlincalli",
+            "Umber Hulk",
+            "Medusa",
+            "Hydra",
+            "Tiranno della Morte",
+            "Spettro",
+            "Sword Wraith Warrior",
+            "Wight",
+            "Banshee",
+            "Fantasma",
+            "Allip",
+            "Wraith",
+            "Sword Wraith Commander",
+            "Ghoul",
+            "Ghast",
+            "Adult Blue Dracholich",
+            "Demilich",
+            "Lich",
+            "Mummy",
+            "Mummy Lord",
+            "Skeleton",
+            "Scheletro Cavallo da Guerra",
+            "Minotaur Skeleton",
+            "Flameskull",
+            "Death lock Wight",
+            "Death lock",
+            "Death lock Mastermind ",
+            "Crawling Claw",
+            "Zombie",
+            "Beholder Zombie",
+            "Revenant",
+            "Spawn of Kyuss",
+            "Death Knight",
+            "Shadow",
+            "Fuoco Fatuo",
+            "Vampiric Mist",
+            "Bodak",
+            "Boneclaw",
+            "Eidolon",
+            "Devourer",
+            "Skull Lord",
+            "Nightwalker",
+            "Segugi di Yeth",
+            "Boleto Stridente",
+            "Fungo Viola",
+            "Treant",
+            "Cumulo Strisciante",
+            "Spora Gassosa",
+            "Wood Woad",
+            "Corpse Flower ",
+            "Githyanki Guerriero",
+            "Githyanki Cavalliere",
+            "Githyanki Gish",
+            "Githyanki Kith'rak",
+            "Githyanki Supreme Commander",
+            "Githzerai Monaco",
+            "Githzerai Zerth",
+            "Githzerai Enlightened",
+            "Githzerai Anarch",
+            "Sea Spawn",
+            "Deep Scion",
+            "Aarakockra",
+            "Eladrin, Autumn",
+            "Eladrin, Spring",
+            "Eladrin, Summer ",
+            "Eladrin, Winter",
+            "Troglodita",
+            "Thri-kreen",
+            "Quaggoth"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Ratto",
+        "creature_ids": [
+            "Ratti Cranio",
+            "Ratto Gigante",
+            "Sciame di Ratti",
+            "Sciame di Ratti Cranio"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Solitario",
+        "creature_ids": [
+            "Choker",
+            "Berbalang",
+            "Minotauro",
+            "Doppelganger",
+            "Nagpa",
+            "Allip"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Spia",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Clockwork",
+        "creature_ids": [
+            "Clockwork Bronze Scout",
+            "Clockwork Iron Cobra",
+            "Clockwork Stone Defender",
+            "Clockwork Oaken Bolter"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cavalluccio",
+        "creature_ids": [
+            "Cavalluccio Marino",
+            "Cavalluccio Marino Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Sciame",
+        "creature_ids": [
+            "Sciame di Ratti",
+            "Sciame di Corvi",
+            "Sciame di Pipistrelli",
+            "Sciame di Insetti",
+            "Sciame di Vespe",
+            "Swarm of Rot Grubs",
+            "Sciame di Piragna",
+            "Sciame di Serpenti Velenosi",
+            "Sciame di Ratti Cranio"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Bestiame",
+        "creature_ids": [
+            "Capra",
+            "Cammello",
+            "Mulo",
+            "Pony",
+            "Cavallo da Galoppo",
+            "Cavallo da Tiro",
+            "Deep Rothe",
+            "Mucca",
+            "Ox",
+            "Capra Gigante",
+            "Cavallo da Guerra",
+            "Aurochs",
+            "Stench Kow",
+            "Gigante Strider",
+            "Shadow Mastiff",
+            "Shadow Mastiff Alpha",
+            "Steeder Male",
+            "Steeder Female"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tasso",
+        "creature_ids": [
+            "Tasso",
+            "Tasso Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Serpente",
+        "creature_ids": [
+            "Serpente Velenoso",
+            "Serpente Volante",
+            "Serpente Stritolatore",
+            "Serpente Velenoso Gigante",
+            "Sciame di Serpenti Velenosi",
+            "Serpente Stritolatore Gigante",
+            "Serpente di Fuoco"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Volpe",
+        "creature_ids": [
+            "Volpe"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Uccello",
+        "creature_ids": [
+            "Uccello Stigeo",
+            "Beccoaguzzo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Larve",
+        "creature_ids": [
+            "Swarm of Rot Grubs"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Scorpione",
+        "creature_ids": [
+            "Scorpione"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Pipistrello",
+        "creature_ids": [
+            "Pipistrello",
+            "Pipistrello Gigante",
+            "Sciame di Pipistrelli"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Corvo",
+        "creature_ids": [
+            "Corvi",
+            "Sciame di Corvi"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Sciacallo",
+        "creature_ids": [
+            "Sciacallo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Scarabeo",
+        "creature_ids": [
+            "Scarabeo di Fuoco Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rana",
+        "creature_ids": [
+            "Rana",
+            "Rana Gigante",
+            "Rospo Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Riccio",
+        "creature_ids": [
+            "Riccio"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Polipo",
+        "creature_ids": [
+            "Polipo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Piragna",
+        "creature_ids": [
+            "Piragna"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Pantera",
+        "creature_ids": [
+            "Pantera"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Alce",
+        "creature_ids": [
+            "Alce"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Aquila",
+        "creature_ids": [
+            "Aquila",
+            "Aquila Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Avvoltoio",
+        "creature_ids": [
+            "Avvoltoio",
+            "Avvoltoio Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Scimmia",
+        "creature_ids": [
+            "Babbuino",
+            "Gorilla",
+            "Gorilla Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cammello",
+        "creature_ids": [
+            "Cammello"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Capra",
+        "creature_ids": [
+            "Capra",
+            "Capra Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cervo",
+        "creature_ids": [
+            "Cervo"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Cinghiale",
+        "creature_ids": [
+            "Cinghiale"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Corvi",
+        "creature_ids": [],
+        "is_faction": false
+    },
+    {
+        "name": "Delfino",
+        "creature_ids": [
+            "Delfino"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Donnola",
+        "creature_ids": [
+            "Donnola",
+            "Donnola Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Falco",
+        "creature_ids": [
+            "Falco",
+            "Falco di Sangue"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Gatto",
+        "creature_ids": [
+            "Gatto"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Granchio",
+        "creature_ids": [
+            "Granchio",
+            "Granchio Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Gufo",
+        "creature_ids": [
+            "Gufo",
+            "Gufo Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Iena",
+        "creature_ids": [
+            "Iena"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rettile",
+        "creature_ids": [
+            "Lucertola",
+            "Lucertola Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Lupo",
+        "creature_ids": [
+            "Lupo",
+            "Lupo Feroce",
+            "Lupo Invernale"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Mucca",
+        "creature_ids": [
+            "Mucca"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Squalo",
+        "creature_ids": [
+            "Squalo Tropicale",
+            "Squalo Cacciatore",
+            "Squalo Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Coccodrillo",
+        "creature_ids": [
+            "Coccodrillo",
+            "Coccodrillo Gigante"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Leone",
+        "creature_ids": [
+            "Leone"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Orso",
+        "creature_ids": [
+            "Orso Nero",
+            "Orso Bruno",
+            "Orso da Caverna",
+            "Orso Polare"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Tigre",
+        "creature_ids": [
+            "Tigre",
+            "Tigre dai Denti a Sciabola"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Vespe",
+        "creature_ids": [
+            "Sciame di Vespe"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Pesce",
+        "creature_ids": [
+            "Sciame di Piragna"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Rinoceronte",
+        "creature_ids": [
+            "Rinoceronte"
+        ],
+        "is_faction": false
+    },
+    {
+        "name": "Balena",
+        "creature_ids": [
+            "Killer Whale"
+        ],
+        "is_faction": false
+    }
+]

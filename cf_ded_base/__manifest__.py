@@ -2,7 +2,7 @@
 # Powered by cyberfolk
 
 {
-    'name': "Cyberfolk | D&D",
+    'name': "Cyberfolk | D&D Base",
     'icon': '/cf_ded_base/static/description/icon.png',
     'sequence': 2,
     'version': '0.0.1',
@@ -13,11 +13,32 @@
         """In questo modulo vengono introdotti gli elementi base di Dungeons & Dragons.""",
     'license': 'AGPL-3',
     'data': [
+        "security/ir.model.access.csv",
         "views/menu_root.xml",
+        "views/biome_biome.xml",
+        "views/structure_structure.xml",
+        "views/creature_creature.xml",
+        "views/creature_type.xml",
+        "views/creature_tag.xml",
+        "views/creature_encounter.xml",
+        "views/creature_encounter_line.xml",
+        "views/creature_faction.xml",
+        "views/encounter_encounter.xml",
+        "views/creature_npc.xml",
+        "views/creature_npc_roster.xml",
+        "reports/creature_npc_roster.xml",
+        "reports/root_report.xml",
     ],
-    'depends': [],
+    'depends': ['base', 'web'],
     'demo': [],
     'application': True,
     'installable': True,
-    'assets': {},
+    'assets': {
+        'web.assets_backend': [
+            '/cf_ded_base/static/src/css/style.css',
+        ],
+        'web.assets_frontend': [
+            '/cf_ded_base/static/src/css/style.css',
+        ]
+    },
 }
