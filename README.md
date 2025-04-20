@@ -1,29 +1,16 @@
-<table>
-  <tr>
-    <td>
-      <img src="cf_hex_base/static/description/icon.png" width="80" alt="Logo progetto" />
-    </td>
-    <td>
-      <h1 style="margin: 0px; padding-top: 10px"> Odoo | Ded</h1>
-    </td>
-  </tr>
-</table>
 
+# Odoo | Ded
 
 📅 **Initial commit**: 21/01/2024  
 🛠 **Stack**: Odoo, Owl, Python, JavaScript, XML, HTML, CSS, SCSS, Bootstrap
 
----
-
-## 📖 Descrizione
+## Descrizione
 
 Questa repository contiene una suite di moduli **Odoo** progettati per gestire campagne di **Dungeon & Dragons**.  
 L’obiettivo è fornire strumenti modulari e flessibili per creare, gestire e visualizzare mappe, incantesimi, campagne e
 ambientazioni per D&D.
 
----
-
-## 📦 Moduli
+## Moduli
 
 - 🧱 `cf_ded_base` → App che introduce i modelli base per *Dungeon & Dragons*.
 - 📜 `cf_ded_campaign` → Modulo che introduce i modelli per la gestione delle Campagne.
