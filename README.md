@@ -1,20 +1,35 @@
-# Odoo | Hex Map
+<table>
+  <tr>
+    <td>
+      <img src="cf_hex_base/static/description/icon.png" width="80" alt="Logo progetto" />
+    </td>
+    <td>
+      <h1 style="margin: 0px; padding-top: 10px"> Odoo | Ded</h1>
+    </td>
+  </tr>
+</table>
 
-**Initial commit**: 21/01/24
 
-**Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap.
+📅 **Initial commit**: 21/01/2024  
+🛠 **Stack**: Odoo, Owl, Python, JavaScript, XML, HTML, CSS, SCSS, Bootstrap
 
-**Info**: :world_map: Repo che contiene App e Moduli per gestire una Hex Map.
+---
 
-- **cf_hex_base** In questa app vengono introdotti gli elementi base della Hex Map: ovvero Macro-area, Quadranti,
-  Esagoni e AssetTiles.
-- **cf_hex_biome** In questo modulo vengono introdotti i Biomi, Le Creature, Le Fazioni e gli Scontri.
-- **cf_hex_lore** In questo modulo viene aggiunta la Lore sugli Hex mediante campi Descrizione, Immagini e altri campi
-  relazionali che li collegano ai relativi biomi e alle creature che lo popolano.
-- **cf_hex_client** In questo modulo viene introdotto:
-    - Un'interfaccia per poter interagire direttamente con le mappe in modo più semplice.
-    - Il widget "QuadWidget" per visualizzare la mappa dei quadranti nei relativi Form.
-    - Il modello "asset_tile" che permette assegnare un immagine(Montagne/Alberi/Incroci/...) a uno specifico Hex.
-- **cf_hex_data** In questo modulo vengono caricati i dati dei modelli introdotti negli altri moduli.
+## 📖 Descrizione
 
-<img src="cf_hex_base/static/description/icon.png" width="250"/>
+Questa repository contiene una suite di moduli **Odoo** progettati per gestire campagne di **Dungeon & Dragons**.  
+L’obiettivo è fornire strumenti modulari e flessibili per creare, gestire e visualizzare mappe, incantesimi, campagne e
+ambientazioni per D&D.
+
+---
+
+## 📦 Moduli
+
+- 🧱 `cf_ded_base` → App che introduce i modelli base per *Dungeon & Dragons*.
+- 📜 `cf_ded_campaign` → Modulo che introduce i modelli per la gestione delle Campagne.
+- ✨ `cf_ded_spell` → Modulo che introduce gli incantesimi.
+- 🗺️ `cf_hex_base` → App che introduce i modelli base per la gestione delle Hex Map.
+- 📖 `cf_hex_ded` → Modulo che introduce la lore sulla Hex Map.
+- 🧭 `cf_hex_ded_client` → Modulo che introduce un interfaccia per interagire direttamente con le Hex Map.
+- 🧩 `cf_hex_ded_data` → Modulo per caricare i dati dei modelli introdotti precedentemente.
+
