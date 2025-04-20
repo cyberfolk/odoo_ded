@@ -3,7 +3,7 @@
 
 {
     'name': "Cyberfolk | Hex Data",
-    'icon': '/cf_ded_base/static/description/cyberfolk.png',
+    'icon': '/cf_hex_ded_data/static/description/icon.png',
     'sequence': 3,
     'version': '0.0.1',
     'category': 'Map',
@@ -14,9 +14,9 @@
     'license': 'AGPL-3',
     'data': [],
     'depends': [
-        'cf_hex_client',
-        'cf_hex_biome',
-        'cf_hex_lore',
+        'cf_hex_ded_client',
+        'cf_ded_base',
+        'cf_hex_ded',
     ],
     'demo': [],
     'application': False,

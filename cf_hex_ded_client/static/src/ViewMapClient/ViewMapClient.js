@@ -1,16 +1,16 @@
 /** @odoo-module **/
 import { Component } from "@odoo/owl";
-import { ClearCurrent } from '@cf_hex_client/ViewMapClient/ClearCurrent/ClearCurrent';
-import { CurrentBiome } from '@cf_hex_client/ViewMapClient/CurrentBiome/CurrentBiome';
-import { CurrentTiles } from '@cf_hex_client/ViewMapClient/CurrentTiles/CurrentTiles';
-import { AddQuadrant } from '@cf_hex_client/ViewMapClient/AddQuadrant/AddQuadrant';
-import { CurrentZoom } from '@cf_hex_client/ViewMapClient/CurrentZoom/CurrentZoom';
-import { CurrentMap } from '@cf_hex_client/ViewMapClient/CurrentMap/CurrentMap';
-import { HideShow } from '@cf_hex_client/ViewMapClient/HideShow/HideShow';
-import { ViewMap } from '@cf_hex_client/ViewMapClient/ViewMap/ViewMap';
+import { ClearCurrent } from '@cf_hex_ded_client/ViewMapClient/ClearCurrent/ClearCurrent';
+import { CurrentBiome } from '@cf_hex_ded_client/ViewMapClient/CurrentBiome/CurrentBiome';
+import { CurrentTiles } from '@cf_hex_ded_client/ViewMapClient/CurrentTiles/CurrentTiles';
+import { AddQuadrant } from '@cf_hex_ded_client/ViewMapClient/AddQuadrant/AddQuadrant';
+import { CurrentZoom } from '@cf_hex_ded_client/ViewMapClient/CurrentZoom/CurrentZoom';
+import { CurrentMap } from '@cf_hex_ded_client/ViewMapClient/CurrentMap/CurrentMap';
+import { HideShow } from '@cf_hex_ded_client/ViewMapClient/HideShow/HideShow';
+import { ViewMap } from '@cf_hex_ded_client/ViewMapClient/ViewMap/ViewMap';
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { store, useStore } from "@cf_hex_client/store";
+import { store, useStore } from "@cf_hex_ded_client/store";
 const actionRegistry = registry.category("actions");
 
 class ViewMapClient extends Component {

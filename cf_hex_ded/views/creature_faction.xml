@@ -2,7 +2,7 @@
     <record id="creature_faction_view_form_inherited" model="ir.ui.view">
         <field name="name">creature.faction.form.lore</field>
         <field name="model">creature.faction</field>
-        <field name="inherit_id" ref="cf_hex_biome.creature_faction_view_form"/>
+        <field name="inherit_id" ref="cf_ded_base.creature_faction_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//page[@name='page_creatures']" position="after">
                 <page string="Esagoni Scriptati">

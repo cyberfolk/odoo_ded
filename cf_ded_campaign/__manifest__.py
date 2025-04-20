@@ -3,7 +3,7 @@
 
 {
     'name': "Cyberfolk | Ded Campaign",
-    'icon': '/cf_ded_base/static/description/cyberfolk.png',
+    'icon': '/cf_ded_campaign/static/description/icon.png',
     'sequence': 4,
     'version': '0.0.1',
     'category': 'Map',

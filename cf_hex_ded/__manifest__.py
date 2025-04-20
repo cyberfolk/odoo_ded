@@ -2,8 +2,8 @@
 # Powered by cyberfolk
 
 {
-    'name': "Cyberfolk | Hex Lore",
-    'icon': '/cf_hex_base/static/description/cyberfolk.png',
+    'name': "Cyberfolk | Hex Ded",
+    'icon': '/cf_hex_ded/static/description/icon.png',
     'sequence': 4,
     'version': '0.0.1',
     'category': 'Map',
@@ -21,7 +21,7 @@
         "views/creature_faction.xml",
         "views/menu_root.xml",
     ],
-    'depends': ['cf_hex_base', 'cf_hex_biome', 'cf_multiple_image'],
+    'depends': ['cf_hex_base', 'cf_ded_base', 'cf_multiple_image'],
     'demo': [],
     'application': False,
     'installable': True,

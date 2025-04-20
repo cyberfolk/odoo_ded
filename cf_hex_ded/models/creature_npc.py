@@ -1,7 +1,7 @@
 import logging
 
 from odoo import fields, models, api, Command
-from ...cf_hex_biome.utility.exp import MAP_CR_EXP
+from ...cf_ded_base.utility.exp import MAP_CR_EXP
 
 _logger = logging.getLogger(__name__)
 

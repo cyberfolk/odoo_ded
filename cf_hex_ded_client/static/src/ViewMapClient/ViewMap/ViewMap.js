@@ -1,10 +1,10 @@
 /** @odoo-module **/
 import { Component } from "@odoo/owl";
-import { HexHex } from '@cf_hex_client/ViewMapClient/HexHex/HexHex';
+import { HexHex } from '@cf_hex_ded_client/ViewMapClient/HexHex/HexHex';
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
-import { getAxesV1, getAxesV2, POLYGON_QUAD_V1_LIST } from '@cf_hex_client/utility/utils';
-import { store, useStore } from "@cf_hex_client/store";
+import { getAxesV1, getAxesV2, POLYGON_QUAD_V1_LIST } from '@cf_hex_ded_client/utility/utils';
+import { store, useStore } from "@cf_hex_ded_client/store";
 const actionRegistry = registry.category("actions");
 
 export class ViewMap extends Component {

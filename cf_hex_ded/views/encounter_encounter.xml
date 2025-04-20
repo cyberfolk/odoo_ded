@@ -2,7 +2,7 @@
     <record id="encounter_encounter_view_tree_inherited" model="ir.ui.view">
         <field name="name">encounter.encounter.tree.lore</field>
         <field name="model">encounter.encounter</field>
-        <field name="inherit_id" ref="cf_hex_biome.encounter_encounter_view_tree"/>
+        <field name="inherit_id" ref="cf_ded_base.encounter_encounter_view_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='description']" position="after">
                 <field name="hex_id"/>
@@ -13,7 +13,7 @@
     <record id="encounter_encounter_view_form_inherited" model="ir.ui.view">
         <field name="name">creature.npc.form.lore</field>
         <field name="model">creature.npc</field>
-        <field name="inherit_id" ref="cf_hex_biome.encounter_encounter_view_form"/>
+        <field name="inherit_id" ref="cf_ded_base.encounter_encounter_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='description']" position="after">
                 <field name="hex_id"/>

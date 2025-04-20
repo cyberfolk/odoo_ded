@@ -1,4 +1,4 @@
-# CF | Hex Lore
+# CF | Hex Ded
 
 **Initial commit**: 06/10/24
 

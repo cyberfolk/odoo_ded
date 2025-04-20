@@ -1,7 +1,7 @@
 /** @odoo-module **/
 import { Component, useState } from "@odoo/owl";
-import { getAxesV1, getAxesV2 } from '@cf_hex_client/utility/utils';
-import { useStore } from "@cf_hex_client/store";
+import { getAxesV1, getAxesV2 } from '@cf_hex_ded_client/utility/utils';
+import { useStore } from "@cf_hex_ded_client/store";
 import { useService } from "@web/core/utils/hooks";
 
 export class HexHex extends Component {

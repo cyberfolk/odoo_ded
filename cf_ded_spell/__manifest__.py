@@ -3,7 +3,7 @@
 
 {
     'name': "Cyberfolk | D&D | Spell",
-    'icon': '/cf_hex_base/static/description/cyberfolk.png',
+    'icon': '/cf_ded_spell/static/description/icon.png',
     'sequence': 2,
     'version': '0.0.1',
     'category': 'D&D',

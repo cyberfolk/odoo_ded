@@ -2,9 +2,9 @@
 import { xml, Component, onWillStart, useState, onWillUpdateProps} from "@odoo/owl";
 import { standardFieldProps } from "@web/views/fields/standard_field_props";
 import { useService } from "@web/core/utils/hooks";
-import { getAxesV1 } from '@cf_hex_client/utility/utils';
+import { getAxesV1 } from '@cf_hex_ded_client/utility/utils';
 import { registry } from "@web/core/registry";
-import { HexHex } from '@cf_hex_client/ViewMapClient/HexHex/HexHex';
+import { HexHex } from '@cf_hex_ded_client/ViewMapClient/HexHex/HexHex';
 const fieldRegistry = registry.category("fields");
 
 export class QuadField extends Component {

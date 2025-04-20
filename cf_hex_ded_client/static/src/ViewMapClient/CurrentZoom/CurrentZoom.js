@@ -2,7 +2,7 @@
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { store, useStore } from "@cf_hex_client/store";
+import { store, useStore } from "@cf_hex_ded_client/store";
 
 export class CurrentZoom extends Component {
     static template = "CurrentZoom"

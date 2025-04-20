@@ -1,9 +1,9 @@
 /** @odoo-module **/
-import { DirTiles } from '@cf_hex_client/ViewMapClient/DirTiles/DirTiles';
+import { DirTiles } from '@cf_hex_ded_client/ViewMapClient/DirTiles/DirTiles';
 import { registry } from "@web/core/registry";
 import { Component, onWillStart, useState } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
-import { store, useStore } from "@cf_hex_client/store";
+import { store, useStore } from "@cf_hex_ded_client/store";
 
 export class CurrentTiles extends Component {
     static template = "CurrentTiles"
