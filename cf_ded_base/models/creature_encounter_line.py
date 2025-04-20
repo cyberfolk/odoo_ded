@@ -14,9 +14,10 @@ class CreatureEncounterLine(models.Model):
         string="Nome",
         help="Nome della linea dello scontro.",
         compute="_compute_name",
+        store=True
     )
 
-    encounter_id = fields.Many2one(
+    encounter_ids = fields.Many2many(
         comodel_name="creature.encounter",
         string="Scontro",
         help="Scontro a cui appartiene la linea.",

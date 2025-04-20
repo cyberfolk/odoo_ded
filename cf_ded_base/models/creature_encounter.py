@@ -19,9 +19,8 @@ class CreatureEncounter(models.Model):
         store=True
     )
 
-    line_ids = fields.One2many(
+    line_ids = fields.Many2many(
         comodel_name="creature.encounter.line",
-        inverse_name="encounter_id",
         string="Linee",
         help="Linee dello scontro.",
     )
