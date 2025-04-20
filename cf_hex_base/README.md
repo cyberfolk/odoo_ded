@@ -1,10 +1,12 @@
+<img src="../cf_hex_base/static/description/icon.png" align="right" height="70"/>
+
 # CF | Hex Data
 
-**Initial commit**: 21/01/24
+📅 **Initial commit**: 21/01/24  
+🛠 **Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap
 
-**Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap.
+## Descrizione
 
-- **cf_hex_base** In questa app vengono introdotti gli elementi base della Hex Map: ovvero Mappe, Quadranti,
-  Esagoni e AssetTiles.
+In questa app vengono introdotti gli elementi base della Hex Map: ovvero Mappe, Quadranti,
+Esagoni e AssetTiles.
 
-<img src="../cf_hex_base/static/description/icon.png" width="250"/>

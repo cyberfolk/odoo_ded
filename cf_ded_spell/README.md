@@ -1,7 +1,10 @@
-# CF | D&D | Spell
+<img src="../cf_ded_spell/static/description/icon.png" align="right" height="70"/>
 
-**Initial commit**: 16/08/24
+# CF | D&D Spell
 
-**Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap.
+📅 **Initial commit**: 01/03/25  
+🛠 **Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap
 
-- **cf_ded_spell** Questo modulo introduce gli incantesimi.
+## Descrizione
+
+Questo modulo introduce gli incantesimi.

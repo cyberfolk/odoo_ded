@@ -1,10 +1,13 @@
+<img src="../cf_ded_base/static/description/icon.png" align="right" height="70"/>
+
 # CF | Ded Base
 
-**Initial commit**: 16/08/24
+📅 **Initial commit**: 16/08/24  
+🛠 **Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap
 
-**Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap.
+## Descrizione
 
-**Descrizione**: In questo modulo vengono introdotti i modelli base per *Dungeon & Dragons*:
+In questo modulo vengono introdotti i modelli base per *Dungeon & Dragons*:
 
 - Biomi
 - Creature
@@ -13,5 +16,3 @@
 - NPC
 - Incontri
 - Strutture
-
-<img src="../cf_ded_base/static/description/icon.png" width="250"/>

@@ -1,3 +1,4 @@
+<img src="./cf_ded_base/static/description/icon.png" align="right" height="70"/>
 
 # Odoo | Ded
 
