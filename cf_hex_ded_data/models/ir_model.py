@@ -9,10 +9,11 @@ INIT_MODEL = [
     ("creature.tag", 'name', 'creature_ids'),
     ("creature.type", 'name', 'creature_ids'),
     ("creature.creature", 'name', ''),
+    ("creature.npc", 'name', ''),
     ("creature.faction", 'name', ''),
     ("creature.encounter", 'name', ''),
     ("creature.encounter.line", 'name', 'encounter_ids'),
-    # ("hex.hex", 'name', ''),
+    ("hex.hex", 'name', ''),
 ]
 
 

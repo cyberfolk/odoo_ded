@@ -15,7 +15,7 @@ INIT_MODEL = [
     "creature.faction",
     "creature.encounter.line",
     "creature.encounter",
-    # ("hex.hex", 'name', ''),
+    "hex.hex",
 ]
 
 
