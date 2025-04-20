@@ -20,18 +20,19 @@ def post_init_hook_cf_hex_data(env):
     """
     try:
         _logger.info("* START * post_init_hook_cf_hex_data()")
-        env["biome.biome"].popolate_by_json()
-        env["structure.structure"].popolate_by_json()
-        env["creature.tag"].popolate_by_json()
-        env["creature.type"].popolate_by_json()
-        env["creature.creature"].popolate_by_json()
-        env["creature.faction"].popolate_by_json()
-        env["creature.encounter"].popolate_by_json()
-        env["hex.hex"].popolate_by_json()
-        env["asset.tile"].load_images()
+        env['ir.model'].init_data_handler_fields()
+        env['data.handler'].init_data_handler_fields()
+        # env["biome.biome"].popolate_by_json()
+        # env["structure.structure"].popolate_by_json()
+        # env["creature.tag"].popolate_by_json()
+        # env["creature.type"].popolate_by_json()
+        # env["creature.creature"].popolate_by_json()
+        # env["creature.faction"].popolate_by_json()
+        # env["creature.encounter"].popolate_by_json()
+        # env["hex.hex"].popolate_by_json()
+        # env["asset.tile"].load_images()
     except Exception as e:
         msg = (f"Errore nella funzione post_init_hook_cf_hex_data()\n"
-               f"Fallito caricamento dei dati per il modulo cf_hex_biome\n"
                f"{e}")
         raise ValidationError(msg)
     finally:

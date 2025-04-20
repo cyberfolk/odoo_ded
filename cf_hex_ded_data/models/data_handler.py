@@ -1,4 +1,4 @@
-import json
+import base64
 import logging
 import os
 from pathlib import Path
@@ -6,60 +6,64 @@ from pathlib import Path
 from odoo import models, api
 
 _logger = logging.getLogger(__name__)
+INIT_MODEL = [
+    "biome.biome",
+    "structure.structure",
+    "creature.tag",
+    "creature.type",
+    "creature.creature",
+    "creature.faction",
+    "creature.encounter.line",
+    "creature.encounter",
+    # ("hex.hex", 'name', ''),
+]
 
-EXCLUDED_FIELDS = {'write_date', 'write_uid', 'create_date', 'create_uid', 'display_name', 'id'}
 
-
-class MixinImportJson(models.AbstractModel):
-    _name = 'mixin.import.json'
+class DataHandler(models.AbstractModel):
+    _inherit = 'data.handler'
     _description = 'Mixin per popolare i modelli da Json'
 
-#     def download_json(self):
-#         """Scarica i dati del modello in un file '.py' mettendolo nella cartella 'data'."""
-#         _logger.info(f"START download_json ({self._name})")
-#
-#         data_str = self.get_data_json()
-#         file_path = self._get_file_path()
-#
-#         try:
-#             Path(file_path).parent.mkdir(parents=True, exist_ok=True)
-#             with open(file_path, 'w', encoding='utf-8') as file:
-#                 file.write(data_str)
-#         except IOError as e:
-#             _logger.error(f"Failed to write to {file_path}: {e}")
-#         finally:
-#             _logger.info(f"END   download_json ({self._name})")
-#
-#     def popolate_by_json(self):
-#         """Crea record partendo dal file '.json' nella cartella 'data'."""
-#         _logger.info(f"** START ** popolate_by_json() - ({self._name})")
-#         try:
-#             file_path = self._get_file_path()
-#             if not os.path.exists(file_path):
-#                 raise FileNotFoundError(f"File not found: {file_path}")
-#
-#             with open(file_path, 'r', encoding='utf-8') as file:
-#                 json_data = json.load(file)
-#
-#             self._popolate_by_json(json_data)
-#
-#         except json.JSONDecodeError as e:
-#             _logger.error(f"** ERROR ** Failed to decode JSON: {e}")
-#         except FileNotFoundError as e:
-#             _logger.error(f"** ERROR ** File not found: {e}")
-#         except Exception as e:
-#             _logger.error(f"** ERROR ** popolate_by_json() - ({self._name})")
-#             _logger.exception(e)
-#         finally:
-#             _logger.info(f"** END   ** popolate_by_json() - ({self._name})")
-#
-#     # region UTILITY ---------------------------------------------------------------------------------------------------
-#     def _get_file_path(self):
-#         """Helper method to get the file path based on the model name."""
-#         nome_file = self._name.replace('.', '_') + '.json'
-#         return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
-#
-#     def get_comodel_map(self):
+    def init_data_handler_fields(self):
+        for model_name in INIT_MODEL:
+            handler = self.create({
+                'name': f"INIT: {model_name}",
+                'model_id': self.env['ir.model'].search([('model', '=', model_name)], limit=1).id,
+                'datas_file': self._get_datas_file(model_name),
+                'datas_file_name': f"{model_name}.json",
+            })
+            handler._onchange_datas_file()
+            handler.start_import_from_zero()
+            pass
+
+    def _get_datas_file(self, model_name):
+        """Crea record partendo dal file '.json' nella cartella 'data'."""
+        _logger.info(f"** START ** popolate_by_json() - ({model_name})")
+        try:
+            file_path = self._get_file_path(model_name)
+            if not os.path.exists(file_path):
+                raise FileNotFoundError(f"File not found: {file_path}")
+
+            with open(file_path, 'rb') as file:
+                binary_data = file.read()
+                binary_data_encoded = base64.b64encode(binary_data).decode('utf-8')  # Questa stringa è valida
+
+            return binary_data_encoded
+
+        except FileNotFoundError as e:
+            _logger.error(f"** ERROR ** File not found: {e}")
+        except Exception as e:
+            _logger.error(f"** ERROR ** _get_datas_file() - ({model_name})")
+            _logger.exception(e)
+        finally:
+            _logger.info(f"** END   ** _get_datas_file() - ({model_name})")
+
+    # region UTILITY ---------------------------------------------------------------------------------------------------
+    def _get_file_path(self, model_name):
+        """Helper method to get the file path based on the model name."""
+        nome_file = model_name.replace('.', '_') + '.json'
+        return (Path(__file__).resolve().parents[1] / 'data' / nome_file).as_posix()
+
+    # def get_comodel_map(self):
 #         COMODEL_MAP = {}
 #         for f_name, f_info in self._fields.items():
 #             comodel_name = f_info.comodel_name

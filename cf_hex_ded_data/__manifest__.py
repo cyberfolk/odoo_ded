@@ -12,11 +12,14 @@
     'description':
         """In questo modulo vengono salvati i dati per popolare i record.""",
     'license': 'AGPL-3',
-    'data': [],
+    'data': [
+        "views/base.xml",
+    ],
     'depends': [
         'cf_hex_ded_client',
         'cf_ded_base',
         'cf_hex_ded',
+        'cf_data_handler',
     ],
     'demo': [],
     'application': False,

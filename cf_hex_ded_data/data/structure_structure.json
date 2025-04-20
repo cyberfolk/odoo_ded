@@ -4,12 +4,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -17,12 +29,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -30,11 +54,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -42,10 +76,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -53,11 +95,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -65,10 +117,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -76,10 +136,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -87,11 +155,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -99,11 +177,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -111,10 +199,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -122,7 +218,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -130,12 +228,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -143,12 +253,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -156,12 +278,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -169,7 +303,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -177,10 +313,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -188,10 +332,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -199,7 +351,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto"
+            {
+                "name": "Deserto"
+            }
         ]
     },
     {
@@ -207,8 +361,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -216,8 +374,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -225,11 +387,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -237,7 +409,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -245,9 +419,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -255,7 +435,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -263,12 +445,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -276,12 +470,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -289,11 +495,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -301,10 +517,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -312,10 +536,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -323,8 +555,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Collina",
-            "Palude"
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -332,7 +568,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta"
+            {
+                "name": "Foresta"
+            }
         ]
     },
     {
@@ -340,10 +578,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -351,9 +597,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -361,11 +613,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -373,10 +635,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -384,12 +654,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -397,8 +679,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -406,7 +692,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto"
+            {
+                "name": "Deserto"
+            }
         ]
     },
     {
@@ -414,10 +702,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -425,12 +721,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -438,11 +746,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -450,10 +768,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -461,7 +787,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Montagna"
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -469,12 +797,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -482,12 +822,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -495,9 +847,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -505,12 +863,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -518,12 +888,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -531,10 +913,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -542,10 +932,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -553,7 +951,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -561,12 +961,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -574,8 +986,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -583,7 +999,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Montagna"
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -591,12 +1009,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -604,10 +1034,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -615,9 +1053,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -625,7 +1069,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto"
+            {
+                "name": "Deserto"
+            }
         ]
     },
     {
@@ -633,8 +1079,12 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            }
         ]
     },
     {
@@ -642,12 +1092,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -655,7 +1117,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto"
+            {
+                "name": "Deserto"
+            }
         ]
     },
     {
@@ -663,7 +1127,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Palude"
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -671,7 +1137,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto"
+            {
+                "name": "Deserto"
+            }
         ]
     },
     {
@@ -679,7 +1147,9 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria"
+            {
+                "name": "Prateria"
+            }
         ]
     },
     {
@@ -687,12 +1157,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -700,12 +1182,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -713,10 +1207,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -724,10 +1226,18 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -735,12 +1245,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -748,12 +1270,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -761,9 +1295,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -771,12 +1311,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -784,11 +1336,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -796,9 +1358,15 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Prateria",
-            "Collina",
-            "Montagna"
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            }
         ]
     },
     {
@@ -806,12 +1374,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -819,12 +1399,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -832,12 +1424,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -845,12 +1449,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -858,12 +1474,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -871,12 +1499,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -884,11 +1524,21 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -896,12 +1546,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -909,12 +1571,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -922,12 +1596,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -935,12 +1621,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     },
     {
@@ -948,12 +1646,24 @@
         "description": "",
         "image": "",
         "biome_ids": [
-            "Deserto",
-            "Foresta",
-            "Prateria",
-            "Collina",
-            "Montagna",
-            "Palude"
+            {
+                "name": "Deserto"
+            },
+            {
+                "name": "Foresta"
+            },
+            {
+                "name": "Prateria"
+            },
+            {
+                "name": "Collina"
+            },
+            {
+                "name": "Montagna"
+            },
+            {
+                "name": "Palude"
+            }
         ]
     }
 ]
