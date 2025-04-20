@@ -25,6 +25,6 @@
     'demo': [],
     'application': False,
     'installable': True,
-    'post_init_hook': 'post_init_hook_cf_hex_data',
+    'post_init_hook': 'post_init__cf_hex_ded_data',
     'assets': {},
 }
