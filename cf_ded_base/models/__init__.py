@@ -1,3 +1,4 @@
+from . import creature_stats
 from . import biome_biome
 from . import structure_structure
 from . import creature_creature

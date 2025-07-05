@@ -5,19 +5,7 @@ from ...cf_ded_base.utility.exp import get_level_by_exp
 class CampaignPg(models.Model):
     _name = "campaign.pg"
     _description = "PG"
-
-    name = fields.Char(
-        string="Nome",
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Campagna",
-    )
-
-    image = fields.Image(
-        string="Immagine",
-    )
+    _inherit = "creature.stats"
 
     player_id = fields.Many2one(
         comodel_name="res.partner",

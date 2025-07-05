@@ -30,8 +30,8 @@
                                 </h3>
                             </div>
                             <group>
-                                <field name="creature_id" string="Creatura"/>
                                 <field name="type_id"/>
+                                <field name="tag_ids" widget="many2many_tags"/>
                                 <div name="div_cr_exp" class="w-100 d-flex" colspan="2">
                                     <div style="width: 15%" class="o_form_label fw-bold pe-3">GS</div>
                                     <field style="width: 8%" name="cr"/>
@@ -41,17 +41,19 @@
                                 </div>
                             </group>
                             <group>
-                                <field name="tag_ids" widget="many2many_tags"/>
                                 <field name="faction_ids" widget="many2many_tags"/>
-                            </group>
-                            <group colspan="2" string="Descrizione">
-                                <field name="description" nolabel="1" colspan="2"/>
+                                <field name="creature_id" string="Creatura"/>
                             </group>
                         </group>
                         <group colspan="2">
                             <field name="image" widget="image" nolabel="1" colspan="2"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page name="Info MM">
+                            <field name="description" colspan="4"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

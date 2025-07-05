@@ -9,16 +9,7 @@ _logger = logging.getLogger(__name__)
 class CreatureCreature(models.Model):
     _name = "creature.creature"
     _description = "Creatura"
-
-    name = fields.Char(
-        string="Nome",
-        required=True,
-        help="Nome generico della creatura per come è registrata sui manuali."
-    )
-
-    _sql_constraints = [
-        ('unique_creature_creature_name', 'UNIQUE(name)', 'Il nome della creatura deve essere univoco!')
-    ]
+    _inherit = "creature.stats"
 
     cr = fields.Float(
         string="Grado Sfida",
@@ -125,15 +116,6 @@ class CreatureCreature(models.Model):
         compute="_compute_biome_ids",
         help="Lista che comprende Biomi %Bassa e Biomi %Alta.",
         store=True
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Creatura",
-    )
-
-    image = fields.Image(
-        string="Immagine",
     )
 
     @api.depends("cr")

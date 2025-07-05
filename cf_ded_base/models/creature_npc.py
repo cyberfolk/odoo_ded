@@ -1,27 +1,15 @@
-import logging
-
 from odoo import fields, models, api
 from ..utility.exp import MAP_CR_EXP
-
-_logger = logging.getLogger(__name__)
 
 
 class CreatureNpc(models.Model):
     _name = "creature.npc"
     _description = "NPC"
-
-    name = fields.Char(
-        string="Nome",
-        required=True,
-    )
+    _inherit = "creature.stats"
 
     titles = fields.Char(
         string="Titoli",
     )
-
-    _sql_constraints = [
-        ('unique_creature_npc_name', 'UNIQUE(name)', 'Il nome del NPC deve essere univoco!')
-    ]
 
     cr = fields.Float(
         string="Grado Sfida",
@@ -51,15 +39,6 @@ class CreatureNpc(models.Model):
         relation="creature_faction_creature_npc_rel",
         string="Fazioni",
         help="Fazioni del NPC",
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Creatura",
-    )
-
-    image = fields.Image(
-        string="Immagine",
     )
 
     creature_id = fields.Many2one(
