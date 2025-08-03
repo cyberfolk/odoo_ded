@@ -79,7 +79,7 @@ td[name="help_exp"] {
 }
 
 th[data-name="help_percentage"] {
-  width: 40px !important;
+  width: 50px !important;
 }
 
 th[data-name="help_exp"] {
@@ -102,7 +102,11 @@ td[name="rp_exp"] {
 }
 
 th[data-name="rp_percentage"] {
-  width: 50px !important;
+  width: 75px !important;
+}
+
+td[name="rp_percentage"] {
+  text-align: center !important;
 }
 
 th[data-name="rp_exp"] {
@@ -168,11 +172,21 @@ th[data-name="exp_gained_total"] {
   color: #8e8e8e !important;
 }
 
+[data-name="exp_next_level"] {
+  width: 70px !important;
+}
+
 [data-name="exp_next_level"] * ,
 [name="exp_next_level"]{
-  text-align: start !important;
+  text-align: center !important;
 }
 
 [data-name="exp_gained"] * {
   text-align: center !important;
+}
+
+[data-name="exp_gained_common"],
+[data-name="exp_gained_single"],
+[data-name="exp_gained_total"] {
+  color: #8e8e8e !important;
 }

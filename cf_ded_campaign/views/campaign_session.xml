@@ -152,25 +152,25 @@
                             <field name="session_pg_ids" nolabel="1" colspan="2">
                                 <tree editable="bottom">
                                     <field name="pg_id" domain="[('id', 'not in', parent.pg_ids)]"/>
-                                    <field name="player_id"/>
+                                    <field name="player_id" optional="hide"/>
                                     <field string="Exp I" name="exp_start" class="text-end"/>
                                     <field string="Liv I" name="liv_start" class="text-center text-muted"/>
                                     <field string="Exp Bar" name="exp_bar" class="text-center text-muted"/>
                                     <field string="Exp Liv Up" name="exp_next_level" class="text-center text-muted"/>
                                     <!--3 Field Exp Role-->
                                     <field string="Ruolo" name="role"/>
-                                    <field string="R%" name="role_percentage" widget="percentage"/>
-                                    <field string="Exp R" name="role_exp"/>
+                                    <field string="%" name="role_percentage" widget="percentage"/>
+                                    <field string="Exp" name="role_exp"/>
                                     <!--2 Field Exp Help-->
-                                    <field string="A%" name="help_percentage" widget="percentage"/>
-                                    <field string="Exp A" name="help_exp"/>
+                                    <field string="Aiuto" name="help_percentage" widget="percentage"/>
+                                    <field string="Exp" name="help_exp"/>
                                     <!--2 Field Exp RP-->
-                                    <field string="RP%" name="rp_percentage" widget="percentage"/>
-                                    <field string="Exp RP" name="rp_exp"/>
+                                    <field string="Role Play" name="rp_percentage" widget="percentage"/>
+                                    <field string="Exp" name="rp_exp"/>
                                     <!--Exp Guadagnata-->
-                                    <field string="📈Com" name="exp_gained_common" class="text-center"/>
-                                    <field string="📈Single" name="exp_gained_single" class="text-center"/>
-                                    <field string="📈Tot" name="exp_gained_total" class="text-center"/>
+                                    <field string="Comune"  name="exp_gained_common" class="text-center text-muted" optional="hide"/>
+                                    <field string="Singola" name="exp_gained_single" class="text-center text-muted" optional="hide"/>
+                                    <field string="Totale"  name="exp_gained_total"  class="text-center text-muted" optional="hide"/>
                                     <!--Other Fields-->
                                     <field string="Exp F" name="exp_end"
                                            decoration-bf="exp_end &lt;= parent.exp_soglia"
