@@ -290,7 +290,14 @@ class CampaignSession(models.Model):
             rec.exp_gained_common = rec.mission_id_exp + rec.encounter_exp_split + rec.n_hex_crossed_exp + rec.treasure_info_exp
 
     def action_confirm(self):
+        self.ensure_one()
         self.state = 'confirmed'
+        for session_pg in self.session_pg_ids:
+            session_pg.pg_id.exp += (session_pg.exp_end_adj - session_pg.exp_start)
 
     def action_return_to_draft(self):
+        self.ensure_one()
         self.state = 'draft'
+        for session_pg in self.session_pg_ids:
+            session_pg.pg_id.exp -= (session_pg.exp_end_adj - session_pg.exp_start)
+

@@ -15,8 +15,8 @@ class CampaignPg(models.Model):
 
     exp = fields.Integer(
         string="EXP",
-        compute="_compute_exp",
-        # default="900"
+        # compute="_compute_exp",
+        default="900"
     )
 
     level = fields.Integer(
@@ -42,6 +42,7 @@ class CampaignPg(models.Model):
     session_pg_ids = fields.Many2many(
         comodel_name="campaign.session.pg",
         compute="_compute_session_pg_ids",
+        string="Sessioni PG",
         store=True,
     )
 
@@ -53,9 +54,3 @@ class CampaignPg(models.Model):
     def _compute_session_pg_ids(self):
         for rec in self:
             rec.session_pg_ids = self.env['campaign.session.pg'].search([('pg_id', '=', rec.id)], order='id')
-
-    @api.depends('session_pg_ids.exp_end_adj')
-    def _compute_exp(self):
-        for rec in self:
-            session_pg_confirmed = rec.session_pg_ids.filtered(lambda x: x.state == 'confirmed')
-            rec.exp = 900 + sum([x.exp_gained_adj for x in session_pg_confirmed])
