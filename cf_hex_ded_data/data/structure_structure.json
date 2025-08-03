@@ -25,6 +25,18 @@
         ]
     },
     {
+        "name": "Villa sfarzosa in decadenza",
+        "description": "",
+        "image": "",
+        "biome_ids": []
+    },
+    {
+        "name": "Pascolo circondati da filari di viti",
+        "description": "",
+        "image": "",
+        "biome_ids": []
+    },
+    {
         "name": "Accampamento tribale",
         "description": "",
         "image": "",

@@ -1,0 +1,62 @@
+<odoo>
+
+    <!-- === Giocatori (res.partner) === -->
+    <record id="demo_player_01" model="res.partner">
+        <field name="name">Player 01</field>
+    </record>
+    <record id="demo_player_02" model="res.partner">
+        <field name="name">Player 02</field>
+    </record>
+    <record id="demo_player_03" model="res.partner">
+        <field name="name">Player 03</field>
+    </record>
+    <record id="demo_player_04" model="res.partner">
+        <field name="name">Player 04</field>
+    </record>
+
+    <!-- === PGs (campaign.pg) === -->
+    <record id="demo_pg_01" model="campaign.pg">
+        <field name="name">PG 01</field>
+        <field name="player_id" ref="demo_player_01"/>
+    </record>
+    <record id="demo_pg_02" model="campaign.pg">
+        <field name="name">PG 02</field>
+        <field name="player_id" ref="demo_player_02"/>
+    </record>
+    <record id="demo_pg_03" model="campaign.pg">
+        <field name="name">PG 03</field>
+        <field name="player_id" ref="demo_player_03"/>
+    </record>
+    <record id="demo_pg_04" model="campaign.pg">
+        <field name="name">PG 04</field>
+        <field name="player_id" ref="demo_player_04"/>
+    </record>
+
+    <!-- === Campagna (campaign.campaign) === -->
+    <record id="demo_campaign_01" model="campaign.campaign">
+        <field name="name">Campagna 01</field>
+        <field name="player_ids" eval="[(6, 0, [
+            ref('demo_player_01'), ref('demo_player_02'),
+            ref('demo_player_03'), ref('demo_player_04')
+        ])]"/>
+        <field name="pg_ids" eval="[(6, 0, [
+            ref('demo_pg_01'), ref('demo_pg_02'),
+            ref('demo_pg_03'), ref('demo_pg_04')
+        ])]"/>
+    </record>
+
+    <!-- === Campagna (campaign.session) === -->
+    <record id="demo_session_01" model="campaign.session">
+        <field name="name">Session 01</field>
+        <field name="campaign_id" ref="demo_campaign_01"/>
+        <field name="player_ids" eval="[(6, 0, [
+            ref('demo_player_01'), ref('demo_player_02'),
+            ref('demo_player_03'), ref('demo_player_04')
+        ])]"/>
+        <field name="pg_ids" eval="[(6, 0, [
+            ref('demo_pg_01'), ref('demo_pg_02'),
+            ref('demo_pg_03'), ref('demo_pg_04')
+        ])]"/>
+    </record>
+
+</odoo>

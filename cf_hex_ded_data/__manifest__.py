@@ -14,6 +14,7 @@
     'license': 'AGPL-3',
     'data': [
         "views/base.xml",
+        "data/demo.xml",
     ],
     'depends': [
         'cf_ded_base',
