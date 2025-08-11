@@ -142,12 +142,12 @@ class BiomeBiome(models.Model):
     def _compute_creature_grouped_by_tag(self):
         for record in self:
             creature = record.creature_high_prob_ids | record.creature_low_prob_ids
-            self.creature_innocuous = creature.filtered(lambda x: x.is_innocuous)
-            self.creature_not_violent = creature.filtered(lambda x: x.is_not_violent)
-            self.creature_cool = creature.filtered(lambda x: x.is_cool)
-            self.creature_endemic = creature.filtered(lambda x: x.is_endemic)
-            self.creature_social = creature.filtered(lambda x: x.is_social)
-            self.creature_boss = creature.filtered(lambda x: x.is_boss)
+            record.creature_innocuous = creature.filtered("is_innocuous")
+            record.creature_not_violent = creature.filtered("is_not_violent")
+            record.creature_cool = creature.filtered("is_cool")
+            record.creature_endemic = creature.filtered("is_endemic")
+            record.creature_social = creature.filtered("is_social")
+            record.creature_boss = creature.filtered("is_boss")
 
     # endregion --------------------------------------------------------------------------------------------------------
 
