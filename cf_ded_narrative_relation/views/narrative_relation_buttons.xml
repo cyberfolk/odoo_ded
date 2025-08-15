@@ -1,0 +1,85 @@
+<odoo>
+    <!-- creature.faction -->
+    <record id="action_narrative_relation_creature_faction" model="ir.actions.act_window">
+        <field name="name">Relazioni</field>
+        <field name="res_model">ded.narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|',
+            '&amp;', ('source_model', '=', ref('base.model_creature_faction')), ('source_id', '=', active_id),
+            '&amp;', ('target_model', '=', ref('base.model_creature_faction')), ('target_id', '=', active_id)
+        ]</field>
+    </record>
+    <record id="view_creature_faction_form_narrative_button" model="ir.ui.view">
+        <field name="name">creature.faction.form.narrative.button</field>
+        <field name="model">creature.faction</field>
+        <field name="inherit_id" ref="cf_ded_base.creature_faction_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="before">
+                <button type="action" name="%(action_narrative_relation_creature_faction)d" string="Relazioni"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- creature.npc -->
+    <record id="action_narrative_relation_creature_npc" model="ir.actions.act_window">
+        <field name="name">Relazioni</field>
+        <field name="res_model">ded.narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|',
+            '&amp;', ('source_model', '=', ref('base.model_creature_npc')), ('source_id', '=', active_id),
+            '&amp;', ('target_model', '=', ref('base.model_creature_npc')), ('target_id', '=', active_id)
+        ]</field>
+    </record>
+    <record id="view_creature_npc_form_narrative_button" model="ir.ui.view">
+        <field name="name">creature.npc.form.narrative.button</field>
+        <field name="model">creature.npc</field>
+        <field name="inherit_id" ref="cf_ded_base.creature_npc_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="before">
+                <button type="action" name="%(action_narrative_relation_creature_npc)d" string="Relazioni"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- structure.structure -->
+    <record id="action_narrative_relation_structure_structure" model="ir.actions.act_window">
+        <field name="name">Relazioni</field>
+        <field name="res_model">ded.narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|',
+            '&amp;', ('source_model', '=', ref('base.model_structure_structure')), ('source_id', '=', active_id),
+            '&amp;', ('target_model', '=', ref('base.model_structure_structure')), ('target_id', '=', active_id)
+        ]</field>
+    </record>
+    <record id="view_structure_structure_form_narrative_button" model="ir.ui.view">
+        <field name="name">structure.structure.form.narrative.button</field>
+        <field name="model">structure.structure</field>
+        <field name="inherit_id" ref="cf_ded_base.structure_structure_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="before">
+                <button type="action" name="%(action_narrative_relation_structure_structure)d" string="Relazioni"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- campaign.mission -->
+    <record id="action_narrative_relation_campaign_mission" model="ir.actions.act_window">
+        <field name="name">Relazioni</field>
+        <field name="res_model">ded.narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">['|',
+            '&amp;', ('source_model', '=', ref('base.model_campaign_mission')), ('source_id', '=', active_id),
+            '&amp;', ('target_model', '=', ref('base.model_campaign_mission')), ('target_id', '=', active_id)
+        ]</field>
+    </record>
+    <record id="view_campaign_mission_form_narrative_button" model="ir.ui.view">
+        <field name="name">campaign.mission.form.narrative.button</field>
+        <field name="model">campaign.mission</field>
+        <field name="inherit_id" ref="cf_ded_campaign.campaign_mission_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[1]" position="before">
+                <button type="action" name="%(action_narrative_relation_campaign_mission)d" string="Relazioni"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

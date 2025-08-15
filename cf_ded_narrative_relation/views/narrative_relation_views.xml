@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_narrative_relation_tree" model="ir.ui.view">
+        <field name="name">ded.narrative.relation.tree</field>
+        <field name="model">ded.narrative.relation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="source_ref"/>
+                <field name="description"/>
+                <field name="target_ref"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_narrative_relation_form" model="ir.ui.view">
+        <field name="name">ded.narrative.relation.form</field>
+        <field name="model">ded.narrative.relation</field>
+        <field name="arch" type="xml">
+            <form string="Narrative Relation">
+                <sheet>
+                    <group>
+                        <field name="source_ref"/>
+                        <field name="target_ref"/>
+                        <field name="is_directional"/>
+                    </group>
+                    <group>
+                        <field name="description" placeholder="Testo della relazione..." colspan="4"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_narrative_relation_search" model="ir.ui.view">
+        <field name="name">ded.narrative.relation.search</field>
+        <field name="model">ded.narrative.relation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="description"/>
+                <filter string="Per modello origine" context="{'group_by': 'source_model'}"/>
+                <filter string="Per modello destinazione" context="{'group_by': 'target_model'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_ded_narrative_relation" model="ir.actions.act_window">
+        <field name="name">Relazioni narrative</field>
+        <field name="res_model">ded.narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ded_narrative_root" name="Narrazione" parent="cf_ded_base.menu_root"/>
+    <menuitem id="menu_ded_narrative_relation" name="Relazioni" parent="menu_ded_narrative_root" action="action_ded_narrative_relation"/>
+</odoo>
