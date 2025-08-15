@@ -5,18 +5,18 @@
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('oe_title')]" position="replace">
                 <div class="oe_title mb24">
-                    <field name="active" invisible="1"/>
+                    <field name="country_id" invisible="1"/>
                     <field name="is_company" invisible="1"/>
                     <field name="parent_id" invisible="1"/>
-                    <field name="street" invisible="1"/>
-                    <field name="street2" invisible="1"/>
-                    <field name="city" invisible="1"/>
                     <field name="state_id" invisible="1"/>
-                    <field name="zip" invisible="1"/>
-                    <field name="country_id" invisible="1"/>
+                    <field name="user_ids" invisible="1"/>
+                    <field name="street2" invisible="1"/>
+                    <field name="street" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                    <field name="city" invisible="1"/>
                     <field name="lang" invisible="1"/>
                     <field name="type" invisible="1"/>
-                    <field name="rpg_type"/>
+                    <field name="zip" invisible="1"/>
                     <h1>
                         <field name="name" default_focus="1" placeholder="e.g. Brandom Freeman"
                                required="type == 'contact'"/>

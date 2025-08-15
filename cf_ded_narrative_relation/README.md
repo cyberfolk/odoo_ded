@@ -1,0 +1,10 @@
+<img src="../cf_ded_narrative_relation/static/description/icon.png" align="right" height="70"/>
+
+# CF | D&D Spell
+
+📅 **Initial commit**: 15/08/25  
+🛠 **Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap
+
+## Descrizione
+
+Questo modulo introduce le relazioni narrative.

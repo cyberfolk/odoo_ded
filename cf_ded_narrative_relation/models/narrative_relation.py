@@ -7,16 +7,12 @@ class NarrativeRelation(models.Model):
     _description = "Narrative Relation"
     _inherit = ["mail.thread"]
 
-    description = fields.Text(required=True, tracking=True)
-    source_ref = fields.Reference(
-        selection="_selection_reference_models", required=True, tracking=True
-    )
-    source_model = fields.Many2one("ir.model", required=True, index=True)
+    description = fields.Text(required=True)
+    source_ref = fields.Reference(selection="_selection_reference_models", required=True)
+    source_model = fields.Many2one("ir.model", required=True, index=True, ondelete="cascade")
     source_id = fields.Integer(required=True, index=True)
-    target_ref = fields.Reference(
-        selection="_selection_reference_models", required=True, tracking=True
-    )
-    target_model = fields.Many2one("ir.model", required=True, index=True)
+    target_ref = fields.Reference(selection="_selection_reference_models", required=True)
+    target_model = fields.Many2one("ir.model", required=True, index=True, ondelete="cascade")
     target_id = fields.Integer(required=True, index=True)
     is_directional = fields.Boolean(default=True)
     name = fields.Char(compute="_compute_name", store=True)
@@ -92,13 +88,13 @@ class NarrativeRelation(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             if vals.get("source_ref") and (
-                not vals.get("source_model") or not vals.get("source_id")
+                    not vals.get("source_model") or not vals.get("source_id")
             ):
                 model_name, res_id = vals["source_ref"].split(",")
                 vals["source_model"] = self.env["ir.model"]._get(model_name).id
                 vals["source_id"] = int(res_id)
             if vals.get("target_ref") and (
-                not vals.get("target_model") or not vals.get("target_id")
+                    not vals.get("target_model") or not vals.get("target_id")
             ):
                 model_name, res_id = vals["target_ref"].split(",")
                 vals["target_model"] = self.env["ir.model"]._get(model_name).id

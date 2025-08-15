@@ -31,17 +31,17 @@
         </field>
     </record>
 
-    <record id="view_narrative_relation_search" model="ir.ui.view">
-        <field name="name">ded.narrative.relation.search</field>
-        <field name="model">ded.narrative.relation</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="description"/>
-                <filter string="Per modello origine" context="{'group_by': 'source_model'}"/>
-                <filter string="Per modello destinazione" context="{'group_by': 'target_model'}"/>
-            </search>
-        </field>
-    </record>
+<!--    <record id="view_narrative_relation_search" model="ir.ui.view">-->
+<!--        <field name="name">ded.narrative.relation.search</field>-->
+<!--        <field name="model">ded.narrative.relation</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search>-->
+<!--                <field name="description"/>-->
+<!--                <filter string="Per modello origine" context="{'group_by': 'source_model'}"/>-->
+<!--                <filter string="Per modello destinazione" context="{'group_by': 'target_model'}"/>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
 
     <record id="action_ded_narrative_relation" model="ir.actions.act_window">
         <field name="name">Relazioni narrative</field>
