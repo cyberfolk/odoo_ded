@@ -5,7 +5,6 @@ from odoo.exceptions import ValidationError
 class NarrativeRelation(models.Model):
     _name = "ded.narrative.relation"
     _description = "Narrative Relation"
-    _inherit = ["mail.thread"]
 
     description = fields.Text(required=True)
     source_ref = fields.Reference(selection="_selection_reference_models", required=True)
@@ -16,14 +15,6 @@ class NarrativeRelation(models.Model):
     target_id = fields.Integer(required=True, index=True)
     is_directional = fields.Boolean(default=True)
     name = fields.Char(compute="_compute_name", store=True)
-
-    _sql_constraints = [
-        (
-            "no_self_link",
-            "CHECK(source_model_id != target_model_id OR source_id != target_id)",
-            "Source and target must be different.",
-        )
-    ]
 
     @api.depends("source_ref", "target_ref")
     def _compute_name(self):

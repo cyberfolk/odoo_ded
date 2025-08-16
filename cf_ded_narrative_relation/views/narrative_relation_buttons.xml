@@ -5,8 +5,8 @@
         <field name="res_model">ded.narrative.relation</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">['|',
-            '&amp;', ('source_model', '=', ref('base.model_creature_faction')), ('source_id', '=', active_id),
-            '&amp;', ('target_model', '=', ref('base.model_creature_faction')), ('target_id', '=', active_id)
+         '&amp;', ('source_model', '=', %(cf_ded_base.model_creature_faction)d), ('source_id', '=', active_id),
+         '&amp;', ('target_model', '=', %(cf_ded_base.model_creature_faction)d), ('target_id', '=', active_id)
         ]</field>
     </record>
     <record id="view_creature_faction_form_narrative_button" model="ir.ui.view">

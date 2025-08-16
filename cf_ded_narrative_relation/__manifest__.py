@@ -14,7 +14,8 @@
     "license": "AGPL-3",
     "depends": [
         "base",
-        "mail"
+        "cf_ded_base",
+        "cf_ded_campaign"
     ],
     "data": [
         "security/ir.model.access.csv",

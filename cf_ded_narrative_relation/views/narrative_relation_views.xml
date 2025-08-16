@@ -26,7 +26,6 @@
                         <field name="description" placeholder="Testo della relazione..." colspan="4"/>
                     </group>
                 </sheet>
-                <div class="oe_chatter"/>
             </form>
         </field>
     </record>
