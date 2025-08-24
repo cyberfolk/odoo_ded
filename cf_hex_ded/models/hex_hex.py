@@ -75,6 +75,12 @@ class HexHex(models.Model):
         help="Percentuale di campi completati sul totale dei campi modello."
     )
 
+    settlement_id = fields.Many2one(
+        "settlement.settlement",
+        string="Insediamento",
+        help="Insediamento presente nell’esagono",
+    )
+
     def _compute_completion_percentage(self):
         target_fields = [
             'image', 'npc_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',

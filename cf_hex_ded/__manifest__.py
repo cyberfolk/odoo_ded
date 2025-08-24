@@ -20,6 +20,7 @@
         "views/creature_npc.xml",
         "views/creature_faction.xml",
         "views/menu_root.xml",
+        "views/settlement_settlement.xml",
     ],
     'depends': ['cf_hex_base', 'cf_ded_base', 'cf_multiple_image'],
     'demo': [],

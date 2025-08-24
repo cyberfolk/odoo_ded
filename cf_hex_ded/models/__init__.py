@@ -3,3 +3,4 @@ from . import biome_biome
 from . import encounter_encounter
 from . import creature_npc
 from . import creature_faction
+from . import settlement_settlement
