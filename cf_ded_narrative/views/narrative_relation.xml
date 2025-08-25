@@ -1,0 +1,112 @@
+<odoo>
+    <record id="narrative_relation_view_tree" model="ir.ui.view">
+        <field name="name">narrative.relation.tree</field>
+        <field name="model">narrative.relation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="source_ref"/>
+                <field name="description"/>
+                <field name="target_ref"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="narrative_relation_view_form" model="ir.ui.view">
+        <field name="name">narrative.relation.form</field>
+        <field name="model">narrative.relation</field>
+        <field name="arch" type="xml">
+            <form string="Narrative Relation">
+                <header>
+                    <field name="is_directional" invisible="1"/>
+                </header>
+                <style>
+                    /* wrapper */
+                    .ded-rel-hero{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    gap:20px;
+                    }
+
+                    /* cards */
+                    .ded-card{
+                    flex:1 1 40%;
+                    min-width:260px;
+                    max-width:520px;
+                    border-radius:14px;
+                    padding:16px 18px;
+                    color:#1f2d3d;
+                    box-shadow:0 8px 22px rgba(31,45,61,.08), 0 2px 6px rgba(31,45,61,.06);
+                    border:1px solid rgba(0,0,0,.05);
+                    background-color: rgb(31 45 61 / 8%);
+                    }
+
+                    .ded-card-title{
+                    margin:0 0 8px;
+                    text-align:center;
+                    font-weight:600;
+                    letter-spacing:.2px;
+                    }
+
+                    /* freccia centrale */
+                    .ded-arrow{
+                    margin: 0 40px;
+                    flex:0 0 72px;
+                    height:72px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    background: radial-gradient(ellipse at center, #ffffff 0%, #f6f7fb 70%, transparent 100%);
+                    border-radius:50%;
+                    box-shadow:0 6px 14px rgba(31,45,61,.06);
+                    }
+                    .ded-arrow i{
+                    color:#5e6e82;
+                    text-shadow:0 1px 0 rgba(255,255,255,.5);
+                    }
+
+                    /* field allineato */
+                    .ded-card .o_field_widget{ display:block; }
+                    .ded-card .o_field_widget input{ text-align:center; }
+                </style>
+
+                <sheet>
+                    <div class="ded-rel-hero">
+                        <div class="ded-card">
+                            <h3 class="ded-card-title">Origine</h3>
+                            <field name="source_ref"/>
+                        </div>
+
+                        <div class="ded-arrow">
+                            <span invisible="not is_directional">
+                                <i class="fa fa-long-arrow-right fa-2x" title="Direzione: Origine → Target"/>
+                            </span>
+                            <span invisible="is_directional">
+                                <i class="fa fa-exchange fa-2x" title="Bidirezionale"/>
+                            </span>
+                        </div>
+
+                        <div class="ded-card">
+                            <h3 class="ded-card-title">Target</h3>
+                            <field name="target_ref"/>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-3">Descrizione</h3>
+
+                    <group>
+                        <field string="Descrizione" name="description" placeholder="Testo della relazione..." colspan="4" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_narrative_relation" model="ir.actions.act_window">
+        <field name="name">Relazioni narrative</field>
+        <field name="res_model">narrative.relation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ded_narrative_root" name="Relazioni" parent="cf_ded_base.menu_root" action="action_narrative_relation"/>
+</odoo>

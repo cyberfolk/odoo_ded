@@ -3,7 +3,7 @@ from odoo.exceptions import ValidationError
 
 
 class NarrativeRelation(models.Model):
-    _name = "ded.narrative.relation"
+    _name = "narrative.relation"
     _description = "Narrative Relation"
 
     description = fields.Text(required=True)
@@ -15,6 +15,11 @@ class NarrativeRelation(models.Model):
     target_id = fields.Integer(required=True, index=True)
     is_directional = fields.Boolean(default=True)
     name = fields.Char(compute="_compute_name", store=True)
+    sequence = fields.Integer(default=1)
+
+    # helper per filtrare facilmente con active_model / active_id
+    source_model_name = fields.Char(related='source_model.model', store=True, index=True, string='source_model_name')
+    target_model_name = fields.Char(related='target_model.model', store=True, index=True, string='target_model_name')
 
     @api.depends("source_ref", "target_ref")
     def _compute_name(self):
@@ -119,3 +124,19 @@ class NarrativeRelation(models.Model):
             target_model_name = self.env["ir.model"].browse(target_model_id).model
             self._validate_allowed_models([source_model_name, target_model_name])
         return super().write(vals)
+
+    @api.model
+    def default_get(self, fields_list):
+        """Se arrivo da un record (active_model/active_id) e c'è context
+        relation_direction ∈ {'out','in'}, precompilo il lato giusto."""
+        res = super().default_get(fields_list)
+        active_model = self.env.context.get('active_model')
+        active_id = self.env.context.get('active_id')
+        direction = self.env.context.get('relation_direction')  # 'out' o 'in'
+        if active_model and active_id and direction:
+            ref = f"{active_model},{active_id}"
+            if direction == 'out' and 'source_ref' in self._fields:
+                res.setdefault('source_ref', ref)
+            elif direction == 'in' and 'target_ref' in self._fields:
+                res.setdefault('target_ref', ref)
+        return res

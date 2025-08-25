@@ -2,8 +2,8 @@
 # Powered by cyberfolk
 
 {
-    "name": "Cyberfolk | D&D Narrative Relation",
-    'icon': '/cf_ded_narrative_relation/static/description/icon.png',
+    "name": "Cyberfolk | D&D Narrative",
+    'icon': '/cf_ded_narrative/static/description/icon.png',
     'sequence': 5,
     'version': '0.0.1',
     'category': 'D&D',
@@ -19,8 +19,8 @@
     ],
     "data": [
         "security/ir.model.access.csv",
-        "views/narrative_relation_views.xml",
-        "views/narrative_relation_buttons.xml",
+        "views/narrative_relation.xml",
+        "views/creature_npc.xml",
     ],
     'demo': [],
     'application': False,
