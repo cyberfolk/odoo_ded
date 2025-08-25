@@ -17,6 +17,7 @@
         <field name="model">creature.npc</field>
         <field name="arch" type="xml">
             <form>
+                <header/>
                 <sheet>
                     <group col="6">
                         <group colspan="4">
@@ -39,10 +40,16 @@
                                     <div class="o_form_label fw-bold px-3">Exp</div>
                                     <field style="width: 36%" name="exp"/>
                                 </div>
+                                <field name="appearance"/>
+                                <field name="social_role"/>
+                                <field name="pc_relation"/>
                             </group>
                             <group>
                                 <field name="faction_ids" widget="many2many_tags"/>
                                 <field name="creature_id" string="Creatura"/>
+                                <field name="motivation"/>
+                                <field name="needs"/>
+                                <field name="offers"/>
                             </group>
                         </group>
                         <group colspan="2">

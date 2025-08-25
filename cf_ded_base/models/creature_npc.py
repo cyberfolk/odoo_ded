@@ -46,6 +46,26 @@ class CreatureNpc(models.Model):
         string="Creatura di riferimento",
     )
 
+    motivation = fields.Text(
+        string="Motivazione",
+    )
+    needs = fields.Text(
+        string="Bisogni"
+    )
+    offers = fields.Text(
+        string="Offre"
+    )
+    appearance = fields.Text(
+        string="Aspetto",
+    )
+    social_role = fields.Text(
+        string="Ruolo Sociale",
+    )
+    pc_relation = fields.Text(
+        string="Ruolo verso i PG",
+        help="Se può essere d'aiuto, minaccia, o altro verso i PG.",
+    )
+
     @api.depends("cr")
     def _compute_exp(self):
         for record in self:
