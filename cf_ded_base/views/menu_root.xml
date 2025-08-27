@@ -73,6 +73,12 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_menu_quest_quest" model="ir.actions.act_window">
+        <field name="name">Missioni</field>
+        <field name="res_model">quest.quest</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem sequence="0" id="menu_root" name="D&amp;D" web_icon="cf_ded_base,static/description/icon.png">
         <menuitem sequence="1" id="menu_biome" name="Biomi" action="action_menu_biome_biome"/>
         <menuitem sequence="2" id="menu_structure" name="Strutture" action="action_menu_structure_structure"/>
@@ -82,14 +88,15 @@
             <menuitem sequence="0" id="menu_creature_npc" name="NPC" action="action_menu_creature_npc"/>
             <menuitem sequence="1" id="menu_creature_npc_roster" name="NPC Roster" action="action_menu_creature_npc_roster"/>
         </menuitem>
-        <menuitem sequence="6" id="menu_creature_root" name="Creature">
+        <menuitem sequence="6" id="menu_quest_quest" name="Missioni" action="action_menu_quest_quest"/>
+        <menuitem sequence="7" id="menu_creature_root" name="Creature">
             <menuitem sequence="0" id="menu_creature" name="Creature" action="action_menu_creature_creature"/>
             <menuitem sequence="1" id="menu_creature_tag" name="Creature Tag" action="action_menu_creature_tag"/>
             <menuitem sequence="2" id="menu_creature_type" name="Creature Tipi" action="action_menu_creature_type"/>
             <menuitem sequence="3" id="menu_creature_encounter" name="Creature Scontri" action="action_menu_creature_encounter"/>
             <menuitem sequence="4" id="menu_creature_encounter_line" name="Creature Scontri Linee" action="action_menu_creature_encounter_line"/>
         </menuitem>
-        <menuitem sequence="7" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter"/>
+        <menuitem sequence="8" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter"/>
     </menuitem>
 
 </odoo>

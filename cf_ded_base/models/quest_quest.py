@@ -1,10 +1,10 @@
 from odoo import fields, models
 
-MISSION_SATE_LIST = [('todo', 'Da fare'), ('ongoing', 'In corso'), ('done', 'Terminata')]
+QUEST_SATE_LIST = [('todo', 'Da fare'), ('ongoing', 'In corso'), ('done', 'Terminata')]
 
 
-class CampaignMission(models.Model):
-    _name = "campaign.mission"
+class QuestQuest(models.Model):
+    _name = "quest.quest"
     _description = "Missione"
 
     name = fields.Char(
@@ -22,7 +22,7 @@ class CampaignMission(models.Model):
 
     state = fields.Selection(
         string="Stato",
-        selection=MISSION_SATE_LIST,
-        default="active",
+        selection=QUEST_SATE_LIST,
+        default="ongoing",
         help="Stato della campagna",
     )

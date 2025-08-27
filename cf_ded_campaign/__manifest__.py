@@ -19,7 +19,6 @@
         "views/campaign_session.xml",
         "views/campaign_campaign.xml",
         "views/res_partner.xml",
-        "views/campaign_mission.xml",
     ],
     'assets': {
         'web.assets_backend': [

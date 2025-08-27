@@ -27,6 +27,7 @@
         "views/creature_npc.xml",
         "views/creature_npc_roster.xml",
         "views/settlement_settlement.xml",
+        "views/quest_quest.xml",
         "reports/creature_npc_roster.xml",
         "reports/root_report.xml",
     ],

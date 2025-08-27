@@ -1,7 +1,7 @@
 <odoo>
-    <record id="campaign_mission_view_tree" model="ir.ui.view">
-        <field name="name">campaign.mission.tree.base</field>
-        <field name="model">campaign.mission</field>
+    <record id="quest_quest_view_tree" model="ir.ui.view">
+        <field name="name">quest.quest.tree.base</field>
+        <field name="model">quest.quest</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -12,9 +12,9 @@
         </field>
     </record>
 
-    <record id="campaign_mission_view_form" model="ir.ui.view">
-        <field name="name">campaign.mission.form.base</field>
-        <field name="model">campaign.mission</field>
+    <record id="quest_quest_view_form" model="ir.ui.view">
+        <field name="name">quest.quest.form.base</field>
+        <field name="model">quest.quest</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>

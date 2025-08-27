@@ -20,11 +20,6 @@
         <field name="view_mode">tree,form</field>
         <field name="domain">[('rpg_type', '!=', None)]</field>
     </record>
-    <record id="action_menu_campaign_mission" model="ir.actions.act_window">
-        <field name="name">Missioni</field>
-        <field name="res_model">campaign.mission</field>
-        <field name="view_mode">tree,form</field>
-    </record>
 
     <menuitem sequence="3" id="menu_hex" name="Campagne" parent="cf_ded_base.menu_root">
         <menuitem sequence="1" id="menu_campaign_campaign" name="Campagne" action="action_menu_campaign_campaign"/>
@@ -32,6 +27,5 @@
         <menuitem sequence="3" id="menu_campaign_res_partner_player" name="Player/Master"
                   action="action_menu_res_partner_player"/>
         <menuitem sequence="4" id="menu_campaign_pg" name="PG" action="action_menu_campaign_pg"/>
-        <menuitem sequence="5" id="menu_campaign_mission" name="Missioni" action="action_menu_campaign_mission"/>
     </menuitem>
 </odoo>

@@ -94,20 +94,20 @@ class CampaignSession(models.Model):
         compute="_compute_treasure_info_exp"
     )
     # ------------------------------------------------------------------------------------------------------------------
-    mission_id = fields.Many2one(
-        comodel_name="campaign.mission",
+    quest_id = fields.Many2one(
+        comodel_name="quest.quest",
         string="Missione",
     )
 
-    mission_id_difficulty = fields.Float(
+    quest_id_difficulty = fields.Float(
         string="Missione: Difficoltà",
         help="Difficoltà Missione, per calcolare l'esperienza guadagnata",
     )
 
-    mission_id_exp = fields.Integer(
+    quest_id_exp = fields.Integer(
         string="Missione: Exp",
         help="Esperienza derivante dal difficoltà Missione per il livello medio del party",
-        compute="_compute_mission_id_exp"
+        compute="_compute_quest_id_exp"
     )
     # ------------------------------------------------------------------------------------------------------------------
     encounter_ids = fields.Many2many(
@@ -221,10 +221,10 @@ class CampaignSession(models.Model):
         for rec in self:
             rec.treasure_info_exp = rec.treasure_info_difficulty * rec.party_exp_bar
 
-    @api.depends('party_exp_bar', 'mission_id_difficulty')
-    def _compute_mission_id_exp(self):
+    @api.depends('party_exp_bar', 'quest_id_difficulty')
+    def _compute_quest_id_exp(self):
         for rec in self:
-            rec.mission_id_exp = rec.mission_id_difficulty * rec.party_exp_bar
+            rec.quest_id_exp = rec.quest_id_difficulty * rec.party_exp_bar
 
     @api.depends('party_exp_bar', 'n_hex_crossed')
     def _compute_n_hex_crossed_exp(self):
@@ -284,10 +284,10 @@ class CampaignSession(models.Model):
             exp_end_list = [x.exp_end for x in rec.session_pg_ids] or [0]
             rec.exp_soglia = sum(exp_end_list) / len(exp_end_list or 0)
 
-    @api.depends('mission_id_exp', 'encounter_exp_split', 'n_hex_crossed_exp', 'treasure_info_exp')
+    @api.depends('quest_id_exp', 'encounter_exp_split', 'n_hex_crossed_exp', 'treasure_info_exp')
     def _compute_exp_gained_common(self):
         for rec in self:
-            rec.exp_gained_common = rec.mission_id_exp + rec.encounter_exp_split + rec.n_hex_crossed_exp + rec.treasure_info_exp
+            rec.exp_gained_common = rec.quest_id_exp + rec.encounter_exp_split + rec.n_hex_crossed_exp + rec.treasure_info_exp
 
     def action_confirm(self):
         self.ensure_one()

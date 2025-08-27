@@ -11,3 +11,4 @@ access_creature_encounter,access_creature_encounter,model_creature_encounter,bas
 access_creature_encounter_line,access_creature_encounter_line,model_creature_encounter_line,base.group_user,1,1,1,1
 access_creature_faction,access_creature_faction,model_creature_faction,base.group_user,1,1,1,1
 access_settlement_settlement,access_settlement_settlement,model_settlement_settlement,base.group_user,1,1,1,1
+access_quest_quest,access_quest_quest,model_quest_quest,base.group_user,1,1,1,1
