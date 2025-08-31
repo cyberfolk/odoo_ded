@@ -172,6 +172,49 @@ class CampaignSession(models.Model):
         help="Daily Budget, Stima dell'esperienza che un party può guadagnare in un giorno senza morire,"
              " riposando adeguatamente tra i vari scontri."
     )
+    # ------------------------------------------------------------------------------------------------------------------
+    encounter_easy_exp_adj = fields.Integer(
+        string="Scontro Facile: Exp Adj",
+        compute="_compute_budget_exp"
+    )
+    encounter_medium_exp_adj = fields.Integer(
+        string="Scontro Medio: Exp Adj",
+        compute="_compute_budget_exp"
+    )
+    encounter_hard_exp_adj = fields.Integer(
+        string="Scontro Difficile: Exp Adj",
+        compute="_compute_budget_exp"
+    )
+    encounter_deadly_exp_adj = fields.Integer(
+        string="Scontro Mortale: Exp Adj",
+        compute="_compute_budget_exp"
+    )
+    daily_budget_exp_adj = fields.Integer(
+        string="Daily Budget: Exp Adj",
+        compute="_compute_budget_exp",
+    )
+    # ------------------------------------------------------------------------------------------------------------------
+    encounter_easy_exp_split = fields.Integer(
+        string="Scontro Facile: Exp Divisa",
+        compute="_compute_budget_exp"
+    )
+    encounter_medium_exp_split = fields.Integer(
+        string="Scontro Medio: Exp Divisa",
+        compute="_compute_budget_exp"
+    )
+    encounter_hard_exp_split = fields.Integer(
+        string="Scontro Difficile: Exp Divisa",
+        compute="_compute_budget_exp"
+    )
+    encounter_deadly_exp_split = fields.Integer(
+        string="Scontro Mortale: Exp Divisa",
+        compute="_compute_budget_exp"
+    )
+    daily_budget_exp_split = fields.Integer(
+        string="Daily Budget: Exp Divisa",
+        compute="_compute_budget_exp",
+    )
+    # ------------------------------------------------------------------------------------------------------------------
     encounter_easy_exp_percentage = fields.Float(
         string="Scontro Facile: Exp Percentage",
         compute="_compute_budget_exp",
@@ -265,18 +308,34 @@ class CampaignSession(models.Model):
     def _compute_budget_exp(self):
         for rec in self:
             liv_start_list = [x.liv_start for x in rec.session_pg_ids]
+            n_pg = len(rec.session_pg_ids) or 1
+            exp_bar = rec.party_exp_bar or 1
             easy, medium, hard, deadly, budget = get_budget_exp(liv_start_list)
+
             rec.encounter_easy_exp = easy
+            rec.encounter_easy_exp_adj = easy / 2
+            rec.encounter_easy_exp_split = easy / 2 / n_pg
+            rec.encounter_easy_exp_percentage = easy / 2 / n_pg / exp_bar
+
             rec.encounter_medium_exp = medium
+            rec.encounter_medium_exp_adj = medium / 2
+            rec.encounter_medium_exp_split = medium / 2 / n_pg
+            rec.encounter_medium_exp_percentage = medium / 2 / n_pg / exp_bar
+
             rec.encounter_hard_exp = hard
+            rec.encounter_hard_exp_adj = hard / 2
+            rec.encounter_hard_exp_split = hard / 2 / n_pg
+            rec.encounter_hard_exp_percentage = hard / 2 / n_pg / exp_bar
+
             rec.encounter_deadly_exp = deadly
+            rec.encounter_deadly_exp_adj = deadly / 2
+            rec.encounter_deadly_exp_split = deadly / 2 / n_pg
+            rec.encounter_deadly_exp_percentage = deadly / 2 / n_pg / exp_bar
+
             rec.daily_budget_exp = budget
-            K = 1 / 2 / len(rec.session_pg_ids) / rec.party_exp_bar if rec.session_pg_ids and rec.party_exp_bar else 0
-            rec.encounter_easy_exp_percentage = easy * K
-            rec.encounter_medium_exp_percentage = medium * K
-            rec.encounter_hard_exp_percentage = hard * K
-            rec.encounter_deadly_exp_percentage = deadly * K
-            rec.daily_budget_exp_percentage = budget * K
+            rec.daily_budget_exp_adj = budget / 2
+            rec.daily_budget_exp_split = budget / 2 / n_pg
+            rec.daily_budget_exp_percentage = budget / 2 / n_pg / exp_bar
 
     @api.depends('session_pg_ids')
     def _compute_exp_soglia(self):
@@ -300,4 +359,3 @@ class CampaignSession(models.Model):
         self.state = 'draft'
         for session_pg in self.session_pg_ids:
             session_pg.pg_id.exp -= (session_pg.exp_end_adj - session_pg.exp_start)
-
