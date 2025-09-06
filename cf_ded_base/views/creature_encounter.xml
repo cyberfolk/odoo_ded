@@ -56,9 +56,9 @@
                         <group string="Componenti dello scontro" colspan="2">
                             <field name="line_ids" nolabel="1" colspan="2">
                                 <tree>
-                                    <field name="name"/>
-                                    <field name="creature_qty"/>
+                                    <field name="name" column_invisible="1"/>
                                     <field name="creature_id"/>
+                                    <field name="creature_qty"/>
                                     <field name="cr"/>
                                     <field name="exp_sum" string="Exp riga"/>
                                 </tree>
