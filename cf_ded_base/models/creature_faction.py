@@ -106,6 +106,12 @@ class FactionFaction(models.Model):
         help="NPC appartenenti alla fazione",
     )
 
+    poi_ids = fields.Many2many(
+        string="Punti d'Interesse",
+        comodel_name="point.of.interest",
+        relation="point_of_interest_faction_rel",
+    )
+
     # Info base:
     n01_years_in_region = fields.Text(string="Da quanti anni sono nella regione?")
     n02_daily_operations = fields.Text(string="Quali sono le loro operazioni quotidiane?")

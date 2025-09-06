@@ -95,6 +95,7 @@
                                 <field name="good_evil_axis"/>
                                 <field name="cosmology"/>
                                 <field name="parent_id"/>
+                                <field name="poi_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <notebook>

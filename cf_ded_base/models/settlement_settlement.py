@@ -20,8 +20,13 @@ class Settlement(models.Model):
     _name = "settlement.settlement"
     _description = "Insediamento"
 
-    name = fields.Char(string="Nome", required=True)
-    description = fields.Html(string="Descrizione")
+    name = fields.Char(
+        string="Nome",
+        required=True
+    )
+    description = fields.Html(
+        string="Descrizione"
+    )
     scale = fields.Selection(
         selection=SCALE_SELECTION_LIST,
         string="Scala",

@@ -22,6 +22,7 @@
         "views/creature_tag.xml",
         "views/creature_encounter.xml",
         "views/creature_encounter_line.xml",
+        "views/point_of_interest.xml",
         "views/creature_faction.xml",
         "views/encounter_encounter.xml",
         "views/creature_npc.xml",

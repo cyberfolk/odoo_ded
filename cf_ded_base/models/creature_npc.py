@@ -46,6 +46,12 @@ class CreatureNpc(models.Model):
         string="Creatura di riferimento",
     )
 
+    poi_ids = fields.Many2many(
+        string="Punto d'Interesse",
+        comodel_name="point.of.interest",
+        relation="point_of_interest_npc_rel",
+    )
+
     motivation = fields.Text(
         string="Motivazione",
     )

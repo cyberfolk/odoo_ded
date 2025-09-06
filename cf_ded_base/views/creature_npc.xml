@@ -33,6 +33,7 @@
                             <group>
                                 <field name="type_id"/>
                                 <field name="tag_ids" widget="many2many_tags"/>
+                                <field name="creature_id" string="Creatura"/>
                                 <div name="div_cr_exp" class="w-100 d-flex" colspan="2">
                                     <div style="width: 15%" class="o_form_label fw-bold pe-3">GS</div>
                                     <field style="width: 8%" name="cr"/>
@@ -40,16 +41,10 @@
                                     <div class="o_form_label fw-bold px-3">Exp</div>
                                     <field style="width: 36%" name="exp"/>
                                 </div>
-                                <field name="appearance"/>
-                                <field name="social_role"/>
-                                <field name="pc_relation"/>
                             </group>
                             <group>
                                 <field name="faction_ids" widget="many2many_tags"/>
-                                <field name="creature_id" string="Creatura"/>
-                                <field name="motivation"/>
-                                <field name="needs"/>
-                                <field name="offers"/>
+                                <field name="poi_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -58,7 +53,21 @@
                     </group>
                     <notebook>
                         <page name="Info MM">
-                            <field name="description" colspan="4"/>
+                            <group>
+                                <group>
+                                    <field name="appearance" placeholder="..."/>
+                                    <field name="social_role" placeholder="..."/>
+                                    <field name="pc_relation" placeholder="..."/>
+                                </group>
+                                <group>
+                                    <field name="motivation" placeholder="..."/>
+                                    <field name="needs" placeholder="..."/>
+                                    <field name="offers" placeholder="..."/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="description" nolabel="1" colspan="2" placeholder="Descrizione..."/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

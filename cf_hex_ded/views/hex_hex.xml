@@ -63,7 +63,8 @@
                                 <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
                                 <field name="npc_ids" widget="many2many_tags"/>
                                 <field name="faction_ids" widget="many2many_tags"/>
-                                <field name="creature_id" optional="show"/>
+                                <field name="creature_id"/>
+                                <field name="poi_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group colspan="2">

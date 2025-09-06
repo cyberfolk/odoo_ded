@@ -76,10 +76,17 @@ class HexHex(models.Model):
     )
 
     settlement_id = fields.Many2one(
-        "settlement.settlement",
+        comodel_name="settlement.settlement",
         string="Insediamento",
         help="Insediamento presente nell’esagono",
     )
+
+    poi_ids = fields.Many2many(
+        string="Punti d'Interesse",
+        comodel_name="point.of.interest",
+        relation="point_of_interest_hex_rel",
+    )
+
 
     def _compute_completion_percentage(self):
         target_fields = [

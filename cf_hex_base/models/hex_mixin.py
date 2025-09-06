@@ -39,10 +39,13 @@ class HexMixin(models.AbstractModel):
              "[v2_nolimit_q] -> Mappa con numero di Quadranti estendibile disposti a griglia."
     )
 
-    @api.depends('code')
+    @api.depends('code', 'name')
     def _compute_display_name(self):
         for rec in self:
-            rec.display_name = rec.code
+            if rec.code and rec.name and rec.code != rec.name:
+                rec.display_name = f"{rec.code} | {rec.name}"
+            else:
+                rec.display_name = rec.code or rec.name or "-"
 
     @api.depends('index')
     def _compute_circle_order(self):

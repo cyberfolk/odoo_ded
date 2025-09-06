@@ -9,6 +9,7 @@ from . import creature_encounter_line
 from . import creature_faction
 from . import creature_npc
 from . import encounter_encounter
+from . import point_of_interest
 from . import creature_npc_roster
 from . import settlement_settlement
 from . import quest_quest

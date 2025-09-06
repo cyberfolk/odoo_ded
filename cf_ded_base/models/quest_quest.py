@@ -26,3 +26,9 @@ class QuestQuest(models.Model):
         default="ongoing",
         help="Stato della campagna",
     )
+
+    poi_ids = fields.Many2many(
+        string="Punti d'Interesse",
+        comodel_name="point.of.interest",
+        relation="point_of_interest_quest_rel",
+    )
