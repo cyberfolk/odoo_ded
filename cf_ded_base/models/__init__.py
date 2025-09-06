@@ -1,4 +1,4 @@
-from . import creature_stats
+from . import creature_base_mixin
 from . import biome_biome
 from . import structure_structure
 from . import creature_creature
@@ -7,6 +7,7 @@ from . import creature_type
 from . import creature_encounter
 from . import creature_encounter_line
 from . import creature_faction
+from . import creature_monster_legendary
 from . import creature_npc
 from . import encounter_encounter
 from . import point_of_interest

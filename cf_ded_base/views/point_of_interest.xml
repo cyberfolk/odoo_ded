@@ -25,9 +25,10 @@
                                 </h1>
                             </div>
                             <group>
+                                <field name="quest_ids" widget="many2many_tags"/>
+                                <field name="monster_ids" widget="many2many_tags"/>
                                 <field name="npc_ids" widget="many2many_tags"/>
                                 <field name="faction_ids" widget="many2many_tags"/>
-                                <field name="quest_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group colspan="2">

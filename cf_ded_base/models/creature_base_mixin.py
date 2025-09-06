@@ -2,7 +2,7 @@ from odoo import fields, models
 
 
 class CreatureCreature(models.AbstractModel):
-    _name = "creature.stats"
+    _name = "creature.base.mixin"
     _description = "Creature Caratteristiche Comuni"
 
     name = fields.Char(
@@ -11,7 +11,7 @@ class CreatureCreature(models.AbstractModel):
     )
 
     _sql_constraints = [
-        ('unique_creature_stats_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')
+        ('unique_creature_base_mixin_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')
     ]
 
     description = fields.Html(

@@ -5,7 +5,7 @@ from ...cf_ded_base.utility.exp import get_level_by_exp
 class CampaignPg(models.Model):
     _name = "campaign.pg"
     _description = "PG"
-    _inherit = "creature.stats"
+    _inherit = "creature.base.mixin"
 
     player_id = fields.Many2one(
         comodel_name="res.partner",

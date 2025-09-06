@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 class CreatureCreature(models.Model):
     _name = "creature.creature"
     _description = "Creatura"
-    _inherit = "creature.stats"
+    _inherit = "creature.base.mixin"
 
     cr = fields.Float(
         string="Grado Sfida",

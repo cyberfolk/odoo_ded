@@ -27,8 +27,25 @@ class QuestQuest(models.Model):
         help="Stato della campagna",
     )
 
+    # region M2M Entità narrative
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
-        relation="point_of_interest_quest_rel",
+        relation="quest_poi_rel",
     )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.monster.legendary",
+        relation="quest_monster_rel",
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.npc",
+        relation="quest_npc_rel",
+    )
+    faction_ids = fields.Many2many(
+        string="Fazioni",
+        comodel_name="creature.faction",
+        relation="quest_faction_rel",
+    )
+    # endregion

@@ -99,18 +99,28 @@ class FactionFaction(models.Model):
         compute="_compute_desc_creature",
     )
 
-    npc_ids = fields.Many2many(
-        comodel_name="creature.npc",
-        relation="creature_faction_creature_npc_rel",
-        string="NPCs",
-        help="NPC appartenenti alla fazione",
+    # region M2M Entità narrative
+    quest_ids = fields.Many2many(
+        string="Missioni",
+        comodel_name="quest.quest",
+        relation="quest_faction_rel",
     )
-
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
-        relation="point_of_interest_faction_rel",
+        relation="poi_faction_rel",
     )
+    monster_ids = fields.Many2many(
+        string="Mostro Leggendario",
+        comodel_name="creature.monster.legendary",
+        relation="monster_faction_rel",
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.npc",
+        relation="faction_npc_rel",
+    )
+    # endregion
 
     # Info base:
     n01_years_in_region = fields.Text(string="Da quanti anni sono nella regione?")
