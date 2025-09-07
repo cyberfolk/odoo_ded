@@ -15,7 +15,7 @@ class FactionFaction(models.Model):
         ('unique_creature_faction_code', 'UNIQUE(code)', 'Il code della fazione deve essere univoco!')
     ]
 
-    # region FIELD -----------------------------------------------------------------------------------------------------
+    # region FIELD - BASE ----------------------------------------------------------------------------------------------
     name = fields.Char(
         string="Nome",
         required=True,
@@ -63,9 +63,10 @@ class FactionFaction(models.Model):
 
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
-        relation="creature_faction_creature_creature_rel",
+        relation="faction_creature_rel",
         string="Creature",
         help="Creature della fazione",
+        domain=[("is_legendary", "=", False), ("is_npc", "=", False)],
     )
 
     encounter_ids = fields.One2many(
@@ -99,29 +100,42 @@ class FactionFaction(models.Model):
         compute="_compute_desc_creature",
     )
 
-    # region M2M Entità narrative
+    # endregion FIELD --------------------------------------------------------------------------------------------------
+
+    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",
         relation="quest_faction_rel",
+        # column1="quest_id",
+        # column2="faction_id",
     )
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
         relation="poi_faction_rel",
+        # column1="poi_id",
+        # column2="faction_id",
     )
     monster_ids = fields.Many2many(
         string="Mostro Leggendario",
-        comodel_name="creature.monster.legendary",
+        comodel_name="creature.creature",
         relation="monster_faction_rel",
+        # column1="monster_id",
+        # column2="faction_id",
+        domain=[("is_legendary", "=", True)],
     )
     npc_ids = fields.Many2many(
         string="NPCs",
-        comodel_name="creature.npc",
+        comodel_name="creature.creature",
         relation="faction_npc_rel",
+        # column1="faction_id",
+        # column2="npc_id",
+        domain=[("is_npc", "=", True)],
     )
-    # endregion
+    # endregion --------------------------------------------------------------------------------------------------------
 
+    # region FIELD - DESCRIPTIVE ---------------------------------------------------------------------------------------
     # Info base:
     n01_years_in_region = fields.Text(string="Da quanti anni sono nella regione?")
     n02_daily_operations = fields.Text(string="Quali sono le loro operazioni quotidiane?")
@@ -154,9 +168,9 @@ class FactionFaction(models.Model):
     n19_possible_developments = fields.Text(string="Possibili sviluppi della Fazione?")
     n20_faction_theme = fields.Text(string="Tema della Fazione?")
 
-    # endregion FIELD --------------------------------------------------------------------------------------------------
+    # endregion --------------------------------------------------------------------------------------------------------
 
-    # region COMPUTED METHOD -------------------------------------------------------------------------------------------
+    # region METHOD - COMPUTED -----------------------------------------------------------------------------------------
     @api.depends("child_ids", "parent_id")
     def _compute_is_child(self):
         for rec in self:
@@ -183,4 +197,4 @@ class FactionFaction(models.Model):
             ])
             rec.desc_creature = f"""<div class="row">{content}</div>""" if content else "Nessuna creatura"
 
-    # endregion COMPUTED METHOD ----------------------------------------------------------------------------------------
+    # endregion --------------------------------------------------------------------------------------------------------

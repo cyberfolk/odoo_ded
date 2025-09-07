@@ -5,6 +5,7 @@ class PointOfInterest(models.Model):
     _name = "point.of.interest"
     _description = "Point of Interest"
 
+    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
         string="Nome",
         required=True
@@ -15,8 +16,9 @@ class PointOfInterest(models.Model):
     image = fields.Image(
         string="Immagine",
     )
+    # endregion --------------------------------------------------------------------------------------------------------
 
-    # region M2M Entità narrative
+    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",
@@ -24,32 +26,30 @@ class PointOfInterest(models.Model):
     )
     monster_ids = fields.Many2many(
         string="Mostro Leggendario",
-        comodel_name="creature.monster.legendary",
+        comodel_name="creature.creature",
         relation="poi_monster_rel",
+        domain=[("is_legendary", "=", True)],
     )
     npc_ids = fields.Many2many(
         string="NPCs",
-        comodel_name="creature.npc",
+        comodel_name="creature.creature",
         relation="poi_npc_rel",
+        domain=[("is_npc", "=", True)],
     )
     faction_ids = fields.Many2many(
         string="Fazione",
         comodel_name="creature.faction",
         relation="poi_faction_rel",
     )
-    # endregion
+    # endregion --------------------------------------------------------------------------------------------------------
 
-# category_id	Tipologia specifica (Many2one poi.category con valori “Naturale/Artificiale” e sottocategorie).
-# danger_level	Valore indicativo (es. SML/difficoltà).
-# status	Enum (concept, unlocked, cleared…) per gestire progressi.
-# todo lore_item_ids	Many2many → lore.item	Leggende, miti, oggetti collegati.
-# Record di categoria (Naturale, Artificiale, sottocategorie comuni).
+    # category_id	Tipologia specifica (Many2one poi.category con valori “Naturale/Artificiale” e sottocategorie).
+    # danger_level	Valore indicativo (es. SML/difficoltà).
+    # status	Enum (concept, unlocked, cleared…) per gestire progressi.
+    # todo lore_item_ids	Many2many → lore.item	Leggende, miti, oggetti collegati.
+    # Record di categoria (Naturale, Artificiale, sottocategorie comuni).
 
-# Campi: name, hex_id (Many2one hex.hex), category_id, description, image, gallery_ids, danger_level, status, is_primary, notes
-# Relazioni: lore_item_ids
+    # Campi: name, hex_id (Many2one hex.hex), category_id, description, image, gallery_ids, danger_level, status, is_primary, notes
+    # Relazioni: lore_item_ids
 
-# Popolamento iniziale di categorie (“Naturale”, “Artificiale” ecc.).
-
-
-
-
+    # Popolamento iniziale di categorie (“Naturale”, “Artificiale” ecc.).

@@ -9,33 +9,39 @@
 
 
 from odoo import fields, models, api
-from ..utility.exp import MAP_CR_EXP
 
 
-class CreatureMonsterLegendary(models.Model):
-    _name = "creature.monster.legendary"
-    _inherit = "creature.base.mixin"
-    _description = "Creature | Monster Legendary (ML)"
+class CreatureCreatureLegendary(models.Model):
+    _inherit = "creature.creature"
 
-    # region M2M Entità narrative
-    quest_ids = fields.Many2many(
-        string="Missioni",
+    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
+    ml_quest_ids = fields.Many2many(
+        string="ML Missioni",
         comodel_name="quest.quest",
         relation="quest_monster_rel",
+        # column1="quest_id",
+        # column2="monster_id",
     )
-    poi_ids = fields.Many2many(
-        string="Punto d'Interesse",
+    ml_poi_ids = fields.Many2many(
+        string="ML Punto d'Interesse",
         comodel_name="point.of.interest",
         relation="poi_monster_rel",
+        # column1="poi_id",
+        # column2="monster_id",
     )
-    npc_ids = fields.Many2many(
-        string="NPCs",
-        comodel_name="creature.npc",
+    ml_npc_ids = fields.Many2many(
+        string="ML NPCs",
+        comodel_name="creature.creature",
         relation="monster_npc_rel",
+        column1="monster_id",
+        column2="npc_id",
+        domain=[("is_npc", "=", True)],
     )
-    faction_ids = fields.Many2many(
-        string="Fazioni",
+    ml_faction_ids = fields.Many2many(
+        string="ML Fazioni",
         comodel_name="creature.faction",
         relation="monster_faction_rel",
+        # column1="monster_id",
+        # column2="faction_id",
     )
-    # endregion
+    # endregion --------------------------------------------------------------------------------------------------------

@@ -1,23 +1,20 @@
 <odoo>
-    <record id="creature_npc_view_tree" model="ir.ui.view">
-        <field name="name">creature.creature.tree</field>
+    <record id="creature_legendary_view_tree" model="ir.ui.view">
+        <field name="name">creature_legendary_view_tree</field>
         <field name="model">creature.creature</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="tag_ids" widget="many2many_tags"/>
-                <field name="type_id"/>
-                <field name="npc_faction_ids" widget="many2many_tags"/>
+                <field name="description"/>
             </tree>
         </field>
     </record>
 
-    <record id="creature_npc_view_form" model="ir.ui.view">
-        <field name="name">creature.creature.form</field>
+    <record id="creature_legendary_view_form" model="ir.ui.view">
+        <field name="name">creature_legendary_view_form</field>
         <field name="model">creature.creature</field>
         <field name="arch" type="xml">
             <form>
-                <header/>
                 <sheet>
                     <group col="6">
                         <group colspan="4">
@@ -26,9 +23,6 @@
                                 <h1>
                                     <field class="text-nowrap" name="name" nolabel="1"/>
                                 </h1>
-                                <h3>
-                                    <field class="text-nowrap text-muted" name="titles" nolabel="1" placeholder="Titoli..."/>
-                                </h3>
                                 <group>
                                     <group>
                                         <field name="is_legendary"/>
@@ -39,7 +33,6 @@
                             <group>
                                 <field name="type_id"/>
                                 <field name="tag_ids" widget="many2many_tags"/>
-                                <field name="creature_id" string="Creatura"/>
                                 <div name="div_cr_exp" class="w-100 d-flex" colspan="2">
                                     <div style="width: 15%" class="o_form_label fw-bold pe-3">GS</div>
                                     <field style="width: 8%" name="cr"/>
@@ -49,10 +42,10 @@
                                 </div>
                             </group>
                             <group>
-                                <field name="npc_quest_ids" widget="many2many_tags"/>
-                                <field name="npc_poi_ids" widget="many2many_tags"/>
-                                <field name="npc_monster_ids" widget="many2many_tags"/>
-                                <field name="npc_faction_ids" widget="many2many_tags"/>
+                                <field name="ml_quest_ids" widget="many2many_tags"/>
+                                <field name="ml_poi_ids" widget="many2many_tags"/>
+                                <field name="ml_npc_ids" widget="many2many_tags"/>
+                                <field name="ml_faction_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -60,22 +53,8 @@
                         </group>
                     </group>
                     <notebook>
-                        <page name="Info MM">
-                            <group>
-                                <group>
-                                    <field name="appearance" placeholder="..."/>
-                                    <field name="social_role" placeholder="..."/>
-                                    <field name="pc_relation" placeholder="..."/>
-                                </group>
-                                <group>
-                                    <field name="motivation" placeholder="..."/>
-                                    <field name="needs" placeholder="..."/>
-                                    <field name="offers" placeholder="..."/>
-                                </group>
-                            </group>
-                            <group>
-                                <field name="description" nolabel="1" colspan="2" placeholder="Descrizione..."/>
-                            </group>
+                        <page string="Descrizione" name="page_description">
+                            <field name="description"/>
                         </page>
                     </notebook>
                 </sheet>

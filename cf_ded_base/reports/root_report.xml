@@ -14,23 +14,23 @@
 
     <record id="action_report_spell_list_v1" model="ir.actions.report">
         <field name="name">Stampa V1</field>
-        <field name="model">creature.npc.roster</field>
+        <field name="model">creature.roster</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">cf_ded_base.report_creature_npc_roster_template_v1</field>
-        <field name="report_file">cf_ded_base.report_creature_npc_roster_template_v1</field>
+        <field name="report_name">cf_ded_base.report_creature_roster_template_v1</field>
+        <field name="report_file">cf_ded_base.report_creature_roster_template_v1</field>
         <field name="print_report_name">(object.name)</field>
-        <field name="binding_model_id" ref="model_creature_npc_roster"/>
+        <field name="binding_model_id" ref="model_creature_roster"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="cf_ded_base.cf_paperformat"/>
     </record>
     <record id="action_report_spell_list_v2" model="ir.actions.report">
         <field name="name">Stampa V2</field>
-        <field name="model">creature.npc.roster</field>
+        <field name="model">creature.roster</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">cf_ded_base.report_creature_npc_roster_template_v2</field>
-        <field name="report_file">cf_ded_base.report_creature_npc_roster_template_v2</field>
+        <field name="report_name">cf_ded_base.report_creature_roster_template_v2</field>
+        <field name="report_file">cf_ded_base.report_creature_roster_template_v2</field>
         <field name="print_report_name">(object.name)</field>
-        <field name="binding_model_id" ref="model_creature_npc_roster"/>
+        <field name="binding_model_id" ref="model_creature_roster"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="cf_ded_base.cf_paperformat"/>
     </record>

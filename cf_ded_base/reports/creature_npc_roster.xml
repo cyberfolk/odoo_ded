@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_creature_npc_roster_template_v1">
+    <template id="report_creature_roster_template_v1">
         <t t-call="web.basic_layout">
             <style>
                 .npc-card {
@@ -33,7 +33,7 @@
         </t>
     </template>
 
-    <template id="report_creature_npc_roster_template_v2">
+    <template id="report_creature_roster_template_v2">
         <t t-call="web.basic_layout">
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&amp;display=swap');
