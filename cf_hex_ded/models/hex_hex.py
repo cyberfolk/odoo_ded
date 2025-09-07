@@ -24,9 +24,9 @@ class HexHex(models.Model):
         string="Immagine",
     )
 
-    npc_ids = fields.Many2many(
-        comodel_name="creature.npc",
-        relation="creature_npc_hex_script_rel",
+    creature_ids = fields.Many2many(
+        comodel_name="creature.creature",
+        relation="creature_hex_script_rel",
         string="NPCs",
         help="Elenco NPC che si posso trovare in questo Esagono Scriptato."
     )
@@ -90,7 +90,7 @@ class HexHex(models.Model):
 
     def _compute_completion_percentage(self):
         target_fields = [
-            'image', 'npc_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
+            'image', 'creature_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
             'structure_id', 'image_gallery_ids', 'wild_encounter_ids', 'encounter_encounter_ids',
         ]
         for rec in self:

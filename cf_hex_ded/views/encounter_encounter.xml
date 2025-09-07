@@ -4,15 +4,15 @@
         <field name="model">encounter.encounter</field>
         <field name="inherit_id" ref="cf_ded_base.encounter_encounter_view_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='description']" position="after">
+            <xpath expr="//field[@name='name']" position="after">
                 <field name="hex_id"/>
             </xpath>
         </field>
     </record>
 
-    <record id="encounter_encounter_view_form_inherited" model="ir.ui.view">
-        <field name="name">creature.npc.form.lore</field>
-        <field name="model">creature.npc</field>
+    <record id="encounter_encounter_view_form" model="ir.ui.view">
+        <field name="name">encounter_encounter_view_form</field>
+        <field name="model">creature.creature</field>
         <field name="inherit_id" ref="cf_ded_base.encounter_encounter_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='description']" position="after">

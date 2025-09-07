@@ -1,0 +1,23 @@
+<odoo>
+    <record id="creature_creature_view_tree" model="ir.ui.view">
+        <field name="name">creature_creature_view_tree</field>
+        <field name="model">creature.creature</field>
+        <field name="inherit_id" ref="cf_ded_base.creature_creature_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='faction_ids']" position="after">
+                <field name="hex_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="creature_creature_view_form" model="ir.ui.view">
+        <field name="name">creature_creature_view_form</field>
+        <field name="model">creature.creature</field>
+        <field name="inherit_id" ref="cf_ded_base.creature_creature_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='poi_ids']" position="before">
+                <field name="hex_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

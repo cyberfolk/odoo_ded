@@ -97,8 +97,8 @@
                                 <field name="parent_id"/>
                                 <field name="quest_ids" widget="many2many_tags"/>
                                 <field name="poi_ids" widget="many2many_tags"/>
-                                <field name="monster_ids" widget="many2many_tags"/>
-                                <field name="npc_ids" widget="many2many_tags"/>
+                                <field name="creature_ids" widget="many2many_tags" domain="[('is_legendary', '=', True)]"/>
+                                <field name="creature_ids" widget="many2many_tags" domain="[('is_npc', '=', True)]"/>
                             </group>
                         </group>
                         <notebook>
@@ -115,7 +115,7 @@
                             </page>
                             <page string="NPC">
                                 <group>
-                                    <field name="npc_ids" nolabel="1" colspan="2"/>
+                                    <field name="creature_ids" domain="[('is_npc', '=', True)]" nolabel="1" colspan="2"/>
                                 </group>
                             </page>
                             <page string="Domande" name="page_questions">

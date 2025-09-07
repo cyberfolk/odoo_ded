@@ -20,6 +20,7 @@
         'cf_ded_base',
         'cf_hex_base',
         'cf_hex_ded',
+        'cf_ded_campaign',
         'cf_hex_ded_client',
         'cf_data_handler',
     ],

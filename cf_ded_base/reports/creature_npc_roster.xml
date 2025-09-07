@@ -12,7 +12,7 @@
                 }
             </style>
 
-            <t t-set="npc_list" t-value="docs[0].npc_ids"/>
+            <t t-set="npc_list" t-value="docs[0].creature_ids"/>
             <t t-set="npc_list_grouped2" t-value="[npc_list[i:i+2] for i in range(0, len(npc_list), 2)]"/>
             <t t-foreach="npc_list_grouped2" t-as="npc_sublist2">
                 <div class="d-flex" style="page-break-inside: avoid;">

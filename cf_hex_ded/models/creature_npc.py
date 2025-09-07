@@ -6,14 +6,14 @@ from ...cf_ded_base.utility.exp import MAP_CR_EXP
 _logger = logging.getLogger(__name__)
 
 
-class CreatureNpc(models.Model):
-    _inherit = "creature.npc"
+class CreatureCreature(models.Model):
+    _inherit = "creature.creature"
 
     hex_ids = fields.Many2many(
         comodel_name="hex.hex",
-        relation="creature_npc_hex_script_rel",
+        relation="creature_hex_script_rel",
         string="Hexs possibili",
-        help="Esagoni dove è possibile trovare l'NPC."
+        help="Esagoni dove è possibile trovarlo."
     )
 
     hex_id = fields.Many2many(

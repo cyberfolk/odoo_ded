@@ -62,10 +62,6 @@
         <field name="view_mode">tree,form</field>
         <field name="domain">[('is_npc', '=', True)]</field>
         <field name="context">{'default_is_npc':1}</field>
-        <field name="view_ids"
-               eval="[(5, 0, 0),
-                          (0, 0, {'view_mode': 'tree', 'view_id': ref('creature_npc_view_tree')}),
-                          (0, 0, {'view_mode': 'form', 'view_id': ref('creature_npc_view_form')})]"/>
     </record>
 
     <record id="action_menu_creature_roster" model="ir.actions.act_window">
@@ -98,10 +94,6 @@
         <field name="view_mode">tree,form</field>
         <field name="domain">[('is_legendary', '=', True)]</field>
         <field name="context">{'default_is_legendary':1}</field>
-        <field name="view_ids"
-               eval="[(5, 0, 0),
-                          (0, 0, {'view_mode': 'tree', 'view_id': ref('creature_legendary_view_tree')}),
-                          (0, 0, {'view_mode': 'form', 'view_id': ref('creature_legendary_view_form')})]"/>
     </record>
 
     <menuitem sequence="0" id="menu_root" name="D&amp;D" web_icon="cf_ded_base,static/description/icon.png">

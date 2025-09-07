@@ -12,7 +12,6 @@ INIT_MODELS = [
     ("creature.tag",            'name', 'creature_ids'),
     ("creature.type",           'name', 'creature_ids'),
     ("creature.creature",       'name', ''),
-    ("creature.npc",            'name', ''),
     ("creature.faction",        'name', ''),
     ("creature.encounter.line", 'name', 'encounter_ids'),
     ("creature.encounter",      'name', ''),

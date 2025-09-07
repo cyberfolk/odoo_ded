@@ -34,8 +34,7 @@
         <field name="name">creature.creature.tree</field>
         <field name="model">creature.creature</field>
         <field name="arch" type="xml">
-            <tree decoration-bf="is_cool"
-                  decoration-muted="is_skip">
+            <tree decoration-bf="is_cool" decoration-muted="is_skip">
                 <field name="is_skip" column_invisible="1"/>
                 <field name="is_cool" column_invisible="1"/>
                 <field name="name"/>
@@ -45,7 +44,7 @@
                 <field name="tag_ids" widget="many2many_tags"/>
                 <field name="biome_low_prob_ids" widget="many2many_tags"/>
                 <field name="biome_high_prob_ids" widget="many2many_tags"/>
-                <field name="base_faction_ids" widget="many2many_tags"/>
+                <field name="faction_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -55,22 +54,22 @@
         <field name="model">creature.creature</field>
         <field name="arch" type="xml">
             <form>
+                <header/>
                 <sheet>
                     <group col="6">
                         <group colspan="4">
                             <div class="oe_title mb-3" colspan="2">
                                 <label for="name" class="fw-bold oe_inline mb-0"/>
                                 <h1>
-                                    <field class="text-nowrap" name="name" nolabel="1"/>
+                                    <field class="text-nowrap" name="name" nolabel="1" placeholder="Nome..."/>
                                 </h1>
-                                <group>
-                                    <group>
-                                        <field name="is_legendary"/>
-                                        <field name="is_npc"/>
-                                    </group>
-                                </group>
+                                <h3>
+                                    <field class="text-nowrap text-muted" name="titles" nolabel="1" placeholder="Titoli..."/>
+                                </h3>
                             </div>
                             <group>
+                                <field name="is_legendary" string="ML"/>
+                                <field name="is_npc"/>
                                 <field name="type_id"/>
                                 <field name="tag_ids" widget="many2many_tags"/>
                                 <div name="div_cr_exp" class="w-100 d-flex" colspan="2">
@@ -81,10 +80,17 @@
                                     <field style="width: 36%" name="exp"/>
                                 </div>
                             </group>
-                            <group>
-                                <field name="base_faction_ids" widget="many2many_tags"/>
+                            <group invisible="is_npc or is_legendary">
+                                <field name="faction_ids" widget="many2many_tags"/>
                                 <field name="biome_high_prob_ids" widget="many2many_tags"/>
                                 <field name="biome_low_prob_ids" widget="many2many_tags"/>
+                            </group>
+                            <group invisible="not is_npc and not is_legendary">
+                                <field name="quest_ids" widget="many2many_tags"/>
+                                <field name="poi_ids" widget="many2many_tags"/>
+                                <field name="creature_ids" widget="many2many_tags" string="Mostri" domain="[('is_legendary', '=', True)]"/>
+                                <field name="creature_ids" widget="many2many_tags" string="NPCs" domain="[('is_npc', '=', True)]"/>
+                                <field name="faction_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -92,8 +98,22 @@
                         </group>
                     </group>
                     <notebook>
-                        <page name="Info MM">
-                            <field name="description" colspan="4"/>
+                        <page name="Descrizione">
+                            <group invisible="not is_npc">
+                                <group>
+                                    <field name="appearance" placeholder="..."/>
+                                    <field name="social_role" placeholder="..."/>
+                                    <field name="pc_relation" placeholder="..."/>
+                                </group>
+                                <group>
+                                    <field name="motivation" placeholder="..."/>
+                                    <field name="needs" placeholder="..."/>
+                                    <field name="offers" placeholder="..."/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="description" nolabel="1" colspan="2" placeholder="Descrizione..."/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

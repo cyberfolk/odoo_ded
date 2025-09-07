@@ -24,17 +24,10 @@ class PointOfInterest(models.Model):
         comodel_name="quest.quest",
         relation="quest_poi_rel",
     )
-    monster_ids = fields.Many2many(
-        string="Mostro Leggendario",
+    creature_ids = fields.Many2many(
+        string="Creature",
         comodel_name="creature.creature",
-        relation="poi_monster_rel",
-        domain=[("is_legendary", "=", True)],
-    )
-    npc_ids = fields.Many2many(
-        string="NPCs",
-        comodel_name="creature.creature",
-        relation="poi_npc_rel",
-        domain=[("is_npc", "=", True)],
+        relation="poi_creature_rel",
     )
     faction_ids = fields.Many2many(
         string="Fazione",

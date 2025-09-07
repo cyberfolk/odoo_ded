@@ -19,7 +19,7 @@
         "sml": 3,
         "description": "<p style=\"margin-bottom: 0px;\">All'interno della villa vive una Medusa che un tempo ha fatto un patto con <strong>Merrshaulk</strong>, ma non lo rispettò e quindi venne trasformata in medusa. Il patto consisteva in giovinezza eterna e in cambio doveva sacrificare i suoi figli. Lei non rispettò il patto e perciò venne trasformata in medusa e accidentalmente i suoi figli vennero trasformati in pietra. Adesso è riuscita a sottomettere 4 Yan-ti sangue puro e sta cercando un modo per rompere la maledizione.&nbsp;</p><p style=\"margin-bottom: 0px;\"><br></p><ul style=\"margin-bottom: 0px;\"><li style=\"margin-bottom: 0px;\"><strong>Incontro:</strong> Trovano\n  una discarica poco lontano dalla villa con dentro tutti gli specchi rotti\n  dalla medusa.</li><li style=\"margin-bottom: 0px;\"><strong>Scontro:&nbsp;</strong>Non\n  c'è la medusa ma ci sono gli sciacalli mannari che vogliono rapirli e\n  portarli dalla loro padrona.</li></ul><ul><li><strong>Aiuto:&nbsp;</strong>Trovano\n  degli occhiali da aviatore futuristici con i quali possono schermarsi dalla\n  vista della medusa, sono appoggiati su un albero morto.</li><li><strong>Struttura:&nbsp;</strong>Grande\n  villa sfarzosa ormai in decadenza, all'interno di un'oasi con palme e\n  rampicanti che abbelliscono la villa.</li></ul><p><br></p><p style=\"margin-bottom: 0px;\"><br></p><p>\n\n\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": {
             "name": "Villa sfarzosa in decadenza"
@@ -53,7 +53,7 @@
         },
         "sml": 4,
         "description": "<p style=\"margin-bottom: 0px;\">Per trovare l'ampolla bisogna passare attraverso un muro di fuoco e la maggior parte delle persone che ci hanno provato sono state bruciate vive. La leggenda narra che solo se sei puro di cuore puoi passarci e vedere così l'ampolla.&nbsp;</p><p>Se i PG non convincono il DM che sono puri di cuore TS su SAG CD 17.&nbsp;</p><ul style=\"margin-bottom: 0px;\"><li style=\"margin-bottom: 0px;\"><strong>Incontri:</strong></li><li class=\"oe-nested\"><ul><li style=\"margin-bottom: 0px;\">Trovano\n  un arazzo dove c'è scritta tutta la leggenda e la ricetta per ricreare\n  l'elisir di lunga vita (sangue di elfo).</li><li style=\"margin-bottom: 0px;\">Cavaliere\n  che vuole trovare l'ampolla perché immortale ed è l'unico modo per morire. Sa\n  che l'ampolla è li da qualche parte. Vuole morire perché ha visto morire\n  tutti i suoi cari.</li><li style=\"margin-bottom: 0px;\">Passaggio\n  segreto che porta nelle segrete del castello.</li></ul></li><li style=\"margin-bottom: 0px;\"><strong>Scontro:&nbsp;</strong>1 <a href=\"https://5e.tools/bestiary.html#invisible%20stalker_mm\">Cacciatore\n  Invisibile</a> (GS 6) (SML 4.125)&nbsp;Cerca\n  di catturare il PG + buono e lo porta al castello</li></ul><ul><li style=\"margin-bottom: 0px;\"><strong>Pericoli:&nbsp;<a>Tempesta di Sabbia</a></strong>.</li><li><strong>Aiuto: ...&nbsp;</strong>.</li><li><strong>Struttura:&nbsp;</strong>Vecchio\n  castello diroccato, al cui interno si cela l'ampolla per l'elisir di lunga\n  vita. Castello\n  alle pendici di una duna.</li></ul>",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -84,7 +84,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -115,7 +115,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">Questo palazzo è un bordello gestito dalla lamia e i suoi servito/schiavi.&nbsp;</p><table class=\"table table-bordered\">\n <tbody><tr>\n  <td>\n  <p>(1d12)</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>1</p>\n  </td>\n  <td>\n  <p>PERICOLO</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>2</p>\n  </td>\n  <td>\n  <p>Scontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>Scontro 2</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>4</p>\n  </td>\n  <td>\n  <p>Scontro 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>5-6</p>\n  </td>\n  <td>\n  <p>Scontro 5</p>\n  </td>\n  <td>\n  <p>Lamia</p>\n  <p>Una\n  piccola tenda bazar con un grasso mercante di cibo e una scimmia con\n  cappellino che vende in omaggio vende dei biglietti per il bordello. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>7</p>\n  </td>\n  <td>\n  <p>Aiuto</p>\n  </td>\n  <td>\n  <p>Un\n  vecchio pazzo urlante che urla \"quella brutta puttana mi voleva mangiare\n  il cazzo\". </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>8</p>\n  </td>\n  <td>\n  <p>NPG</p>\n  </td>\n  <td>\n  <p>Uno\n  sceicco che abita li vicino e sta facendo l'addio al celibato con i suoi\n  amici.</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>9</p>\n  </td>\n  <td>\n  <p>Entrata retro</p>\n  </td>\n  <td>\n  <p>Li\n  vicino c'è una bancarella di specchi dove in alcuni dei quali viene riflessa\n  l'immagine reale del palazzo. Questi sono specchi magici, gli altri sono\n  specchi normali.</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>10-12</p>\n  </td>\n  <td>\n  <p>Struttura 1</p>\n  </td>\n  <td>\n  <p>Palazzo\n  aristocratico al centro del deserto, con strada che porta al castello. </p>\n  <p>Ci\n  sono dei cammelli parcheggiati li, c'è uno striscione che da il benvenuto.</p>\n  </td>\n </tr>\n</tbody></table><p>\n\n\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": {
@@ -148,7 +148,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -179,7 +179,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Merrshaulk",
@@ -215,7 +215,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">Drago rosso gs 17</p><p style=\"margin-bottom: 0px;\">che è diventato gs 10&nbsp;</p><p style=\"margin-bottom: 0px;\">e di giorno è gs 4</p><p><br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti",
@@ -251,7 +251,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Rocce Nere",
@@ -287,7 +287,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -318,7 +318,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">Ciclope eremita che vuole dimostrare di sapersela cavare da solo.&nbsp;</p><p style=\"margin-bottom: 0px;\">Non è cattivo, anzi da cibo e acqua ai PG, solo che in compenso vuole denaro e sfruttarli a lavorare per lui.&nbsp;</p><p>Se gli viene donato qualcosa di valore li lascia stare.&nbsp;</p><table class=\"table table-bordered\">\n <tbody><tr>\n  <td>\n  <p>(1d12)</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>1</p>\n  </td>\n  <td>\n  <p>PERICOLO</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p><a href=\"onenote:#Frane%20e%20Valanghe&amp;section-id=%7B3DEAF776-72B1-49AF-963B-55D155ADD705%7D&amp;page-id=%7B2C2ABC8E-B37A-4B02-B1FF-B8EEFB53B144%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Regioni.one\">Frane\n  e valanghe</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>2</p>\n  </td>\n  <td>\n  <p>Scontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>Scontro 2</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>4</p>\n  </td>\n  <td>\n  <p>Scontro 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>5-6</p>\n  </td>\n  <td>\n  <p>Mostro Fico</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>1 <a href=\"https://5e.tools/bestiary.html#cyclops_mm\">Ciclope</a> (GS 6) (SML 4)</p>\n  <p>Beccano\n  direttamente il ciclope che gli invita a mangiare e poi vuole i soldi per il\n  pranzo. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>7</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Una pacchianissima\n  collanazza d'oro (tarocco) con piume colorate e utensili da cucina. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>8</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Contadino/allevatore\n  ex proprietario della mandria ora diventato dipendente del ciclope (siccome è\n  sciocco è felice della cosa).</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>9</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Grande macina di\n  mulino appoggiata a ridosso della montagna. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>10-12</p>\n  </td>\n  <td>\n  <p>Struttura 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Grande pascolo\n  circondati da immensi filari di viti </p>\n  </td>\n </tr>\n</tbody></table><p>\n\n\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": {
@@ -351,7 +351,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -382,7 +382,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Rocce Nere",
@@ -418,7 +418,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Rocce Nere",
@@ -454,7 +454,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">L'obbiettivo degli Azer è estrarre le gemme preziosi incastonate nella montagna per portarle nel loro piano.&nbsp;</p><p style=\"margin-bottom: 0px;\">Per farlo dovrebbero risvegliare i loro fratelli con il fuoco elementale, ma non ci riescono perché sono in mezzo ai piedi.&nbsp;</p><p style=\"margin-bottom: 0px;\">Il loro obiettivo a lungo termine è di tornare a casa.</p><p>Obiettivo a breve termine sterminare le salamandre.</p><table class=\"table table-bordered\">\n <tbody><tr>\n  <td>\n  <p>(1d12)</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>1</p>\n  </td>\n  <td>\n  <p>PERICOLO</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p><a href=\"onenote:#Tempesta&amp;section-id=%7B3DEAF776-72B1-49AF-963B-55D155ADD705%7D&amp;page-id=%7B60A7A1CC-6524-45E6-B451-1C0FDAAFA88D%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Regioni.one\">Tempesta\n  </a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>2</p>\n  </td>\n  <td>\n  <p>Scontro 1</p>\n  </td>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p>1 <a href=\"onenote:#section-id=%7BD590B4CB-1BF1-4967-93BF-A90E86088DAA%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Alfa.one\">Salamandra</a>\n  (GS 5) </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>Scontro 2</p>\n  </td>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>5 <a href=\"https://5e.tools/bestiary.html#fire%20snake_mm\">Serpente di Fuoco</a>\n  (GS 1)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>4</p>\n  </td>\n  <td>\n  <p>Scontro 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>5-6</p>\n  </td>\n  <td>\n  <p>Mostro Fico</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>5 <a href=\"https://5e.tools/bestiary.html#azer_mm\">Azer</a> (GS 2) (SML 5) </p>\n  <p>3 di\n  loro vogliono catturare i PG per identificarli e portarli alla loro base,\n  dove ci sono gli altri e non vogliono ucciderli ma solo interrogarli. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>7</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>4 uova di\n  salamandra sfere di ossidiana </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>8</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Gemma di fuoco\n  elementale (si trova nel nido delle salamandre) se in possesso degli Azer\n  riescono a risvegliare i fratelli </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>9</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Cunicolo laterale\n  che porta alla fucina degli Azer </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>10-12</p>\n  </td>\n  <td>\n  <p>Struttura 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Altopiano\n  costellato da statue naniche di bronzo</p>\n  </td>\n </tr>\n</tbody></table><p>&nbsp;</p><p>\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -485,7 +485,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\"><br></p><p style=\"margin-bottom: 0px;\">Si dice che una dolce nonnina vive in una radura nella montagna.&nbsp;</p><p style=\"margin-bottom: 0px;\">C'è un sentiero laterale che porta alla casa della vecchia.</p><p style=\"margin-bottom: 0px;\">Questa infesta il villaggio vicino, spaventando i più piccoli.&nbsp;</p><p>Il suo scopo è quello di catturare bambini ed avventurieri per riprendere i suoi grandi poteri. Era a capo di una congrega ma è stata mandata via perché ha fatto il passo più lungo della gamba.<br>\n\n\n\n\n</p><table class=\"table table-bordered\">\n <tbody><tr>\n  <td>\n  <p>(1d12)</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>1</p>\n  </td>\n  <td>\n  <p>PERICOLO</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p><a href=\"onenote:#Tempesta&amp;section-id=%7B3DEAF776-72B1-49AF-963B-55D155ADD705%7D&amp;page-id=%7B60A7A1CC-6524-45E6-B451-1C0FDAAFA88D%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Regioni.one\">Tempesta\n  </a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>2</p>\n  </td>\n  <td>\n  <p>Scontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>Scontro 2</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>4</p>\n  </td>\n  <td>\n  <p>Scontro 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>5-6</p>\n  </td>\n  <td>\n  <p>Mostro Fico</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>1 <a href=\"https://5e.tools/bestiary.html#annis%20hag_vgm\">Annis Hag</a>&nbsp; (GS 7) (SML 4)</p>\n  <p>La\n  strega è sotto mentite spoglie di nonnina dolcina e invita nella sua casetta\n  i PG a riposare. Nel mentre prende uno dei PG e cerca di rivoltarlo verso il\n  resto del Party promettendo di avverare i suoi più grandi desideri. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>7</p>\n  </td>\n  <td>\n  <p>Incontro 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Troll al di sotto\n  della strega che vuole scappare dalla schiavitù</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>8</p>\n  </td>\n  <td>\n  <p>Incontro 2</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Villaggio che\n  racconta della presenza della strega.</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>9</p>\n  </td>\n  <td>\n  <p>Incontro 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Piccola moneta di\n  ferro con cui possono individuare la vecchia e farle una imboscata.</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>10-12</p>\n  </td>\n  <td>\n  <p>Struttura </p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Piccola\n  catapecchia in una radura vicino ad un precipizio, piena di bambini cattivi\n  rompicoglioni che litiga tra di loro.</p>\n  </td>\n </tr>\n</tbody></table><p>&nbsp;</p><p>\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -516,7 +516,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">C'è un Gigante della pietra che viene recluso a fare la guardia al regno dei giganti perché non sa padroneggiare l'arte della pietra. Per questo si incazza e prova a fare le sue opere e costringe gli avventurieri ad ammirare le sue opere e se non sono affabili lancia le sculture e gli avventurieri giù dal monte.&nbsp;</p><p>Più che proteggere il sentiero dei giganti è interessato ad imparare l'arte della pietra.</p><table class=\"table table-bordered\" style=\"width: 1407.6px;\">\n <tbody><tr>\n  <td style=\"width: 135.8px;\">\n  <p>(1d12)</p>\n  </td>\n  <td style=\"width: 143px;\">\n  <p>&nbsp;</p>\n  </td>\n  \n  <td style=\"width: 944px;\">\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>1</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>PERICOLO</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p><a href=\"onenote:#Frane%20e%20Valanghe&amp;section-id=%7B3DEAF776-72B1-49AF-963B-55D155ADD705%7D&amp;page-id=%7B2C2ABC8E-B37A-4B02-B1FF-B8EEFB53B144%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Regioni.one\">Frane\n  e valanghe</a></p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>2</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Scontro 1</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>3</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Scontro 2</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>4</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Scontro 3</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>&nbsp;</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>5-6</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Mostro Fico</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>1 <a href=\"https://5e.tools/bestiary.html#stone%20giant_mm\">Gigante delle Pietre</a> (GS 7) <br>\n    (SML 4.5)</p>\n  <p>Il gigante permaloso che gli fa vedere le opere.</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>7</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Incontro 1</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>Libro\n  di scultura </p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>8</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Incontro 2</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>Scultore\n  morente</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>9</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Incontro 3</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>Insegna\n  di pietra \"Galleria d'arte\"</p>\n  </td>\n </tr>\n <tr>\n  <td style=\"width: 351.7px;\">\n  <p>10-12</p>\n  </td>\n  <td style=\"width: 351.7px;\">\n  <p>Struttura 1</p>\n  </td>\n  \n  <td style=\"width: 351.7px;\">\n  <p>Un\n  sentiero scosceso costellato da orribili sculture.</p>\n  </td>\n </tr>\n</tbody></table><p>&nbsp;</p><p>&nbsp;</p><p>\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": {
@@ -549,7 +549,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Spaccatuono",
@@ -585,7 +585,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Zanne Rosse",
@@ -621,7 +621,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Spaccatuono",
@@ -657,7 +657,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Spaccatuono",
@@ -693,7 +693,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">Le streghe sono in combutta perché hanno rapito la figlia femmina e non il gemello maschio. Pertanto, una delle due vuole ritornare al villaggio per rapire anche il maschio e lasciare la bambina.&nbsp;</p><p style=\"margin-bottom: 0px;\">Quando erano in 3 avevano l'aspetto di mamma e 2 figlie che facevano le erboriste e le allevatrici. Dopo che hanno cacciato la madre le altre due litigano di continuo. Il loro scopo è quello di mandare in rovina il villaggio vicino.&nbsp;</p><p>Il villaggio pensa che la madre sia una strega perché è lei che curava la gente e voleva dare le figlie in sposa a qualcuno.</p><table class=\"table table-bordered\">\n <tbody><tr>\n  <td>\n  <p>(1d12)</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>TABELLA DI VIAGGIO&nbsp;\n  (1d12)</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>1</p>\n  </td>\n  <td>\n  <p>PERICOLO</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p><a href=\"onenote:#Sabbie%20Mobili&amp;section-id=%7B3DEAF776-72B1-49AF-963B-55D155ADD705%7D&amp;page-id=%7BCA703E8F-F870-413E-BA10-98F9205DF878%7D&amp;end&amp;base-path=https://d.docs.live.net/6ed02d2c78b77267/Documenti/WM7/Regioni.one\">Sabbie\n  mobili</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>2</p>\n  </td>\n  <td>\n  <p>Scontro 1</p>\n  </td>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p><a href=\"https://5e.tools/bestiary.html#giant%20hyena_mm\">Iena Gigante</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p>Scontro 2</p>\n  </td>\n  <td>\n  <p>3</p>\n  </td>\n  <td>\n  <p><a href=\"https://5e.tools/bestiary.html#saber-toothed%20tiger_mm\">Tigre dai\n  Denti a Sciabola</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>4</p>\n  </td>\n  <td>\n  <p>Scontro 3</p>\n  </td>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p><a href=\"https://5e.tools/bestiary.html#giant%20eagle_mm\">Aquila Gigante</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p>Scontro 4</p>\n  </td>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p><a href=\"https://5e.tools/bestiary.html#death%20dog_mm\">Cane della Morte</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>6</p>\n  </td>\n  <td>\n  <p>Scontro 5</p>\n  </td>\n  <td>\n  <p>5</p>\n  </td>\n  <td>\n  <p><a href=\"https://5e.tools/bestiary.html#giant%20eagle_mm\">Aquila Gigante</a></p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>7</p>\n  </td>\n  <td>\n  <p>Aiuto</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Trovano\n  il servo delle megere che si è perso per la foresta. Con lui ha l'occhio\n  delle Megere. Riuscendolo a trovare riescono ad avere un asso nella manica\n  con le streghe. Lui è costretto a fare il servo perché ha fatto un patto con\n  loro.&nbsp; Il tizio doveva sposare la\n  megera ma alla fine ha rifiutato dopo aver fatto il patto e così è diventato\n  il loro servo. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>8</p>\n  </td>\n  <td>\n  <p>NPG</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Genitori\n  a cui è stata appena rubata la figlia in culla. Sospettano che nel folto\n  della foresta&nbsp; sia ritornata una\n  vecchia megera.</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>9</p>\n  </td>\n  <td>\n  <p>Entrata retro</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Trovano\n  una strega vestita da gentil signora che vuole portare il bambino perduto al\n  villaggio. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>10-12</p>\n  </td>\n  <td>\n  <p>Struttura 1</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Vecchia\n  casa sull'albero in rovina all'interno della foresta nera. </p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>*</p>\n  </td>\n  <td>\n  <p>Struttura 2</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Spada\n  Roccia</p>\n  </td>\n </tr>\n <tr>\n  <td>\n  <p>*</p>\n  </td>\n  <td>\n  <p>Struttura 3</p>\n  </td>\n  <td>\n  <p>&nbsp;</p>\n  </td>\n  <td>\n  <p>Bandiera\n  puntata</p>\n  </td>\n </tr>\n</tbody></table><p>\n\n\n\n\n\n\n\n<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -724,7 +724,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Artigli di Luthic",
@@ -760,7 +760,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Seth",
@@ -796,7 +796,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Seth",
@@ -832,7 +832,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Seth",
@@ -868,7 +868,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Dendar",
@@ -904,7 +904,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Mani di Yurtrus",
@@ -940,7 +940,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Dendar",
@@ -976,7 +976,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -1007,7 +1007,7 @@
         "sml": 1,
         "description": "<p style=\"margin-bottom: 0px;\">Dendar, il serpente notturno.&nbsp;</p><p style=\"margin-bottom: 0px;\">Un giorno diventerà così grande da divorare il mondo.</p><p style=\"margin-bottom: 0px;\">I suoi seguaci terrorizzano le creature e i prigionieri per alimentare Dendar.</p><p>Marcare Terreno Mute di serpente lasciate per terra<br></p>",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Yuan-Ti – Dendar",
@@ -1043,7 +1043,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Tritaossa",
@@ -1079,7 +1079,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -1110,7 +1110,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -1141,7 +1141,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,
@@ -1172,7 +1172,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Tritaossa",
@@ -1208,7 +1208,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [
             {
                 "name": "Orchi - Clan Tritaossa",
@@ -1244,7 +1244,7 @@
         "sml": 1,
         "description": "",
         "image": "",
-        "npc_ids": [],
+        "creature_ids": [],
         "faction_ids": [],
         "structure_id": false,
         "creature_id": false,

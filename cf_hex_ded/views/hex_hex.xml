@@ -23,7 +23,7 @@
             <xpath expr="//field[@name='col']" position="before">
                 <field name="biome_id"/>
                 <field name="sml"/>
-                <field name="npc_ids" widget="many2many_tags" optional="show"/>
+                <field name="creature_ids" widget="many2many_tags" optional="show"/>
                 <field name="faction_ids" widget="many2many_tags" optional="show"/>
                 <field name="structure_id" optional="show"/>
                 <field name="creature_id" optional="show"/>
@@ -61,7 +61,7 @@
                             <group>
                                 <field name="encounter_encounter_ids" widget="many2many_tags"/>
                                 <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
-                                <field name="npc_ids" widget="many2many_tags"/>
+                                <field name="creature_ids" widget="many2many_tags"/>
                                 <field name="faction_ids" widget="many2many_tags"/>
                                 <field name="creature_id"/>
                                 <field name="poi_ids" widget="many2many_tags"/>
@@ -92,7 +92,7 @@
                             </field>
                         </page>
                         <page string="NPCs" name="page_npc_ids">
-                            <field name="npc_ids" colspan="2" nolabel="1">
+                            <field name="creature_ids" colspan="2" nolabel="1" domain="[('is_npc', '=', True)]">
                                 <tree>
                                     <field name="name"/>
                                     <field name="tag_ids"/>

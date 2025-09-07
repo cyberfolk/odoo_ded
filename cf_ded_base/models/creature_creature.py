@@ -46,6 +46,31 @@ class CreatureCreature(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
+    # region FIELD - NPC DESCRIPTIVE ------------------------------------------------------------------------------------
+    titles = fields.Char(
+        string="Titoli",
+    )
+    motivation = fields.Text(
+        string="Motivazione",
+    )
+    needs = fields.Text(
+        string="Bisogni"
+    )
+    offers = fields.Text(
+        string="Offre"
+    )
+    appearance = fields.Text(
+        string="Aspetto",
+    )
+    social_role = fields.Text(
+        string="Ruolo Sociale",
+    )
+    pc_relation = fields.Text(
+        string="Ruolo verso i PG",
+        help="Se può essere d'aiuto, minaccia, o altro verso i PG.",
+    )
+    # endregion --------------------------------------------------------------------------------------------------------
+
     # region FIELDS - CR EXP -------------------------------------------------------------------------------------------
     cr = fields.Float(
         string="Grado Sfida",
@@ -165,12 +190,6 @@ class CreatureCreature(models.Model):
         string="Biomi %Bassa",
         help="Biomi con Bassa probabilità di trovare la creatura."
     )
-    base_faction_ids = fields.Many2many(
-        comodel_name="creature.faction",
-        relation="faction_creature_rel",
-        string="Fazioni",
-        help="Fazioni della Creatura",
-    )
     biome_ids = fields.Many2many(
         comodel_name="biome.biome",
         string="Biomi",
@@ -184,4 +203,35 @@ class CreatureCreature(models.Model):
         for record in self:
             record.biome_ids = record.biome_high_prob_ids + record.biome_low_prob_ids
 
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
+    quest_ids = fields.Many2many(
+        string="Missioni",
+        comodel_name="quest.quest",
+        relation="quest_creature_rel",
+        # column1="quest_id",
+        # column2="creature_id",
+    )
+    poi_ids = fields.Many2many(
+        string="Punto d'Interesse",
+        comodel_name="point.of.interest",
+        relation="poi_creature_rel",
+        # column1="poi_id",
+        # column2="creature_id",
+    )
+    creature_ids = fields.Many2many(
+        string="Creature",
+        comodel_name="creature.creature",
+        relation="creature_creature_rel",
+        column1="creature1_id",
+        column2="creature2_id",
+    )
+    faction_ids = fields.Many2many(
+        string="Fazioni",
+        comodel_name="creature.faction",
+        relation="creature_faction_rel",
+        # column1="creature_id",
+        # column2="faction_id",
+    )
     # endregion --------------------------------------------------------------------------------------------------------

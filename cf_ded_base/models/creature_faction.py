@@ -61,14 +61,6 @@ class FactionFaction(models.Model):
         help="Posizione cosmologica del Bioma. Se la fazione si può trovare ovunque lasciare vuoto il campo",
     )
 
-    creature_ids = fields.Many2many(
-        comodel_name="creature.creature",
-        relation="faction_creature_rel",
-        string="Creature",
-        help="Creature della fazione",
-        domain=[("is_legendary", "=", False), ("is_npc", "=", False)],
-    )
-
     encounter_ids = fields.One2many(
         comodel_name="creature.encounter",
         inverse_name="faction_id",
@@ -117,21 +109,10 @@ class FactionFaction(models.Model):
         # column1="poi_id",
         # column2="faction_id",
     )
-    monster_ids = fields.Many2many(
-        string="Mostro Leggendario",
+    creature_ids = fields.Many2many(
         comodel_name="creature.creature",
-        relation="monster_faction_rel",
-        # column1="monster_id",
-        # column2="faction_id",
-        domain=[("is_legendary", "=", True)],
-    )
-    npc_ids = fields.Many2many(
-        string="NPCs",
-        comodel_name="creature.creature",
-        relation="faction_npc_rel",
-        # column1="faction_id",
-        # column2="npc_id",
-        domain=[("is_npc", "=", True)],
+        relation="faction_creature_rel",
+        string="Creature",
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
