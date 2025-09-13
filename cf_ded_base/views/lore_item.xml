@@ -16,6 +16,8 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <widget name="web_ribbon" title="Lore Alta" bg_color="text-bg-danger" invisible="type == 'low'"/>
+                    <widget name="web_ribbon" title="Lore Bassa" bg_color="text-bg-success" invisible="type == 'high'"/>
                     <group col="6">
                         <group colspan="4">
                             <div class="oe_title mb-3" colspan="2">
@@ -23,8 +25,13 @@
                                 <h1>
                                     <field class="text-nowrap" name="name" nolabel="1"/>
                                 </h1>
+                                <h3 class="text-muted fst-italic">
+                                    <field class="text-nowrap" name="complete_name" nolabel="1"/>
+                                </h3>
                             </div>
                             <group string="Info Base" name="group_fields_base">
+                                <field name="parent_id" string="Padre"/>
+                                <field name="type"/>
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">
                                 <field widget="many2many_tags" name="monster_ids"/>
@@ -42,7 +49,15 @@
                     </group>
                     <notebook>
                         <page name="Descrizione">
-                            <field name="description" colspan="4"/>
+                            <field name="description"/>
+                        </page>
+                        <page name="Lore Item Figli">
+                            <field name="child_ids" nolabel="1" colspan="2">
+                                <tree editable="top">
+                                    <field name="name"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

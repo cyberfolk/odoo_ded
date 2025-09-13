@@ -4,6 +4,7 @@ from odoo import fields, models, api
 class LoreItem(models.Model):
     _name = "lore.item"
     _description = "Lore Item"
+    _rec_name = "complete_name"
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
@@ -16,6 +17,47 @@ class LoreItem(models.Model):
     image = fields.Image(
         string="Immagine",
     )
+    type = fields.Selection(
+        selection=[
+            ('high', 'Alta'),
+            ('low', 'Bassa'),
+        ],
+        string="Tipo",
+        required=True,
+        default='low',
+    )
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region FIELDS - HIERARCHY -------------------------------------------------------------------------------------
+    child_ids = fields.One2many(
+        comodel_name="lore.item",
+        inverse_name="parent_id",
+        string="Lore Item figli",
+    )
+    parent_id = fields.Many2one(
+        comodel_name="lore.item",
+        string="Lore Item Padre",
+    )
+    complete_name = fields.Char(
+        string="Nome Completo",
+        compute="_compute_complete_name",
+        store=True,
+        recursive=True
+    )
+
+    @api.depends('name', 'parent_id.complete_name')
+    def _compute_complete_name(self):
+        for record in self:
+            if record.parent_id:
+                record.complete_name = f"{record.parent_id.complete_name} / {record.name}"
+            else:
+                record.complete_name = record.name
+
+    @api.depends('complete_name')
+    def _compute_display_name(self):
+        for record in self:
+            record.display_name = record.complete_name
+
     # endregion --------------------------------------------------------------------------------------------------------
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
