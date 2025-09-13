@@ -220,18 +220,18 @@ class CreatureCreature(models.Model):
         # column1="poi_id",
         # column2="creature_id",
     )
+    faction_ids = fields.Many2many(
+        string="Fazioni",
+        comodel_name="creature.faction",
+        relation="faction_creature_rel",
+        # column1="creature_id",
+        # column2="faction_id",
+    )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",
         relation="creature_creature_rel",
         column1="creature1_id",
         column2="creature2_id",
-    )
-    faction_ids = fields.Many2many(
-        string="Fazioni",
-        comodel_name="creature.faction",
-        relation="creature_faction_rel",
-        # column1="creature_id",
-        # column2="faction_id",
     )
     # endregion --------------------------------------------------------------------------------------------------------

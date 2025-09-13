@@ -24,15 +24,15 @@ class PointOfInterest(models.Model):
         comodel_name="quest.quest",
         relation="quest_poi_rel",
     )
-    creature_ids = fields.Many2many(
-        string="Creature",
-        comodel_name="creature.creature",
-        relation="poi_creature_rel",
-    )
     faction_ids = fields.Many2many(
         string="Fazione",
         comodel_name="creature.faction",
         relation="poi_faction_rel",
+    )
+    creature_ids = fields.Many2many(
+        string="Creature",
+        comodel_name="creature.creature",
+        relation="poi_creature_rel",
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
