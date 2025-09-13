@@ -68,13 +68,20 @@
                     /* field allineato */
                     .ded-card .o_field_widget{ display:block; }
                     .ded-card .o_field_widget input{ text-align:center; }
+
+                    div[name="source_ref"] > div > select,
+                    div[name="target_ref"] > div > select{
+                        flex-grow: 1 !important;
+                        flex-shrink: 0 !important;
+                        padding: 2px 10px 2px 4px !important;
+                    }
                 </style>
 
                 <sheet>
                     <div class="ded-rel-hero">
                         <div class="ded-card">
                             <h3 class="ded-card-title">Origine</h3>
-                            <field name="source_ref"/>
+                            <field name="source_ref" class="w-100"/>
                         </div>
 
                         <div class="ded-arrow">

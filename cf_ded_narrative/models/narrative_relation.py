@@ -52,7 +52,7 @@ class NarrativeRelation(models.Model):
     def _get_allowed_model_names(self):
         param = (
             self.env["ir.config_parameter"].sudo().get_param(
-                "ded.narrative.allowed_models", ""
+                "narrative.relation.allowed_models", ""
             )
         )
         if param:

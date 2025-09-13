@@ -1,0 +1,21 @@
+<odoo>
+    <record id="quest_quest_view_form" model="ir.ui.view">
+        <field name="name">quest_quest_view_form</field>
+        <field name="model">quest.quest</field>
+        <field name="inherit_id" ref="cf_ded_base.quest_quest_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Smart Per le relazioni -->
+            <xpath expr="//sheet/group" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_open_narratives" type="object" class="oe_stat_button" icon="fa-link">
+                        <field string="Relazioni" name="narrative_relations_count" widget="statinfo"/>
+                    </button>
+                    <button name="action_add_outgoing_narrative" type="object" class="oe_stat_button" icon="fa-plus" string="R Attiva"/>
+                    <button name="action_add_incoming_narrative" type="object" class="oe_stat_button" icon="fa-plus" string="R Passiva"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

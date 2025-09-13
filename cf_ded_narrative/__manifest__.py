@@ -18,8 +18,12 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "data/ir_config_parameter.xml",
+        "views/creature_creature.xml",
+        "views/creature_faction.xml",
         "views/narrative_relation.xml",
-        "views/creature_npc.xml",
+        "views/point_of_interest.xml",
+        "views/quest_quest.xml",
     ],
     'demo': [],
     'application': False,
