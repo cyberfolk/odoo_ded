@@ -5,6 +5,8 @@ from ..utility.selection import STATE_LIST, GOOD_EVIL_LIST, COSMOLOGY_LIST
 
 _logger = logging.getLogger(__name__)
 
+SCALE_LIST = [('local', 'Locale'), ('regional', 'Regionale'), ('global', 'Globale')]
+
 
 class FactionFaction(models.Model):
     _name = "creature.faction"
@@ -90,6 +92,20 @@ class FactionFaction(models.Model):
     desc_creature = fields.Html(
         string="Descrizione creature",
         compute="_compute_desc_creature",
+    )
+
+    tag_ids = fields.Many2many(
+        comodel_name="creature.faction.tag",
+        relation="faction_tag_rel",
+        string="Tag",
+        help="Tag della fazione"
+    )
+
+    scale = fields.Selection(
+        selection=SCALE_LIST,
+        string="Portata",
+        default="local",
+        help="Portata della fazione"
     )
 
     # endregion --------------------------------------------------------------------------------------------------------
@@ -188,3 +204,15 @@ class FactionFaction(models.Model):
             rec.desc_creature = f"""<div class="row">{content}</div>""" if content else "Nessuna creatura"
 
     # endregion --------------------------------------------------------------------------------------------------------
+
+    # symbol = fields.Char(string="Simbolo", help="Simbolo o emblema della fazione")
+    # motto = fields.Char(string="Motto", help="Motto o frase distintiva della fazione")
+    #
+    # related_faction_ids = fields.Many2many(
+    #     comodel_name="creature.faction",
+    #     relation="faction_relation_rel",
+    #     string="Fazioni Correlate",
+    #     help="Altre fazioni in relazione (alleati, nemici, ecc.)"
+    # )
+    #
+    # is_secret = fields.Boolean(string="Segreta", help="La fazione è segreta o conosciuta pubblicamente?")

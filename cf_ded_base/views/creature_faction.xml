@@ -95,9 +95,13 @@
                                 <field name="good_evil_axis"/>
                                 <field name="cosmology"/>
                                 <field name="parent_id"/>
+                                <field name="scale"/>
+                                <field widget="many2many_tags" name="tag_ids"/>
+                            </group>
+                            <group string="Entità Narrative" name="group_fields_en">
+                                <field widget="many2many_tags" name="tag_ids"/>
                                 <field widget="many2many_tags" name="quest_ids"/>
                                 <field widget="many2many_tags" name="poi_ids"/>
-                                <field widget="many2many_tags" name="creature_ids"/>
                                 <field widget="many2many_tags" name="npc_ids"/>
                                 <field widget="many2many_tags" name="monster_ids"/>
                             </group>

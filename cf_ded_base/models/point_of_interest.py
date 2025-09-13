@@ -3,7 +3,7 @@ from odoo import fields, models, api
 
 class PointOfInterest(models.Model):
     _name = "point.of.interest"
-    _description = "Point of Interest"
+    _description = "Punto d'Interesse"
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(

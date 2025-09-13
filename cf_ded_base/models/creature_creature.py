@@ -339,7 +339,7 @@ class CreatureCreature(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
-    @api.model
+    @api.model_create_multi
     def create(self, vals):
         record = super().create(vals)
         record._sync_creature_links()

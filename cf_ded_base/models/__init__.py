@@ -6,6 +6,7 @@ from . import creature_type
 from . import creature_encounter
 from . import creature_encounter_line
 from . import creature_faction
+from . import creature_faction_tag
 from . import encounter_encounter
 from . import point_of_interest
 from . import creature_roster

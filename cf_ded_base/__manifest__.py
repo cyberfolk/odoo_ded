@@ -24,6 +24,7 @@
         "views/creature_encounter_line.xml",
         "views/point_of_interest.xml",
         "views/creature_faction.xml",
+        "views/creature_faction_tag.xml",
         "views/encounter_encounter.xml",
         # "views/creature_roster.xml",
         "views/settlement_settlement.xml",
