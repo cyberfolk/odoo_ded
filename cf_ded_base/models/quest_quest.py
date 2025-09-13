@@ -7,6 +7,7 @@ class QuestQuest(models.Model):
     _name = "quest.quest"
     _description = "Missione"
 
+    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
         string="Nome",
     )
@@ -26,8 +27,9 @@ class QuestQuest(models.Model):
         default="ongoing",
         help="Stato della campagna",
     )
+    # endregion --------------------------------------------------------------------------------------------------------
 
-    # region M2M Entità narrative
+    # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
@@ -49,4 +51,4 @@ class QuestQuest(models.Model):
         # column1="quest_id",
         # column2="faction_id",
     )
-    # endregion
+    # endregion --------------------------------------------------------------------------------------------------------

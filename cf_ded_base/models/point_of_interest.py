@@ -18,7 +18,7 @@ class PointOfInterest(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
+    # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",
@@ -36,6 +36,7 @@ class PointOfInterest(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
+    # region DETAILS ---------------------------------------------------------------------------------------------------
     # category_id	Tipologia specifica (Many2one poi.category con valori “Naturale/Artificiale” e sottocategorie).
     # danger_level	Valore indicativo (es. SML/difficoltà).
     # status	Enum (concept, unlocked, cleared…) per gestire progressi.
@@ -46,3 +47,4 @@ class PointOfInterest(models.Model):
     # Relazioni: lore_item_ids
 
     # Popolamento iniziale di categorie (“Naturale”, “Artificiale” ecc.).
+    # endregion --------------------------------------------------------------------------------------------------------

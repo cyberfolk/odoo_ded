@@ -46,7 +46,7 @@ class CreatureCreature(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region FIELD - NPC DESCRIPTIVE ------------------------------------------------------------------------------------
+    # region FIELDS - NPC DESCRIPTIVE ------------------------------------------------------------------------------------
     titles = fields.Char(
         string="Titoli",
     )
@@ -205,7 +205,7 @@ class CreatureCreature(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
+    # region FIELDS - NARRATIVE ENTITY ----------------------------------------------------------------------------------
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",

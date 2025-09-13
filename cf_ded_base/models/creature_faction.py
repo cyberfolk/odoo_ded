@@ -15,7 +15,7 @@ class FactionFaction(models.Model):
         ('unique_creature_faction_code', 'UNIQUE(code)', 'Il code della fazione deve essere univoco!')
     ]
 
-    # region FIELD - BASE ----------------------------------------------------------------------------------------------
+    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
         string="Nome",
         required=True,
@@ -92,9 +92,9 @@ class FactionFaction(models.Model):
         compute="_compute_desc_creature",
     )
 
-    # endregion FIELD --------------------------------------------------------------------------------------------------
+    # endregion --------------------------------------------------------------------------------------------------------
 
-    # region FIELD - NARRATIVE ENTITY ----------------------------------------------------------------------------------
+    # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",
@@ -116,7 +116,7 @@ class FactionFaction(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region FIELD - DESCRIPTIVE ---------------------------------------------------------------------------------------
+    # region FIELDS - DESCRIPTIVE --------------------------------------------------------------------------------------
     # Info base:
     n01_years_in_region = fields.Text(string="Da quanti anni sono nella regione?")
     n02_daily_operations = fields.Text(string="Quali sono le loro operazioni quotidiane?")
