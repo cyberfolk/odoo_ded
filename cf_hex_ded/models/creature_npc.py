@@ -1,9 +1,4 @@
-import logging
-
 from odoo import fields, models, api, Command
-from ...cf_ded_base.utility.exp import MAP_CR_EXP
-
-_logger = logging.getLogger(__name__)
 
 
 class CreatureCreature(models.Model):
@@ -19,6 +14,5 @@ class CreatureCreature(models.Model):
     hex_id = fields.Many2many(
         comodel_name="hex.hex",
         string="Hex",
-        help="Esagoni dove si trova attualmente l'NPC."
+        help="Esagoni dove si trova la creatura."
     )
-

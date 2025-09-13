@@ -25,8 +25,10 @@
                                     <field class="text-nowrap" name="name" nolabel="1"/>
                                 </h1>
                             </div>
-                            <group>
+                            <group string="Info Base" name="group_fields_base">
                                 <field name="state"/>
+                            </group>
+                            <group string="Entità Narrative" name="group_fields_en_base">
                                 <field widget="many2many_tags" name="poi_ids"/>
                                 <field widget="many2many_tags" name="creature_ids"/>
                                 <field widget="many2many_tags" name="npc_ids"/>
