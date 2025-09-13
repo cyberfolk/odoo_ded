@@ -135,6 +135,11 @@ class FactionFaction(models.Model):
         comodel_name="settlement.settlement",
         relation="settlement_faction_rel",
     )
+    lore_item_ids = fields.Many2many(
+        string="Lore Items",
+        comodel_name="lore.item",
+        relation="lore_item_faction_rel",
+    )
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
         relation="faction_creature_rel",
@@ -218,12 +223,3 @@ class FactionFaction(models.Model):
             rec.desc_creature = f"""<div class="row">{content}</div>""" if content else "Nessuna creatura"
 
     # endregion --------------------------------------------------------------------------------------------------------
-
-    # related_faction_ids = fields.Many2many(
-    #     comodel_name="creature.faction",
-    #     relation="faction_relation_rel",
-    #     string="Fazioni Correlate",
-    #     help="Altre fazioni in relazione (alleati, nemici, ecc.)"
-    # )
-    #
-    # is_secret = fields.Boolean(string="Segreta", help="La fazione è segreta o conosciuta pubblicamente?")

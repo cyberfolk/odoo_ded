@@ -1,9 +1,9 @@
 from odoo import fields, models, api
 
 
-class PointOfInterest(models.Model):
-    _name = "point.of.interest"
-    _description = "Punto d'Interesse"
+class LoreItem(models.Model):
+    _name = "lore.item"
+    _description = "Lore Item"
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
@@ -19,55 +19,42 @@ class PointOfInterest(models.Model):
     # endregion --------------------------------------------------------------------------------------------------------
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
+    poi_ids = fields.Many2many(
+        string="Punti d'Interesse",
+        comodel_name="point.of.interest",
+        relation="poi_lore_item_rel",
+    )
     quest_ids = fields.Many2many(
         string="Missioni",
         comodel_name="quest.quest",
-        relation="quest_poi_rel",
+        relation="quest_lore_item_rel",
     )
     faction_ids = fields.Many2many(
         string="Fazione",
         comodel_name="creature.faction",
-        relation="poi_faction_rel",
+        relation="lore_item_faction_rel",
     )
     settlement_ids = fields.Many2many(
         string="Insediamento",
         comodel_name="settlement.settlement",
-        relation="settlement_poi_rel",
-    )
-    lore_item_ids = fields.Many2many(
-        string="Lore Items",
-        comodel_name="lore.item",
-        relation="poi_lore_item_rel",
+        relation="settlement_lore_item_rel",
     )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",
-        relation="poi_creature_rel",
+        relation="lore_item_creature_rel",
         domain=[('is_base', '=', True)]
     )
     npc_ids = fields.Many2many(
         string="NPCs",
         comodel_name="creature.creature",
-        relation="poi_npc_rel",
+        relation="lore_item_npc_rel",
         domain=[('is_npc', '=', True)]
     )
     monster_ids = fields.Many2many(
         string="Mostri Leggendari",
         comodel_name="creature.creature",
-        relation="poi_monster_rel",
+        relation="lore_item_monster_rel",
         domain=[('is_legendary', '=', True)]
     )
-    # endregion --------------------------------------------------------------------------------------------------------
-
-    # region DETAILS ---------------------------------------------------------------------------------------------------
-    # category_id	Tipologia specifica (Many2one poi.category con valori “Naturale/Artificiale” e sottocategorie).
-    # danger_level	Valore indicativo (es. SML/difficoltà).
-    # status	Enum (concept, unlocked, cleared…) per gestire progressi.
-    # todo lore_item_ids	Many2many → lore.item	Leggende, miti, oggetti collegati.
-    # Record di categoria (Naturale, Artificiale, sottocategorie comuni).
-
-    # Campi: name, hex_id (Many2one hex.hex), category_id, description, image, gallery_ids, danger_level, status, is_primary, notes
-    # Relazioni: lore_item_ids
-
-    # Popolamento iniziale di categorie (“Naturale”, “Artificiale” ecc.).
     # endregion --------------------------------------------------------------------------------------------------------

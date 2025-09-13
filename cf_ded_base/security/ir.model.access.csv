@@ -13,3 +13,4 @@ access_creature_faction_tag,access_creature_faction_tag,model_creature_faction_t
 access_settlement_settlement,access_settlement_settlement,model_settlement_settlement,base.group_user,1,1,1,1
 access_quest_quest,access_quest_quest,model_quest_quest,base.group_user,1,1,1,1
 access_point_of_interest,access_point_of_interest,model_point_of_interest,base.group_user,1,1,1,1
+access_lore_item,access_lore_item,model_lore_item,base.group_user,1,1,1,1

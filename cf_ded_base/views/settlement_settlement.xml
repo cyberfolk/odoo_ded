@@ -31,12 +31,13 @@
                                 <field name="offers"/>
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">
-                                <field widget="many2many_tags" string="Mostri Leggendari" name="monster_ids"/>
-                                <field widget="many2many_tags" string="Punti d'Interesse" name="poi_ids"/>
-                                <field widget="many2many_tags" string="Missioni" name="quest_ids"/>
-                                <field widget="many2many_tags" string="Creature" name="creature_ids"/>
-                                <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
-                                <field widget="many2many_tags" string="NPCs" name="npc_ids"/>
+                                <field widget="many2many_tags" name="monster_ids"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
+                                <field widget="many2many_tags" name="quest_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
+                                <field widget="many2many_tags" name="lore_item_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

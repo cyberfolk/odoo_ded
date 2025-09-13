@@ -8,6 +8,7 @@ from . import creature_encounter_line
 from . import creature_faction
 from . import creature_faction_tag
 from . import encounter_encounter
+from . import lore_item
 from . import point_of_interest
 from . import creature_roster
 from . import settlement_settlement

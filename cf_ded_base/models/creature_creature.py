@@ -233,6 +233,11 @@ class CreatureCreature(models.Model):
         comodel_name="settlement.settlement",
         relation="settlement_creature_rel",
     )
+    lore_item_ids = fields.Many2many(
+        string="(Base) Lore Items",
+        comodel_name="lore.item",
+        relation="lore_item_creature_rel",
+    )
     creature_ids = fields.Many2many(
         string="(Base) Creature",
         comodel_name="creature.creature",
@@ -279,6 +284,11 @@ class CreatureCreature(models.Model):
         string="(NPC) Insediamenti",
         comodel_name="settlement.settlement",
         relation="settlement_npc_rel",
+    )
+    lore_item_npc_ids = fields.Many2many(
+        string="(NPC) Lore Items",
+        comodel_name="lore.item",
+        relation="lore_item_npc_rel",
     )
     creature_npc_ids = fields.Many2many(
         string="(NPC) Creature",
@@ -327,6 +337,11 @@ class CreatureCreature(models.Model):
         comodel_name="settlement.settlement",
         relation="settlement_monster_rel",
     )
+    lore_item_monster_ids = fields.Many2many(
+        string="(Monster) Lore Items",
+        comodel_name="lore.item",
+        relation="lore_item_monster_rel",
+    )
     creature_monster_ids = fields.Many2many(
         string="(Monster) Creature",
         comodel_name="creature.creature",
@@ -351,7 +366,6 @@ class CreatureCreature(models.Model):
         column1="monster1_id",
         column2="monster2_id",
     )
-
     # endregion --------------------------------------------------------------------------------------------------------
 
     @api.model_create_multi

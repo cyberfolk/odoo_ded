@@ -94,6 +94,12 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_menu_lore_item" model="ir.actions.act_window">
+        <field name="name">Lore</field>
+        <field name="res_model">lore.item</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="action_menu_creature_legendary" model="ir.actions.act_window">
         <field name="name">Creature Leggendarie</field>
         <field name="res_model">creature.creature</field>
@@ -124,6 +130,7 @@
             <menuitem sequence="3" id="menu_creature_encounter" name="Creature Scontri" action="action_menu_creature_encounter"/>
         </menuitem>
         <menuitem sequence="9" id="menu_encounter_encounter" name="Incontri Casuali" action="action_menu_encounter_encounter"/>
+        <menuitem sequence="19" id="menu_lore_item" name="Lore" action="action_menu_lore_item"/>
     </menuitem>
 
 </odoo>

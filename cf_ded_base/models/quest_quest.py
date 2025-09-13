@@ -45,6 +45,11 @@ class QuestQuest(models.Model):
         comodel_name="creature.faction",
         relation="quest_faction_rel",
     )
+    lore_item_ids = fields.Many2many(
+        string="Lore Items",
+        comodel_name="lore.item",
+        relation="quest_lore_item_rel",
+    )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",

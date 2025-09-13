@@ -1,7 +1,7 @@
 <odoo>
-    <record id="point_of_interest_view_tree" model="ir.ui.view">
-        <field name="name">point_of_interest_view_tree</field>
-        <field name="model">point.of.interest</field>
+    <record id="lore_item_view_tree" model="ir.ui.view">
+        <field name="name">lore.item.tree</field>
+        <field name="model">lore.item</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -10,9 +10,9 @@
         </field>
     </record>
 
-    <record id="point_of_interest_view_form" model="ir.ui.view">
-        <field name="name">point_of_interest_view_form</field>
-        <field name="model">point.of.interest</field>
+    <record id="lore_item_view_form" model="ir.ui.view">
+        <field name="name">lore.item.form</field>
+        <field name="model">lore.item</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>
@@ -27,13 +27,13 @@
                             <group string="Info Base" name="group_fields_base">
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">
+                                <field widget="many2many_tags" name="monster_ids"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
                                 <field widget="many2many_tags" name="quest_ids"/>
                                 <field widget="many2many_tags" name="creature_ids"/>
-                                <field widget="many2many_tags" name="npc_ids"/>
-                                <field widget="many2many_tags" name="monster_ids"/>
                                 <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
                                 <field widget="many2many_tags" name="settlement_ids"/>
-                                <field widget="many2many_tags" name="lore_item_ids"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -41,8 +41,8 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Descrizione" name="page_description">
-                            <field name="description"/>
+                        <page name="Descrizione">
+                            <field name="description" colspan="4"/>
                         </page>
                     </notebook>
                 </sheet>
