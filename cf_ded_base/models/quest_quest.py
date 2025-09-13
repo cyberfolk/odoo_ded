@@ -30,6 +30,11 @@ class QuestQuest(models.Model):
     # endregion --------------------------------------------------------------------------------------------------------
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
+    settlement_ids = fields.Many2many(
+        string="Insediamenti",
+        comodel_name="settlement.settlement",
+        relation="settlement_quest_rel",
+    )
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",

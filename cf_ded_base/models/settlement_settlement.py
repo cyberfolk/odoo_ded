@@ -20,6 +20,7 @@ class Settlement(models.Model):
     _name = "settlement.settlement"
     _description = "Insediamento"
 
+    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     name = fields.Char(
         string="Nome",
         required=True
@@ -48,3 +49,40 @@ class Settlement(models.Model):
     image = fields.Image(
         string="Immagine",
     )
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
+    quest_ids = fields.Many2many(
+        string="Missioni",
+        comodel_name="quest.quest",
+        relation="settlement_quest_rel",
+    )
+    poi_ids = fields.Many2many(
+        string="Punti d'Interesse",
+        comodel_name="point.of.interest",
+        relation="settlement_poi_rel",
+    )
+    faction_ids = fields.Many2many(
+        string="Fazioni",
+        comodel_name="creature.faction",
+        relation="settlement_faction_rel",
+    )
+    creature_ids = fields.Many2many(
+        string="Creature",
+        comodel_name="creature.creature",
+        relation="settlement_creature_rel",
+        domain=[('is_base', '=', True)]
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.creature",
+        relation="settlement_npc_rel",
+        domain=[('is_npc', '=', True)]
+    )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.creature",
+        relation="settlement_monster_rel",
+        domain=[('is_legendary', '=', True)]
+    )
+    # endregion --------------------------------------------------------------------------------------------------------

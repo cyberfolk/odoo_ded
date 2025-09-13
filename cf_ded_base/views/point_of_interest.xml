@@ -30,6 +30,7 @@
                                 <field widget="many2many_tags" name="npc_ids"/>
                                 <field widget="many2many_tags" name="monster_ids"/>
                                 <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="settlement_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

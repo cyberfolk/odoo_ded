@@ -228,6 +228,11 @@ class CreatureCreature(models.Model):
         comodel_name="creature.faction",
         relation="faction_creature_rel",
     )
+    settlement_ids = fields.Many2many(
+        string="(Base) Insediamenti",
+        comodel_name="settlement.settlement",
+        relation="settlement_creature_rel",
+    )
     creature_ids = fields.Many2many(
         string="(Base) Creature",
         comodel_name="creature.creature",
@@ -270,6 +275,11 @@ class CreatureCreature(models.Model):
         comodel_name="creature.faction",
         relation="faction_npc_rel",
     )
+    settlement_npc_ids = fields.Many2many(
+        string="(NPC) Insediamenti",
+        comodel_name="settlement.settlement",
+        relation="settlement_npc_rel",
+    )
     creature_npc_ids = fields.Many2many(
         string="(NPC) Creature",
         comodel_name="creature.creature",
@@ -311,6 +321,11 @@ class CreatureCreature(models.Model):
         string="(Monster) Fazioni",
         comodel_name="creature.faction",
         relation="faction_monster_rel",
+    )
+    settlement_monster_ids = fields.Many2many(
+        string="(Monster) Insediamenti",
+        comodel_name="settlement.settlement",
+        relation="settlement_monster_rel",
     )
     creature_monster_ids = fields.Many2many(
         string="(Monster) Creature",

@@ -24,13 +24,19 @@
                                     <field class="text-nowrap" name="name" nolabel="1"/>
                                 </h1>
                             </div>
-                            <group>
+                            <group string="Info Base" name="group_fields_base">
                                 <field name="scale"/>
                                 <field name="attitude"/>
-                            </group>
-                            <group>
                                 <field name="needs"/>
                                 <field name="offers"/>
+                            </group>
+                            <group string="Entità Narrative" name="group_fields_en_base">
+                                <field widget="many2many_tags" string="Mostri Leggendari" name="monster_ids"/>
+                                <field widget="many2many_tags" string="Punti d'Interesse" name="poi_ids"/>
+                                <field widget="many2many_tags" string="Missioni" name="quest_ids"/>
+                                <field widget="many2many_tags" string="Creature" name="creature_ids"/>
+                                <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
+                                <field widget="many2many_tags" string="NPCs" name="npc_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

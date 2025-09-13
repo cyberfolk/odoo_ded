@@ -29,6 +29,11 @@ class PointOfInterest(models.Model):
         comodel_name="creature.faction",
         relation="poi_faction_rel",
     )
+    settlement_ids = fields.Many2many(
+        string="Insediamento",
+        comodel_name="settlement.settlement",
+        relation="settlement_poi_rel",
+    )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",

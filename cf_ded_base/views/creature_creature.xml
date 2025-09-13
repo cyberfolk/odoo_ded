@@ -93,6 +93,7 @@
                                 <field widget="many2many_tags" string="Creature" name="creature_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_ids"/>
                             </group>
                             <group string="Entità Narrative" invisible="not is_npc" name="group_fields_en_npc">
                                 <field widget="many2many_tags" string="Mostri Leggendari" name="monster_npc_ids"/>
@@ -101,6 +102,7 @@
                                 <field widget="many2many_tags" string="Creature" name="creature_npc_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_npc_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_npc_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_npc_ids"/>
                             </group>
                             <group string="Entità Narrative" invisible="not is_legendary" name="group_fields_en_legendary">
                                 <field widget="many2many_tags" string="Mostri Leggendari" name="monster_monster_ids"/>
@@ -109,6 +111,7 @@
                                 <field widget="many2many_tags" string="Creature" name="creature_monster_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_monster_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_monster_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_monster_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

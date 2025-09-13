@@ -91,7 +91,6 @@
                         </div>
                         <div class="col-2">
                             <field name="symbol" widget="image" nolabel="1" style="width: 100px; height: 100px;"/>
-
                         </div>
                     </div>
 
@@ -114,6 +113,7 @@
                             <field widget="many2many_tags" name="poi_ids"/>
                             <field widget="many2many_tags" name="npc_ids"/>
                             <field widget="many2many_tags" name="monster_ids"/>
+                            <field widget="many2many_tags" name="settlement_ids"/>
                         </group>
                         <notebook>
                             <page string="Info MM" name="page_info_mm">

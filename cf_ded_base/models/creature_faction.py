@@ -130,6 +130,11 @@ class FactionFaction(models.Model):
         comodel_name="point.of.interest",
         relation="poi_faction_rel",
     )
+    settlement_ids = fields.Many2many(
+        string="Insediamenti",
+        comodel_name="settlement.settlement",
+        relation="settlement_faction_rel",
+    )
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
         relation="faction_creature_rel",
