@@ -59,19 +59,21 @@
                     <group col="6">
                         <group colspan="4">
                             <div class="oe_title mb-3" colspan="2">
-                                <label for="name" class="fw-bold oe_inline mb-0"/>
-                                <h1>
+                                <group class="d-flex">
+                                    <field name="is_base" invisible="1"/>
+                                    <field name="is_legendary" string="ML"/>
+                                    <field name="is_npc"/>
+                                </group>
+                                <!--                                <label for="name" class="fw-bold oe_inline mb-0"/>-->
+                                <h1 name="h1_name">
                                     <field class="text-nowrap" name="name" nolabel="1" placeholder="Nome..."/>
                                 </h1>
-                                <h3>
+                                <field name="link_5et" invisible="not is_base" widget="url" readonly="1" text="Link 5etools"/>
+                                <h3 name="h3_titles" invisible="not is_npc">
                                     <field class="text-nowrap text-muted" name="titles" nolabel="1" placeholder="Titoli..."/>
                                 </h3>
                             </div>
-                            <group>
-                                <field name="is_legendary" string="ML"/>
-                                <field name="is_npc"/>
-                                <field name="type_id"/>
-                                <field name="tag_ids" widget="many2many_tags"/>
+                            <group string="Info Base" name="group_fields_base">
                                 <div name="div_cr_exp" class="w-100 d-flex" colspan="2">
                                     <div style="width: 15%" class="o_form_label fw-bold pe-3">GS</div>
                                     <field style="width: 8%" name="cr"/>
@@ -79,18 +81,34 @@
                                     <div class="o_form_label fw-bold px-3">Exp</div>
                                     <field style="width: 36%" name="exp"/>
                                 </div>
+                                <field name="tag_ids" widget="many2many_tags"/>
+                                <field name="biome_high_prob_ids" widget="many2many_tags" invisible="not is_base"/>
+                                <field name="biome_low_prob_ids" widget="many2many_tags" invisible="not is_base"/>
+                                <field name="type_id"/>
                             </group>
-                            <group invisible="is_npc or is_legendary">
-                                <field name="faction_ids" widget="many2many_tags"/>
-                                <field name="biome_high_prob_ids" widget="many2many_tags"/>
-                                <field name="biome_low_prob_ids" widget="many2many_tags"/>
+                            <group string="Entità Narrative" invisible="not is_base" name="group_fields_en_base">
+                                <field widget="many2many_tags" string="Mostri Leggendari" name="monster_ids"/>
+                                <field widget="many2many_tags" string="Punti d'Interesse" name="poi_ids"/>
+                                <field widget="many2many_tags" string="Missioni" name="quest_ids"/>
+                                <field widget="many2many_tags" string="Creature" name="creature_ids"/>
+                                <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
+                                <field widget="many2many_tags" string="NPCs" name="npc_ids"/>
                             </group>
-                            <group invisible="not is_npc and not is_legendary">
-                                <field name="quest_ids" widget="many2many_tags"/>
-                                <field name="poi_ids" widget="many2many_tags"/>
-                                <field name="creature_ids" widget="many2many_tags" string="Mostri" domain="[('is_legendary', '=', True)]"/>
-                                <field name="creature_ids" widget="many2many_tags" string="NPCs" domain="[('is_npc', '=', True)]"/>
-                                <field name="faction_ids" widget="many2many_tags"/>
+                            <group string="Entità Narrative" invisible="not is_npc" name="group_fields_en_npc">
+                                <field widget="many2many_tags" string="Mostri Leggendari" name="monster_npc_ids"/>
+                                <field widget="many2many_tags" string="Punti d'Interesse" name="poi_npc_ids"/>
+                                <field widget="many2many_tags" string="Missioni" name="quest_npc_ids"/>
+                                <field widget="many2many_tags" string="Creature" name="creature_npc_ids"/>
+                                <field widget="many2many_tags" string="Fazioni" name="faction_npc_ids"/>
+                                <field widget="many2many_tags" string="NPCs" name="npc_npc_ids"/>
+                            </group>
+                            <group string="Entità Narrative" invisible="not is_legendary" name="group_fields_en_legendary">
+                                <field widget="many2many_tags" string="Mostri Leggendari" name="monster_monster_ids"/>
+                                <field widget="many2many_tags" string="Punti d'Interesse" name="poi_monster_ids"/>
+                                <field widget="many2many_tags" string="Missioni" name="quest_monster_ids"/>
+                                <field widget="many2many_tags" string="Creature" name="creature_monster_ids"/>
+                                <field widget="many2many_tags" string="Fazioni" name="faction_monster_ids"/>
+                                <field widget="many2many_tags" string="NPCs" name="npc_monster_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

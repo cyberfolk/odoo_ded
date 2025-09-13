@@ -99,20 +99,29 @@ class FactionFaction(models.Model):
         string="Missioni",
         comodel_name="quest.quest",
         relation="quest_faction_rel",
-        # column1="quest_id",
-        # column2="faction_id",
     )
     poi_ids = fields.Many2many(
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
         relation="poi_faction_rel",
-        # column1="poi_id",
-        # column2="faction_id",
     )
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
         relation="faction_creature_rel",
         string="Creature",
+        domain=[('is_base', '=', True)]
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.creature",
+        relation="faction_npc_rel",
+        domain=[('is_npc', '=', True)]
+    )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.creature",
+        relation="faction_monster_rel",
+        domain=[('is_legendary', '=', True)]
     )
     # endregion --------------------------------------------------------------------------------------------------------
 

@@ -34,21 +34,28 @@ class QuestQuest(models.Model):
         string="Punti d'Interesse",
         comodel_name="point.of.interest",
         relation="quest_poi_rel",
-        # column1="quest_id",
-        # column2="poi_id",
     )
     faction_ids = fields.Many2many(
         string="Fazioni",
         comodel_name="creature.faction",
         relation="quest_faction_rel",
-        # column1="quest_id",
-        # column2="faction_id",
     )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",
         relation="quest_creature_rel",
-        # column1="quest_id",
-        # column2="creature_id",
+        domain=[('is_base', '=', True)]
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.creature",
+        relation="quest_npc_rel",
+        domain=[('is_npc', '=', True)]
+    )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.creature",
+        relation="quest_monster_rel",
+        domain=[('is_legendary', '=', True)]
     )
     # endregion --------------------------------------------------------------------------------------------------------

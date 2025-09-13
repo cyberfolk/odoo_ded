@@ -95,10 +95,11 @@
                                 <field name="good_evil_axis"/>
                                 <field name="cosmology"/>
                                 <field name="parent_id"/>
-                                <field name="quest_ids" widget="many2many_tags"/>
-                                <field name="poi_ids" widget="many2many_tags"/>
-                                <field name="creature_ids" widget="many2many_tags" domain="[('is_legendary', '=', True)]"/>
-                                <field name="creature_ids" widget="many2many_tags" domain="[('is_npc', '=', True)]"/>
+                                <field widget="many2many_tags" name="quest_ids"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
+                                <field widget="many2many_tags" name="monster_ids"/>
                             </group>
                         </group>
                         <notebook>
@@ -106,16 +107,21 @@
                                 <field name="description"/>
                             </page>
                             <page string="Creature" name="page_creatures">
-                                <group>
+                                <group colspan="2">
                                     <field name="desc_creature" nolabel="1" colspan="2"/>
                                 </group>
-                                <group string="Creature della fazione" colspan="2">
-                                    <field name="creature_ids" nolabel="1" colspan="2"/>
-                                </group>
+                                <field name="creature_ids" nolabel="1" colspan="2"/>
                             </page>
                             <page string="NPC">
                                 <group>
-                                    <field name="creature_ids" domain="[('is_npc', '=', True)]" nolabel="1" colspan="2"/>
+                                    <field name="npc_ids" nolabel="1" colspan="2">
+                                        <tree editable="top">
+                                            <field name="cr"/>
+                                            <field name="name"/>
+                                            <field name="tag_ids" widget="many2many_tags"/>
+                                            <field name="description"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <page string="Domande" name="page_questions">

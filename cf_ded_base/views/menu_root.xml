@@ -16,7 +16,7 @@
         <field name="name">Creature</field>
         <field name="res_model">creature.creature</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('is_legendary', '=', False), ('is_npc', '=', False)]</field>
+        <field name="domain">[('is_base', '=', True)]</field>
     </record>
 
     <record id="action_menu_creature_tag" model="ir.actions.act_window">

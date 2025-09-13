@@ -33,6 +33,19 @@ class PointOfInterest(models.Model):
         string="Creature",
         comodel_name="creature.creature",
         relation="poi_creature_rel",
+        domain=[('is_base', '=', True)]
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.creature",
+        relation="poi_npc_rel",
+        domain=[('is_npc', '=', True)]
+    )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.creature",
+        relation="poi_monster_rel",
+        domain=[('is_legendary', '=', True)]
     )
     # endregion --------------------------------------------------------------------------------------------------------
 

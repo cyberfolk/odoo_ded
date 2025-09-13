@@ -27,10 +27,11 @@
                             </div>
                             <group>
                                 <field name="state"/>
-                                <field name="poi_ids" widget="many2many_tags"/>
-                                <field name="creature_ids" widget="many2many_tags" string="Mostri" domain="[('is_legendary', '=', True)]"/>
-                                <field name="creature_ids" widget="many2many_tags" string="NPCs" domain="[('is_npc', '=', True)]"/>
-                                <field name="faction_ids" widget="many2many_tags"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
+                                <field widget="many2many_tags" name="monster_ids"/>
+                                <field widget="many2many_tags" name="faction_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

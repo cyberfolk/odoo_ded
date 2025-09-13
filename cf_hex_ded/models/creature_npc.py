@@ -12,7 +12,7 @@ class CreatureCreature(models.Model):
     hex_ids = fields.Many2many(
         comodel_name="hex.hex",
         relation="creature_hex_script_rel",
-        string="Hexs possibili",
+        string="HEXs",
         help="Esagoni dove è possibile trovarlo."
     )
 
