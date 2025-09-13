@@ -108,6 +108,15 @@ class FactionFaction(models.Model):
         help="Portata della fazione"
     )
 
+    symbol = fields.Image(
+        string="Simbolo",
+    )
+
+    motto = fields.Char(
+        string="Motto",
+        help="Motto o frase distintiva della fazione"
+    )
+
     # endregion --------------------------------------------------------------------------------------------------------
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
@@ -205,9 +214,6 @@ class FactionFaction(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # symbol = fields.Char(string="Simbolo", help="Simbolo o emblema della fazione")
-    # motto = fields.Char(string="Motto", help="Motto o frase distintiva della fazione")
-    #
     # related_faction_ids = fields.Many2many(
     #     comodel_name="creature.faction",
     #     relation="faction_relation_rel",
