@@ -16,3 +16,9 @@ COSMOLOGY_LIST = [
     ("mirror", "Specchio"),
     ("elemental", "Elementale"),
 ]
+
+SCALE_LIST = [
+    ('local', 'Locale'),
+    ('regional', 'Regionale'),
+    ('global', 'Globale')
+]

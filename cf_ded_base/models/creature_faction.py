@@ -1,11 +1,5 @@
-import logging
-
 from odoo import fields, models, api
-from ..utility.selection import STATE_LIST, GOOD_EVIL_LIST, COSMOLOGY_LIST
-
-_logger = logging.getLogger(__name__)
-
-SCALE_LIST = [('local', 'Locale'), ('regional', 'Regionale'), ('global', 'Globale')]
+from ..utility.selection import STATE_LIST, GOOD_EVIL_LIST, COSMOLOGY_LIST, SCALE_LIST
 
 
 class FactionFaction(models.Model):
