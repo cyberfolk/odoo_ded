@@ -10,19 +10,6 @@ class FactionFaction(models.Model):
     _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome della Fazione deve essere univoco!")]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    child_ids = fields.One2many(
-        comodel_name="creature.faction",
-        inverse_name="parent_id",
-        string="Fazioni figlie",
-        help="Fazioni figlie della fazione",
-    )
-
-    parent_id = fields.Many2one(
-        comodel_name="creature.faction",
-        string="Fazione Padre",
-        help="Fazione Padre della fazione",
-    )
-
     state = fields.Selection(
         string="Stato",
         selection=STATE_LIST,
@@ -51,25 +38,6 @@ class FactionFaction(models.Model):
         help="Scontri della fazione",
     )
 
-    is_child = fields.Boolean(
-        string="È Figlio",
-        help="È una Fazione figlio di un'altra Fazione Padre",
-        compute="_compute_is_child",
-        store=True,
-    )
-
-    is_parent = fields.Boolean(
-        string="È Padre",
-        help="È una Fazione Padre di altre Fazione Figlio",
-        compute="_compute_is_parent",
-        store=True,
-    )
-
-    desc_creature = fields.Html(
-        string="Descrizione creature",
-        compute="_compute_desc_creature",
-    )
-
     tag_ids = fields.Many2many(
         comodel_name="creature.faction.tag",
         relation="faction_tag_rel",
@@ -92,6 +60,67 @@ class FactionFaction(models.Model):
         string="Motto",
         help="Motto o frase distintiva della fazione"
     )
+
+    desc_creature = fields.Html(
+        string="Descrizione creature",
+        compute="_compute_desc_creature",
+    )
+
+    @api.depends("creature_ids")
+    def _compute_desc_creature(self):
+        for rec in self:
+            creatures = rec.creature_ids.filtered(lambda x: x.description and x.description != '<p><br></p>')
+            creatures = sorted(creatures, key=lambda x: len(x.description))
+            content = "".join([
+                f"""
+                <div class="col-3">
+                    <h2>{creature.name}</h2>
+                    <p>{creature.description}</p>
+                </div>
+                """
+                for creature in creatures if creature and creature.description
+            ])
+            rec.desc_creature = f"""<div class="row">{content}</div>""" if content else "Nessuna creatura"
+
+    # endregion --------------------------------------------------------------------------------------------------------
+
+    # region FIELDS - HIERARCHY -------------------------------------------------------------------------------------
+    child_ids = fields.One2many(
+        comodel_name="creature.faction",
+        inverse_name="parent_id",
+        string="Fazioni figlie",
+        help="Fazioni figlie della fazione",
+    )
+
+    parent_id = fields.Many2one(
+        comodel_name="creature.faction",
+        string="Fazione Padre",
+        help="Fazione Padre della fazione",
+    )
+
+    is_child = fields.Boolean(
+        string="È Figlio",
+        help="È una Fazione figlio di un'altra Fazione Padre",
+        compute="_compute_is_child",
+        store=True,
+    )
+
+    is_parent = fields.Boolean(
+        string="È Padre",
+        help="È una Fazione Padre di altre Fazione Figlio",
+        compute="_compute_is_parent",
+        store=True,
+    )
+
+    @api.depends("child_ids", "parent_id")
+    def _compute_is_child(self):
+        for rec in self:
+            rec.is_child = True if rec.parent_id else False
+
+    @api.depends("child_ids", "parent_id")
+    def _compute_is_parent(self):
+        for rec in self:
+            rec.is_parent = True if rec.child_ids else False
 
     # endregion --------------------------------------------------------------------------------------------------------
 
@@ -173,34 +202,5 @@ class FactionFaction(models.Model):
     n18_contact_with_pcs = fields.Text(string="Come entrano in contatto coi PG?")
     n19_possible_developments = fields.Text(string="Possibili sviluppi della Fazione?")
     n20_faction_theme = fields.Text(string="Tema della Fazione?")
-
-    # endregion --------------------------------------------------------------------------------------------------------
-
-    # region METHOD - COMPUTED -----------------------------------------------------------------------------------------
-    @api.depends("child_ids", "parent_id")
-    def _compute_is_child(self):
-        for rec in self:
-            rec.is_child = True if rec.parent_id else False
-
-    @api.depends("child_ids", "parent_id")
-    def _compute_is_parent(self):
-        for rec in self:
-            rec.is_parent = True if rec.child_ids else False
-
-    @api.depends("creature_ids")
-    def _compute_desc_creature(self):
-        for rec in self:
-            creatures = rec.creature_ids.filtered(lambda x: x.description and x.description != '<p><br></p>')
-            creatures = sorted(creatures, key=lambda x: len(x.description))
-            content = "".join([
-                f"""
-                <div class="col-3">
-                    <h2>{creature.name}</h2>
-                    <p>{creature.description}</p>
-                </div>
-                """
-                for creature in creatures if creature and creature.description
-            ])
-            rec.desc_creature = f"""<div class="row">{content}</div>""" if content else "Nessuna creatura"
 
     # endregion --------------------------------------------------------------------------------------------------------
