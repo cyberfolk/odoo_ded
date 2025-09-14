@@ -91,6 +91,7 @@
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_ids"/>
                                 <field widget="many2many_tags" string="Insediamenti" name="settlement_ids"/>
                                 <field widget="many2many_tags" string="Lore Items" name="lore_item_ids"/>
+                                <field widget="many2many_tags" string="Artefatti" name="artifact_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
@@ -101,6 +102,7 @@
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_npc_ids"/>
                                 <field widget="many2many_tags" string="Insediamenti" name="settlement_npc_ids"/>
                                 <field widget="many2many_tags" string="Lore Items" name="lore_item_npc_ids"/>
+                                <field widget="many2many_tags" string="Artefatti" name="artifact_npc_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_npc_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_npc_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_npc_ids"/>
@@ -111,6 +113,7 @@
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_monster_ids"/>
                                 <field widget="many2many_tags" string="Insediamenti" name="settlement_monster_ids"/>
                                 <field widget="many2many_tags" string="Lore Items" name="lore_item_monster_ids"/>
+                                <field widget="many2many_tags" string="Artefatti" name="artifact_monster_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_monster_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_monster_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_monster_ids"/>

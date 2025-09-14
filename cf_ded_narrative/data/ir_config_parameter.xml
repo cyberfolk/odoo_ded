@@ -2,7 +2,7 @@
     <data noupdate="0">
         <record id="allowed_models" model="ir.config_parameter">
             <field name="key">narrative.relation.allowed_models</field>
-            <field name="value">creature.creature,creature.faction,quest.quest,point.of.interest</field>
+            <field name="value">artifact.artifact,creature.creature,creature.faction,lore.item,point.of.interest,quest.quest,settlement.settlement</field>
         </record>
     </data>
 </odoo>

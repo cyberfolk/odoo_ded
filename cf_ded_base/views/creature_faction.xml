@@ -113,6 +113,7 @@
                             <field widget="many2many_tags" name="poi_ids"/>
                             <field widget="many2many_tags" name="settlement_ids"/>
                             <field widget="many2many_tags" name="lore_item_ids"/>
+                            <field widget="many2many_tags" name="artifact_ids"/>
                             <field widget="many2many_tags" name="quest_ids"/>
                             <field widget="many2many_tags" name="npc_ids"/>
                         </group>

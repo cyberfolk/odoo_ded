@@ -34,6 +34,7 @@
                                 <field widget="many2many_tags" name="monster_ids"/>
                                 <field widget="many2many_tags" name="poi_ids"/>
                                 <field widget="many2many_tags" name="lore_item_ids"/>
+                                <field widget="many2many_tags" name="artifact_ids"/>
                                 <field widget="many2many_tags" name="quest_ids"/>
                                 <field widget="many2many_tags" name="creature_ids"/>
                                 <field widget="many2many_tags" name="faction_ids"/>
