@@ -10,10 +10,10 @@
 <!--            action = records.export_json()-->
 <!--        </field>-->
 <!--    </record>-->
-    <record id="action_export_json_structure_structure" model="ir.actions.server">
+    <record id="action_export_json_biome_structure" model="ir.actions.server">
         <field name="name">Export Json</field>
-        <field name="model_id" ref="cf_ded_base.model_structure_structure"/>
-        <field name="binding_model_id" ref="cf_ded_base.model_structure_structure"/>
+        <field name="model_id" ref="cf_ded_base.model_biome_structure"/>
+        <field name="binding_model_id" ref="cf_ded_base.model_biome_structure"/>
         <field name="binding_type">action</field> <!-- 'action' = menu Azioni in vista tree -->
         <field name="state">code</field>
         <field name="code">

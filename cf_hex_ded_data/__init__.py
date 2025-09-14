@@ -7,14 +7,20 @@ _logger = logging.getLogger(__name__)
 
 # Modelli da inizializzare: (modello, campi unici, campi da ignorare)
 INIT_MODELS = [
+    ("artifact.artifact",       'name', 'creature_high_prob_ids,creature_low_prob_ids,encounter_ids,hex_ids'),
     ("biome.biome",             'name', 'creature_high_prob_ids,creature_low_prob_ids,encounter_ids,hex_ids'),
-    ("structure.structure",     'name', ''),
+    ("biome.structure",         'name', ''),
     ("creature.tag",            'name', 'creature_ids'),
     ("creature.type",           'name', 'creature_ids'),
     ("creature.creature",       'name', ''),
     ("creature.faction",        'name', ''),
+    ("creature.faction.tag",    'name', ''),
     ("creature.encounter.line", 'name', 'encounter_ids'),
     ("creature.encounter",      'name', ''),
+    ("lore.item",               'name', ''),
+    ("point.of.interest",       'name', ''),
+    ("quest.quest",             'name', ''),
+    ("settlement.settlement",   'name', ''),
     ("hex.hex",                 'name', ''),
 ]
 

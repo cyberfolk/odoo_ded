@@ -2,7 +2,7 @@ from . import _mixin_narrative_entity
 from . import artifact_artifact
 from . import creature_creature
 from . import biome_biome
-from . import structure_structure
+from . import biome_structure
 from . import creature_tag
 from . import creature_type
 from . import creature_encounter

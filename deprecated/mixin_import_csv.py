@@ -13,7 +13,7 @@ MAP_MODEL_CSV = {
     "creature.type": "Tipi di creature (creature.type).csv",
     "creature.tag": "Tag per creature (creature.tag).csv",
     "creature.creature": "Creatura (creature.creature).csv",
-    "structure.structure": "Struttura (structure.structure).csv",
+    "biome.structure": "Struttura (biome.structure).csv",
 }
 
 

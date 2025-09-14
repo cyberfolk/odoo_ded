@@ -17,7 +17,7 @@
         "views/menu_root.xml",
         "views/artifact_artifact.xml",
         "views/biome_biome.xml",
-        "views/structure_structure.xml",
+        "views/biome_structure.xml",
         "views/creature_creature.xml",
         "views/creature_type.xml",
         "views/creature_tag.xml",

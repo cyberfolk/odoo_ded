@@ -1,8 +1,6 @@
 [
     {
         "name": "Accampamento disabitato",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -26,20 +24,14 @@
     },
     {
         "name": "Villa sfarzosa in decadenza",
-        "description": "",
-        "image": "",
         "biome_ids": []
     },
     {
         "name": "Pascolo circondati da filari di viti",
-        "description": "",
-        "image": "",
         "biome_ids": []
     },
     {
         "name": "Accampamento tribale",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -63,8 +55,6 @@
     },
     {
         "name": "Alberi a forma di portale",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -85,8 +75,6 @@
     },
     {
         "name": "Alberi colorati",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -104,8 +92,6 @@
     },
     {
         "name": "Alberi Morti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -126,8 +112,6 @@
     },
     {
         "name": "Alberi rossi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -145,8 +129,6 @@
     },
     {
         "name": "Alberi scintillanti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -164,8 +146,6 @@
     },
     {
         "name": "Alberi spettrali",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -186,8 +166,6 @@
     },
     {
         "name": "Albero con impiccati",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -208,8 +186,6 @@
     },
     {
         "name": "Albero Enorme",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -227,8 +203,6 @@
     },
     {
         "name": "Alligatore impagliato",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -237,8 +211,6 @@
     },
     {
         "name": "Altare cerimoniale",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -262,8 +234,6 @@
     },
     {
         "name": "Altare sacrificale",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -287,8 +257,6 @@
     },
     {
         "name": "Bandiera puntata",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -312,8 +280,6 @@
     },
     {
         "name": "Barca a remi abbandonata",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -322,8 +288,6 @@
     },
     {
         "name": "Bolle verdi su alberi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -341,8 +305,6 @@
     },
     {
         "name": "Boschetto isolato",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -360,8 +322,6 @@
     },
     {
         "name": "Cactus",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -370,8 +330,6 @@
     },
     {
         "name": "Campi bruciati",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -383,8 +341,6 @@
     },
     {
         "name": "Campi coltivati",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -396,8 +352,6 @@
     },
     {
         "name": "Campo di fiori",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -418,8 +372,6 @@
     },
     {
         "name": "Canne di bambù",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -428,8 +380,6 @@
     },
     {
         "name": "Capanna di marzapane",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -444,8 +394,6 @@
     },
     {
         "name": "Capanna inquietante con teschi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -454,8 +402,6 @@
     },
     {
         "name": "Carcassa Grande animale morto",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -479,8 +425,6 @@
     },
     {
         "name": "Cartello",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -504,8 +448,6 @@
     },
     {
         "name": "Casa con Camino che fuma",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -526,8 +468,6 @@
     },
     {
         "name": "Casa sull'Albero",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -545,8 +485,6 @@
     },
     {
         "name": "Cascata",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -564,8 +502,6 @@
     },
     {
         "name": "Case abband. sugli alberi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Collina"
@@ -577,8 +513,6 @@
     },
     {
         "name": "Case abbandonata sugli alberi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -587,8 +521,6 @@
     },
     {
         "name": "Case contadine",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -606,8 +538,6 @@
     },
     {
         "name": "Case fiabesche negli alberi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -622,8 +552,6 @@
     },
     {
         "name": "Catasta di Legna",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -644,8 +572,6 @@
     },
     {
         "name": "Cerchio di pietre",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -663,8 +589,6 @@
     },
     {
         "name": "Cimitero",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -688,8 +612,6 @@
     },
     {
         "name": "Disegni nel grano",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -701,8 +623,6 @@
     },
     {
         "name": "Erba Mobile",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -711,8 +631,6 @@
     },
     {
         "name": "Falegnameria",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -730,8 +648,6 @@
     },
     {
         "name": "Forte",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -755,8 +671,6 @@
     },
     {
         "name": "Funghi giganti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -777,8 +691,6 @@
     },
     {
         "name": "Giardino rigoglioso",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -796,8 +708,6 @@
     },
     {
         "name": "Graffiti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Montagna"
@@ -806,8 +716,6 @@
     },
     {
         "name": "Grande cancello",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -831,8 +739,6 @@
     },
     {
         "name": "Grande cratere",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -856,8 +762,6 @@
     },
     {
         "name": "Grande radura",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -872,8 +776,6 @@
     },
     {
         "name": "Grande Roccia",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -897,8 +799,6 @@
     },
     {
         "name": "Grotta",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -922,8 +822,6 @@
     },
     {
         "name": "Labirinto di pietra e rampicanti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -941,8 +839,6 @@
     },
     {
         "name": "Lago",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -960,8 +856,6 @@
     },
     {
         "name": "Lago putrefatto",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -970,8 +864,6 @@
     },
     {
         "name": "Locanda disabitata",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -995,8 +887,6 @@
     },
     {
         "name": "Macchinari agricoli",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -1008,8 +898,6 @@
     },
     {
         "name": "Miniera",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Montagna"
@@ -1018,8 +906,6 @@
     },
     {
         "name": "Monastero",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1043,8 +929,6 @@
     },
     {
         "name": "Mulino",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1062,8 +946,6 @@
     },
     {
         "name": "Nido gigante",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1078,8 +960,6 @@
     },
     {
         "name": "Oasi",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1088,8 +968,6 @@
     },
     {
         "name": "Opere di irrigazione",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -1101,8 +979,6 @@
     },
     {
         "name": "Orme Giganti",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1126,8 +1002,6 @@
     },
     {
         "name": "Ossa di Animali",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1136,8 +1010,6 @@
     },
     {
         "name": "Palafitte",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Palude"
@@ -1146,8 +1018,6 @@
     },
     {
         "name": "Piramide",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1156,8 +1026,6 @@
     },
     {
         "name": "Risaia",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -1166,8 +1034,6 @@
     },
     {
         "name": "Rocce colorate",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1191,8 +1057,6 @@
     },
     {
         "name": "Rovine",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1216,8 +1080,6 @@
     },
     {
         "name": "Ruscello",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1235,8 +1097,6 @@
     },
     {
         "name": "Ruscello fatato",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1254,8 +1114,6 @@
     },
     {
         "name": "Scalinata",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1279,8 +1137,6 @@
     },
     {
         "name": "Sfera luminosa che fluttua",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1304,8 +1160,6 @@
     },
     {
         "name": "Sorgente",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1320,8 +1174,6 @@
     },
     {
         "name": "Spada Roccia",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1345,8 +1197,6 @@
     },
     {
         "name": "Spaventapasseri",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1367,8 +1217,6 @@
     },
     {
         "name": "Stalle",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Prateria"
@@ -1383,8 +1231,6 @@
     },
     {
         "name": "Statua enorme Di Pietra",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1408,8 +1254,6 @@
     },
     {
         "name": "Statue dimenticate",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1433,8 +1277,6 @@
     },
     {
         "name": "Strane pitture",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1458,8 +1300,6 @@
     },
     {
         "name": "Tempio",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1483,8 +1323,6 @@
     },
     {
         "name": "Torre",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1508,8 +1346,6 @@
     },
     {
         "name": "Totem",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1533,8 +1369,6 @@
     },
     {
         "name": "Tronco Gigante",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Foresta"
@@ -1555,8 +1389,6 @@
     },
     {
         "name": "Trono",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1580,8 +1412,6 @@
     },
     {
         "name": "Un castello",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1605,8 +1435,6 @@
     },
     {
         "name": "Villaggio bruciato",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1630,8 +1458,6 @@
     },
     {
         "name": "Villaggio distrutto",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"
@@ -1655,8 +1481,6 @@
     },
     {
         "name": "Vulcano",
-        "description": "",
-        "image": "",
         "biome_ids": [
             {
                 "name": "Deserto"

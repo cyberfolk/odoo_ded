@@ -21,10 +21,8 @@
         "image": "",
         "creature_ids": [],
         "faction_ids": [],
-        "poi_id": {
-            "name": "Villa sfarzosa in decadenza"
-        },
-        "creature_id": {
+        "poi_id": false,
+        "monster_id": {
             "name": "Medusa"
         },
         "image_gallery_ids": [],
@@ -56,7 +54,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -87,7 +85,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -118,7 +116,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": {
+        "monster_id": {
             "name": "Lamia"
         },
         "image_gallery_ids": [],
@@ -151,7 +149,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -187,7 +185,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -223,7 +221,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -259,7 +257,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -290,7 +288,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -321,7 +319,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": {
+        "monster_id": {
             "name": "Ciclope"
         },
         "image_gallery_ids": [],
@@ -354,7 +352,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -390,7 +388,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -426,7 +424,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -457,7 +455,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -488,7 +486,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -519,7 +517,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": {
+        "monster_id": {
             "name": "Gigante delle Pietre"
         },
         "image_gallery_ids": [],
@@ -557,7 +555,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -593,7 +591,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -629,7 +627,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -665,7 +663,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -696,7 +694,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -732,7 +730,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -768,7 +766,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -804,7 +802,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -840,7 +838,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -876,7 +874,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -912,7 +910,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -948,7 +946,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -979,7 +977,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1015,7 +1013,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1051,7 +1049,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1082,7 +1080,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1113,7 +1111,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1144,7 +1142,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1180,7 +1178,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1216,7 +1214,7 @@
             }
         ],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],
@@ -1247,7 +1245,7 @@
         "creature_ids": [],
         "faction_ids": [],
         "poi_id": false,
-        "creature_id": false,
+        "monster_id": false,
         "image_gallery_ids": [],
         "wild_encounter_ids": [],
         "encounter_encounter_ids": [],

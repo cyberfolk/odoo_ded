@@ -24,7 +24,7 @@ class BiomeBiome(models.Model):
     )
 
     structure_ids = fields.Many2many(
-        comodel_name="structure.structure",
+        comodel_name="biome.structure",
         string="Strutture",
     )
 
