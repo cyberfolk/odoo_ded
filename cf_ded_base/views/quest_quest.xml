@@ -29,13 +29,13 @@
                                 <field name="state"/>
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">
-                                <field widget="many2many_tags" name="poi_ids"/>
-                                <field widget="many2many_tags" name="creature_ids"/>
-                                <field widget="many2many_tags" name="npc_ids"/>
                                 <field widget="many2many_tags" name="monster_ids"/>
-                                <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
                                 <field widget="many2many_tags" name="settlement_ids"/>
                                 <field widget="many2many_tags" name="lore_item_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -44,7 +44,20 @@
                     </group>
                     <notebook>
                         <page string="Descrizione" name="page_description">
-                            <field name="description"/>
+                            <group>
+                                <group>
+                                    <field name="hook" placeholder="Il gancio, il motivo per cui i PG si interessano (curiosità, sopravvivenza, dovere, ricompensa)."/>
+                                    <field name="objective" placeholder="Cosa bisogna fare, in termini chiari e raggiungibili."/>
+                                    <field name="key_steps" placeholder="Micro-task o dettagli operativi che chiariscono meglio l’obiettivo."/>
+                                </group>
+                                <group>
+                                    <field name="rewards" placeholder="Ciò che si ottiene se la quest viene completata (oro, prestigio, conoscenze, alleanze)."/>
+                                    <field name="risks" placeholder="Ciò che si rischia se la quest viene fallita o ignorata (perdita, morte, maledizione, rovina sociale)."/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="description" nolabel="1" colspan="2" placeholder="Descrizione..."/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
@@ -52,3 +65,4 @@
         </field>
     </record>
 </odoo>
+

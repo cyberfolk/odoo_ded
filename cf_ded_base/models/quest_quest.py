@@ -29,6 +29,29 @@ class QuestQuest(models.Model):
     )
     # endregion --------------------------------------------------------------------------------------------------------
 
+    # region FIELDS - DESCRIPTIVE ----------------------------------------------------------------------------------
+    hook = fields.Text(
+        string="Hook",
+        help="Il gancio, il motivo per cui i PG si interessano (curiosità, sopravvivenza, dovere, ricompensa).",
+    )
+    objective = fields.Text(
+        string="Obiettivo",
+        help="Cosa bisogna fare, in termini chiari e raggiungibili.",
+    )
+    key_steps = fields.Text(
+        string="Passaggi chiave",
+        help="Micro-task o dettagli operativi che chiariscono meglio l’obiettivo.",
+    )
+    rewards = fields.Text(
+        string="Ricompense",
+        help="Ciò che si ottiene se la quest viene completata (oro, prestigio, conoscenze, alleanze).",
+    )
+    risks = fields.Text(
+        string="Rischi",
+        help="Ciò che si rischia se la quest viene fallita o ignorata (perdita, morte, maledizione, rovina sociale).",
+    )
+    # endregion --------------------------------------------------------------------------------------------------------
+
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     settlement_ids = fields.Many2many(
         string="Insediamenti",
@@ -49,6 +72,11 @@ class QuestQuest(models.Model):
         string="Lore Items",
         comodel_name="lore.item",
         relation="quest_lore_item_rel",
+    )
+    artifact_ids = fields.Many2many(
+        string="Artefatti",
+        comodel_name="artifact.artifact",
+        relation="artifact_quest_rel",
     )
     creature_ids = fields.Many2many(
         string="Creature",

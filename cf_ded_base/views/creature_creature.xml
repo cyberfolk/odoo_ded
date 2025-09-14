@@ -89,32 +89,32 @@
                             <group string="Entità Narrative" invisible="not is_base" name="group_fields_en_base">
                                 <field widget="many2many_tags" string="Mostri Leggendari" name="monster_ids"/>
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_ids"/>
+                                <field widget="many2many_tags" string="Lore Items" name="lore_item_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_ids"/>
-                                <field widget="many2many_tags" string="Insediamenti" name="settlement_ids"/>
-                                <field widget="many2many_tags" string="Lore Items" name="lore_item_ids"/>
                             </group>
                             <group string="Entità Narrative" invisible="not is_npc" name="group_fields_en_npc">
                                 <field widget="many2many_tags" string="Mostri Leggendari" name="monster_npc_ids"/>
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_npc_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_npc_ids"/>
+                                <field widget="many2many_tags" string="Lore Items" name="lore_item_npc_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_npc_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_npc_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_npc_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_npc_ids"/>
-                                <field widget="many2many_tags" string="Insediamenti" name="settlement_npc_ids"/>
-                                <field widget="many2many_tags" string="Lore Items" name="lore_item_npc_ids"/>
                             </group>
                             <group string="Entità Narrative" invisible="not is_legendary" name="group_fields_en_legendary">
                                 <field widget="many2many_tags" string="Mostri Leggendari" name="monster_monster_ids"/>
                                 <field widget="many2many_tags" string="Punti d'Interesse" name="poi_monster_ids"/>
+                                <field widget="many2many_tags" string="Insediamenti" name="settlement_monster_ids"/>
+                                <field widget="many2many_tags" string="Lore Items" name="lore_item_monster_ids"/>
                                 <field widget="many2many_tags" string="Missioni" name="quest_monster_ids"/>
                                 <field widget="many2many_tags" string="Creature" name="creature_monster_ids"/>
                                 <field widget="many2many_tags" string="Fazioni" name="faction_monster_ids"/>
                                 <field widget="many2many_tags" string="NPCs" name="npc_monster_ids"/>
-                                <field widget="many2many_tags" string="Insediamenti" name="settlement_monster_ids"/>
-                                <field widget="many2many_tags" string="Lore Items" name="lore_item_monster_ids"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -122,7 +122,7 @@
                         </group>
                     </group>
                     <notebook>
-                        <page name="Descrizione">
+                        <page string="Descrizione" name="page_description">
                             <group invisible="not is_npc">
                                 <group>
                                     <field name="appearance" placeholder="..."/>

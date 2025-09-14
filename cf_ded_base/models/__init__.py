@@ -1,3 +1,4 @@
+from . import artifact_artifact
 from . import creature_creature
 from . import biome_biome
 from . import structure_structure

@@ -27,13 +27,13 @@
                             <group string="Info Base" name="group_fields_base">
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">
-                                <field widget="many2many_tags" name="quest_ids"/>
-                                <field widget="many2many_tags" name="creature_ids"/>
-                                <field widget="many2many_tags" name="npc_ids"/>
                                 <field widget="many2many_tags" name="monster_ids"/>
-                                <field widget="many2many_tags" name="faction_ids"/>
                                 <field widget="many2many_tags" name="settlement_ids"/>
                                 <field widget="many2many_tags" name="lore_item_ids"/>
+                                <field widget="many2many_tags" name="quest_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
                             </group>
                         </group>
                         <group colspan="2">

@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_artifact_artifact,access_artifact_artifact,model_artifact_artifact,base.group_user,1,1,1,1
 access_biome_biome,access_biome_biome,model_biome_biome,base.group_user,1,1,1,1
 access_structure_structure,access_structure_structure,model_structure_structure,base.group_user,1,1,1,1
 access_encounter_encounter,access_encounter_encounter,model_encounter_encounter,base.group_user,1,1,1,1

@@ -39,6 +39,11 @@ class PointOfInterest(models.Model):
         comodel_name="lore.item",
         relation="poi_lore_item_rel",
     )
+    artifact_ids = fields.Many2many(
+        string="Artefatti",
+        comodel_name="artifact.artifact",
+        relation="artifact_poi_rel",
+    )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",

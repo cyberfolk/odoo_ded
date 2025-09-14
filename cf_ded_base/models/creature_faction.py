@@ -140,6 +140,11 @@ class FactionFaction(models.Model):
         comodel_name="lore.item",
         relation="lore_item_faction_rel",
     )
+    artifact_ids = fields.Many2many(
+        string="Artefatti",
+        comodel_name="artifact.artifact",
+        relation="artifact_faction_rel",
+    )
     creature_ids = fields.Many2many(
         comodel_name="creature.creature",
         relation="faction_creature_rel",

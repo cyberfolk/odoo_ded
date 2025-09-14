@@ -109,12 +109,12 @@
                             </group>
                         </group>
                         <group string="Entità Narrative" name="group_fields_en">
-                            <field widget="many2many_tags" name="quest_ids"/>
-                            <field widget="many2many_tags" name="poi_ids"/>
-                            <field widget="many2many_tags" name="npc_ids"/>
                             <field widget="many2many_tags" name="monster_ids"/>
+                            <field widget="many2many_tags" name="poi_ids"/>
                             <field widget="many2many_tags" name="settlement_ids"/>
                             <field widget="many2many_tags" name="lore_item_ids"/>
+                            <field widget="many2many_tags" name="quest_ids"/>
+                            <field widget="many2many_tags" name="npc_ids"/>
                         </group>
                         <notebook>
                             <page string="Info MM" name="page_info_mm">

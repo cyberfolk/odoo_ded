@@ -72,6 +72,11 @@ class Settlement(models.Model):
         comodel_name="lore.item",
         relation="settlement_lore_item_rel",
     )
+    artifact_ids = fields.Many2many(
+        string="Artefatti",
+        comodel_name="artifact.artifact",
+        relation="settlement_artifact_rel",
+    )
     creature_ids = fields.Many2many(
         string="Creature",
         comodel_name="creature.creature",
