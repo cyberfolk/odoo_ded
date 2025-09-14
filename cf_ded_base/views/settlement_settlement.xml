@@ -29,6 +29,7 @@
                                 <field name="attitude"/>
                                 <field name="needs"/>
                                 <field name="offers"/>
+                                <field name="lore_level"/>
                                 <field name="code" class="text-nowrap text-muted fst-italic" readonly="1" groups="base.group_no_one"/>
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">

@@ -1,8 +1,12 @@
 from odoo import fields, models, api
-from ..utility.selection import LORE_ITEM_TYPE_LIST
 
 
 class LoreItem(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l05-lore-item/
+    """
+
     _name = "lore.item"
     _inherit = "mixin.narrative.entity"
     _description = "Lore Item"
@@ -13,12 +17,7 @@ class LoreItem(models.Model):
     ]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    type = fields.Selection(
-        selection=LORE_ITEM_TYPE_LIST,
-        string="Tipo",
-        required=True,
-        default='low',
-    )
+    # ...
     # endregion --------------------------------------------------------------------------------------------------------
 
     # region FIELDS - HIERARCHY -------------------------------------------------------------------------------------

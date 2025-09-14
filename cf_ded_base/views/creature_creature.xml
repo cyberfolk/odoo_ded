@@ -81,6 +81,7 @@
                                     <div class="o_form_label fw-bold px-3">Exp</div>
                                     <field style="width: 36%" name="exp"/>
                                 </div>
+                                <field name="lore_level"/>
                                 <field name="code" class="text-nowrap text-muted fst-italic" readonly="1" groups="base.group_no_one"/>
                                 <field name="tag_ids" widget="many2many_tags"/>
                                 <field name="biome_high_prob_ids" widget="many2many_tags" invisible="not is_base"/>

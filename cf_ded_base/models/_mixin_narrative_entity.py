@@ -1,5 +1,6 @@
 from odoo import fields, models, api
 from ..utility.narrative_entity import PREFIX_BY_MODE_MAP
+from ..utility.selection import LORE_LEVEL_LIST
 from odoo.addons.http_routing.models.ir_http import slugify_one
 
 
@@ -23,6 +24,13 @@ class NarrativeEntityMixin(models.AbstractModel):
         string="Codice",
         compute='_compute_code',
         store=True,
+    )
+
+    lore_level = fields.Selection(
+        selection=LORE_LEVEL_LIST,
+        string="Lore Level",
+        required=True,
+        default='low',
     )
 
     @api.depends("name")

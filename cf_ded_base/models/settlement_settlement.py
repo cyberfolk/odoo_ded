@@ -3,6 +3,11 @@ from ..utility.selection import SETTLEMENT_SCALE_LIST, ATTITUDE_LIST
 
 
 class Settlement(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l02-insediamenti/
+    """
+
     _name = "settlement.settlement"
     _inherit = "mixin.narrative.entity"
     _description = "Insediamento"

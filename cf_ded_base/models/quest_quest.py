@@ -3,6 +3,11 @@ from ..utility.selection import QUEST_SATE_LIST
 
 
 class QuestQuest(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l06-quest/
+    """
+
     _name = "quest.quest"
     _inherit = "mixin.narrative.entity"
     _description = "Missione"

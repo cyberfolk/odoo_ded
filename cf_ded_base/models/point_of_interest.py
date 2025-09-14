@@ -2,6 +2,11 @@ from odoo import fields, models, api
 
 
 class PointOfInterest(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l04-poi/
+    """
+
     _name = "point.of.interest"
     _inherit = "mixin.narrative.entity"
     _description = "Punto d'Interesse"

@@ -45,7 +45,7 @@ QUEST_SATE_LIST = [
     ('done', 'Terminata')
 ]
 
-LORE_ITEM_TYPE_LIST = [
-    ('high', 'Alta'),
-    ('low', 'Bassa'),
+LORE_LEVEL_LIST = [
+    ('high', 'Lore Alta'),
+    ('low', 'Lore Bassa'),
 ]

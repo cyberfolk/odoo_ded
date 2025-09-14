@@ -2,9 +2,19 @@ from odoo import fields, models, api
 from odoo.addons.http_routing.models.ir_http import slugify_one
 from ..utility.exp import MAP_CR_EXP
 from ..utility.narrative_entity import PREFIX_BY_MODE_MAP
+from ..utility.function import sync_m2m_field
 
 
 class CreatureCreature(models.Model):
+    """Questo modello è polimorfico, e in base al valore dei campi `is_legendary` e `is_npc`
+    viene considerato come un `Mostro_Leggendario`, un `NPC` o una `Creatura_Base`.
+
+    Documentazione completa - NPC:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l03-npcs/
+
+    Documentazione completa - Mostro Leggendario:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l07-monster/
+    """
     _name = "creature.creature"
     _inherit = "mixin.narrative.entity"
     _description = "Creatura"
@@ -385,6 +395,7 @@ class CreatureCreature(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
+    # region METHODS ---------------------------------------------------------------------------------------------------
     @api.model_create_multi
     def create(self, vals):
         record = super().create(vals)
@@ -406,56 +417,23 @@ class CreatureCreature(models.Model):
 
         for rec in self:
             # 1. Base <-> Base
-            _sync_m2m_field(rec.id, set(rec.creature_ids.ids), base, 'creature_ids', rec.is_base)
+            sync_m2m_field(rec.id, set(rec.creature_ids.ids), base, 'creature_ids', rec.is_base)
 
             # 2. Base <-> NPC
-            _sync_m2m_field(rec.id, set(rec.npc_ids.ids), npcs, 'creature_npc_ids', rec.is_base)
-            _sync_m2m_field(rec.id, set(rec.creature_npc_ids.ids), base, 'npc_ids', rec.is_npc)
+            sync_m2m_field(rec.id, set(rec.npc_ids.ids), npcs, 'creature_npc_ids', rec.is_base)
+            sync_m2m_field(rec.id, set(rec.creature_npc_ids.ids), base, 'npc_ids', rec.is_npc)
 
             # 3. Base <-> Monster
-            _sync_m2m_field(rec.id, set(rec.monster_ids.ids), mons, 'creature_monster_ids', rec.is_base)
-            _sync_m2m_field(rec.id, set(rec.creature_monster_ids.ids), base, 'monster_ids', rec.is_legendary)
+            sync_m2m_field(rec.id, set(rec.monster_ids.ids), mons, 'creature_monster_ids', rec.is_base)
+            sync_m2m_field(rec.id, set(rec.creature_monster_ids.ids), base, 'monster_ids', rec.is_legendary)
 
             # 4. NPC <-> NPC
-            _sync_m2m_field(rec.id, set(rec.npc_npc_ids.ids), npcs, 'npc_npc_ids', rec.is_npc)
+            sync_m2m_field(rec.id, set(rec.npc_npc_ids.ids), npcs, 'npc_npc_ids', rec.is_npc)
 
             # 5. Monster <-> NPC
-            _sync_m2m_field(rec.id, set(rec.npc_monster_ids.ids), npcs, 'monster_npc_ids', rec.is_legendary)
-            _sync_m2m_field(rec.id, set(rec.monster_npc_ids.ids), mons, 'npc_monster_ids', rec.is_npc)
+            sync_m2m_field(rec.id, set(rec.npc_monster_ids.ids), npcs, 'monster_npc_ids', rec.is_legendary)
+            sync_m2m_field(rec.id, set(rec.monster_npc_ids.ids), mons, 'npc_monster_ids', rec.is_npc)
 
             # 6. Monster <-> Monster
-            _sync_m2m_field(rec.id, set(rec.monster_monster_ids.ids), mons, 'monster_monster_ids', rec.is_legendary)
-
-
-def _sync_m2m_field(self_id, source_ids, target_model, reverse_field_name, check):
-    """Sincronizza un campo Many2many in modo bidirezionale sullo stesso modello.
-
-    Questa funzione assicura che se A è collegato a B, allora B sia collegato anche ad A
-    tramite il campo `reverse_field_name`. Funziona anche per rimuovere i collegamenti
-    se vengono recisi da un lato.
-
-    Args:
-        check (bool): Se False, non esegue alcuna azione
-        self_id (int): L'ID del record principale (quello da cui si parte)
-        source_ids (set[int]): Gli ID dei record che il record principale collega (es `creature_ids`, `npc_ids`, etc)
-        target_model (recordset): L'elenco dei possibili target da sincronizzare (es tutti i mostri, NPC o creature)
-        reverse_field_name (str): Il nome del campo Many2many opposto da sincronizzare
-    """
-    if not check:
-        return
-
-    for target in target_model:
-        # Evita il confronto con sé stesso (utile nei collegamenti simmetrici es. npc_npc_ids)
-        if target.id == self_id:
-            continue
-
-        # Ottiene il campo opposto dal target (es. creature_ids, npc_npc_ids, ecc.)
-        reverse_field = getattr(target, reverse_field_name)
-
-        # Se il record principale è collegato al target MA il target NON è collegato a lui → rimuovi
-        if self_id in reverse_field.ids and target.id not in source_ids:
-            setattr(target, reverse_field_name, [(3, self_id)])
-
-        # Se il record principale è collegato al target MA il target NON è ancora collegato a lui → aggiungi
-        elif self_id not in reverse_field.ids and target.id in source_ids:
-            setattr(target, reverse_field_name, [(4, self_id)])
+            sync_m2m_field(rec.id, set(rec.monster_monster_ids.ids), mons, 'monster_monster_ids', rec.is_legendary)
+    # endregion --------------------------------------------------------------------------------------------------------

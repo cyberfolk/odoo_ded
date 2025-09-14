@@ -2,6 +2,11 @@ from odoo import fields, models
 
 
 class ArtifactArtifact(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l08-artifact/
+    """
+
     _name = "artifact.artifact"
     _inherit = "mixin.narrative.entity"
     _description = "Artefatto"

@@ -16,8 +16,8 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <widget name="web_ribbon" title="Lore Alta" bg_color="text-bg-danger" invisible="type == 'low'"/>
-                    <widget name="web_ribbon" title="Lore Bassa" bg_color="text-bg-success" invisible="type == 'high'"/>
+                    <widget name="web_ribbon" title="Lore Alta" bg_color="text-bg-danger" invisible="lore_level == 'low'"/>
+                    <widget name="web_ribbon" title="Lore Bassa" bg_color="text-bg-success" invisible="lore_level == 'high'"/>
                     <group col="6">
                         <group colspan="4">
                             <div class="oe_title mb-3" colspan="2">
@@ -31,7 +31,7 @@
                             </div>
                             <group string="Info Base" name="group_fields_base">
                                 <field name="parent_id" string="Padre"/>
-                                <field name="type"/>
+                                <field name="lore_level"/>
                                 <field name="code" class="text-nowrap text-muted fst-italic" readonly="1" groups="base.group_no_one"/>
                             </group>
                             <group string="Entità Narrative" name="group_fields_en_base">

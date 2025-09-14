@@ -3,6 +3,11 @@ from ..utility.selection import STATE_LIST, GOOD_EVIL_LIST, COSMOLOGY_LIST, SCAL
 
 
 class FactionFaction(models.Model):
+    """
+    Documentazione completa:
+        https://cyberfolk.github.io/wm-docs/md/lore-tool/l01-fazioni/
+    """
+
     _name = "creature.faction"
     _inherit = "mixin.narrative.entity"
     _description = "Fazione"
