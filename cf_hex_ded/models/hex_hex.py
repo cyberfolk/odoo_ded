@@ -4,15 +4,16 @@ from odoo import fields, models, api
 class HexHex(models.Model):
     _inherit = "hex.hex"
 
+    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     biome_id = fields.Many2one(
         comodel_name='biome.biome',
         string="Biome",
-        help="Bioma contenuto in questo Hex-Script"
+        help="Bioma contenuto in questo Hex"
     )
 
     sml = fields.Integer(
         string="SML",
-        help="Difficoltà Hex-Script. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
+        help="Difficoltà Hex. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
         default=1
     )
 
@@ -24,32 +25,19 @@ class HexHex(models.Model):
         string="Immagine",
     )
 
-    creature_ids = fields.Many2many(
+    poi_id = fields.Many2one(
+        comodel_name="point.of.interest",
+        string="Punto d'Interesse",
+    )
+
+    monster_id = fields.Many2one(
         comodel_name="creature.creature",
-        relation="creature_hex_script_rel",
-        string="NPCs",
-        help="Elenco NPC che si posso trovare in questo Esagono Scriptato."
-    )
-
-    faction_ids = fields.Many2many(
-        comodel_name="creature.faction",
-        relation="creature_faction_hex_script_rel",
-        string="Fazioni",
-        help="Elenco Fazioni che si posso trovare in questo Esagono Scriptato."
-    )
-
-    structure_id = fields.Many2one(
-        comodel_name="structure.structure",
-        string="Struttura Principale",
-    )
-
-    creature_id = fields.Many2one(
-        comodel_name="creature.creature",
-        string="Creatura Principale",
+        string="Mostro Leggendario",
+        domain=[('is_legendary', '=', True)]
     )
 
     image_gallery_ids = fields.Many2many(
-        'ir.attachment',
+        comodel_name='ir.attachment',
         string="Altre Immagini",
         domain=[('mimetype', 'ilike', 'image')],
         help="Upload multiple images"
@@ -59,14 +47,14 @@ class HexHex(models.Model):
         comodel_name="creature.encounter",
         relation="creature_encounter_hex_script_rel",
         string="Scontri Selvaggi",
-        help="Scontri Selvaggi che si possono verificare nell'Esagono Scriptato.",
+        help="Scontri Selvaggi che si possono verificare nel Hex.",
     )
 
     encounter_encounter_ids = fields.One2many(
         comodel_name="encounter.encounter",
         inverse_name="hex_id",
         string="Incontri Casuali",
-        help="Incontri Casuali che si possono verificare nell'Esagono Scriptato.",
+        help="Incontri Casuali che si possono verificare nel Hex.",
     )
 
     completion_percentage = fields.Float(
@@ -75,23 +63,11 @@ class HexHex(models.Model):
         help="Percentuale di campi completati sul totale dei campi modello."
     )
 
-    settlement_id = fields.Many2one(
-        comodel_name="settlement.settlement",
-        string="Insediamento",
-        help="Insediamento presente nell’esagono",
-    )
-
-    poi_ids = fields.Many2many(
-        string="Punti d'Interesse",
-        comodel_name="point.of.interest",
-        relation="point_of_interest_hex_rel",
-    )
-
-
     def _compute_completion_percentage(self):
         target_fields = [
-            'image', 'creature_ids', 'biome_id', 'faction_ids', 'creature_id', 'description',
-            'structure_id', 'image_gallery_ids', 'wild_encounter_ids', 'encounter_encounter_ids',
+            'biome_id', 'sml', 'description', 'image', 'poi_id', 'image_gallery_ids', 'wild_encounter_ids',
+            'encounter_encounter_ids', 'artifact_ids', 'faction_ids', 'lore_item_ids', 'poi_ids', 'quest_ids',
+            'settlement_ids', 'creature_ids', 'npc_ids', 'monster_ids',
         ]
         for rec in self:
             filled_fields = sum(1 for field in target_fields if rec[field])
@@ -102,3 +78,55 @@ class HexHex(models.Model):
 
             total_fields = len(target_fields) + 2  # +2 per i due controlli aggiuntivi
             rec.completion_percentage = (filled_fields / total_fields) * 100 if total_fields else 0
+
+    # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
+    artifact_ids = fields.Many2many(
+        comodel_name="artifact.artifact",
+        relation="artifact_hex_rel",
+        string="Artefatti",
+    )
+    faction_ids = fields.Many2many(
+        comodel_name="creature.faction",
+        relation="faction_hex_rel",
+        string="Fazioni",
+    )
+    lore_item_ids = fields.Many2many(
+        comodel_name="lore.item",
+        relation="lore_item_hex_rel",
+        string="Lore Items",
+    )
+    poi_ids = fields.Many2many(
+        comodel_name="point.of.interest",
+        relation="poi_hex_rel",
+        string="Punti d'Interesse",
+    )
+    quest_ids = fields.Many2many(
+        comodel_name="quest.quest",
+        relation="quest_hex_rel",
+        string="Missioni",
+    )
+    settlement_ids = fields.Many2many(
+        comodel_name="settlement.settlement",
+        relation="settlement_hex_rel",
+        string="Insediamenti",
+    )
+    creature_ids = fields.Many2many(
+        string="Creature",
+        comodel_name="creature.creature",
+        relation="hex_creature_rel",
+        domain=[('is_base', '=', True)]
+    )
+    npc_ids = fields.Many2many(
+        string="NPCs",
+        comodel_name="creature.creature",
+        relation="hex_npc_rel",
+        domain=[('is_npc', '=', True)]
+    )
+    monster_ids = fields.Many2many(
+        string="Mostri Leggendari",
+        comodel_name="creature.creature",
+        relation="hex_monster_rel",
+        domain=[('is_legendary', '=', True)]
+    )
+
+    # endregion --------------------------------------------------------------------------------------------------------

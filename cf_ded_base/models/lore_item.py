@@ -77,7 +77,7 @@ class LoreItem(models.Model):
         relation="lore_item_faction_rel",
     )
     settlement_ids = fields.Many2many(
-        string="Insediamento",
+        string="Insediamenti",
         comodel_name="settlement.settlement",
         relation="settlement_lore_item_rel",
     )

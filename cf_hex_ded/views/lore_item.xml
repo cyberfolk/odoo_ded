@@ -1,8 +1,8 @@
 <odoo>
-    <record id="quest_quest_view_form" model="ir.ui.view">
-        <field name="name">quest_quest_view_form</field>
-        <field name="model">quest.quest</field>
-        <field name="inherit_id" ref="cf_ded_base.quest_quest_view_form"/>
+    <record id="lore_item_view_form" model="ir.ui.view">
+        <field name="name">lore_item_view_form</field>
+        <field name="model">lore.item</field>
+        <field name="inherit_id" ref="cf_ded_base.lore_item_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='npc_ids']" position="after">
                 <field name="hex_ids" widget="many2many_tags"/>

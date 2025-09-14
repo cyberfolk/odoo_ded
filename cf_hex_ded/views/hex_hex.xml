@@ -25,8 +25,7 @@
                 <field name="sml"/>
                 <field name="creature_ids" widget="many2many_tags" optional="show"/>
                 <field name="faction_ids" widget="many2many_tags" optional="show"/>
-                <field name="structure_id" optional="show"/>
-                <field name="creature_id" optional="show"/>
+                <field name="poi_id" optional="show"/>
                 <field name="completion_percentage" widget="progressbar"/>
             </xpath>
         </field>
@@ -47,24 +46,26 @@
                                     <field class="text-nowrap" name="name" nolabel="1"/>
                                 </h1>
                             </div>
-                            <group>
+                            <group string="Info Base" name="group_fields_base">
                                 <field name="status" widget="badge"
                                        decoration-danger="status  == 'script'"
                                        decoration-success="status == 'grid'"/>
                                 <field name="completion_percentage" widget="progressbar"/>
                                 <field name="biome_id" required="1"/>
                                 <field name="sml" required="1"/>
-                                <field name="structure_id"/>
-                                <!-- todo aggiungere restrizione su mostro figo o interessante -->
-                                <field name="creature_id"/>
+                                <field name="poi_id"/>
+                                <field name="monster_id"/>
                             </group>
-                            <group>
-                                <field name="encounter_encounter_ids" widget="many2many_tags"/>
-                                <field name="wild_encounter_ids" widget="many2many_tags" domain="[('sml', '=', sml)]"/>
-                                <field name="creature_ids" widget="many2many_tags"/>
-                                <field name="faction_ids" widget="many2many_tags"/>
-                                <field name="creature_id"/>
-                                <field name="poi_ids" widget="many2many_tags"/>
+                            <group string="Entità Narrative" name="group_fields_en_base">
+                                <field widget="many2many_tags" name="monster_ids"/>
+                                <field widget="many2many_tags" name="poi_ids"/>
+                                <field widget="many2many_tags" name="settlement_ids"/>
+                                <field widget="many2many_tags" name="lore_item_ids"/>
+                                <field widget="many2many_tags" name="quest_ids"/>
+                                <field widget="many2many_tags" name="artifact_ids"/>
+                                <field widget="many2many_tags" name="creature_ids"/>
+                                <field widget="many2many_tags" name="faction_ids"/>
+                                <field widget="many2many_tags" name="npc_ids"/>
                             </group>
                         </group>
                         <group colspan="2">
@@ -84,7 +85,7 @@
                             </field>
                         </page>
                         <page string="Scontri Selvaggi" name="page_wild_encounter_ids">
-                            <field name="wild_encounter_ids" colspan="2" nolabel="1">
+                            <field name="wild_encounter_ids" colspan="2" nolabel="1" domain="[('sml', '=', sml)]">
                                 <tree>
                                     <field name="sml"/>
                                     <field name="name"/>

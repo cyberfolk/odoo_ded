@@ -1,12 +1,12 @@
 <odoo>
-  <record id="settlement_settlement_view_form_hex" model="ir.ui.view">
-    <field name="name">settlement.settlement.form.hex</field>
-    <field name="model">settlement.settlement</field>
-    <field name="inherit_id" ref="cf_ded_base.settlement_settlement_view_form"/>
-    <field name="arch" type="xml">
-      <xpath expr="//sheet/group/group/group[1]" position="inside">
-          <field name="hex_ids" widget="many2many_tags"/>
-      </xpath>
-    </field>
-  </record>
+    <record id="settlement_settlement_view_form" model="ir.ui.view">
+        <field name="name">settlement_settlement_view_form</field>
+        <field name="model">settlement.settlement</field>
+        <field name="inherit_id" ref="cf_ded_base.settlement_settlement_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='npc_ids']" position="after">
+                <field name="hex_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
 </odoo>

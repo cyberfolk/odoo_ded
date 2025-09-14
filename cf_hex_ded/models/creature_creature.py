@@ -5,14 +5,17 @@ class CreatureCreature(models.Model):
     _inherit = "creature.creature"
 
     hex_ids = fields.Many2many(
+        string="(Base) HEXs",
         comodel_name="hex.hex",
-        relation="creature_hex_script_rel",
-        string="HEXs",
-        help="Esagoni dove è possibile trovarlo."
+        relation="hex_creature_rel",
     )
-
-    hex_id = fields.Many2many(
+    hex_npc_ids = fields.Many2many(
+        string="(NPC) HEXs",
         comodel_name="hex.hex",
-        string="Hex",
-        help="Esagoni dove si trova la creatura."
+        relation="hex_npc_rel",
+    )
+    hex_monster_ids = fields.Many2many(
+        string="(Monster) HEXs",
+        comodel_name="hex.hex",
+        relation="hex_monster_rel",
     )

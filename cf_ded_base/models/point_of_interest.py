@@ -30,7 +30,7 @@ class PointOfInterest(models.Model):
         relation="poi_faction_rel",
     )
     settlement_ids = fields.Many2many(
-        string="Insediamento",
+        string="Insediamenti",
         comodel_name="settlement.settlement",
         relation="settlement_poi_rel",
     )
