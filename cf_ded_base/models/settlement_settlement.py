@@ -7,9 +7,7 @@ class Settlement(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Insediamento"
 
-    _sql_constraints = [
-        ("unique_settlement_settlement_name", "UNIQUE(name)", "Il nome dell'Insediamento deve essere univoco!"),
-    ]
+    _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome dell'Insediamento deve essere univoco!")]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     scale = fields.Selection(

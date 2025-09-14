@@ -7,9 +7,7 @@ class QuestQuest(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Missione"
 
-    _sql_constraints = [
-        ("unique_artifact_artifact_name", "UNIQUE(name)", "Il nome della Missione deve essere univoco!"),
-    ]
+    _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome della Missione deve essere univoco!")]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     state = fields.Selection(

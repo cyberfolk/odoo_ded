@@ -6,9 +6,7 @@ class PointOfInterest(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Punto d'Interesse"
 
-    _sql_constraints = [
-        ("unique_point_of_interest_name", "UNIQUE(name)", "Il nome del Punto d'Interesse deve essere univoco!"),
-    ]
+    _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome del Punto d'Interesse deve essere univoco!")]
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     quest_ids = fields.Many2many(

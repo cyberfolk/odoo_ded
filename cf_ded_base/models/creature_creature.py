@@ -9,9 +9,7 @@ class CreatureCreature(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Creatura"
 
-    _sql_constraints = [
-        ('unique_creature_creature_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')
-    ]
+    _sql_constraints = [('unique_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     link_5et = fields.Char(

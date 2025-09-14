@@ -7,9 +7,7 @@ class FactionFaction(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Fazione"
 
-    _sql_constraints = [
-        ("unique_creature_faction_name", "UNIQUE(name)", "Il nome della Fazione deve essere univoco!"),
-    ]
+    _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome della Fazione deve essere univoco!")]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
     child_ids = fields.One2many(

@@ -6,9 +6,7 @@ class ArtifactArtifact(models.Model):
     _inherit = "mixin.narrative.entity"
     _description = "Artefatto"
 
-    _sql_constraints = [
-        ("unique_artifact_artifact_name", "UNIQUE(name)", "Il nome dell'Artefatto deve essere univoco!"),
-    ]
+    _sql_constraints = [("unique_name", "UNIQUE(name)", "Il nome dell'Artefatto deve essere univoco!")]
 
     # region FIELDS - DESCRIPTIVE ----------------------------------------------------------------------------------
     # ...
