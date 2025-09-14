@@ -3,20 +3,12 @@ from odoo import fields, models, api
 
 class PointOfInterest(models.Model):
     _name = "point.of.interest"
+    _inherit = "mixin.narrative.entity"
     _description = "Punto d'Interesse"
 
-    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-        required=True
-    )
-    description = fields.Html(
-        string="Descrizione"
-    )
-    image = fields.Image(
-        string="Immagine",
-    )
-    # endregion --------------------------------------------------------------------------------------------------------
+    _sql_constraints = [
+        ("unique_point_of_interest_name", "UNIQUE(name)", "Il nome del Punto d'Interesse deve essere univoco!"),
+    ]
 
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     quest_ids = fields.Many2many(

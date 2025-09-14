@@ -1,41 +1,25 @@
 from odoo import fields, models
-
-SCALE_SELECTION_LIST = [
-    ("borgo", "Borgo"),
-    ("villaggio", "Villaggio"),
-    ("citta", "Città"),
-    ("capitale", "Capitale"),
-    ("megalopoli", "Megalopoli"),
-    ("avamposto", "Avamposto"),
-    ("eremo", "Eremo"),
-]
-ATTITUDE_SELECTION_LIST = [
-    ("cordiale", "Cordiale"),
-    ("neutrale", "Neutrale"),
-    ("ostile", "Ostile")
-]
+from ..utility.selection import SETTLEMENT_SCALE_LIST, ATTITUDE_LIST
 
 
 class Settlement(models.Model):
     _name = "settlement.settlement"
+    _inherit = "mixin.narrative.entity"
     _description = "Insediamento"
 
+    _sql_constraints = [
+        ("unique_settlement_settlement_name", "UNIQUE(name)", "Il nome dell'Insediamento deve essere univoco!"),
+    ]
+
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-        required=True
-    )
-    description = fields.Html(
-        string="Descrizione"
-    )
     scale = fields.Selection(
-        selection=SCALE_SELECTION_LIST,
+        selection=SETTLEMENT_SCALE_LIST,
         string="Scala",
         required=True,
         default="borgo",
     )
     attitude = fields.Selection(
-        selection=ATTITUDE_SELECTION_LIST,
+        selection=ATTITUDE_LIST,
         string="Atteggiamento",
         required=True,
         default="neutrale",
@@ -45,9 +29,6 @@ class Settlement(models.Model):
     )
     offers = fields.Text(
         string="Offre"
-    )
-    image = fields.Image(
-        string="Immagine",
     )
     # endregion --------------------------------------------------------------------------------------------------------
 

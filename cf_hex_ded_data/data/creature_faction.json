@@ -1,7 +1,6 @@
 [
     {
         "name": "Demoni",
-        "code": "DEM",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -32,7 +31,6 @@
     },
     {
         "name": "Yugoloth",
-        "code": "YGLT",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -63,7 +61,6 @@
     },
     {
         "name": "Miconidi",
-        "code": "MCND",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -94,7 +91,6 @@
     },
     {
         "name": "Vegepygmy",
-        "code": "VGPG",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -125,7 +121,6 @@
     },
     {
         "name": "Draghi Cromatici",
-        "code": "DRGC",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -156,7 +151,6 @@
     },
     {
         "name": "Draghi Metallici",
-        "code": "DRGM",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -187,7 +181,6 @@
     },
     {
         "name": "Non Morti",
-        "code": "NMRT",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -218,7 +211,6 @@
     },
     {
         "name": "Vampiri",
-        "code": "VAMP",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -249,7 +241,6 @@
     },
     {
         "name": "Aboleth",
-        "code": "ABOL",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -280,7 +271,6 @@
     },
     {
         "name": "Mind Flayer",
-        "code": "MIND",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -311,7 +301,6 @@
     },
     {
         "name": "Slaad",
-        "code": "SLAD",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -342,7 +331,6 @@
     },
     {
         "name": "Star Spawn",
-        "code": "STAR",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -373,7 +361,6 @@
     },
     {
         "name": "Githzerai",
-        "code": "GZRAI",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -404,7 +391,6 @@
     },
     {
         "name": "Githyanki",
-        "code": "GTNKI",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -435,7 +421,6 @@
     },
     {
         "name": "Sahuagin",
-        "code": "SAHU",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -466,7 +451,6 @@
     },
     {
         "name": "Firenewt",
-        "code": "FIREN",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -497,7 +481,6 @@
     },
     {
         "name": "Neogi",
-        "code": "NEOG",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -528,7 +511,6 @@
     },
     {
         "name": "Maligni",
-        "code": "MLGN",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -559,7 +541,6 @@
     },
     {
         "name": "Tortle",
-        "code": "TORTL",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -590,7 +571,6 @@
     },
     {
         "name": "Grung",
-        "code": "GRNG",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -621,7 +601,6 @@
     },
     {
         "name": "Licantropi",
-        "code": "LICA",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -652,7 +631,6 @@
     },
     {
         "name": "Bullywug",
-        "code": "BWUG",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -683,7 +661,6 @@
     },
     {
         "name": "Kuo-toa",
-        "code": "KTOA",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -714,7 +691,6 @@
     },
     {
         "name": "Drow",
-        "code": "DRW",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -745,7 +721,6 @@
     },
     {
         "name": "Nani",
-        "code": "NANI",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -776,7 +751,6 @@
     },
     {
         "name": "Duergar",
-        "code": "DUER",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -807,7 +781,6 @@
     },
     {
         "name": "Elfi",
-        "code": "ELF",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -838,7 +811,6 @@
     },
     {
         "name": "Shadar-Kai",
-        "code": "SHAD",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -869,7 +841,6 @@
     },
     {
         "name": "Giganti",
-        "code": "GIG",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -900,7 +871,6 @@
     },
     {
         "name": "Megere",
-        "code": "MEGER",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -931,7 +901,6 @@
     },
     {
         "name": "Steeder",
-        "code": "STEED",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -962,7 +931,6 @@
     },
     {
         "name": "Sorrowsworn",
-        "code": "SORR",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -993,7 +961,6 @@
     },
     {
         "name": "Naga",
-        "code": "NAG",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1024,7 +991,6 @@
     },
     {
         "name": "Kruthik",
-        "code": "KRUT",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -1055,7 +1021,6 @@
     },
     {
         "name": "Giff",
-        "code": "GIFF",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1086,7 +1051,6 @@
     },
     {
         "name": "Aarakockra",
-        "code": "ARAK",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1117,7 +1081,6 @@
     },
     {
         "name": "Eladrin",
-        "code": "ELAD",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1148,7 +1111,6 @@
     },
     {
         "name": "Derro",
-        "code": "DER",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -1179,7 +1141,6 @@
     },
     {
         "name": "Merfolk",
-        "code": "MERF",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -1210,7 +1171,6 @@
     },
     {
         "name": "Trogloditi",
-        "code": "TROG",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1241,7 +1201,6 @@
     },
     {
         "name": "Kenku",
-        "code": "KENK",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -1272,7 +1231,6 @@
     },
     {
         "name": "Gnomi",
-        "code": "GNM",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -1303,7 +1261,6 @@
     },
     {
         "name": "Thri-kreen",
-        "code": "TRIK",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1334,7 +1291,6 @@
     },
     {
         "name": "Angeli",
-        "code": "ANG",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1365,7 +1321,6 @@
     },
     {
         "name": "Monodroni",
-        "code": "MNDR",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -1396,7 +1351,6 @@
     },
     {
         "name": "Beholder",
-        "code": "BLDR",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1427,7 +1381,6 @@
     },
     {
         "name": "Xvart",
-        "code": "XVART",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -1458,7 +1411,6 @@
     },
     {
         "name": "Diavoli",
-        "code": "DIAV",
         "child_ids": [],
         "parent_id": false,
         "state": "upcoming",
@@ -1489,7 +1441,6 @@
     },
     {
         "name": "Terra",
-        "code": "TER",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1520,7 +1471,6 @@
     },
     {
         "name": "Acqua",
-        "code": "ACQ",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1551,7 +1501,6 @@
     },
     {
         "name": "Aria",
-        "code": "ARIA",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1582,7 +1531,6 @@
     },
     {
         "name": "Fuoco",
-        "code": "FOCO",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1613,7 +1561,6 @@
     },
     {
         "name": "Feywild",
-        "code": "FEY",
         "child_ids": [],
         "parent_id": false,
         "state": "future",
@@ -1644,7 +1591,6 @@
     },
     {
         "name": "Quaggoth",
-        "code": "QGGT",
         "child_ids": [],
         "parent_id": false,
         "state": "doubtful",
@@ -1675,7 +1621,6 @@
     },
     {
         "name": "Goblin",
-        "code": "GOB",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1706,7 +1651,6 @@
     },
     {
         "name": "Hobgoblin",
-        "code": "HOB",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1737,7 +1681,6 @@
     },
     {
         "name": "Bugbear",
-        "code": "BGB",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1768,7 +1711,6 @@
     },
     {
         "name": "Ogre",
-        "code": "OGR",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1799,7 +1741,6 @@
     },
     {
         "name": "Orchi",
-        "code": "ORC",
         "child_ids": [
             {
                 "name": "Orchi - Clan Tritaossa"
@@ -1852,7 +1793,6 @@
     },
     {
         "name": "Lucertoloidi",
-        "code": "LCRT",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1883,7 +1823,6 @@
     },
     {
         "name": "Yuan-Ti",
-        "code": "YUA",
         "child_ids": [
             {
                 "name": "Yuan-Ti – Dendar"
@@ -1924,7 +1863,6 @@
     },
     {
         "name": "Coboldi",
-        "code": "COB",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1955,7 +1893,6 @@
     },
     {
         "name": "Gnoll",
-        "code": "GNLL",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -1986,7 +1923,6 @@
     },
     {
         "name": "Troll",
-        "code": "TRLL",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -2017,7 +1953,6 @@
     },
     {
         "name": "Banditi",
-        "code": "BNDT",
         "child_ids": [],
         "parent_id": false,
         "state": "active",
@@ -2048,7 +1983,6 @@
     },
     {
         "name": "Yuan-Ti – Dendar",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Yuan-Ti"
@@ -2081,7 +2015,6 @@
     },
     {
         "name": "Yuan-Ti – Merrshaulk",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Yuan-Ti"
@@ -2114,7 +2047,6 @@
     },
     {
         "name": "Yuan-Ti – Seth",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Yuan-Ti"
@@ -2147,7 +2079,6 @@
     },
     {
         "name": "Orchi - Clan Tritaossa",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2180,7 +2111,6 @@
     },
     {
         "name": "Orchi - Clan Spaccatuono",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2213,7 +2143,6 @@
     },
     {
         "name": "Orchi - Clan Rocce Nere",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2246,7 +2175,6 @@
     },
     {
         "name": "Orchi - Mandriani Uri",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2279,7 +2207,6 @@
     },
     {
         "name": "Orchi - Zanne Rosse",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2312,7 +2239,6 @@
     },
     {
         "name": "Orchi - Artigli di Luthic",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"
@@ -2345,7 +2271,6 @@
     },
     {
         "name": "Orchi - Mani di Yurtrus",
-        "code": false,
         "child_ids": [],
         "parent_id": {
             "name": "Orchi"

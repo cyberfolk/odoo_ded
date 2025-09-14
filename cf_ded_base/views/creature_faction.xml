@@ -25,7 +25,6 @@
         <field name="arch" type="xml">
             <!--<tree editable="top">-->
             <tree>
-                <field name="code"/>
                 <field name="name"/>
                 <field name="state" widget="badge"
                        decoration-success="state == 'active'"
@@ -97,10 +96,10 @@
                     <group>
                         <group string="Campi Base">
                             <group>
-                                <field name="code"/>
                                 <field name="state"/>
                                 <field name="good_evil_axis"/>
                                 <field name="cosmology"/>
+                                <field name="code" class="text-nowrap text-muted fst-italic" readonly="1" groups="base.group_no_one"/>
                             </group>
                             <group>
                                 <field name="parent_id"/>

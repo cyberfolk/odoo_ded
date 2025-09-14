@@ -1,3 +1,4 @@
+from . import _mixin_narrative_entity
 from . import artifact_artifact
 from . import creature_creature
 from . import biome_biome

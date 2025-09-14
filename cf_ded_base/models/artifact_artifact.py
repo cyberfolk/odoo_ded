@@ -3,22 +3,12 @@ from odoo import fields, models
 
 class ArtifactArtifact(models.Model):
     _name = "artifact.artifact"
+    _inherit = "mixin.narrative.entity"
     _description = "Artefatto"
 
-    # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Campagna",
-    )
-
-    image = fields.Image(
-        string="Immagine",
-    )
-    # endregion --------------------------------------------------------------------------------------------------------
+    _sql_constraints = [
+        ("unique_artifact_artifact_name", "UNIQUE(name)", "Il nome dell'Artefatto deve essere univoco!"),
+    ]
 
     # region FIELDS - DESCRIPTIVE ----------------------------------------------------------------------------------
     # ...

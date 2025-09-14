@@ -22,3 +22,30 @@ SCALE_LIST = [
     ('regional', 'Regionale'),
     ('global', 'Globale')
 ]
+
+SETTLEMENT_SCALE_LIST = [
+    ("borg", "Borgo"),
+    ("village", "Villaggio"),
+    ("city", "Città"),
+    ("capital", "Capitale"),
+    ("megalopoli", "Megalopoli"),
+    ("avamposto", "Avamposto"),
+    ("eremo", "Eremo"),
+]
+
+ATTITUDE_LIST = [
+    ("friendly", "Cordiale"),
+    ("neutral", "Neutrale"),
+    ("hostile", "Ostile")
+]
+
+QUEST_SATE_LIST = [
+    ('todo', 'Da fare'),
+    ('ongoing', 'In corso'),
+    ('done', 'Terminata')
+]
+
+LORE_ITEM_TYPE_LIST = [
+    ('high', 'Alta'),
+    ('low', 'Bassa'),
+]

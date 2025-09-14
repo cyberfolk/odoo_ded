@@ -1,30 +1,19 @@
 from odoo import fields, models, api
+from odoo.addons.http_routing.models.ir_http import slugify_one
 from ..utility.exp import MAP_CR_EXP
+from ..utility.narrative_entity import PREFIX_BY_MODE_MAP
 
 
 class CreatureCreature(models.Model):
     _name = "creature.creature"
+    _inherit = "mixin.narrative.entity"
     _description = "Creatura"
 
     _sql_constraints = [
-        ('unique_creature_base_mixin_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')
+        ('unique_creature_creature_name', 'UNIQUE(name)', 'Il nome deve essere univoco!')
     ]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-        required=True,
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Creatura",
-    )
-
-    image = fields.Image(
-        string="Immagine",
-    )
-
     link_5et = fields.Char(
         string="Link 5et",
         help="Link al form della creatura su 5etools per avere maggiori dettagli."
@@ -50,6 +39,20 @@ class CreatureCreature(models.Model):
     def _compute_is_base(self):
         for rec in self:
             rec.is_base = not rec.is_legendary and not rec.is_npc
+
+    @api.depends('name', 'is_legendary', 'is_npc')
+    def _compute_code(self):
+        PREFIX_DICT = PREFIX_BY_MODE_MAP[self._name]
+        mapping = {
+            (True, True): "monster-npc",
+            (False, False): "base",
+            (False, True): "monster",
+            (True, False): "npc",
+        }
+        for record in self:
+            key = (record.is_npc, record.is_legendary)
+            prefix = PREFIX_DICT.get(mapping.get(key, "UNK"))
+            record.code = f"{prefix}_{slugify_one(record.name)}"
 
     # endregion --------------------------------------------------------------------------------------------------------
 

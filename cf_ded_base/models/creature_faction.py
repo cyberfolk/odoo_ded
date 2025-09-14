@@ -4,25 +4,14 @@ from ..utility.selection import STATE_LIST, GOOD_EVIL_LIST, COSMOLOGY_LIST, SCAL
 
 class FactionFaction(models.Model):
     _name = "creature.faction"
+    _inherit = "mixin.narrative.entity"
     _description = "Fazione"
 
     _sql_constraints = [
-        ('unique_creature_faction_name', 'UNIQUE(name)', 'Il nome della fazione deve essere univoco!'),
-        ('unique_creature_faction_code', 'UNIQUE(code)', 'Il code della fazione deve essere univoco!')
+        ("unique_creature_faction_name", "UNIQUE(name)", "Il nome della Fazione deve essere univoco!"),
     ]
 
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-        required=True,
-        help="Nome della fazione",
-    )
-
-    code = fields.Char(
-        string="Codice",
-        help="Codice della fazione",
-    )
-
     child_ids = fields.One2many(
         comodel_name="creature.faction",
         inverse_name="parent_id",
@@ -76,11 +65,6 @@ class FactionFaction(models.Model):
         help="È una Fazione Padre di altre Fazione Figlio",
         compute="_compute_is_parent",
         store=True,
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della fazione",
     )
 
     desc_creature = fields.Html(

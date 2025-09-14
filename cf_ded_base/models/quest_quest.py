@@ -1,26 +1,17 @@
 from odoo import fields, models
-
-QUEST_SATE_LIST = [('todo', 'Da fare'), ('ongoing', 'In corso'), ('done', 'Terminata')]
+from ..utility.selection import QUEST_SATE_LIST
 
 
 class QuestQuest(models.Model):
     _name = "quest.quest"
+    _inherit = "mixin.narrative.entity"
     _description = "Missione"
 
+    _sql_constraints = [
+        ("unique_artifact_artifact_name", "UNIQUE(name)", "Il nome della Missione deve essere univoco!"),
+    ]
+
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-    )
-
-    description = fields.Html(
-        string="Descrizione",
-        help="Descrizione della Campagna",
-    )
-
-    image = fields.Image(
-        string="Immagine",
-    )
-
     state = fields.Selection(
         string="Stato",
         selection=QUEST_SATE_LIST,

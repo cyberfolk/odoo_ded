@@ -5,7 +5,7 @@
         <field name="inherit_id" ref="cf_ded_base.creature_faction_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//page[@name='page_creatures']" position="after">
-                <page string="Esagoni Scriptati">
+                <page string="Esagoni">
                     <group>
                         <field name="hex_ids" nolabel="1" colspan="2"/>
                     </group>

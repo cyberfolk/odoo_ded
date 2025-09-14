@@ -1,27 +1,20 @@
 from odoo import fields, models, api
+from ..utility.selection import LORE_ITEM_TYPE_LIST
 
 
 class LoreItem(models.Model):
     _name = "lore.item"
+    _inherit = "mixin.narrative.entity"
     _description = "Lore Item"
     _rec_name = "complete_name"
 
+    _sql_constraints = [
+        ("unique_lore_item_name", "UNIQUE(name)", "Il nome del Lore Item deve essere univoco!"),
+    ]
+
     # region FIELDS - BASE ---------------------------------------------------------------------------------------------
-    name = fields.Char(
-        string="Nome",
-        required=True
-    )
-    description = fields.Html(
-        string="Descrizione"
-    )
-    image = fields.Image(
-        string="Immagine",
-    )
     type = fields.Selection(
-        selection=[
-            ('high', 'Alta'),
-            ('low', 'Bassa'),
-        ],
+        selection=LORE_ITEM_TYPE_LIST,
         string="Tipo",
         required=True,
         default='low',
