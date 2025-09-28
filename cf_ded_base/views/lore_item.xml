@@ -1,11 +1,39 @@
 <odoo>
+
+<!--    <record id="lore_item_hierarchy_view" model="ir.ui.view">-->
+<!--        <field name="name">lore.item.hierarchy</field>-->
+<!--        <field name="model">lore.item</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <hierarchy child_field="child_ids" draggable="1">-->
+<!--                <field name="name"/>-->
+<!--                <templates>-->
+<!--                    <t t-name="hierarchy-box">-->
+<!--                        <div class="o_hierarchy_node_body d-flex flex-column text-center">-->
+<!--                            <field class="fw-bold" name="name"/>-->
+<!--                        </div>-->
+<!--                    </t>-->
+<!--                </templates>-->
+<!--            </hierarchy>-->
+<!--        </field>-->
+<!--    </record>-->
+
     <record id="lore_item_view_tree" model="ir.ui.view">
         <field name="name">lore.item.tree</field>
         <field name="model">lore.item</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
+                <field name="name" class="fw-bold"/>
                 <field name="description"/>
+                <field name="lore_level" widget="badge"
+                       decoration-danger="lore_level == 'high'"
+                       decoration-success="lore_level == 'low'"
+                />
+                <field name="revision_status" widget="badge"
+                       decoration-warning="revision_status == 'todo'"
+                       decoration-primary="revision_status == 'reliable'"
+                       decoration-success="revision_status == 'confirmed'"
+                />
+                <field name="parent_id" optional="hide"/>
             </tree>
         </field>
     </record>

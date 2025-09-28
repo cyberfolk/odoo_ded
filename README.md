@@ -19,5 +19,5 @@ ambientazioni per D&D.
 - 🗺️ `cf_hex_base` → App che introduce i modelli base per la gestione delle Hex Map.
 - 📖 `cf_hex_ded` → Modulo che introduce la lore sulla Hex Map.
 - 🧭 `cf_hex_ded_client` → Modulo che introduce un interfaccia per interagire direttamente con le Hex Map.
-- 🧩 `cf_hex_ded_data` → Modulo per caricare i dati dei modelli introdotti precedentemente.
+- 🧩 `cf_hex_ded_data_base` → Modulo per caricare i dati dei modelli introdotti precedentemente.
 

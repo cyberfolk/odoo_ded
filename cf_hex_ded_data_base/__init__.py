@@ -17,15 +17,13 @@ INIT_MODELS = [
     ("creature.faction.tag",    'name', ''),
     ("creature.encounter.line", 'name', 'encounter_ids'),
     ("creature.encounter",      'name', ''),
-    ("lore.item",               'name', ''),
     ("point.of.interest",       'name', ''),
     ("quest.quest",             'name', ''),
     ("settlement.settlement",   'name', ''),
-    ("hex.hex",                 'name', ''),
 ]
 
 
-def post_init__cf_hex_ded_data(env):
+def post_init__cf_hex_ded_data_base(env):
     """
     Eseguito post-installazione modulo.
     Inizializza i dati dei modelli:
@@ -38,7 +36,7 @@ def post_init__cf_hex_ded_data(env):
         - Scontri
         - Asset Tiles
     """
-    _logger.info("* START * post_init__cf_hex_ded_data()")
+    _logger.info("* START * post_init__cf_hex_ded_data_base()")
 
     # Caricamento immagini tile
     env["asset.tile"].load_images()
@@ -53,4 +51,4 @@ def post_init__cf_hex_ded_data(env):
         model = utility.get_model(env, model_name)
         utility.import_model_data(env, model, model_name)
 
-    _logger.info("* END   * post_init__cf_hex_ded_data()")
+    _logger.info("* END   * post_init__cf_hex_ded_data_base()")

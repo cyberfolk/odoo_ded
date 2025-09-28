@@ -49,3 +49,9 @@ LORE_LEVEL_LIST = [
     ('high', 'Lore Alta'),
     ('low', 'Lore Bassa'),
 ]
+
+REVISION_LEVEL_LIST = [
+    ('todo', 'Da rivedere'),
+    ('reliable', 'Abbastanza sicuro'),
+    ('confirmed', 'Confermato'),
+]

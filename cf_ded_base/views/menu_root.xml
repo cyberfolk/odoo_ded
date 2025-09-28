@@ -99,6 +99,7 @@
         <field name="name">Lore</field>
         <field name="res_model">lore.item</field>
         <field name="view_mode">tree,form</field>
+        <!-- <field name="view_mode">tree,form,hierarchy</field>-->
     </record>
 
     <record id="action_menu_artifact_artifact" model="ir.actions.act_window">

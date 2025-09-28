@@ -34,7 +34,11 @@
         # "reports/creature_roster.xml",
         "reports/root_report.xml",
     ],
-    'depends': ['base', 'web'],
+    'depends': [
+        'base',
+        'web',
+        # 'web_hierarchy'
+    ],
     'demo': [],
     'application': True,
     'installable': True,

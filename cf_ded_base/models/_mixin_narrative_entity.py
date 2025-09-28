@@ -1,6 +1,6 @@
 from odoo import fields, models, api
 from ..utility.narrative_entity import PREFIX_BY_MODE_MAP
-from ..utility.selection import LORE_LEVEL_LIST
+from ..utility.selection import LORE_LEVEL_LIST, REVISION_LEVEL_LIST
 from odoo.addons.http_routing.models.ir_http import slugify_one
 
 
@@ -31,6 +31,12 @@ class NarrativeEntityMixin(models.AbstractModel):
         string="Lore Level",
         required=True,
         default='low',
+    )
+
+    revision_status = fields.Selection(
+        selection=REVISION_LEVEL_LIST,
+        string="Stato Revisione",
+        default='reliable'
     )
 
     @api.depends("name")

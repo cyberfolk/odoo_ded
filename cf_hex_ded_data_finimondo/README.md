@@ -1,8 +1,8 @@
-<img src="../cf_hex_ded_data_base/static/description/icon.png" align="right" height="70"/>
+<img src="../cf_hex_ded_data_finimondo/static/description/icon.png" align="right" height="70"/>
 
-# CF | Hex Data Base
+# CF | Hex Data Finimondo
 
-📅 **Initial commit**: 02/09/24  
+📅 **Initial commit**: 20/09/25  
 🛠 **Stack**: Odoo, Owl, Python, JS, XML, HTML, CSS, SCSS e Bootstrap
 
 ## Descrizione
