@@ -52,7 +52,7 @@ class CreatureCreature(models.Model):
     def _compute_code(self):
         PREFIX_DICT = PREFIX_BY_MODE_MAP[self._name]
         mapping = {
-            (True, True): "monster-npc",
+            (True, True): "npc-monster",
             (False, False): "base",
             (False, True): "monster",
             (True, False): "npc",

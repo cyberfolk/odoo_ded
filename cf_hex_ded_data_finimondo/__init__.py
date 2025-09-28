@@ -15,19 +15,8 @@ def post_init__cf_hex_ded_data_finimondo(env):
     """
     Eseguito post-installazione modulo.
     Inizializza i dati dei modelli:
-        - Biomi
-        - Strutture
-        - Tag delle Creature
-        - Tipi delle Creature
-        - Creature
-        - Fazioni
-        - Scontri
-        - Asset Tiles
     """
     _logger.info("* START * post_init__cf_hex_ded_data_finimondo()")
-
-    # Caricamento immagini tile
-    env["asset.tile"].load_images()
 
     # Configurazione modelli
     for model_name, unique_fields, skip_fields in INIT_MODELS:
