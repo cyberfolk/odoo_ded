@@ -1,5 +1,5 @@
 from odoo import api, fields, models
-from ..utility.constant import HEX_STATUS_SELECTION
+from ..utility.selection import HEX_STATUS_SELECTION
 
 
 class Hex(models.Model):
@@ -29,14 +29,6 @@ class Hex(models.Model):
         help="Indica la status dell'Hex:\n"
              "[grid] -> Hex che appartiene a un Quadrante di una Mappa.\n"
              "[script] -> Hex scollegato da Quadranti e da Mappe. Usato per contenere Lore provvisorie."
-    )
-
-    row = fields.Integer(
-        string="Riga",
-    )
-
-    col = fields.Integer(
-        string="Colonna",
     )
 
     # region FIELDS BORDI ----------------------------------------------------------------------------------------------
@@ -77,20 +69,3 @@ class Hex(models.Model):
     )
 
     # endregion --------------------------------------------------------------------------------------------------------
-
-    @api.depends('index')
-    def _compute_code(self):
-        for rec in self:
-            if rec.type == "v1_19_q" and rec.index:
-                code = f"{rec.quad_id.code}"
-                code += f".{str(rec.circle_order).zfill(2)}"
-                code += f".{str(rec.circle_number).zfill(2)}"
-            elif rec.type == "v2_nolimit_q":
-                quad_row = rec.quad_id.row * 4
-                quad_col = rec.quad_id.col * 4
-                _row = rec.format_int_v2(quad_row + rec.row)
-                _col = rec.format_int_v2(quad_col + rec.col)
-                code = f"{_row}{_col}"
-            else:
-                code = 'void'
-            rec.code = code

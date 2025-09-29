@@ -5,6 +5,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="index_19q"/>
                 <field name="type" widget="badge"
                        decoration-info="type  == 'v1_19_q'"
                        decoration-primary="type == 'v2_nolimit_q'"/>
@@ -30,6 +31,7 @@
                     <group>
                         <group>
                             <field name="type" invisible="quad_ids"/>
+                            <field name="index_19q" invisible="type != 'v1_19_q'"/>
                         </group>
                     </group>
                     <notebook>
@@ -38,7 +40,11 @@
                                 <tree delete="0" create="0" edit="0">
                                     <field name="name"/>
                                     <field name="code"/>
+                                    <field name="row" column_invisible="parent.type != 'v2_nolimit_q'"/>
+                                    <field name="col" column_invisible="parent.type != 'v2_nolimit_q'"/>
                                     <field name="index" column_invisible="parent.type != 'v1_19_q'"/>
+                                    <field name="circle_order" column_invisible="parent.type != 'v1_19_q'"/>
+                                    <field name="circle_number" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="border_N" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="border_NE" column_invisible="parent.type != 'v1_19_q'"/>
                                     <field name="border_SE" column_invisible="parent.type != 'v1_19_q'"/>
@@ -47,6 +53,16 @@
                                     <field name="border_NW" column_invisible="parent.type != 'v1_19_q'"/>
                                 </tree>
                             </field>
+                        </page>
+                        <page string="Righe Colonne" name="page_row_col" invisible="type != 'v2_nolimit_q'">
+                            <group name="group_row_col">
+                                <field string="Indice riga minore" name="row_min"/>
+                                <field string="Indice riga maggiore" name="row_max"/>
+                                <field string="Numero righe" name="row_num"/>
+                                <field string="Indice colonna minore" name="col_min"/>
+                                <field string="Indice colonna maggiore" name="col_max"/>
+                                <field string="Numero colonne" name="col_num"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
