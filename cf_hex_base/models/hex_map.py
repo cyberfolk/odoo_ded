@@ -1,10 +1,5 @@
-import json
-from itertools import groupby
-
 from odoo import fields, models, api, Command
-from ..utility.constant import BORDERS_MAP
-from ..utility.constant import MAP_TYPE_SELECTION
-from ..utility.constant import QUAD_LIST_V1
+from ..utility.constant import BORDERS_MAP, MAP_TYPE_SELECTION, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
 
 
 class HexMap(models.Model):
@@ -25,14 +20,31 @@ class HexMap(models.Model):
         selection=MAP_TYPE_SELECTION,
         string="Tipo",
         default="v1_19_q",
+        required=True,
     )
 
+    index_19q = fields.Selection(
+        selection=INDEX_MAP_19Q_LIST,
+        string="Index",
+        default="NAN",
+        required=True,
+        help="Index per la mappa V1 19Q\n"
+             " - [CCC]: Macro-area Centrale\n"
+             " - [FAR]: Reame Remoto\n"
+             " - [NAN]: Nessuno\n"
+             " - [I01, I08]: Macro-aree Interne\n"
+             " - [E01, I16]: Macro-aree Esterne\n"
+    )
+
+    # region FIELDS - V2 NOLIMIT Q -------------------------------------------------------------------------------------
     row_min = fields.Integer(string="Row Min", compute="compute_quad_stats")
     row_max = fields.Integer(string="Row Max", compute="compute_quad_stats")
     row_num = fields.Integer(string="Row Num", compute="compute_quad_stats")
     col_min = fields.Integer(string="Col Min", compute="compute_quad_stats")
     col_max = fields.Integer(string="Col Max", compute="compute_quad_stats")
     col_num = fields.Integer(string="Col Num", compute="compute_quad_stats")
+
+    # endregion --------------------------------------------------------------------------------------------------------
 
     def set_quads_borders(self):
         """Impostare i bordi dei quadranti. Dal secondo cerchio in poi ci potrebbero essere bordi che non

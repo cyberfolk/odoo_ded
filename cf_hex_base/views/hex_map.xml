@@ -5,6 +5,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="index_19q"/>
                 <field name="type" widget="badge"
                        decoration-info="type  == 'v1_19_q'"
                        decoration-primary="type == 'v2_nolimit_q'"/>
@@ -30,6 +31,7 @@
                     <group>
                         <group>
                             <field name="type" invisible="quad_ids"/>
+                            <field name="index_19q" invisible="type != 'v1_19_q'"/>
                         </group>
                     </group>
                     <notebook>

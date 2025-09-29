@@ -134,7 +134,7 @@ class HexHex(models.Model):
 
     # endregion --------------------------------------------------------------------------------------------------------
 
-    # region NOMENCLATURA ESAAGONI --------------------------------------------------------------------------------------
+    # region NOMENCLATURA ESAGONI --------------------------------------------------------------------------------------
     code_complete = fields.Char(
         string="Codice Completo",
         compute="_compute_alias_and_slug_and_title",
@@ -153,13 +153,14 @@ class HexHex(models.Model):
     def _compute_alias_and_slug_and_title(self):
         for rec in self:
             sml = rec.sml or 'x'
-            biome_code = rec.biome_id.code or 'biome code'
-            biome_name = rec.biome_id.name or 'biome name'
-            hex_code = rec.code or 'hex code'
+            biome_code = rec.biome_id.code or 'biome_code'
+            biome_name = rec.biome_id.name or 'biome_name'
+            hex_code = rec.code or 'hex_code'
 
             if rec.type == 'v1_19_q':
-                hex_code = f"I01-{hex_code}" # TODO: implementare, mettere i codici alle Macro mappe
+                ma = rec.map_id.index_19q or 'NAN'
+                hex_code = f"{ma}.{hex_code}"
 
-            rec.code_complete = f"{hex_code}-{biome_code}-SML{sml}"
+            rec.code_complete = f"{hex_code}.{biome_code}.SML{sml}"
             rec.code_complete_human = f"{hex_code} — {biome_name} (SML {sml})"
 # endregion --------------------------------------------------------------------------------------------------------
