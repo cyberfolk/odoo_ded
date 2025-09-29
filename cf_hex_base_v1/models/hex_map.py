@@ -7,10 +7,8 @@ class HexMap(models.Model):
     _description = "Mappa, contains Quadrants."
 
     type = fields.Selection(
-        selection=MAP_TYPE_SELECTION,
-        string="Tipo",
-        default="v1_19_q",
-        required=True,
+        selection_add=[('v1_19_q', 'V1 19 Q')],
+        ondelete='set null'
     )
 
     # endregion --------------------------------------------------------------------------------------------------------

@@ -17,10 +17,8 @@ class HexMap(models.Model):
     )
 
     type = fields.Selection(
-        selection=MAP_TYPE_SELECTION,
-        string="Tipo",
-        default="v1_19_q",
-        required=True,
+        selection_add=[('v3_no_q', 'V3 NO Q')],
+        ondelete='set null'
     )
 
     index_19q = fields.Selection(
