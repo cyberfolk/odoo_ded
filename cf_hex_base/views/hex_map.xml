@@ -5,9 +5,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="type" widget="badge"
-                       decoration-info="type  == 'v1_19_q'"
-                       decoration-primary="type == 'v2_nolimit_q'"/>
+                <field name="type" widget="badge"/>
             </tree>
         </field>
     </record>
@@ -19,9 +17,7 @@
             <form>
                 <sheet>
                     <div class="oe_title">
-                        <field class="me-3" name="type" widget="badge"
-                               decoration-info="type  == 'v1_19_q'"
-                               decoration-primary="type == 'v2_nolimit_q'"/>
+                        <field class="me-3" name="type" widget="badge"/>
                         <label for="name"/>
                         <h1>
                             <field name="name"/>
@@ -38,13 +34,6 @@
                                 <tree delete="0" create="0" edit="0">
                                     <field name="name"/>
                                     <field name="code"/>
-                                    <field name="index" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_N" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_NE" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_SE" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_S" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_SW" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_NW" column_invisible="parent.type != 'v1_19_q'"/>
                                 </tree>
                             </field>
                         </page>

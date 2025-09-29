@@ -3,8 +3,7 @@ from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
 
 
 class HexMap(models.Model):
-    _name = "hex.map"
-    _description = "Mappa, contains Quadrants."
+    _inherit = "hex.map"
 
     name = fields.Char(
         string='Name',

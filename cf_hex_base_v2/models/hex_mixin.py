@@ -5,8 +5,8 @@ class HexMixin(models.AbstractModel):
     _inherit = 'hex.mixin'
 
     type = fields.Selection(
-        selection_add=[('v2_nolimit_q', 'V3 NOLIMIT Q')],
-        ondelete='set null'
+        selection_add=[('v2_nolimit_q', 'V2 NOLIMIT Q')],
+        ondelete={'v2_nolimit_q': 'set null'}
     )
 
     @staticmethod

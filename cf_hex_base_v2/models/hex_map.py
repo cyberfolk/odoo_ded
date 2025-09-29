@@ -3,60 +3,19 @@ from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
 
 
 class HexMap(models.Model):
-    _name = "hex.map"
-    _description = "Mappa, contains Quadrants."
-
-    name = fields.Char(
-        string='Name',
-    )
-
-    quad_ids = fields.One2many(
-        comodel_name='hex.quad',
-        string="Quadrants",
-        inverse_name='map_id',
-    )
+    _inherit = "hex.map"
 
     type = fields.Selection(
-        selection_add=[('v2_nolimit_q', 'V3 NOLIMIT Q')],
-        ondelete='set null'
+        selection_add=[('v2_nolimit_q', 'V2 NOLIMIT Q')],
+        ondelete={'v2_nolimit_q': 'set null'}
     )
 
-    index_19q = fields.Selection(
-        selection=INDEX_MAP_19Q_LIST,
-        string="Index",
-        default="NAN",
-        required=True,
-        help="Index per la mappa V1 19Q\n"
-             " - [CCC]: Macro-area Centrale\n"
-             " - [FAR]: Reame Remoto\n"
-             " - [NAN]: Nessuno\n"
-             " - [I01, I08]: Macro-aree Interne\n"
-             " - [E01, I16]: Macro-aree Esterne\n"
-    )
-
-    # region FIELDS - V2 NOLIMIT Q -------------------------------------------------------------------------------------
     row_min = fields.Integer(string="Row Min", compute="compute_quad_stats")
     row_max = fields.Integer(string="Row Max", compute="compute_quad_stats")
     row_num = fields.Integer(string="Row Num", compute="compute_quad_stats")
     col_min = fields.Integer(string="Col Min", compute="compute_quad_stats")
     col_max = fields.Integer(string="Col Max", compute="compute_quad_stats")
     col_num = fields.Integer(string="Col Num", compute="compute_quad_stats")
-
-    # endregion --------------------------------------------------------------------------------------------------------
-
-    def set_quads_borders(self):
-        """Impostare i bordi dei quadranti. Dal secondo cerchio in poi ci potrebbero essere bordi che non
-        confinano con nulla, in quel caso quei bordi verranno settati a void."""
-        quad_void = self.env.ref('cf_hex_base.hex_quad_void')
-        index_to_quad = {x.index: x for x in self.quad_ids}  # Crea un dizionario per mappare gli index agli esagoni
-        for quad in self.quad_ids:
-            borders = BORDERS_MAP[quad.index]
-            quad.border_N = index_to_quad.get(borders[0]) or quad_void
-            quad.border_NE = index_to_quad.get(borders[1]) or quad_void
-            quad.border_SE = index_to_quad.get(borders[2]) or quad_void
-            quad.border_S = index_to_quad.get(borders[3]) or quad_void
-            quad.border_SW = index_to_quad.get(borders[4]) or quad_void
-            quad.border_NW = index_to_quad.get(borders[5]) or quad_void
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -72,25 +31,7 @@ class HexMap(models.Model):
             quad_vals = {"row": 0, "col": 0, "type": "v2_nolimit_q"}
             map.quad_ids = [Command.create(quad_vals)]
 
-        elif map.type == 'v1_19_q':
-            for quad_vals in QUAD_LIST_V1:
-                quad_vals['type'] = 'v1_19_q'
-                map.quad_ids = [Command.create(quad_vals)]
-
-            map.set_quads_borders()
-            for quad in map.quad_ids:
-                quad.set_hexs_borders()
-            for quad in map.quad_ids:
-                quad.set_hexs_external_borders()
-            for quad in map.quad_ids:
-                quad.set_missing_ids()
         return map
-
-    def unlink(self):
-        for rec in self:
-            for quad in rec.quad_ids:
-                quad.unlink()
-        return super(HexMap, self).unlink()
 
     def compute_quad_stats(self):
         for rec in self:

@@ -5,7 +5,6 @@ class Quadrant(models.Model):
     _name = "hex.quad"
     _inherit = ['hex.mixin']
     _description = "Quadrant, contains Hexagons."
-    _order = 'row,col'
 
     map_id = fields.Many2one(
         comodel_name='hex.map',

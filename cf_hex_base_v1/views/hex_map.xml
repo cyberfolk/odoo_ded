@@ -1,72 +1,27 @@
 <odoo>
     <record id="hex_map_view_tree" model="ir.ui.view">
-        <field name="name">hex.map.tree</field>
+        <field name="name">hex_map_view_tree</field>
         <field name="model">hex.map</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_map_view_tree"/>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="index_19q"/>
-                <field name="type" widget="badge"
-                       decoration-info="type  == 'v1_19_q'"
-                       decoration-primary="type == 'v2_nolimit_q'"/>
-            </tree>
+            <xpath expr="//field[@name='type']" position="attributes">
+                <attribute name="decoration-info">type == 'v1_19_q'</attribute>
+            </xpath>
         </field>
     </record>
 
     <record id="hex_map_view_form" model="ir.ui.view">
-        <field name="name">hex.map.form</field>
+        <field name="name">hex_map_view_form</field>
         <field name="model">hex.map</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_map_view_form"/>
         <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <div class="oe_title">
-                        <field class="me-3" name="type" widget="badge"
-                               decoration-info="type  == 'v1_19_q'"
-                               decoration-primary="type == 'v2_nolimit_q'"/>
-                        <label for="name"/>
-                        <h1>
-                            <field name="name"/>
-                        </h1>
-                    </div>
-                    <group>
-                        <group>
-                            <field name="type" invisible="quad_ids"/>
-                            <field name="index_19q" invisible="type != 'v1_19_q'"/>
-                        </group>
-                    </group>
-                    <notebook>
-                        <page string="Quadranti" name="page_quad_ids">
-                            <field name="quad_ids">
-                                <tree delete="0" create="0" edit="0">
-                                    <field name="name"/>
-                                    <field name="code"/>
-                                    <field name="row" column_invisible="parent.type != 'v2_nolimit_q'"/>
-                                    <field name="col" column_invisible="parent.type != 'v2_nolimit_q'"/>
-                                    <field name="index" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="circle_order" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="circle_number" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_N" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_NE" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_SE" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_S" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_SW" column_invisible="parent.type != 'v1_19_q'"/>
-                                    <field name="border_NW" column_invisible="parent.type != 'v1_19_q'"/>
-                                </tree>
-                            </field>
-                        </page>
-                        <page string="Righe Colonne" name="page_row_col" invisible="type != 'v2_nolimit_q'">
-                            <group name="group_row_col">
-                                <field string="Indice riga minore" name="row_min"/>
-                                <field string="Indice riga maggiore" name="row_max"/>
-                                <field string="Numero righe" name="row_num"/>
-                                <field string="Indice colonna minore" name="col_min"/>
-                                <field string="Indice colonna maggiore" name="col_max"/>
-                                <field string="Numero colonne" name="col_num"/>
-                            </group>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
+            <xpath expr="//field[@name='type']" position="attributes">
+                <attribute name="decoration-info">type == 'v1_19_q'</attribute>
+            </xpath>
+            <xpath expr="//tree/field[@name='code']" position="after">
+                <field name="circle_order" column_invisible="parent.type != 'v1_19_q'"/>
+                <field name="circle_number" column_invisible="parent.type != 'v1_19_q'"/>
+            </xpath>
         </field>
     </record>
 </odoo>

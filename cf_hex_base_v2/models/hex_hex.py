@@ -15,9 +15,9 @@ class Hex(models.Model):
     def get_code(self):
         code = super().get_code()
         if self.type == "v2_nolimit_q":
-            quad_row = rec.quad_id.row * 4
-            quad_col = rec.quad_id.col * 4
-            _row = rec.format_int_v2(quad_row + rec.row)
-            _col = rec.format_int_v2(quad_col + rec.col)
+            quad_row = self.quad_id.row * 4
+            quad_col = self.quad_id.col * 4
+            _row = self.format_int_v2(quad_row + self.row)
+            _col = self.format_int_v2(quad_col + self.col)
             code = f"{_row}{_col}"
         return code

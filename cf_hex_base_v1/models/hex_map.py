@@ -3,20 +3,17 @@ from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1
 
 
 class HexMap(models.Model):
-    _name = "hex.map"
-    _description = "Mappa, contains Quadrants."
+    _inherit = "hex.map"
 
     type = fields.Selection(
         selection_add=[('v1_19_q', 'V1 19 Q')],
-        ondelete='set null'
+        ondelete={'v1_19_q': 'set null'}
     )
-
-    # endregion --------------------------------------------------------------------------------------------------------
 
     def set_quads_borders(self):
         """Impostare i bordi dei quadranti. Dal secondo cerchio in poi ci potrebbero essere bordi che non
         confinano con nulla, in quel caso quei bordi verranno settati a void."""
-        quad_void = self.env.ref('cf_hex_base.hex_quad_void')
+        quad_void = self.env.ref('cf_hex_base_v1.hex_quad_void')
         index_to_quad = {x.index: x for x in self.quad_ids}  # Crea un dizionario per mappare gli index agli esagoni
         for quad in self.quad_ids:
             borders = BORDERS_MAP[quad.index]

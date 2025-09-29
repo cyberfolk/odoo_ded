@@ -13,18 +13,11 @@
         """In questa modulo vengono introdotti gli hex di tipologia V2.""",
     'license': 'AGPL-3',
     'data': [
-        "security/ir.model.access.csv",
         "views/hex_hex.xml",
         "views/hex_quad.xml",
         "views/hex_map.xml",
-        "views/menu_root.xml",
-        "data/hex.xml",
     ],
     'depends': [
-        'base',
-        'web',
-        'cf_o2m_expand_popup',
-        'cf_m2m_tags_link'
         'cf_hex_base'
     ],
     'demo': [],

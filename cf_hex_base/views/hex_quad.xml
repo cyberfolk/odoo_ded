@@ -4,8 +4,6 @@
         <field name="model">hex.quad</field>
         <field name="arch" type="xml">
             <search>
-                <filter name="filter_type_v1_19_q" string="Tipo V1" domain="[('type', '=', 'v1_19_q')]"/>
-                <filter name="filter_type_v2_nolimit_q" string="Tipo V2" domain="[('type', '=', 'v2_nolimit_q')]"/>
                 <filter name="groupby_type" string="Tipo" context="{'group_by': 'type'}"/>
                 <filter name="groupby_map_id" string="Mappa" context="{'group_by': 'map_id'}"/>
             </search>
@@ -19,9 +17,7 @@
             <tree>
                 <field name="name"/>
                 <field name="code"/>
-                <field name="type" widget="badge"
-                       decoration-info="type  == 'v1_19_q'"
-                       decoration-primary="type == 'v2_nolimit_q'"/>
+                <field name="type" widget="badge"/>
                 <field name="index"/>
                 <field name="map_id"/>
                 <field name="border_N"/>
@@ -54,27 +50,15 @@
                         </group>
                         <group col="1">
                             <group col="4" string="Info Quad" name="info_quad">
-                                <group>
-                                    <field name="type" readonly="1"/>
-                                </group>
-                                <group>
+                                <group name="info_quad_col_1">
+                                    <field name="type" readonly="1" widget="badge"/>
                                     <field name="code"/>
-                                </group>
-                                <group invisible="type != 'v1_19_q'">
-                                    <field name="index"/>
                                 </group>
                             </group>
                             <group string="Internal Hexes" name="quad_hex_ids">
                                 <field readonly="1" colspan="2" nolabel="1" name="hex_ids">
                                     <tree create="0" edit="0" delete="0">
                                         <field name="code"/>
-                                        <field name="index" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_N" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_NE" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_SE" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_S" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_SW" column_invisible="parent.type != 'v1_19_q'"/>
-                                        <field name="border_NW" column_invisible="parent.type != 'v1_19_q'"/>
                                     </tree>
                                 </field>
                             </group>

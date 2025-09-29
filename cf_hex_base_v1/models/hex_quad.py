@@ -8,25 +8,11 @@ from ..utility.constant import SPECULAR_BORDERS_MAP
 
 
 class Quadrant(models.Model):
-    _name = "hex.quad"
-    _inherit = ['hex.mixin']
-    _description = "Quadrant, contains Hexagons."
-    _order = 'row,col'
-
-    map_id = fields.Many2one(
-        comodel_name='hex.map',
-        string="Mappa",
-    )
+    _inherit = "hex.quad"
 
     hex_list = fields.Json(
         string="Hex list",
         help="Campo d'appoggio per la creazione di hex_ids."
-    )
-
-    hex_ids = fields.One2many(
-        comodel_name='hex.hex',
-        string="Hexes",
-        inverse_name='quad_id',
     )
 
     missing_ids = fields.Many2many(
@@ -35,28 +21,11 @@ class Quadrant(models.Model):
         string="Missing IDs"
     )
 
-    hook_widget = fields.Char(
-        string="hook_widget",
-        help="Usato solamente per agganciare il widget del quadrante."
-    )
-
     def get_code(self):
         code = super().get_code()
-        if rec.type == "v1_19_q" and rec.index:
-            rec.code = (chr(ord('A') + rec.index - 1))
+        if self.type == "v1_19_q" and self.index:
+            code = (chr(ord('A') + self.index - 1))
         return code
-
-    @api.depends('index', 'row', 'col', 'type')
-    def _compute_code(self):
-        for rec in self:
-            if rec.type == "v1_19_q" and rec.index:
-                rec.code = (chr(ord('A') + rec.index - 1))
-            elif rec.type == "v2_nolimit_q":
-                _row = self.format_int_v2(rec.row)
-                _col = self.format_int_v2(rec.col)
-                rec.code = f"{_row}{_col}"
-            else:
-                rec.code = 'void'
 
     @api.model_create_multi
     def create(self, vals):
@@ -66,16 +35,7 @@ class Quadrant(models.Model):
             if quad.code == 'void' or not quad.hex_list:
                 return quad
             for index in quad.hex_list:
-                hex_vals = {'index': index, 'status': 'grid'}
-                quad.hex_ids = [Command.create(hex_vals)]
-        elif quad.type == "v2_nolimit_q":
-            for i in range(16):
-                hex_vals = {
-                    'type': "v2_nolimit_q",
-                    'status': 'grid',
-                    'row': i // 4,
-                    'col': i % 4
-                }
+                hex_vals = {'index': index, 'status': 'grid', 'type': 'v1_19_q'}
                 quad.hex_ids = [Command.create(hex_vals)]
         return quad
 
@@ -87,7 +47,7 @@ class Quadrant(models.Model):
 
     def set_hexs_borders(self):
         """Impostare i bordi degli Esagoni. Setta a void i bordi degli esagoni esterni."""
-        hex_void = self.env.ref('cf_hex_base.hex_hex_void')
+        hex_void = self.env.ref('cf_hex_base_v1.hex_hex_void')
         index_to_hex = {x.index: x for x in self.hex_ids}  # Crea un dizionario per mappare gli index agli esagoni
         for hex in self.hex_ids:
             borders = BORDERS_MAP[hex.index]

@@ -6,7 +6,7 @@ class HexMixin(models.AbstractModel):
 
     type = fields.Selection(
         selection_add=[('v1_19_q', 'V1 19 Q')],
-        ondelete='set null'
+        ondelete={'v1_19_q': 'set null'}
     )
 
     circle_order = fields.Integer(
@@ -50,9 +50,3 @@ class HexMixin(models.AbstractModel):
         for record in self:
             if record.index < 0 or record.index > 19:
                 raise ValidationError("Il valore di 'index' deve essere compreso tra 1 e 19.")
-
-    @staticmethod
-    def format_int_v2(num):
-        """Ritorna 'N<|num|>' o 'P<|num|>' in base al segno di num"""
-        prefix = "N" if num < 0 else "P"
-        return f"{prefix}{abs(num)}"

@@ -157,9 +157,9 @@ class HexHex(models.Model):
             biome_name = rec.biome_id.name or 'biome_name'
             hex_code = rec.code or 'hex_code'
 
-            if rec.type == 'v1_19_q':
-                ma = rec.map_id.index_19q or 'NAN'
-                hex_code = f"{ma}.{hex_code}"
+            # if rec.type == 'v1_19_q':
+            #     ma = rec.map_id.index_19q or 'NAN'
+            #     hex_code = f"{ma}.{hex_code}"
 
             rec.code_complete = f"{hex_code}.{biome_code}.SML{sml}"
             rec.code_complete_human = f"{hex_code} — {biome_name} (SML {sml})"

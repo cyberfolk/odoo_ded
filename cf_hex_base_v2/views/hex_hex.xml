@@ -1,57 +1,28 @@
 <odoo>
     <record id="hex_hex_view_tree" model="ir.ui.view">
-        <field name="name">hex.hex.tree.base</field>
+        <field name="name">hex_hex_view_tree</field>
         <field name="model">hex.hex</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_hex_view_tree"/>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="code"/>
-                <field name="type" widget="badge" optional="show"
-                       decoration-info="type  == 'v1_19_q'"
-                       decoration-primary="type == 'v2_nolimit_q'"/>
-                <field name="status" widget="badge" optional="show"
-                       decoration-danger="status  == 'script'"
-                       decoration-success="status == 'grid'"/>
-                <field name="quad_id" optional="show"/>
-                <field name="map_id" optional="show"/>
-                <field name="index" optional="hide"/>
-                <field name="circle_order" optional="hide"/>
-                <field name="circle_number" optional="hide"/>
+            <xpath expr="//field[@name='type']" position="attributes">
+                <attribute name="decoration-primary">type == 'v2_nolimit_q'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='index']" position="after">
                 <field name="row" optional="hide"/>
                 <field name="col" optional="hide"/>
-                <field name="border_N" optional="hide"/>
-                <field name="border_NE" optional="hide"/>
-                <field name="border_SE" optional="hide"/>
-                <field name="border_S" optional="hide"/>
-                <field name="border_SW" optional="hide"/>
-                <field name="border_NW" optional="hide"/>
-            </tree>
+            </xpath>
         </field>
     </record>
 
     <record id="hex_hex_view_form" model="ir.ui.view">
-        <field name="name">hex.hex.form.base</field>
+        <field name="name">hex_hex_view_form</field>
         <field name="model">hex.hex</field>
+        <field name="inherit_id" ref="cf_hex_base.hex_hex_view_form"/>
         <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group>
-                        <group>
-                            <field name="name"/>
-                            <field name="code" readonly="1"/>
-                            <field name="type" readonly="1"/>
-                            <field name="status" readonly="1"/>
-                            <field name="index" readonly="1"/>
-                            <field name="circle_order" invisible="type != 'v1_19_q'"/>
-                            <field name="circle_number" invisible="type != 'v1_19_q'"/>
-                            <field name="row" invisible="type != 'v2_nolimit_q'" readonly="1"/>
-                            <field name="col" invisible="type != 'v2_nolimit_q'" readonly="1"/>
-                            <field name="quad_id" readonly="1"/>
-                            <field name="map_id" readonly="1"/>
-                        </group>
-                    </group>
-                </sheet>
-            </form>
+            <xpath expr="//field[@name='index']" position="after">
+                <field name="row" invisible="type != 'v2_nolimit_q'"/>
+                <field name="col" invisible="type != 'v2_nolimit_q'"/>
+            </xpath>
         </field>
     </record>
 </odoo>

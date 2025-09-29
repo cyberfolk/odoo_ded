@@ -6,9 +6,7 @@
             <tree>
                 <field name="name"/>
                 <field name="code"/>
-                <field name="type" widget="badge" optional="show"
-                       decoration-info="type  == 'v1_19_q'"
-                       decoration-primary="type == 'v2_nolimit_q'"/>
+                <field name="type" widget="badge" optional="show"/>
                 <field name="status" widget="badge" optional="show"
                        decoration-danger="status  == 'script'"
                        decoration-success="status == 'grid'"/>

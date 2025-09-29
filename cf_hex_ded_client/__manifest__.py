@@ -23,11 +23,9 @@
         "views/hex_quad.xml",
     ],
     'depends': [
-        'base',
-        'web',
-        'cf_o2m_expand_popup',
-        'cf_m2m_tags_link',
-        'cf_hex_ded'
+        'cf_hex_ded',
+        'cf_hex_base_v1',
+        'cf_hex_base_v2',
     ],
     'demo': [],
     'application': True,
