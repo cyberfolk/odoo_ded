@@ -120,6 +120,7 @@ QUAD_LIST_V1 = [
 MAP_TYPE_SELECTION = [
     ('v1_19_q', 'V1 19Q'),
     ('v2_nolimit_q', 'V2 NOLIMIT Q'),
+    ('v3_no_q', 'V3 NO Q'),
 ]
 
 INDEX_MAP_19Q_LIST = [
@@ -130,4 +131,9 @@ INDEX_MAP_19Q_LIST = [
     ('E05', 'E05'), ('E06', 'E06'), ('E07', 'E07'), ('E08', 'E08'),
     ('E09', 'E09'), ('E10', 'E10'), ('E11', 'E11'), ('E12', 'E12'),
     ('E13', 'E13'), ('E14', 'E14'), ('E15', 'E15'), ('E16', 'E16'),
+]
+
+HEX_STATUS_SELECTION = [
+    ('script', 'SCRIPT'),
+    ('grid', 'GRID')
 ]

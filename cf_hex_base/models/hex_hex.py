@@ -1,6 +1,5 @@
 from odoo import api, fields, models
-
-HEX_STATUS_SELECTION = [('script', 'SCRIPT'), ('grid', 'GRID')]
+from ..utility.constant import HEX_STATUS_SELECTION
 
 
 class Hex(models.Model):
@@ -23,6 +22,24 @@ class Hex(models.Model):
         store=True,
     )
 
+    status = fields.Selection(
+        selection=HEX_STATUS_SELECTION,
+        string="Status",
+        default="script",
+        help="Indica la status dell'Hex:\n"
+             "[grid] -> Hex che appartiene a un Quadrante di una Mappa.\n"
+             "[script] -> Hex scollegato da Quadranti e da Mappe. Usato per contenere Lore provvisorie."
+    )
+
+    row = fields.Integer(
+        string="Riga",
+    )
+
+    col = fields.Integer(
+        string="Colonna",
+    )
+
+    # region FIELDS BORDI ----------------------------------------------------------------------------------------------
     border_N = fields.Many2one(
         comodel_name='hex.hex',
         string="N",
@@ -59,22 +76,7 @@ class Hex(models.Model):
         help="Confine Nord-Ovest"
     )
 
-    status = fields.Selection(
-        selection=HEX_STATUS_SELECTION,
-        string="Status",
-        default="script",
-        help="Indica la status dell'Hex:\n"
-             "[grid] -> Hex che appartiene a un Quadrante di una Mappa.\n"
-             "[script] -> Hex scollegato da Quadranti e da Mappe. Usato per contenere Lore provvisorie."
-    )
-
-    row = fields.Integer(
-        string="Riga",
-    )
-
-    col = fields.Integer(
-        string="Colonna",
-    )
+    # endregion --------------------------------------------------------------------------------------------------------
 
     @api.depends('index')
     def _compute_code(self):
