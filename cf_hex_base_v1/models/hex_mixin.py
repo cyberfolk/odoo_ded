@@ -1,9 +1,13 @@
 from odoo import api, fields, models
-from ..utility.constant import MAP_TYPE_SELECTION
 
 
 class HexMixin(models.AbstractModel):
     _inherit = 'hex.mixin'
+
+    type = fields.Selection(
+        selection_add=[('v1_19_q', 'V1 19 Q')],
+        ondelete='set null'
+    )
 
     circle_order = fields.Integer(
         string='Circle Order',
@@ -14,16 +18,6 @@ class HexMixin(models.AbstractModel):
         string='Circle Number',
         compute='_compute_circle_number',
     )
-
-    type = fields.Selection(
-        selection=MAP_TYPE_SELECTION,
-        string="Tipo",
-        default="v1_19_q",
-        help="Indica la tipologia della mappa:\n"
-             "[v1_19_q] -> Mappa limitata a 19 Quadranti messi a cerchio.\n"
-             "[v2_nolimit_q] -> Mappa con numero di Quadranti estendibile disposti a griglia."
-    )
-
 
     @api.depends('index')
     def _compute_circle_order(self):

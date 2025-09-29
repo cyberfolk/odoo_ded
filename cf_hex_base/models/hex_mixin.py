@@ -16,7 +16,6 @@ class HexMixin(models.AbstractModel):
 
     index = fields.Integer(
         string='Index',
-        help="Il valore di 'index' deve essere compreso tra 1 e 19.",
     )
 
     type = fields.Selection(
