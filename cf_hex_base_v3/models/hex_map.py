@@ -1,5 +1,5 @@
 from odoo import fields, models, api, Command
-from ..utility.constant import BORDERS_MAP, MAP_TYPE_SELECTION, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
+from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
 
 
 class HexMap(models.Model):

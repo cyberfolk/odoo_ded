@@ -1,5 +1,4 @@
 from odoo import api, fields, models
-from ..utility.constant import MAP_TYPE_SELECTION
 
 
 class HexMixin(models.AbstractModel):

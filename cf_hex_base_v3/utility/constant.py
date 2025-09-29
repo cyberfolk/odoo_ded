@@ -117,12 +117,6 @@ QUAD_LIST_V1 = [
     {"index": 19, "hex_list": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 15, 17, 18, 19]}
 ]
 
-MAP_TYPE_SELECTION = [
-    ('v1_19_q', 'V1 19Q'),
-    ('v2_nolimit_q', 'V2 NOLIMIT Q'),
-    ('v3_no_q', 'V3 NO Q'),
-]
-
 INDEX_MAP_19Q_LIST = [
     ('CCC', 'CCC'), ('FAR', 'FAR'), ('NAN', 'NAN'),
     ('I01', 'I01'), ('I02', 'I02'), ('I03', 'I03'), ('I04', 'I04'),

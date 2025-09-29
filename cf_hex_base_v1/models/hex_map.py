@@ -1,5 +1,5 @@
 from odoo import fields, models, api, Command
-from ..utility.constant import BORDERS_MAP, MAP_TYPE_SELECTION, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
+from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1
 
 
 class HexMap(models.Model):
@@ -50,22 +50,3 @@ class HexMap(models.Model):
             for quad in map.quad_ids:
                 quad.set_missing_ids()
         return map
-
-    def compute_quad_stats(self):
-        for rec in self:
-            if not rec.quad_ids:  # Caso in cui non ci sono quad_ids
-                rec.row_min = rec.row_max = rec.row_num = None
-                rec.col_min = rec.col_max = rec.col_num = None
-                continue
-
-            # Calcolo dei set di righe e colonne
-            row_set = {quad.row for quad in rec.quad_ids}
-            col_set = {quad.col for quad in rec.quad_ids}
-
-            # Calcolo delle statistiche
-            rec.row_min = min(row_set)
-            rec.row_max = max(row_set)
-            rec.row_num = rec.row_max - rec.row_min + 1
-            rec.col_min = min(col_set)
-            rec.col_max = max(col_set)
-            rec.col_num = rec.col_max - rec.col_min + 1
