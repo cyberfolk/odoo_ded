@@ -14,7 +14,8 @@ class HexHex(models.Model):
     sml = fields.Integer(
         string="SML",
         help="Difficoltà Hex. Calcolata come 'Scontro Mortale per 4 PG di Livello SML'",
-        default=1
+        default=1,
+        required=True,
     )
 
     description = fields.Html(
@@ -79,6 +80,8 @@ class HexHex(models.Model):
             total_fields = len(target_fields) + 2  # +2 per i due controlli aggiuntivi
             rec.completion_percentage = (filled_fields / total_fields) * 100 if total_fields else 0
 
+    # endregion --------------------------------------------------------------------------------------------------------
+
     # region FIELDS - NARRATIVE ENTITY ---------------------------------------------------------------------------------
     artifact_ids = fields.Many2many(
         comodel_name="artifact.artifact",
@@ -130,3 +133,33 @@ class HexHex(models.Model):
     )
 
     # endregion --------------------------------------------------------------------------------------------------------
+
+    # region NOMENCLATURA ESAAGONI --------------------------------------------------------------------------------------
+    code_complete = fields.Char(
+        string="Codice Completo",
+        compute="_compute_alias_and_slug_and_title",
+        store=True,
+        help="[Hex Code]-[BIO]-SML[X]"
+    )
+
+    code_complete_human = fields.Char(
+        string="Codice Completo (leggibile)",
+        compute="_compute_alias_and_slug_and_title",
+        store=True,
+        help="[Hex Code] — [Bioma nome] (SML[X])"
+    )
+
+    @api.depends('map_id.name', 'quad_id.code', 'code', 'sml', 'biome_id.code')
+    def _compute_alias_and_slug_and_title(self):
+        for rec in self:
+            sml = rec.sml or 'x'
+            biome_code = rec.biome_id.code or 'biome code'
+            biome_name = rec.biome_id.name or 'biome name'
+            hex_code = rec.code or 'hex code'
+
+            if rec.type == 'v1_19_q':
+                hex_code = f"I01-{hex_code}" # TODO: implementare, mettere i codici alle Macro mappe
+
+            rec.code_complete = f"{hex_code}-{biome_code}-SML{sml}"
+            rec.code_complete_human = f"{hex_code} — {biome_name} (SML {sml})"
+# endregion --------------------------------------------------------------------------------------------------------

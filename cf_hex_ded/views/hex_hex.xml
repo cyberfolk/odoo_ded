@@ -22,6 +22,8 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='col']" position="before">
                 <field name="biome_id"/>
+                <field name="code_complete" optional="hide"/>
+                <field name="code_complete_human" optional="hide"/>
                 <field name="sml"/>
                 <field name="creature_ids" widget="many2many_tags" optional="show"/>
                 <field name="faction_ids" widget="many2many_tags" optional="show"/>

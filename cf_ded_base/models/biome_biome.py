@@ -70,6 +70,13 @@ class BiomeBiome(models.Model):
         help="Scontri che si possono verificare nel bioma.",
     )
 
+    code = fields.Char(
+        string="Codice",
+        # required=True,
+        help="Codice univoco per la struttura",
+        # unique=True
+    )
+
     # region TABELLA DIFFICOLTà VIAGGIO --------------------------------------------------------------------------------
     speed_of_travel = fields.Float(
         string="Velocità",

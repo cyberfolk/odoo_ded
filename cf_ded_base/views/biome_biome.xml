@@ -1,10 +1,11 @@
 <odoo>
-        <record id="biome_biome_view_search" model="ir.ui.view">
+    <record id="biome_biome_view_search" model="ir.ui.view">
         <field name="name">biome.biome.search</field>
         <field name="model">biome.biome</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
+                <field name="code"/>
                 <field name="state"/>
                 <filter name="filter_state_active" string="Attivi" domain="[('state', '=', 'active')]"/>
                 <filter name="groupby_state" string="State" context="{'group_by': 'state'}"/>
@@ -18,6 +19,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="code"/>
                 <field name="color" widget="color"/>
                 <field name="speed_of_travel"/>
                 <field name="cd_food"/>
@@ -102,6 +104,7 @@
                             </group>
                             <group>
                                 <field name="speed_of_travel"/>
+                                <field name="code"/>
                             </group>
                         </group>
                         <group name="group_structure" string="Strutture" colspan="2">
