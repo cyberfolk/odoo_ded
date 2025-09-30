@@ -24,15 +24,12 @@ class HexMap(models.Model):
 
         return map
 
-    def get_quad_stats(self):
-        self.ensure_one()
-        row_min = row_max = row_num = None
-        col_min = col_max = col_num = None
+    def get_row_col(self):
+        row_min, row_max, row_num, col_min, col_max, col_num = super().get_row_col()
 
-        # condizione opzionale sul tipo
         if self.type == "v3_no_q" and self.hex_ids:
             row_set = self.hex_ids.mapped('row')
-            col_set =self.hex_ids.mapped('col')
+            col_set = self.hex_ids.mapped('col')
 
             row_min = min(row_set)
             row_max = max(row_set)

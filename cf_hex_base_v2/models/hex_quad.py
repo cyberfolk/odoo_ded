@@ -5,19 +5,11 @@ class Quadrant(models.Model):
     _inherit = "hex.quad"
     _order = 'row,col'
 
-    row = fields.Integer(
-        string="Riga",
-    )
-
-    col = fields.Integer(
-        string="Colonna",
-    )
-
     def get_code(self):
         code = super().get_code()
         if self.type == "v2_nolimit_q":
-            _row = self.format_int_v2(self.row)
-            _col = self.format_int_v2(self.col)
+            _row = self.format_n_or_p(self.row)
+            _col = self.format_n_or_p(self.col)
             code = f"{_row}{_col}"
         return code
 

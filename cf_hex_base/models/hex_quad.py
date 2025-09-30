@@ -22,6 +22,10 @@ class Quadrant(models.Model):
         help="Usato solamente per agganciare il widget del quadrante."
     )
 
+    # Campi usati sia da v2 che v3
+    row = fields.Integer(string="Riga")
+    col = fields.Integer(string="Colonna")
+
     # region FIELDS BORDI --------------------------------------------------------------------------------------------
     border_N = fields.Many2one(
         comodel_name='hex.quad',

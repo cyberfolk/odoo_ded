@@ -31,6 +31,10 @@ class Hex(models.Model):
              "[script] -> Hex scollegato da Quadranti e da Mappe. Usato per contenere Lore provvisorie."
     )
 
+    # Campi usati sia da v2 che v3
+    row = fields.Integer(string="Riga")
+    col = fields.Integer(string="Colonna")
+
     # region FIELDS BORDI ----------------------------------------------------------------------------------------------
     border_N = fields.Many2one(
         comodel_name='hex.hex',
