@@ -18,8 +18,9 @@
                 </t>
             </div>
         </t>
+
         <!-- VIEW V2-->
-        <t t-else="">
+        <t t-if="store.map.type == 'v2_nolimit_q'">
             <div class="map_form m-auto">
                 <t t-foreach="store.map.quad_rows" t-as="quad_row" t-key="quad_row[0].id">
                     <div class="d-flex">
@@ -40,6 +41,29 @@
                     </div>
                 </t>
             </div>
+        </t>
+
+        <!-- VIEW V3-->
+        <t t-if="store.map.type == 'v3_no_q'">
+            <div class="map_form m-auto mt-5">
+                <t t-foreach="store.map.hex_rows" t-as="hex_row" t-key="hex_row[0].id">
+                    <div class="d-flex bg-dark"
+                         t-att-style="(hex_row_index == 0 ? 'padding-top: 80px; ' : '') + 'padding-left: 64px;'">
+                        <t t-foreach="hex_row" t-as="hex" t-key="hex.col">
+                            <HexHex hex_asset_id="hex.hex_asset_id"
+                                    color="hex.color"
+                                    code="hex.code"
+                                    type="'v3_no_q'"
+                                    sml="hex.sml"
+                                    dim="'hex_mf_v2'"
+                                    row="hex.row"
+                                    col="hex.col"
+                                    id="hex.id"/>
+                        </t>
+                    </div>
+                </t>
+            </div>
+
         </t>
     </t>
     <t t-else="">

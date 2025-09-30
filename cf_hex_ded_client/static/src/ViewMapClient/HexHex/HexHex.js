@@ -20,6 +20,7 @@ export class HexHex extends Component {
             dim: this.props.dim,
             sml: this.props.sml,
             code: this.props.code,
+            type: this.props.type,
             index: this.props.index,
             color: this.props.color,
             hex_asset_id: this.props.hex_asset_id
@@ -27,9 +28,22 @@ export class HexHex extends Component {
     }
 
     getHexStyle() {
-        const { row, col, index, color } = this.state;
-        const { asse_x, asse_y } = index ? getAxesV1(index, 0.95) : getAxesV2(row, col);
-        return `top: ${asse_y}; left: ${asse_x}; background-color: ${color};`;
+        const { row, col, index, color, type } = this.state;
+        let pos = "";
+
+        if (type === "v3_no_q") {
+            pos = col % 2 === 0
+                ? "margin: 1px 1px 0px -13px;"
+                : "margin: -23px 1px 0px -13px;";
+        } else if (index) {
+            const { asse_x, asse_y } = getAxesV1(index, 0.95);
+            pos = `top: ${asse_y}; left: ${asse_x};`;
+        } else {
+            const { asse_x, asse_y } = getAxesV2(row, col);
+            pos = `top: ${asse_y}; left: ${asse_x};`;
+        }
+
+        return `background-color: ${color}; ${pos} `;
     }
 
     /**
@@ -51,6 +65,7 @@ export class HexHex extends Component {
     async changeBiomeHex(){
         const biome_id = this.store.currentBiome?.id ?? null;
         await this.orm.call("hex.hex", "change_hex_biome", [this.state.id, biome_id], {});
+        console.log(this.store.currentBiome)
         this.state.color = this.store.currentBiome.color
     }
 

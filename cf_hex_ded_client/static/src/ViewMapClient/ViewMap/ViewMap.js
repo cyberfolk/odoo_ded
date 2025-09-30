@@ -26,4 +26,8 @@ export class ViewMap extends Component {
         const quadPath = POLYGON_QUAD_V1_LIST[index -1];
         return `top: ${asse_y}; left: ${asse_x}; z-index: ${20 - index}; clip-path: ${quadPath};`;
     }
+    getBgStyleV3() {
+        const polygon ="clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);"
+        return polygon;
+    }
 }

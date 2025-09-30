@@ -97,6 +97,11 @@ $MF-MH: $MF-HH_INIZIALE * 20; // Map Height
     transform: translate(-50%, -50%);
 }
 
+.hex_v3 {
+    clip-path: $hex_polygon;
+    transform: translate(-50%, -50%);
+}
+
 .label_code {
     color: white;
     font-weight: bold;
