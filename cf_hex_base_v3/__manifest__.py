@@ -14,7 +14,6 @@
     'license': 'AGPL-3',
     'data': [
         "views/hex_hex.xml",
-        "views/hex_quad.xml",
         "views/hex_map.xml",
     ],
     'depends': [

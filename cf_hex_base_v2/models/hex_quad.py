@@ -1,10 +1,4 @@
-import json
-
 from odoo import api, fields, models, Command
-from ..utility.constant import BORDERS_MAP
-from ..utility.constant import EXTERNAL_BORDERS_MAP
-from ..utility.constant import HEX_MISSING_INDEX
-from ..utility.constant import SPECULAR_BORDERS_MAP
 
 
 class Quadrant(models.Model):
@@ -40,6 +34,7 @@ class Quadrant(models.Model):
         if quad.type == "v2_nolimit_q":
             for i in range(16):
                 hex_vals = {
+                    'map_id': quad.map_id.id,
                     'type': "v2_nolimit_q",
                     'status': 'grid',
                     'row': i // 4,

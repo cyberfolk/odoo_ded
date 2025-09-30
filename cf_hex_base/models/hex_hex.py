@@ -18,8 +18,8 @@ class Hex(models.Model):
     )
 
     map_id = fields.Many2one(
-        related='quad_id.map_id',
-        store=True,
+        comodel_name='hex.map',
+        string="Mappa",
     )
 
     status = fields.Selection(

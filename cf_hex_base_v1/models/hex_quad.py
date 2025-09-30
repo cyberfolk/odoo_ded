@@ -35,7 +35,7 @@ class Quadrant(models.Model):
             if quad.code == 'void' or not quad.hex_list:
                 return quad
             for index in quad.hex_list:
-                hex_vals = {'index': index, 'status': 'grid', 'type': 'v1_19_q'}
+                hex_vals = {'index': index, 'status': 'grid', 'type': 'v1_19_q', 'map_id': quad.map_id.id}
                 quad.hex_ids = [Command.create(hex_vals)]
         return quad
 

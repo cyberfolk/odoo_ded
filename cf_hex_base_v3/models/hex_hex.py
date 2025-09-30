@@ -7,6 +7,7 @@ class Hex(models.Model):
     def get_code(self):
         code = super().get_code()
         if self.type == "v3_no_q":
-            # TODO
-            code = f"v3_no_q"
+            _row = self.format_int_v2(self.row)
+            _col = self.format_int_v2(self.col)
+            code = f"{_row}{_col}"
         return code

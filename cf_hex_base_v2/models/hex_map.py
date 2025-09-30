@@ -1,5 +1,4 @@
 from odoo import fields, models, api, Command
-from ..utility.constant import BORDERS_MAP, QUAD_LIST_V1, INDEX_MAP_19Q_LIST
 
 
 class HexMap(models.Model):
@@ -35,19 +34,29 @@ class HexMap(models.Model):
 
     def compute_quad_stats(self):
         for rec in self:
-            if not rec.quad_ids:  # Caso in cui non ci sono quad_ids
-                rec.row_min = rec.row_max = rec.row_num = None
-                rec.col_min = rec.col_max = rec.col_num = None
-                continue
+            row_min, row_max, row_num, col_min, col_max, col_num = rec.get_quad_stats()
+            rec.row_min = row_min
+            rec.row_max = row_max
+            rec.row_num = row_num
+            rec.col_min = col_min
+            rec.col_max = col_max
+            rec.col_num = col_num
 
-            # Calcolo dei set di righe e colonne
-            row_set = {quad.row for quad in rec.quad_ids}
-            col_set = {quad.col for quad in rec.quad_ids}
+    def get_quad_stats(self):
+        self.ensure_one()
+        row_min = row_max = row_num = None
+        col_min = col_max = col_num = None
 
-            # Calcolo delle statistiche
-            rec.row_min = min(row_set)
-            rec.row_max = max(row_set)
-            rec.row_num = rec.row_max - rec.row_min + 1
-            rec.col_min = min(col_set)
-            rec.col_max = max(col_set)
-            rec.col_num = rec.col_max - rec.col_min + 1
+        # condizione opzionale sul tipo
+        if self.type == "v2_nolimit_q" and self.quad_ids:
+            row_set = {quad.row for quad in self.quad_ids}
+            col_set = {quad.col for quad in self.quad_ids}
+
+            row_min = min(row_set)
+            row_max = max(row_set)
+            row_num = row_max - row_min + 1
+            col_min = min(col_set)
+            col_max = max(col_set)
+            col_num = col_max - col_min + 1
+
+        return row_min, row_max, row_num, col_min, col_max, col_num

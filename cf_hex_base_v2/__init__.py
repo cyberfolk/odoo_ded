@@ -1,5 +1,4 @@
 from . import models
-from .utility.constant import BORDERS_MAP
 
 
 def post_init_hook_cf_hex_base_v2(env):
