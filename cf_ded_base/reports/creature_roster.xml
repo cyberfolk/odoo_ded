@@ -75,7 +75,7 @@
                 }
             </style>
 
-            <t t-set="npc_list" t-value="docs[0].npc_ids"/>
+            <t t-set="npc_list" t-value="docs[0].creature_ids"/>
             <t t-foreach="npc_list" t-as="npc">
                 <div class="cell row">
                     <div class="cell-dx">

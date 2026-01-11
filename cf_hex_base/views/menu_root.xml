@@ -23,12 +23,19 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="action_menu_group" model="ir.actions.act_window">
+        <field name="name">Gruppi</field>
+        <field name="res_model">hex.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <menuitem sequence="0" id="menu_root" name="Hex Map" web_icon="cf_hex_base,static/description/icon.png">
         <menuitem sequence="10" id="menu_hex_map_conf" name="Configurazione">
             <menuitem sequence="1" id="menu_hex_map_conf_base_element" name="Elementi Base">
                 <menuitem sequence="1" id="menu_hex_map_conf_base_elem_map" name="Mappe" action="action_menu_map"/>
                 <menuitem sequence="2" id="menu_hex_map_conf_base_elem_quad" name="Quadranti" action="action_menu_quad"/>
                 <menuitem sequence="3" id="menu_hex_map_conf_base_elem_hex" name="Esagoni" action="action_menu_hex"/>
+                <menuitem sequence="4" id="menu_hex_map_conf_base_elem_group" name="Gruppi" action="action_menu_group"/>
             </menuitem>
         </menuitem>
     </menuitem>

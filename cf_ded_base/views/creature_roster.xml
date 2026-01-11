@@ -24,7 +24,7 @@
                     </div>
                     <group class="mt-3">
                         <group>
-                            <field name="creature_ids"/>
+                            <field name="creature_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>
